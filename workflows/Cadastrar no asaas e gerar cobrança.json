@@ -1,0 +1,132 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "criando cliente no asaas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-08-03T04:41:21.532Z",
+  "id": "WsdoJQSYsmQ1wYgX",
+  "name": "Cadastrar no asaas e gerar cobrança",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "cadastro-asaas",
+        "options": {}
+      },
+      "id": "e88918f5-593b-4ea1-b618-8ddb1140f35a",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -300,
+        380
+      ],
+      "webhookId": "b361ec8a-b87c-450f-a59d-521e2f3cd744"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/customers",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $json.body.Nome }}"
+            },
+            {
+              "name": "cpfCnpj",
+              "value": "={{ $json.body.CPF }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $json.body['E-mail'] }}"
+            },
+            {
+              "name": "phone",
+              "value": "={{ $json.body.Telefone }}"
+            },
+            {
+              "name": "mobilePhone",
+              "value": "={{ $json.body.Telefone }}"
+            },
+            {
+              "name": "externalReference",
+              "value": "={{ $json.body['ID-BC'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3f67ed18-4046-4cfd-a8a7-8ceb97ccd17e",
+      "name": "criando cliente no asaas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -80,
+        380
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "212",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "dfae79f8429d4a199aa70ec408bddd20-91396824d815819f-0",
+            "x-forwarded-for": "18.228.10.119",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "eee596fa3054",
+            "x-real-ip": "18.228.10.119"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "CPF": "05320628501",
+            "Nome": "Kleyvison Teste",
+            "ID-BC": "11111111",
+            "Plano": "Assinatura Maya - Plano Mensal",
+            "E-mail": "teste@teste.com",
+            "ID Asaas": "{IdClienteAsaas}",
+            "Telefone": "+557181719761",
+            "ValorPlano": "25"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-08-03T04:56:01.000Z",
+  "versionId": "d7af9052-5b31-458c-b67f-109acefde31f"
+}
