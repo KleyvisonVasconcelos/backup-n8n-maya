@@ -1,0 +1,1371 @@
+{
+  "active": true,
+  "connections": {
+    "Data Vencimento": {
+      "main": [
+        [
+          {
+            "node": "data -5D",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar informações do cliente": {
+      "main": [
+        [
+          {
+            "node": "definindo telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Lembrete (-5d)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lembrete (-1d)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lembrete (no dia)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lembrete (-5d)": {
+      "main": [
+        [
+          {
+            "node": "Enviar Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data -1D": {
+      "main": [
+        [
+          {
+            "node": "data -1D format",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data -5D": {
+      "main": [
+        [
+          {
+            "node": "data -5D format",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data -5D format": {
+      "main": [
+        [
+          {
+            "node": "data -1D",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data -1D format": {
+      "main": [
+        [
+          {
+            "node": "buscar informações do cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Definindo Valores": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Definindo Valores em Branco": {
+      "main": [
+        [
+          {
+            "node": "Atualizando Cobrança Deletada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status": {
+      "main": [
+        [
+          {
+            "node": "✅ Pago (RECEIVED)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "⏱️ Aguardando (PENDING)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "❌ Atrasado (OVERDUE)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pagamento Deletado?": {
+      "main": [
+        [
+          {
+            "node": "Data Vencimento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Definindo Valores em Branco",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "⏱️ Aguardando (PENDING)": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência": {
+      "main": [
+        [
+          {
+            "node": "Definindo Valores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Pagamento Deletado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CARTAO DE CRÉDITO-CONFIRMADO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CARTAO DE CRÉDITO-CONFIRMADO": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-08-02T21:48:46.734Z",
+  "id": "z4Y9H7lVNLQBtT0w",
+  "name": "Recebendo dados asaas",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "recebendo-dados-asaas",
+        "options": {}
+      },
+      "id": "e7d636cf-c010-498b-9e0f-25343d73621d",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -440,
+        80
+      ],
+      "webhookId": "88dbb469-d25f-4afa-9897-8f18ca96bebe",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"body\"][\"payment\"][\"dueDate\"]}}",
+        "dataPropertyName": "DataVencimento",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "name": "Data Vencimento",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        260,
+        320
+      ],
+      "id": "ce859470-d52f-4a03-bbd3-622194713f4e"
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://www.asaas.com/api/v3/customers/{{$json[\"body\"][\"payment\"][\"customer\"]}}",
+        "options": {}
+      },
+      "name": "buscar informações do cliente",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        320
+      ],
+      "id": "579b9ad8-be6e-4d01-b0d2-0c038444aabf",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": 8
+            }
+          ]
+        }
+      },
+      "id": "0a4fa409-8a2e-43a4-b4f2-4640ad9e03f0",
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        1000
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{Date()}}",
+        "dataPropertyName": "Data Hoje",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {
+          "toTimezone": "America/Bahia"
+        }
+      },
+      "id": "1d974c4e-6b4b-43d3-b2cc-c65f01b5dca0",
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        760,
+        1040
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "0b378261-0763-4b8d-b1ce-888ae9a92878",
+      "name": "Lembrete (-5d)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        860
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3d040004-a0d1-434c-914f-6f1896c44552",
+      "name": "Lembrete (-1d)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        1040
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ef5fcbbc-03ae-4a57-a953-cb02ca9d4682",
+      "name": "Lembrete (no dia)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "sheetId": "1yr_3OkWvD_BzbRqR7vfRgB9xucENvuKRgHsPzSZVbcY",
+        "range": "A:AA",
+        "options": {}
+      },
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        40,
+        1000
+      ],
+      "id": "cbfb160d-287f-49ea-bb6d-85e598833a2c",
+      "credentials": {
+        "googleApi": {
+          "id": "5",
+          "name": "Google account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$json[\"DataVencimento\"]}}",
+        "operation": "subtract",
+        "duration": 1,
+        "dataPropertyName": "data-1D",
+        "options": {
+          "fromFormat": "DD/MM/YYYY"
+        }
+      },
+      "name": "data -1D",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        880,
+        320
+      ],
+      "id": "55cc4699-9dbd-4760-a24e-09abe1bc4c45"
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$json[\"DataVencimento\"]}}",
+        "operation": "subtract",
+        "duration": 5,
+        "dataPropertyName": "data-5D",
+        "options": {
+          "fromFormat": "DD/MM/YYYY"
+        }
+      },
+      "name": "data -5D",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        480,
+        320
+      ],
+      "id": "9559fbad-5b19-411b-b428-5607246501fb"
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"data-5D\"]}}",
+        "dataPropertyName": "data-5D",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "name": "data -5D format",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        680,
+        320
+      ],
+      "id": "23b4f22d-8f4b-4c2b-b690-8b2ece05f7b8"
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"data-1D\"]}}",
+        "dataPropertyName": "data-1D",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "name": "data -1D format",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        320
+      ],
+      "id": "4827cc30-8f74-4731-806b-06b0d3bf84c1"
+    },
+    {
+      "parameters": {},
+      "id": "d54fc339-c0ef-429c-ae20-6cdea8fb388d",
+      "name": "✅ Pago (RECEIVED)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        500,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome",
+              "value": "={{$node[\"buscar informações do cliente\"].json[\"name\"]}}"
+            },
+            {
+              "name": "Telefone",
+              "value": "={{$json[\"phone\"]}}"
+            },
+            {
+              "name": "Data Vencimento",
+              "value": "={{$node[\"data -5D format\"].json[\"DataVencimento\"]}}"
+            },
+            {
+              "name": "Lembrete - 5D",
+              "value": "={{$node[\"data -5D format\"].json[\"data-5D\"]}}"
+            },
+            {
+              "name": "ID cliente",
+              "value": "={{$node[\"buscar informações do cliente\"].json[\"id\"]}}"
+            },
+            {
+              "name": "ID cobrança",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"payment\"][\"id\"]}}"
+            },
+            {
+              "name": "Status",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"payment\"][\"status\"]}}"
+            },
+            {
+              "name": "Valor",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"payment\"][\"value\"]}}"
+            },
+            {
+              "name": "Evento",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"event\"]}}"
+            },
+            {
+              "name": "Lembrete - 1D",
+              "value": "={{$node[\"data -1D format\"].json[\"data-1D\"]}}"
+            },
+            {
+              "name": "ID BC",
+              "value": "={{$json[\"id\"]}}"
+            },
+            {
+              "name": "Link de Cobrança",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"payment\"][\"invoiceUrl\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Definindo Valores",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        320
+      ],
+      "id": "bed2d9a7-9490-43bc-af01-8f399dfee91f"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Nome",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Telefone",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Data Vencimento",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Lembrete - 5D",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "ID cliente",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "ID cobrança",
+              "value": "={{$node[\"Webhook1\"].json[\"body\"][\"payment\"][\"id\"]}}"
+            },
+            {
+              "name": "Status",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Valor",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Evento",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Lembrete - 1D",
+              "value": "=❌ DELETADO"
+            },
+            {
+              "name": "Check - Vencimento",
+              "value": "❌ DELETADO"
+            },
+            {
+              "name": "Check - 1D",
+              "value": "❌ DELETADO"
+            },
+            {
+              "name": "Check - 5D",
+              "value": "❌ DELETADO"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Definindo Valores em Branco",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        260,
+        500
+      ],
+      "id": "d3599da3-2785-4199-8c09-433632964169"
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $json[\"Status\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "RECEIVED"
+            },
+            {
+              "value2": "PENDING",
+              "output": 1
+            },
+            {
+              "value2": "OVERDUE",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "ce300649-319a-4d01-ba9d-4a813691c56b",
+      "name": "Status",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        240,
+        1000
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "2a2b62cf-4bb5-40b6-9086-62142b7b10c8",
+      "name": "❌ Atrasado (OVERDUE)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$node[\"Webhook1\"].json[\"body\"][\"event\"]}}",
+              "operation": "notEqual",
+              "value2": "PAYMENT_DELETED"
+            }
+          ]
+        }
+      },
+      "id": "d975cfc6-14a4-483a-9117-8f8d3b14810a",
+      "name": "Pagamento Deletado?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        20,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "sheetId": "1yr_3OkWvD_BzbRqR7vfRgB9xucENvuKRgHsPzSZVbcY",
+        "range": "A:AA",
+        "key": "ID cobrança",
+        "options": {}
+      },
+      "name": "Atualizando Cobrança Deletada",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        480,
+        500
+      ],
+      "id": "70fce77a-15d1-4a14-91ca-f87e3b946274",
+      "credentials": {
+        "googleApi": {
+          "id": "5",
+          "name": "Google account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "3c08ab8a-4d70-4181-a43c-6bca3a9c72b7",
+      "name": "⏱️ Aguardando (PENDING)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll(',','').replaceAll('.','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1680,
+        320
+      ],
+      "typeVersion": 1,
+      "id": "92bc70ff-69bb-4faa-a731-7c7566d8a739"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"phone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6be063d1-baf7-4515-a99c-2bfa52462f61",
+      "name": "definindo telefone",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{$json[\"whatsapp\"]}}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[0]}}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[1]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[2]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[3]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[4]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[5]}}"
+            }
+          ]
+        }
+      },
+      "name": "Cadastrando na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1880,
+        320
+      ],
+      "id": "20a5e140-5cd7-4a1d-8804-6d8e5bc92bc9",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "value2": "RECEIVED"
+            }
+          ]
+        }
+      },
+      "id": "b77fb75a-8d9f-4e7e-bf36-fa043aed7bdd",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2640,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{$json[\"ID BC\"]}}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "="
+            }
+          ]
+        }
+      },
+      "name": "Enviar Mensagem",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        860
+      ],
+      "id": "476b3c99-8d12-4b95-b447-23931e462eac",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "13Mup5xq3HEWoDjZHd-gezA9Huw8AlwPrsSl9OtqLTyE",
+          "mode": "list",
+          "cachedResultName": "Asaas - Maya RJ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13Mup5xq3HEWoDjZHd-gezA9Huw8AlwPrsSl9OtqLTyE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Cobranças",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13Mup5xq3HEWoDjZHd-gezA9Huw8AlwPrsSl9OtqLTyE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ID BC": "={{ $json['ID BC'] }}",
+            "Nome": "={{ $json.Nome }}",
+            "Telefone": "={{ $json.Telefone }}",
+            "ID cliente": "={{ $json['ID cliente'] }}",
+            "ID cobrança": "={{ $json['ID cobrança'] }}",
+            "Link de Cobrança": "={{ $json['Link de Cobrança'] }}",
+            "Valor": "={{ $json.Valor }}",
+            "Status": "={{ $json.Status }}",
+            "Evento": "={{ $json.Evento }}",
+            "Data Vencimento": "={{ $('data -1D format').item.json.DataVencimento }}",
+            "Lembrete - 5D": "={{ $('data -1D format').item.json['data-5D'] }}",
+            "Lembrete - 1D": "={{ $('data -1D format').item.json['data-1D'] }}"
+          },
+          "matchingColumns": [
+            "ID cobrança"
+          ],
+          "schema": [
+            {
+              "id": "ID cliente",
+              "displayName": "ID cliente",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID cobrança",
+              "displayName": "ID cobrança",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "ID BC",
+              "displayName": "ID BC",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link de Cobrança",
+              "displayName": "Link de Cobrança",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Telefone",
+              "displayName": "Telefone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Valor",
+              "displayName": "Valor",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Evento",
+              "displayName": "Evento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Lembrete - 5D",
+              "displayName": "Lembrete - 5D",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check - 5D",
+              "displayName": "Check - 5D",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Lembrete - 1D",
+              "displayName": "Lembrete - 1D",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check - 1D",
+              "displayName": "Check - 1D",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Data Vencimento",
+              "displayName": "Data Vencimento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Check - Vencimento",
+              "displayName": "Check - Vencimento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Dias Atrasado",
+              "displayName": "Dias Atrasado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Próxima Cobrança",
+              "displayName": "Próxima Cobrança",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6fab3eac-cea2-4dfa-b1d7-ee25d289d514",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        2360,
+        320
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "lwN1WWTkm0Pq97WC",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "recebendo-dados-asaas11111111",
+        "options": {}
+      },
+      "id": "77c0c95e-23d5-49e0-8cf5-038372d9131e",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        420
+      ],
+      "webhookId": "56118588-f8d0-4a5f-a22a-682e8515d095"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "value2": "CONFIRMED"
+            },
+            {
+              "value1": "={{ $('Webhook1').item.json.body.payment.billingType }}",
+              "value2": "CREDIT_CARD"
+            }
+          ]
+        }
+      },
+      "id": "cd7279ec-a79d-4c05-a704-677acf767d45",
+      "name": "CARTAO DE CRÉDITO-CONFIRMADO",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2860,
+        380
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "549cabd5-a013-4760-9fc5-2aa54f099405",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        3080,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"ID BC\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "1658862"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5aad93c7-2c4d-4d27-95c3-59aab6d62cfe",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3340,
+        220
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "Java/1.8.0_282",
+            "content-length": "1270",
+            "accept": "application/json",
+            "accept-encoding": "gzip",
+            "cache-control": "no-cache",
+            "content-type": "application/json",
+            "newrelic": "eyJkIjp7ImFjIjoiNjE0MTE2IiwicHIiOjAuNTI1NzQ2LCJ0eCI6ImFlZjM3ODQxODQxMDJmOGMiLCJ0aSI6MTY5MTAxMzA5MDEwMCwidHkiOiJBcHAiLCJpZCI6IjQzNjc3ZmFlYTVkODgyMzgiLCJ0ciI6IjgyZjQ1M2E3YmMxM2JiYWMxNjFhZjkyNTQ0ZGRiNzkzIiwic2EiOmZhbHNlLCJhcCI6IjU3ODE0MDg4OCJ9LCJ2IjpbMCwxXX0=",
+            "pragma": "no-cache",
+            "traceparent": "00-82f453a7bc13bbac161af92544ddb793-43677faea5d88238-00",
+            "tracestate": "614116@nr=0-0-614116-578140888-80435a0c581b27fa-aef3784184102f8c-0-0.525746-1691013085887",
+            "x-forwarded-for": "52.67.12.206",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "eee596fa3054",
+            "x-real-ip": "52.67.12.206"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event": "PAYMENT_RECEIVED",
+            "payment": {
+              "object": "payment",
+              "id": "pay_2972890657476325",
+              "dateCreated": "2023-06-27",
+              "customer": "cus_000057835867",
+              "subscription": "sub_B8oRG0r5fgEm",
+              "paymentLink": null,
+              "value": 25,
+              "netValue": 23.01,
+              "originalValue": null,
+              "interestValue": null,
+              "description": "Assinatura Maya - Plano Mensal",
+              "billingType": "PIX",
+              "confirmedDate": "2023-07-30",
+              "pixTransaction": "cd424731-8d4f-42f1-a88e-a8d6a2c1d49b",
+              "pixQrCodeId": "SAUDECARIOCA00000000000107508335ASA",
+              "status": "RECEIVED",
+              "dueDate": "2023-07-27",
+              "originalDueDate": "2023-07-27",
+              "paymentDate": "2023-07-30",
+              "clientPaymentDate": "2023-07-30",
+              "installmentNumber": null,
+              "invoiceUrl": "https://www.asaas.com/i/2972890657476325",
+              "invoiceNumber": "226303024",
+              "externalReference": null,
+              "deleted": false,
+              "anticipated": false,
+              "anticipable": false,
+              "creditDate": "2023-07-30",
+              "estimatedCreditDate": "2023-07-30",
+              "transactionReceiptUrl": "https://www.asaas.com/comprovantes/8757392861814961",
+              "nossoNumero": "146707677",
+              "bankSlipUrl": null,
+              "lastInvoiceViewedDate": "2023-07-30T19:17:40Z",
+              "lastBankSlipViewedDate": null,
+              "discount": {
+                "value": 0,
+                "limitDate": null,
+                "dueDateLimitDays": 0,
+                "type": "FIXED"
+              },
+              "fine": {
+                "value": 0,
+                "type": "FIXED"
+              },
+              "interest": {
+                "value": 0,
+                "type": "PERCENTAGE"
+              },
+              "postalService": false,
+              "custody": null,
+              "refunds": null
+            }
+          }
+        }
+      }
+    ],
+    "Webhook1": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "Java/1.8.0_282",
+            "content-length": "1270",
+            "accept": "application/json",
+            "accept-encoding": "gzip",
+            "cache-control": "no-cache",
+            "content-type": "application/json",
+            "newrelic": "eyJkIjp7ImFjIjoiNjE0MTE2IiwicHIiOjAuNTI1NzQ2LCJ0eCI6ImFlZjM3ODQxODQxMDJmOGMiLCJ0aSI6MTY5MTAxMzA5MDEwMCwidHkiOiJBcHAiLCJpZCI6IjQzNjc3ZmFlYTVkODgyMzgiLCJ0ciI6IjgyZjQ1M2E3YmMxM2JiYWMxNjFhZjkyNTQ0ZGRiNzkzIiwic2EiOmZhbHNlLCJhcCI6IjU3ODE0MDg4OCJ9LCJ2IjpbMCwxXX0=",
+            "pragma": "no-cache",
+            "traceparent": "00-82f453a7bc13bbac161af92544ddb793-43677faea5d88238-00",
+            "tracestate": "614116@nr=0-0-614116-578140888-80435a0c581b27fa-aef3784184102f8c-0-0.525746-1691013085887",
+            "x-forwarded-for": "52.67.12.206",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "eee596fa3054",
+            "x-real-ip": "52.67.12.206"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event": "PAYMENT_RECEIVED",
+            "payment": {
+              "object": "payment",
+              "id": "pay_2972890657476325",
+              "dateCreated": "2023-06-27",
+              "customer": "cus_000057835867",
+              "subscription": "sub_B8oRG0r5fgEm",
+              "paymentLink": null,
+              "value": 25,
+              "netValue": 23.01,
+              "originalValue": null,
+              "interestValue": null,
+              "description": "Assinatura Maya - Plano Mensal",
+              "billingType": "PIX",
+              "confirmedDate": "2023-07-30",
+              "pixTransaction": "cd424731-8d4f-42f1-a88e-a8d6a2c1d49b",
+              "pixQrCodeId": "SAUDECARIOCA00000000000107508335ASA",
+              "status": "RECEIVED",
+              "dueDate": "2023-07-27",
+              "originalDueDate": "2023-07-27",
+              "paymentDate": "2023-07-30",
+              "clientPaymentDate": "2023-07-30",
+              "installmentNumber": null,
+              "invoiceUrl": "https://www.asaas.com/i/2972890657476325",
+              "invoiceNumber": "226303024",
+              "externalReference": null,
+              "deleted": false,
+              "anticipated": false,
+              "anticipable": false,
+              "creditDate": "2023-07-30",
+              "estimatedCreditDate": "2023-07-30",
+              "transactionReceiptUrl": "https://www.asaas.com/comprovantes/8757392861814961",
+              "nossoNumero": "146707677",
+              "bankSlipUrl": null,
+              "lastInvoiceViewedDate": "2023-07-30T19:17:40Z",
+              "lastBankSlipViewedDate": null,
+              "discount": {
+                "value": 0,
+                "limitDate": null,
+                "dueDateLimitDays": 0,
+                "type": "FIXED"
+              },
+              "fine": {
+                "value": 0,
+                "type": "FIXED"
+              },
+              "interest": {
+                "value": 0,
+                "type": "PERCENTAGE"
+              },
+              "postalService": false,
+              "custody": null,
+              "refunds": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-08-02T22:34:34.000Z",
+  "versionId": "9b4f3914-39e3-4f46-a898-6e1424b7907e"
+}
