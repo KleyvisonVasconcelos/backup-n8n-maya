@@ -1,0 +1,17 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2023-08-03T02:38:48.852Z",
+  "id": "dXx55vkCfSda26rg",
+  "name": "backup github",
+  "nodes": [],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-08-03T02:38:48.852Z",
+  "versionId": "fdf2ddec-799a-4348-85fb-cc5a6f4fab3c"
+}
