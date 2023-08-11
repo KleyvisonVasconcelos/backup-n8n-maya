@@ -1,0 +1,202 @@
+{
+  "active": false,
+  "connections": {
+    "a cada 5 minutos": {
+      "main": [
+        [
+          {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-08-09T05:26:19.402Z",
+  "id": "iJWybQ2DuvkBPj5h",
+  "name": "lembrete 15m antes - medi",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 5
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 10
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 15
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 20
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 25
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 30
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 35
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 40
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 45
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 50
+            },
+            {
+              "field": "hours",
+              "triggerAtMinute": 55
+            }
+          ]
+        }
+      },
+      "id": "732213e2-f161-43d6-9104-a53ce10f39a9",
+      "name": "a cada 5 minutos",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        520,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
+          "mode": "list",
+          "cachedResultName": "Agendamentos - Medi",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 265903553,
+          "mode": "list",
+          "cachedResultName": "AGENDAMENTOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit#gid=265903553"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "DATA E HORA (pra quando)",
+              "lookupValue": "={{ $json['data hora'] }}"
+            }
+          ]
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "5e453a6d-b4df-436a-bd23-7fdb22abeb25",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1240,
+        380
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json['data hora'] }}",
+        "format": "custom",
+        "customFormat": "dd-MM-yyyy HH:mm",
+        "outputFieldName": "data hora",
+        "options": {
+          "timezone": true
+        }
+      },
+      "id": "abb2067d-2f0a-4ce2-89c9-0e240d70a6b9",
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addToDate",
+        "magnitude": "={{ $json.timestamp }}",
+        "timeUnit": "minutes",
+        "duration": 15,
+        "outputFieldName": "data hora"
+      },
+      "id": "9960d226-86bd-4c72-8064-745d17559bf6",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        760,
+        380
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "id": "hclMiW9LVIyi2C4n",
+      "createdAt": "2023-08-11T02:32:22.208Z",
+      "updatedAt": "2023-08-11T02:32:22.208Z",
+      "name": "Medi"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2023-08-11T02:33:12.000Z",
+  "versionId": "adc51150-cd0a-457e-a3ca-d3f9d18a00d6"
+}
