@@ -134,7 +134,6 @@
           "mappingMode": "defineBelow",
           "value": {
             "TELEFONE": "={{ $('Split In Batches').item.json.TELEFONE }}",
-            "NOME": "={{ $('Split In Batches').item.json.NOME }}",
             "TELEFONE FORMATADO": "={{ $json.whatsapp }}"
           },
           "matchingColumns": [
@@ -168,7 +167,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             }
           ]
         },
@@ -225,8 +225,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "4",
-          "name": "BC GMR"
+          "id": "KzWFGF5pz8MUJsVQ",
+          "name": "BC - Vini"
         }
       }
     },
@@ -277,6 +277,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-08-11T03:57:16.000Z",
-  "versionId": "672cf812-d4bc-4676-93c6-6d7849a1e798"
+  "updatedAt": "2023-08-11T04:03:31.000Z",
+  "versionId": "fb0c3889-8f7c-47ad-a754-c76025c1a747"
 }
