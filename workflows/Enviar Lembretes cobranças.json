@@ -1,0 +1,2158 @@
+{
+  "active": true,
+  "connections": {
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "⏱️ Aguardando (PENDING)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "⏱️ Aguardando (PENDING)": {
+      "main": [
+        [
+          {
+            "node": "Lembrete (-5d)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lembrete (-1d)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lembrete (no dia)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Item Lists1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "1 por vez",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar informações do cliente": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1 por vez": {
+      "main": [
+        [
+          {
+            "node": "buscar informações do cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência": {
+      "main": [
+        [
+          {
+            "node": "salvando link",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvando link": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo cobranca vencida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo cobranca vencida": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "1 por vez",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "❌ Atrasado (OVERDUE)": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lembrete (-1d)": {
+      "main": [
+        [
+          {
+            "node": "data D-1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lembrete (no dia)": {
+      "main": [
+        [
+          {
+            "node": "data-hoje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data-hoje": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvando link1": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo LEMBRETE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar informações do cliente1": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência1": {
+      "main": [
+        [
+          {
+            "node": "salvando link1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1 por vez1": {
+      "main": [
+        [
+          {
+            "node": "buscar informações do cliente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "1 por vez1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists2": {
+      "main": [
+        [
+          {
+            "node": "adesao?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "adesao?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "1 por vez1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo LEMBRETE": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "definindo telefone2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "definindo telefone3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone2": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone3": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "definindo telefone",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "definindo telefone4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone4": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone2": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Item Lists3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists3": {
+      "main": [
+        [
+          {
+            "node": "adesao?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvando link2": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo LEMBRETE1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar informações do cliente2": {
+      "main": [
+        [
+          {
+            "node": "IF2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência2": {
+      "main": [
+        [
+          {
+            "node": "salvando link2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1 por vez2": {
+      "main": [
+        [
+          {
+            "node": "buscar informações do cliente2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "1 por vez2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "adesao?1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "1 por vez2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo LEMBRETE1": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone3": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF2": {
+      "main": [
+        [
+          {
+            "node": "definindo telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "definindo telefone5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone1": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone5": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data D-1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Item Lists4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists4": {
+      "main": [
+        [
+          {
+            "node": "adesao?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvando link3": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo LEMBRETE2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar informações do cliente3": {
+      "main": [
+        [
+          {
+            "node": "IF3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência3": {
+      "main": [
+        [
+          {
+            "node": "salvando link3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1 por vez3": {
+      "main": [
+        [
+          {
+            "node": "buscar informações do cliente3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "1 por vez3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "adesao?2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "1 por vez3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo LEMBRETE2": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone4": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF3": {
+      "main": [
+        [
+          {
+            "node": "definindo telefone6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "definindo telefone7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone6": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "definindo telefone7": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lembrete (-5d)": {
+      "main": [
+        [
+          {
+            "node": "data D-5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "data D-5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron1": {
+      "main": [
+        [
+          {
+            "node": "❌ Atrasado (OVERDUE)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-08-03T08:02:30.542Z",
+  "id": "ehJek80JUntIJmiG",
+  "name": "Enviar Lembretes cobranças",
+  "nodes": [
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": 9
+            }
+          ]
+        }
+      },
+      "id": "a990d297-3621-4929-9683-9b29b51872b4",
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        1080
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "84b2b6d0-319a-450c-9bf1-8353241bc9de",
+      "name": "Lembrete (-5d)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        700
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b788842a-432e-4990-9c48-4558a47fa7d7",
+      "name": "Lembrete (-1d)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        1080
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "dc16e2b1-74a8-4f1a-b041-88af5050da21",
+      "name": "Lembrete (no dia)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        1460
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a4ab0740-90da-439d-b625-c8ccf854cc06",
+      "name": "❌ Atrasado (OVERDUE)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        280
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "6791c539-90ec-4b5b-8d14-259a0a5dc75e",
+      "name": "⏱️ Aguardando (PENDING)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.asaas.com/api/v3/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "status",
+              "value": "OVERDUE"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8dc4b0a0-9de6-49bc-878f-ac55b044c64d",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -340,
+        200
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://www.asaas.com/api/v3/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "status",
+              "value": "OVERDUE"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "offset",
+              "value": "100"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "53683bb2-5877-4438-8e4c-b82ac5285a9a",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -340,
+        360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "81e03309-906c-4248-b369-167bf20adb09",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        140,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "e0862b88-019c-45c3-921a-bc479165e685",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 2.2,
+      "position": [
+        -120,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "ec3c06fa-f35a-47a0-b666-b207876ee733",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 2.2,
+      "position": [
+        -120,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('1 por vez').item.json.invoiceUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ac25a908-3409-4692-a830-1019da7c485f",
+      "name": "salvando link",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1780,
+        300
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://www.asaas.com/api/v3/customers/{{ $json[\"customer\"] }}",
+        "options": {}
+      },
+      "name": "buscar informações do cliente",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        580,
+        300
+      ],
+      "id": "b4d36dae-0e31-4c93-95f3-c46012e09b95",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll(',','').replaceAll('.','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1320,
+        300
+      ],
+      "typeVersion": 1,
+      "id": "d5850dee-3bfa-4e6e-a049-6e8be2afa9ef"
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
+        "options": {}
+      },
+      "name": "Cadastrando na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        300
+      ],
+      "id": "de50cba0-8d1a-4e2c-9211-6a6e0c87001e",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "21abd132-9362-4cde-98ba-43d3d8fadf50",
+      "name": "1 por vez",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        360,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência').item.json[\"id\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "541298"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "358337b9-705f-42ab-b855-944ebedf1f01",
+      "name": "enviar fluxo cobranca vencida",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2020,
+        300
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "id": "20c9fcd9-e923-4ea8-b239-9a87505c48ba",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        300
+      ],
+      "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
+    },
+    {
+      "parameters": {
+        "url": "https://www.asaas.com/api/v3/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "status",
+              "value": "PENDING"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "dueDate[ge]",
+              "value": "={{ $json['data-busca'] }}"
+            },
+            {
+              "name": "dueDate[le]",
+              "value": "={{ $json['data-busca'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c6537f87-3de4-4861-bc4b-6eeea0021a0b",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        140,
+        1460
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{$now}}",
+        "dataPropertyName": "data-busca",
+        "toFormat": "YYYY-MM-DD",
+        "options": {}
+      },
+      "id": "bbb121fc-5c3f-472f-b79a-517e667d4a6e",
+      "name": "data-hoje",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "76291707-28c9-4301-a173-65d2b195f70b",
+      "name": "Item Lists2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 2.2,
+      "position": [
+        360,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('1 por vez1').item.json.invoiceUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3ec1744e-6b74-4e10-ad75-0b8d65a0a73d",
+      "name": "salvando link1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2240,
+        1460
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://www.asaas.com/api/v3/customers/{{ $json[\"customer\"] }}",
+        "options": {}
+      },
+      "name": "buscar informações do cliente1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        1460
+      ],
+      "id": "6e14d750-c3b8-4bf0-9aea-d3622ba7281b",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
+        "options": {}
+      },
+      "name": "Cadastrando na Audiência1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        1460
+      ],
+      "id": "8fa07f6e-80a9-43a4-89a0-6fa84f561ec5",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "3f52d241-a27c-420e-94d8-9e430093cf30",
+      "name": "1 por vez1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        820,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "id": "cef61eb2-4177-415e-a991-c8f958e744cb",
+      "name": "Wait1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2700,
+        1460
+      ],
+      "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.description }}",
+              "operation": "contains",
+              "value2": "ADESAO"
+            }
+          ]
+        }
+      },
+      "id": "bcbb04ed-e5c0-4280-9094-103b3d01f45c",
+      "name": "adesao?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência1').item.json[\"id\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "541294"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "422c4f48-65c2-4bd2-b5a9-37fe74a961fd",
+      "name": "enviar fluxo LEMBRETE",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2480,
+        1460
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.mobilePhone }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "9e96e236-fd28-452b-9927-7742e4fdce89",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        760,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"mobilePhone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "430071e4-e3f0-4118-bade-a972f5d04239",
+      "name": "definindo telefone2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"phone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0638aec2-5381-42ea-a27e-52b2a9e88cd3",
+      "name": "definindo telefone3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll(',','').replaceAll('.','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1820,
+        1460
+      ],
+      "typeVersion": 1,
+      "id": "d8ca520c-1bf9-4734-8fc5-34bade5446cd"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.mobilePhone }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "ee4c312e-c1e0-408a-a8ae-8a1ce407ad80",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"mobilePhone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0d4ac4eb-347f-40d3-9cf1-521a278436bd",
+      "name": "definindo telefone",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"phone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e18afcb5-f6f8-4d2a-a7b4-def6888f9709",
+      "name": "definindo telefone4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.asaas.com/api/v3/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "status",
+              "value": "PENDING"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "dueDate[ge]",
+              "value": "={{ $json['data-busca'].slice(0,10) }}"
+            },
+            {
+              "name": "dueDate[le]",
+              "value": "={{ $json['data-busca'].slice(0,10) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "95708dce-20f8-469a-8ecf-6c7d2a375217",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        140,
+        1080
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "b0127f19-b646-4e7c-8bae-dbfd2fb71665",
+      "name": "Item Lists3",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 2.2,
+      "position": [
+        360,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('1 por vez2').item.json.invoiceUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7b890b79-a37e-45e9-aec1-4fdc03edfe8c",
+      "name": "salvando link2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2240,
+        1080
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://www.asaas.com/api/v3/customers/{{ $json[\"customer\"] }}",
+        "options": {}
+      },
+      "name": "buscar informações do cliente2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        1080
+      ],
+      "id": "6b8bfa71-a096-4d4d-be68-9d2883b2d34f",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
+        "options": {}
+      },
+      "name": "Cadastrando na Audiência2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        1080
+      ],
+      "id": "ef41f24c-d21a-4016-be92-18c8fa3f21df",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "c88739da-5e01-4041-8db1-8c8f779ede3d",
+      "name": "1 por vez2",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        820,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "id": "d11df1d7-8251-46d7-9653-bee2ea1d6d6c",
+      "name": "Wait2",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2700,
+        1080
+      ],
+      "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.description }}",
+              "operation": "contains",
+              "value2": "ADESAO"
+            }
+          ]
+        }
+      },
+      "id": "f865719b-b9b0-49af-ac6a-d962d8de2423",
+      "name": "adesao?1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência2').item.json[\"id\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "541293"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ea2a13ba-44d3-45ac-aa7d-f8fb469e3d73",
+      "name": "enviar fluxo LEMBRETE1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2480,
+        1080
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll(',','').replaceAll('.','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1820,
+        1080
+      ],
+      "typeVersion": 1,
+      "id": "4c8a4467-82ab-4365-846c-5247360779c2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.mobilePhone }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "51df9b9d-0a4a-4171-b4bc-45299b2a2ff1",
+      "name": "IF2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"mobilePhone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "68fe43ba-1867-45c9-81da-bbee47a81ef0",
+      "name": "definindo telefone1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"phone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df83841f-3391-44fa-a83c-39b770635b60",
+      "name": "definindo telefone5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$now}}",
+        "duration": 1,
+        "dataPropertyName": "data-busca",
+        "options": {}
+      },
+      "id": "3ae3ffca-9d94-4fc9-806e-fa8360de3c91",
+      "name": "data D-1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.asaas.com/api/v3/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "status",
+              "value": "PENDING"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "dueDate[ge]",
+              "value": "={{ $json['data-busca'].slice(0,10) }}"
+            },
+            {
+              "name": "dueDate[le]",
+              "value": "={{ $json['data-busca'].slice(0,10) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "325a952a-cfdf-4897-98bd-1085a2574610",
+      "name": "HTTP Request4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        140,
+        700
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "005c417a-db78-4bb3-8e81-f87c91ff6fc2",
+      "name": "Item Lists4",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 2.2,
+      "position": [
+        360,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('1 por vez3').item.json.invoiceUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "acf2bcdf-43c3-4c0b-a46a-e73006eddd9f",
+      "name": "salvando link3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2240,
+        700
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://www.asaas.com/api/v3/customers/{{ $json[\"customer\"] }}",
+        "options": {}
+      },
+      "name": "buscar informações do cliente3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        700
+      ],
+      "id": "3dda3e1f-d620-4509-a6c8-606ee045a0bc",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
+        "options": {}
+      },
+      "name": "Cadastrando na Audiência3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        700
+      ],
+      "id": "05697c01-6913-47cf-8fc7-cf6b08bf5074",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "c34fe7e0-a194-46ab-9b57-24ebad7c0cb0",
+      "name": "1 por vez3",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        820,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "id": "4143ccd4-fe7f-4ec3-a266-945e800e84c6",
+      "name": "Wait3",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2700,
+        700
+      ],
+      "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.description }}",
+              "operation": "contains",
+              "value2": "ADESAO"
+            }
+          ]
+        }
+      },
+      "id": "84a544fb-f705-474a-bf26-e084a1a2ed2e",
+      "name": "adesao?2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência3').item.json[\"id\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "541292"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cf592a3e-3b0b-4e44-a753-aae1992c428c",
+      "name": "enviar fluxo LEMBRETE2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2480,
+        700
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll(',','').replaceAll('.','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1820,
+        700
+      ],
+      "typeVersion": 1,
+      "id": "ae7771c1-2f96-4a7d-a68d-0bf0678c2816"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.mobilePhone }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "2a10a536-4ecc-4d7f-ac20-c70d168b6427",
+      "name": "IF3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"mobilePhone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e3b1bed7-ad77-49d0-a936-5fa4e8df6054",
+      "name": "definindo telefone6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{$json[\"phone\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5d2ce385-6857-47f0-9379-4bbf92eb6d34",
+      "name": "definindo telefone7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$now}}",
+        "duration": 5,
+        "dataPropertyName": "data-busca",
+        "options": {}
+      },
+      "id": "2f05f82b-2e77-42dc-b169-4be745fcac0a",
+      "name": "data D-5",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": 8
+            }
+          ]
+        }
+      },
+      "id": "a935ab4b-c2fa-4e54-bf46-53ba4a17bc75",
+      "name": "Cron1",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -1020,
+        280
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "id": "WVFbq3skbZP8DMK0",
+      "createdAt": "2023-08-11T02:32:29.267Z",
+      "updatedAt": "2023-08-11T02:32:29.267Z",
+      "name": "Maya"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2023-08-11T02:34:38.000Z",
+  "versionId": "5277bf92-b3af-4c18-97f4-e7d60d8e6b05"
+}
