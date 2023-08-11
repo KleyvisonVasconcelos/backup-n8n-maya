@@ -1,0 +1,197 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-08-08T18:40:04.849Z",
+  "id": "ydEQsAkm9PQ0clty",
+  "name": "Medi - Pais",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "medi-pais",
+        "options": {}
+      },
+      "id": "41776be0-487e-4794-8a31-898e995e8b3d",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        680,
+        400
+      ],
+      "webhookId": "e23ca435-9bf5-44c5-9f93-d528130db37c"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "PESQUISA PAIS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "DATA": "={{ $json.body.DATA }}",
+            "NOME": "={{ $json.body.NOME }}",
+            "REMEDIO": "={{ $json.body.REMEDIO }}",
+            "PATOLOGIA": "={{ $json.body.PATOLOGIA }}",
+            "OBESIDADE": "={{ $json.body.OBESIDADE }}",
+            "GESTANTE": "={{ $json.body.GESTANTE }}",
+            "DIABETES": "={{ $json.body.DIABETES }}",
+            "PRESSÃO": "={{ $json.body.PRESSAO }}"
+          },
+          "matchingColumns": [
+            "TELEFONE"
+          ],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "REMEDIO",
+              "displayName": "REMEDIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PATOLOGIA",
+              "displayName": "PATOLOGIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OBSERVAÇÃO",
+              "displayName": "OBSERVAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OBESIDADE",
+              "displayName": "OBESIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "GESTANTE",
+              "displayName": "GESTANTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIABETES",
+              "displayName": "DIABETES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PRESSÃO",
+              "displayName": "PRESSÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "754ede2b-3d15-4cd3-befb-05aac68628c6",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        900,
+        400
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "id": "hclMiW9LVIyi2C4n",
+      "createdAt": "2023-08-11T02:32:22.208Z",
+      "updatedAt": "2023-08-11T02:32:22.208Z",
+      "name": "Medi"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-08-11T02:33:22.000Z",
+  "versionId": "52b8aa4e-4ea0-4de6-85e5-64ca8fdff3ec"
+}
