@@ -1,11 +1,146 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Webhook": {
       "main": [
         [
           {
             "node": "criando cliente no asaas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criando cliente no asaas": {
+      "main": [
+        [
+          {
+            "node": "formatando data hoje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formatando data hoje": {
+      "main": [
+        [
+          {
+            "node": "Tipo de Plano",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tipo de Plano": {
+      "main": [
+        [
+          {
+            "node": "Mensal",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Semestral",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Anual",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mensal": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Mensal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Semestral": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Semestral",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anual": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Anual",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Plano Mensal": {
+      "main": [
+        [
+          {
+            "node": "buscando link no asaas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscando link no asaas": {
+      "main": [
+        [
+          {
+            "node": "salvando link",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvando link": {
+      "main": [
+        [
+          {
+            "node": "enviando fluxo com link",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Plano Semestral": {
+      "main": [
+        [
+          {
+            "node": "buscando link no asaas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Plano Anual": {
+      "main": [
+        [
+          {
+            "node": "buscando link no asaas",
             "type": "main",
             "index": 0
           }
@@ -75,13 +210,337 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -80,
+        -60,
         380
       ],
       "credentials": {
         "httpHeaderAuth": {
           "id": "Ki7uXQCaX0ZIPpIH",
           "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{$now}}",
+        "format": "yyyy-MM-dd",
+        "outputFieldName": "data-hoje",
+        "options": {}
+      },
+      "id": "a5133390-d591-45a4-a48f-849a95f1bd39",
+      "name": "formatando data hoje",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        160,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Webhook').item.json.body.Plano }}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "Mensal"
+            },
+            {
+              "operation": "contains",
+              "value2": "Semestral",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "Anual",
+              "output": 2
+            }
+          ]
+        }
+      },
+      "id": "12f2b4e4-65bd-45ca-a253-dc2eca368b41",
+      "name": "Tipo de Plano",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        380,
+        380
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "4dadcc95-78a8-40ae-af28-300ba1c31143",
+      "name": "Mensal",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        660,
+        200
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ca86d56a-ea90-4e52-9246-26f0de1a3393",
+      "name": "Semestral",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "686b0581-974e-44e6-8a31-c7b17cd37040",
+      "name": "Anual",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        660,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "MONTHLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "021a9481-a8b1-4539-ae38-e72555e82bd4",
+      "name": "Gerar Plano Mensal",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        900,
+        200
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "SEMIANNUALLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dbb92a04-304a-4130-a8dc-04acc6756d40",
+      "name": "Gerar Plano Semestral",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        900,
+        360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "YEARLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "17fec9ef-6903-4138-a52c-69f4440af212",
+      "name": "Gerar Plano Anual",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        900,
+        520
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://www.asaas.com/api/v3/subscriptions/{{ $json[\"id\"] }}/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "4356662b-354e-4d78-82b2-9b92dc651ed5",
+      "name": "buscando link no asaas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1280,
+        360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Ki7uXQCaX0ZIPpIH",
+          "name": "Asaas - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Webhook').item.json[\"body\"][\"ID-BC\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $json.data[0].invoiceUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4e33ef31-cfe3-4370-ba50-e87d2043badc",
+      "name": "salvando link",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1520,
+        360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Webhook').item.json[\"body\"][\"ID-BC\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "580064"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c8c606f6-2893-426f-bc24-a131ee21837a",
+      "name": "enviando fluxo com link",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1740,
+        360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "l1F04yrg6P1fiSSY",
+          "name": "BC - Maya"
         }
       }
     }
@@ -110,7 +569,7 @@
           "body": {
             "CPF": "05320628501",
             "Nome": "Kleyvison Teste",
-            "ID-BC": "11111111",
+            "ID-BC": "119169103",
             "Plano": "Assinatura Maya - Plano Mensal",
             "E-mail": "teste@teste.com",
             "ID Asaas": "{IdClienteAsaas}",
@@ -122,11 +581,20 @@
     ]
   },
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
   },
   "staticData": null,
-  "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-08-03T04:56:01.000Z",
-  "versionId": "d7af9052-5b31-458c-b67f-109acefde31f"
+  "tags": [
+    {
+      "id": "hclMiW9LVIyi2C4n",
+      "createdAt": "2023-08-11T02:32:22.208Z",
+      "updatedAt": "2023-08-11T02:32:22.208Z",
+      "name": "Medi"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2023-08-11T02:33:58.000Z",
+  "versionId": "d6c8d03a-bfb5-4242-a7bc-c6d8bff1e482"
 }
