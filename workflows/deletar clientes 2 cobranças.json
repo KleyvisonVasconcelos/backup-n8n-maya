@@ -622,8 +622,15 @@
       "recurrencyRules": []
     }
   },
-  "tags": [],
+  "tags": [
+    {
+      "id": "WVFbq3skbZP8DMK0",
+      "createdAt": "2023-08-11T02:32:29.267Z",
+      "updatedAt": "2023-08-11T02:32:29.267Z",
+      "name": "Maya"
+    }
+  ],
   "triggerCount": 1,
-  "updatedAt": "2023-08-03T01:55:37.000Z",
-  "versionId": "2c72f87e-6263-4d43-a6a6-5eef39cdea6d"
+  "updatedAt": "2023-08-11T02:34:48.000Z",
+  "versionId": "f9563706-71e7-4c95-9484-13e8de67fc3d"
 }
