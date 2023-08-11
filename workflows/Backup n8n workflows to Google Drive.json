@@ -1,0 +1,244 @@
+{
+  "active": true,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Get Workflow List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Move Binary Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Move Binary Data": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Workflow List": {
+      "main": [
+        [
+          {
+            "node": "Map",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Daily at 2:30am": {
+      "main": [
+        [
+          {
+            "node": "Get Workflow List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Workflow": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-08-09T07:32:39.779Z",
+  "id": "Jpd6g9qjAEL3EZkK",
+  "name": "Backup n8n workflows to Google Drive",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        80,
+        220
+      ],
+      "typeVersion": 1,
+      "id": "3841a322-5611-4a5e-9191-374a7570b815"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        840,
+        340
+      ],
+      "typeVersion": 1,
+      "id": "da3a182e-6b88-4cb9-bb77-071f99b1b233"
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "options": {
+          "useRawData": false
+        }
+      },
+      "name": "Move Binary Data",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "position": [
+        1080,
+        340
+      ],
+      "typeVersion": 1,
+      "id": "2addb20f-98e1-42f3-b86e-31f20bb9adbf"
+    },
+    {
+      "parameters": {
+        "functionCode": "return items[0].json.data.map(item => {\n  return {json: item}\n});"
+      },
+      "name": "Map",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        580,
+        340
+      ],
+      "typeVersion": 1,
+      "id": "9547569b-0fc3-4c41-8fea-0fa177da3435"
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "https://n8n.mayarj.com/api/v1/workflows",
+        "options": {}
+      },
+      "name": "Get Workflow List",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        400,
+        340
+      ],
+      "typeVersion": 1,
+      "id": "fe11cadc-9b94-4804-995d-752cdacdbcfe",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "NA767YwBECvYzeD2",
+          "name": "header n8n maya"
+        }
+      },
+      "notes": "Don't forget to add your credentials for your n8n instance in this Node. Use Basic Auth for this. "
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "binaryData": true,
+        "name": "={{$node[\"Merge\"].data[\"name\"]}}.json",
+        "resolveData": true,
+        "parents": [
+          "12FZptjsQV9DY30GuR68V_KEOOaT8IWkY"
+        ],
+        "options": {}
+      },
+      "name": "Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [
+        1340,
+        340
+      ],
+      "typeVersion": 1,
+      "id": "3285525a-c6f8-4e4e-badc-40765e1d10c9",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "QTjtTakqsU0qz78l",
+          "name": "Google Drive account - maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 47
+            }
+          ]
+        }
+      },
+      "name": "Run Daily at 2:30am",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        60,
+        480
+      ],
+      "typeVersion": 1,
+      "id": "afb33a16-4ffa-4a38-bbcf-b373539c4034"
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "=https://n8n.mayarj.com/api/v1/workflows/{{ $json.id }}",
+        "options": {}
+      },
+      "name": "Get Workflow",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        700,
+        500
+      ],
+      "typeVersion": 1,
+      "id": "f05e61bf-c091-42ab-a160-dd2cce72cfc5",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "NA767YwBECvYzeD2",
+          "name": "header n8n maya"
+        }
+      },
+      "notes": "Don't forget to add your credentials for your n8n instance in this Node. Use Basic Auth for this. "
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-08-09T07:41:01.000Z",
+  "versionId": "7b75353a-337d-45b4-8a8b-a62bad80b4f6"
+}
