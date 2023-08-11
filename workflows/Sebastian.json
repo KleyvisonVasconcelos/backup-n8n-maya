@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Webhook": {
       "main": [
@@ -120,7 +120,7 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "verificar-planilha-vini",
+        "path": "verificar-planilha-sebastian",
         "responseMode": "lastNode",
         "options": {}
       },
@@ -138,17 +138,15 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc",
-          "mode": "list",
-          "cachedResultName": "BOT-VINI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit?usp=drivesdk"
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
         },
         "sheetName": {
           "__rl": true,
-          "value": 1292052403,
-          "mode": "list",
-          "cachedResultName": "n8n",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit#gid=1292052403"
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
         },
         "filtersUI": {
           "values": [
@@ -197,10 +195,10 @@
         },
         "sheetName": {
           "__rl": true,
-          "value": 1292052403,
+          "value": 482129188,
           "mode": "list",
           "cachedResultName": "n8n",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit#gid=1292052403"
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188"
         },
         "options": {
           "columnsToWatch": [
@@ -242,17 +240,15 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc",
-          "mode": "list",
-          "cachedResultName": "BOT-VINI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit?usp=drivesdk"
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
         },
         "sheetName": {
           "__rl": true,
-          "value": 1292052403,
-          "mode": "list",
-          "cachedResultName": "n8n",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit#gid=1292052403"
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
         },
         "columns": {
           "mappingMode": "defineBelow",
@@ -355,8 +351,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "KzWFGF5pz8MUJsVQ",
-          "name": "BC - Vini"
+          "id": "QSCgaYJUmrM1m0in",
+          "name": "BC- SEBASTIAN"
         }
       }
     },
@@ -409,7 +405,7 @@
           "parameter": [
             {
               "name": "flow",
-              "value": "=212819"
+              "value": "=206746"
             }
           ]
         }
@@ -427,8 +423,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "KzWFGF5pz8MUJsVQ",
-          "name": "BC - Vini"
+          "id": "QSCgaYJUmrM1m0in",
+          "name": "BC- SEBASTIAN"
         }
       }
     },
@@ -471,17 +467,15 @@
         "operation": "delete",
         "documentId": {
           "__rl": true,
-          "value": "1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc",
-          "mode": "list",
-          "cachedResultName": "BOT-VINI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit?usp=drivesdk"
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
         },
         "sheetName": {
           "__rl": true,
-          "value": 1292052403,
-          "mode": "list",
-          "cachedResultName": "n8n",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit#gid=1292052403"
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
         },
         "startIndex": "={{ $json.row_number }}"
       },
@@ -507,14 +501,14 @@
   },
   "staticData": {
     "node:Google Sheets Trigger": {
-      "documentId": "1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc",
-      "sheetId": 1292052403,
-      "lastRevision": 5176,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc&revision=5176&exportFormat=xlsx"
+      "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+      "sheetId": 482129188,
+      "lastRevision": 64885,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=64885&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-08-11T04:58:09.000Z",
-  "versionId": "47153d51-9d03-4d15-8ab1-1f2343149d90"
+  "updatedAt": "2023-08-11T05:19:52.000Z",
+  "versionId": "aaa363c8-40ad-4ec8-a6fc-20f885d027d3"
 }
