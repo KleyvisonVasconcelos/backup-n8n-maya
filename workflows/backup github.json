@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "dataArray1": {
       "main": [
@@ -487,7 +487,10 @@
       "parameters": {
         "rule": {
           "interval": [
-            {}
+            {
+              "field": "hours",
+              "triggerAtMinute": 7
+            }
           ]
         }
       },
@@ -505,9 +508,13 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-08-11T02:55:15.000Z",
-  "versionId": "c05e9720-7ba3-43bc-8d21-79ab63fea835"
+  "triggerCount": 1,
+  "updatedAt": "2023-08-11T02:56:29.000Z",
+  "versionId": "07710c9a-ad11-4d47-a807-3349c660b47e"
 }
