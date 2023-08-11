@@ -281,7 +281,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "position": [
         860,
-        910
+        900
       ],
       "typeVersion": 1,
       "id": "21e5f4e0-082a-4d32-90be-b38864541d93",
@@ -369,7 +369,7 @@
           "value": "={{$node[\"Globals1\"].json[\"repo\"][\"name\"]}}",
           "mode": "name"
         },
-        "filePath": "={{$node[\"Globals1\"].json[\"repo\"][\"path\"]}}{{$node[\"N8N Workflow Detail1\"].json[\"name\"]}}.json\n",
+        "filePath": "={{$node[\"Globals1\"].json[\"repo\"][\"path\"]}}{{$node[\"N8N Workflow Detail1\"].json[\"name\"]}}.json",
         "fileContent": "={{$node[\"isDiffOrNew1\"].json[\"n8n_data_stringy\"]}}",
         "commitMessage": "=[N8N Backup] {{$node[\"N8N Workflow Detail1\"].json[\"name\"]}}.json ({{$json[\"github_status\"]}})"
       },
@@ -508,6 +508,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-08-11T02:52:45.000Z",
-  "versionId": "e8a9c09d-aef4-413f-8c42-994bc55ac1c9"
+  "updatedAt": "2023-08-11T02:55:15.000Z",
+  "versionId": "c05e9720-7ba3-43bc-8d21-79ab63fea835"
 }
