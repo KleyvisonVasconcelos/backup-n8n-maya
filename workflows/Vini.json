@@ -5,7 +5,7 @@
       "main": [
         [
           {
-            "node": "Split In Batches",
+            "node": "telefone vazio",
             "type": "main",
             "index": 0
           }
@@ -60,6 +60,57 @@
           }
         ]
       ]
+    },
+    "Cadastrando na Audiência": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone vazio": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-08-11T03:48:10.603Z",
@@ -100,16 +151,15 @@
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        540,
-        400
+        200,
+        380
       ],
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
           "id": "Yj3AURJQIm8UWS12",
           "name": "Google Sheets Trigger account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -184,7 +234,13 @@
             }
           ]
         },
-        "options": {}
+        "options": {
+          "locationDefine": {
+            "values": {
+              "firstDataRow": "={{ $('Split In Batches').item.json.row_number }}"
+            }
+          }
+        }
       },
       "id": "9feb2168-aa37-4ed0-b9a7-86e93edae48c",
       "name": "Google Sheets",
@@ -283,47 +339,6 @@
     },
     {
       "parameters": {
-        "authentication": "headerAuth",
-        "requestMethod": "POST",
-        "url": "https://conectawebhook.com.br/api/v1/webhook/subscriber/",
-        "options": {},
-        "bodyParametersUi": {
-          "parameter": [
-            {
-              "name": "phone",
-              "value": "={{ $json.whatsapp }}"
-            },
-            {
-              "name": "first_name",
-              "value": "={{ $json.Nome }}"
-            },
-            {
-              "name": "last_name",
-              "value": "={{ $json.Sobrenome }}"
-            }
-          ]
-        }
-      },
-      "name": "Cadastrando na Audiência1",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 1,
-      "position": [
-        1760,
-        500
-      ],
-      "id": "ce859a4c-048d-4b36-9e1e-3a000ae61b6c",
-      "retryOnFail": true,
-      "maxTries": 5,
-      "waitBetweenTries": 5000,
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "KzWFGF5pz8MUJsVQ",
-          "name": "BC - Vini"
-        }
-      }
-    },
-    {
-      "parameters": {
         "httpMethod": "POST",
         "path": "verificar-planilha-vini",
         "responseMode": "lastNode",
@@ -383,15 +398,143 @@
           "name": "Maya"
         }
       }
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "=https://conectawebhook.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/send_flow/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "=212819"
+            }
+          ]
+        }
+      },
+      "name": "enviar fluxo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        500
+      ],
+      "id": "ce859a4c-048d-4b36-9e1e-3a000ae61b6c",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "KzWFGF5pz8MUJsVQ",
+          "name": "BC - Vini"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "60d5998d-b261-4acd-931b-2eb8af60f5be",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1960,
+        500
+      ],
+      "webhookId": "763706e1-86cf-4a99-a046-0a4e24a49f49"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.TELEFONE }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7af304f8-fb95-4425-b863-dd26a292bfa3",
+      "name": "telefone vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        480,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc",
+          "mode": "list",
+          "cachedResultName": "BOT-VINI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1292052403,
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc/edit#gid=1292052403"
+        },
+        "startIndex": "={{ $json.row_number }}"
+      },
+      "id": "51f35401-9bf7-497d-b477-cf27fce31f05",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        760,
+        220
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "lwN1WWTkm0Pq97WC",
+          "name": "Maya"
+        }
+      }
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Nome e telefone para validar": [
+      {
+        "json": {
+          "telefone": "5571981719761",
+          "nomeCompleto": "kleyvison vasconcelos"
+        }
+      }
+    ],
+    "Google Sheets Trigger": [
+      {
+        "json": {
+          "row_number": 109,
+          "change_type": "updated",
+          "TELEFONE FORMATADO": "+557181719761",
+          "TELEFONE": "",
+          "NOME": ""
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Google Sheets Trigger": {
+      "documentId": "1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc",
+      "sheetId": 1292052403,
+      "lastRevision": 5184,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1oA43WpaWi8FF_PbnyPbpVN8b-bEFGCyAMr9BEBWVIAc&revision=5184&exportFormat=xlsx"
+    }
+  },
   "tags": [],
-  "triggerCount": 1,
-  "updatedAt": "2023-08-11T04:24:50.000Z",
-  "versionId": "ef11c885-4962-4d47-aac4-6b4c0847d764"
+  "triggerCount": 2,
+  "updatedAt": "2023-08-11T04:56:59.000Z",
+  "versionId": "3c22af9f-414c-478a-98f6-40972fec211c"
 }
