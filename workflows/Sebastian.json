@@ -503,12 +503,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 64896,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=64896&exportFormat=xlsx"
+      "lastRevision": 64901,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=64901&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-08-17T15:18:55.000Z",
+  "updatedAt": "2023-08-17T19:23:53.000Z",
   "versionId": "aaa363c8-40ad-4ec8-a6fc-20f885d027d3"
 }
