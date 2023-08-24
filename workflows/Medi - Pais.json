@@ -5,11 +5,16 @@
       "main": [
         [
           {
-            "node": "Google Sheets",
+            "node": "Google Sheets1",
             "type": "main",
             "index": 0
           }
         ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        []
       ]
     }
   },
@@ -28,14 +33,14 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
-        680,
-        400
+        660,
+        600
       ],
       "webhookId": "e23ca435-9bf5-44c5-9f93-d528130db37c"
     },
     {
       "parameters": {
-        "operation": "appendOrUpdate",
+        "operation": "append",
         "documentId": {
           "__rl": true,
           "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
@@ -74,7 +79,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "NOME",
@@ -176,9 +182,217 @@
           "name": "Medi"
         }
       }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "PESQUISA PAIS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{ $json.body.DATA }}",
+            "NOME": "={{ $json.body.NOME }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body.PSAUDE }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "REMEDIO": "={{ $json.body.REMEDIO }}",
+            "PATOLOGIA": "={{ $json.body.PATOLOGIA }}",
+            "OBESIDADE": "={{ $json.body.OBESIDADE }}",
+            "GESTANTE": "={{ $json.body.GESTANTE }}",
+            "DIABETES": "={{ $json.body.DIABETES }}",
+            "PRESSÃO": "={{ $json.body.PRESSAO }}"
+          },
+          "matchingColumns": [
+            "TELEFONE"
+          ],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "REMEDIO",
+              "displayName": "REMEDIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PATOLOGIA",
+              "displayName": "PATOLOGIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OBESIDADE",
+              "displayName": "OBESIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "GESTANTE",
+              "displayName": "GESTANTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIABETES",
+              "displayName": "DIABETES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PRESSÃO",
+              "displayName": "PRESSÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OBSERVAÇÃO",
+              "displayName": "OBSERVAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "83efad2b-91e7-42d9-8823-acbcee41df36",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        900,
+        600
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "294",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "6294d25102634890b17d36bb262ca14b-8994099676f992d2-0",
+            "x-forwarded-for": "54.94.115.142",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "96550bad8dd9",
+            "x-real-ip": "54.94.115.142"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "DATA": "{data}",
+            "NOME": "{nomepais}",
+            "PRESSAO": "{pressao-usuario}",
+            "REMEDIO": "{remediopais}",
+            "DIABETES": "{DIABETES}",
+            "GESTANTE": "{Gestante}",
+            "TELEFONE": "{TELEFONEPAIS}",
+            "OBESIDADE": "{GRAU_OBESIDADE}",
+            "PATOLOGIA": "{PATOLOGIA_PAIS}",
+            "EMPRESA": "{EMPRESA}",
+            "PSAUDE": "{PSAUDE}"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -192,6 +406,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2023-08-11T02:33:22.000Z",
-  "versionId": "52b8aa4e-4ea0-4de6-85e5-64ca8fdff3ec"
+  "updatedAt": "2023-08-24T00:46:12.000Z",
+  "versionId": "2e192fae-d4df-48ab-96d3-87446f92c626"
 }
