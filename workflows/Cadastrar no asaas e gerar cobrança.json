@@ -191,11 +191,11 @@
             },
             {
               "name": "phone",
-              "value": "={{ $json.body.Telefone }}"
+              "value": "={{ $json.body.Telefone.slice(3) }}"
             },
             {
               "name": "mobilePhone",
-              "value": "={{ $json.body.Telefone }}"
+              "value": "={{ $json.body.Telefone.slice(3) }}"
             },
             {
               "name": "externalReference",
@@ -588,13 +588,13 @@
   "staticData": null,
   "tags": [
     {
-      "id": "hclMiW9LVIyi2C4n",
-      "createdAt": "2023-08-11T02:32:22.208Z",
-      "updatedAt": "2023-08-11T02:32:22.208Z",
-      "name": "Medi"
+      "id": "WVFbq3skbZP8DMK0",
+      "createdAt": "2023-08-11T02:32:29.267Z",
+      "updatedAt": "2023-08-11T02:32:29.267Z",
+      "name": "Maya"
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2023-08-11T02:33:58.000Z",
-  "versionId": "d6c8d03a-bfb5-4242-a7bc-c6d8bff1e482"
+  "updatedAt": "2023-08-28T04:39:13.000Z",
+  "versionId": "6d697ce6-153a-4bed-919b-e11b353b5769"
 }
