@@ -38,7 +38,7 @@
       "main": [
         [
           {
-            "node": "Wait",
+            "node": "Google Sheets",
             "type": "main",
             "index": 0
           }
@@ -88,6 +88,50 @@
           }
         ]
       ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-08-08T14:05:33.466Z",
@@ -104,7 +148,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        1160,
+        1380,
         400
       ]
     },
@@ -118,7 +162,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2320,
+        2720,
         400
       ],
       "webhookId": "a34129e0-1898-4406-bfe9-4ea12bc3da5c"
@@ -144,7 +188,7 @@
       "name": "Nome e telefone para validar",
       "type": "n8n-nodes-base.set",
       "position": [
-        1420,
+        1640,
         400
       ],
       "typeVersion": 1
@@ -158,7 +202,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        1640,
+        1860,
         400
       ]
     },
@@ -184,7 +228,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2080,
+        2300,
         400
       ],
       "retryOnFail": true,
@@ -224,7 +268,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        1860,
+        2080,
         400
       ],
       "id": "8a09bf92-08b5-406d-9af3-58833407bcc6",
@@ -272,8 +316,8 @@
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        700,
-        400
+        580,
+        220
       ],
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
@@ -302,12 +346,237 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        920,
+        1140,
         400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
+          "mode": "list",
+          "cachedResultName": "Agendamentos - Medi",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 265903553,
+          "mode": "list",
+          "cachedResultName": "AGENDAMENTOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit#gid=265903553"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "fluxo sem sucesso enviado?": "✅",
+            "NOME": "={{ $('Split In Batches').item.json[\"NOME\"] }}"
+          },
+          "matchingColumns": [
+            "NOME"
+          ],
+          "schema": [
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "DATA E HORA (pra quando)",
+              "displayName": "DATA E HORA (pra quando)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA E HORA (quando)",
+              "displayName": "DATA E HORA (quando)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ATENDENTE",
+              "displayName": "ATENDENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "STATUS",
+              "displayName": "STATUS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CHAMADOS",
+              "displayName": "CHAMADOS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "fluxo sem sucesso enviado?",
+              "displayName": "fluxo sem sucesso enviado?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "firstDataRow": "={{ $('Google Sheets Trigger').item.json[\"row_number\"] }}"
+            }
+          }
+        }
+      },
+      "id": "f510ee02-b94e-4565-8aac-f9c9c70f6ebc",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        2500,
+        400
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
+          "mode": "list",
+          "cachedResultName": "Agendamentos - Medi",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 265903553,
+          "mode": "list",
+          "cachedResultName": "AGENDAMENTOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit#gid=265903553"
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "a9213193-af02-4af5-acaa-68f234da4706",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        540,
+        520
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "a2326c1f-72d4-41e1-9e7a-7255c48cac01",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        360,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['DATA E HORA (pra quando)'].toString() }}",
+              "operation": "startsWith",
+              "value2": "30-08-2023"
+            }
+          ]
+        }
+      },
+      "id": "4d71774f-b479-4593-8af6-d36de457d8cc",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        760,
+        520
       ]
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Google Sheets Trigger": [
+      {
+        "json": {
+          "row_number": 8858,
+          "NOME": "Bruna Cristina Barbosa da Cruz",
+          "DATA E HORA (pra quando)": "30-08-2023 18:20",
+          "DATA E HORA (quando)": "29-08-2023 12:32",
+          "ATENDENTE": "BIANCA MATHIAS",
+          "TELEFONE": "+5521967133571",
+          "EMPRESA": "ABPLUS",
+          "STATUS": "SEM SUCESSO",
+          "CHAMADOS": "1",
+          "fluxo sem sucesso enviado?": ""
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -315,8 +584,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
       "sheetId": 265903553,
-      "lastRevision": 71272,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=71272&exportFormat=xlsx"
+      "lastRevision": 71377,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=71377&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -328,6 +597,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2023-08-30T20:50:23.000Z",
-  "versionId": "7f87a802-2a70-490d-b10a-b0e722c21429"
+  "updatedAt": "2023-08-30T21:51:05.000Z",
+  "versionId": "f4cd2a5d-8d42-4d5c-8564-c628142226c0"
 }
