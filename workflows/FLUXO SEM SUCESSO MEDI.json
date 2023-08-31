@@ -99,39 +99,6 @@
           }
         ]
       ]
-    },
-    "When clicking \"Execute Workflow\"": {
-      "main": [
-        [
-          {
-            "node": "Google Sheets1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Google Sheets1": {
-      "main": [
-        [
-          {
-            "node": "Filter",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Filter": {
-      "main": [
-        [
-          {
-            "node": "IF",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
     }
   },
   "createdAt": "2023-08-08T14:05:33.466Z",
@@ -316,8 +283,8 @@
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        580,
-        220
+        900,
+        400
       ],
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
@@ -490,73 +457,6 @@
           "name": "Medi"
         }
       }
-    },
-    {
-      "parameters": {
-        "documentId": {
-          "__rl": true,
-          "value": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
-          "mode": "list",
-          "cachedResultName": "Agendamentos - Medi",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 265903553,
-          "mode": "list",
-          "cachedResultName": "AGENDAMENTOS",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI/edit#gid=265903553"
-        },
-        "options": {
-          "returnAllMatches": "returnAllMatches"
-        }
-      },
-      "id": "a9213193-af02-4af5-acaa-68f234da4706",
-      "name": "Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4,
-      "position": [
-        540,
-        520
-      ],
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
-        }
-      }
-    },
-    {
-      "parameters": {},
-      "id": "a2326c1f-72d4-41e1-9e7a-7255c48cac01",
-      "name": "When clicking \"Execute Workflow\"",
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1,
-      "position": [
-        360,
-        520
-      ]
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "string": [
-            {
-              "value1": "={{ $json['DATA E HORA (pra quando)'].toString() }}",
-              "operation": "startsWith",
-              "value2": "30-08-2023"
-            }
-          ]
-        }
-      },
-      "id": "4d71774f-b479-4593-8af6-d36de457d8cc",
-      "name": "Filter",
-      "type": "n8n-nodes-base.filter",
-      "typeVersion": 1,
-      "position": [
-        760,
-        520
-      ]
     }
   ],
   "pinData": {
@@ -584,8 +484,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
       "sheetId": 265903553,
-      "lastRevision": 71410,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=71410&exportFormat=xlsx"
+      "lastRevision": 71455,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=71455&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -597,6 +497,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2023-08-30T22:21:06.000Z",
-  "versionId": "f4cd2a5d-8d42-4d5c-8564-c628142226c0"
+  "updatedAt": "2023-08-31T03:05:33.000Z",
+  "versionId": "00877f1b-aa82-4711-b395-d248425213e9"
 }
