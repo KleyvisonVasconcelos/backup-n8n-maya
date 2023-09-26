@@ -1372,7 +1372,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"mobilePhone\"]}}"
+              "value": "={{$json[\"mobilePhone\"].toString()}}"
             }
           ]
         },
@@ -1393,7 +1393,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"phone\"]}}"
+              "value": "={{$json[\"phone\"].toString()}}"
             }
           ]
         },
@@ -1447,7 +1447,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"mobilePhone\"]}}"
+              "value": "={{$json[\"mobilePhone\"].toString()}}"
             }
           ]
         },
@@ -1468,7 +1468,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"phone\"]}}"
+              "value": "={{$json[\"phone\"].toString()}}"
             }
           ]
         },
@@ -1748,7 +1748,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"mobilePhone\"]}}"
+              "value": "={{$json[\"mobilePhone\"].toString()}}"
             }
           ]
         },
@@ -1769,7 +1769,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"phone\"]}}"
+              "value": "={{$json[\"phone\"].toString()}}"
             }
           ]
         },
@@ -2066,7 +2066,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"mobilePhone\"]}}"
+              "value": "={{$json[\"mobilePhone\"].toString()}}"
             }
           ]
         },
@@ -2087,7 +2087,7 @@
           "string": [
             {
               "name": "=telefone",
-              "value": "={{$json[\"phone\"]}}"
+              "value": "={{$json[\"phone\"].toString()}}"
             }
           ]
         },
@@ -2153,6 +2153,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2023-08-11T02:34:38.000Z",
-  "versionId": "5277bf92-b3af-4c18-97f4-e7d60d8e6b05"
+  "updatedAt": "2023-09-26T13:47:34.000Z",
+  "versionId": "1c107e0b-73e9-4cc9-9013-481524611248"
 }
