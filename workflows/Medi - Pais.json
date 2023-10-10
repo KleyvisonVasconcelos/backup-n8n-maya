@@ -11,6 +11,17 @@
           }
         ]
       ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-08-08T18:40:04.849Z",
@@ -402,6 +413,131 @@
           "name": "Medi"
         }
       }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "medi-pais2",
+        "options": {}
+      },
+      "id": "41dbd2a6-49e3-4eb8-a7f5-99a612072541",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        660,
+        800
+      ],
+      "webhookId": "fcf7f66c-809d-46f1-a920-c1bd9ebc22c3"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 79205736,
+          "mode": "list",
+          "cachedResultName": "ATIVOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=79205736"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "NOME": "={{ $json.body.NOME }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "ACOMPANHAMENTO ATUAL": "={{ $json.body.PERIODICIDADE }}",
+            "EXAMES": "={{ $json.body.EXAME }}",
+            "MEDICAÇÃO": "={{ $json.body.MEDICACAO }}",
+            "ESPECIALIDADE": "={{ $json.body.ESPECIALIDADE }}"
+          },
+          "matchingColumns": [
+            "TELEFONE"
+          ],
+          "schema": [
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "ACOMPANHAMENTO ATUAL",
+              "displayName": "ACOMPANHAMENTO ATUAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ESPECIALIDADE",
+              "displayName": "ESPECIALIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "EXAMES",
+              "displayName": "EXAMES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAÇÃO",
+              "displayName": "MEDICAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9cae3f45-114c-4d44-ad5f-440c89192606",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        900,
+        800
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
     }
   ],
   "pinData": {
@@ -450,6 +586,40 @@
           "item": 0
         }
       }
+    ],
+    "Webhook1": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "191",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "d0031567868749449e50cbd5569a016d-a9d9483be50b4b74-0",
+            "x-forwarded-for": "15.229.146.128",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "96550bad8dd9",
+            "x-real-ip": "15.229.146.128"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "NOME": "{nome-completo}",
+            "TELEFONE": "{telefone}",
+            "ACOMPANHAMENTO": "{FAZ_ACOMPANHAMENTO}",
+            "PERIODICIDADE": "{periodicidade_PAIS}",
+            "EXAME": "{Exame_Pais}",
+            "MEDICACAO": "{remediopais}"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
     ]
   },
   "settings": {
@@ -464,7 +634,7 @@
       "name": "Medi"
     }
   ],
-  "triggerCount": 1,
-  "updatedAt": "2023-10-10T16:04:20.000Z",
-  "versionId": "0721c1c0-4a8f-4677-9ec3-b77a8f406237"
+  "triggerCount": 2,
+  "updatedAt": "2023-10-10T16:12:41.000Z",
+  "versionId": "29d3f2bc-9785-4dd5-826c-6ce640ad092b"
 }
