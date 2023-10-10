@@ -1,0 +1,1241 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split In Batches": {
+      "main": [
+        [
+          {
+            "node": "Set Definir Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Definir Dados": {
+      "main": [
+        [
+          {
+            "node": "Validar Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dados Validados": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Cadastrar Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone": {
+      "main": [
+        [
+          {
+            "node": "Dados Validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Cadastrar Usuario": {
+      "main": [
+        [
+          {
+            "node": "IF Verificar se possui valor Campo 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui valor Campo 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui valor Campo 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait aguardar 2 segundos",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui valor Campo 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui valor Campo 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui valor Campo 1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar Campo 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui valor Campo 2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar Campo 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui valor Campo 3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar Campo 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui valor Campo 4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar Campo 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui valor Campo 5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar Campo 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait aguardar 2 segundos": {
+      "main": [
+        [
+          {
+            "node": "Wait 2 segundos",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui etiqueta 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui etiqueta 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui etiqueta 5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui etiqueta 1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF Verificar se possui etiqueta 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui etiqueta 1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui etiqueta 2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui etiqueta 3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui etiqueta 4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Verificar se possui etiqueta 5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 2 segundos": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split In Batches1": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-10-10T13:22:36.270Z",
+  "id": "O0VJkZlBn1VaaUgL",
+  "name": "SUBIR AUDIENCIA",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "dc9d5ed7-5187-4379-a9b5-8422c286d77e",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2560,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "options": {}
+      },
+      "id": "98b3afb5-ec7f-4e07-b2db-fe473658278c",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -2160,
+        1200
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "acb7999b-caed-4de8-888a-502812b1e25e",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        -1500,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Nome",
+              "value": "={{ $json[\"Nome\"] }}"
+            },
+            {
+              "name": "Sobrenome"
+            },
+            {
+              "name": "telefone",
+              "value": "=+{{ $json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Campo 1",
+              "value": "={{ $json[\"Campo 1\"] }}"
+            },
+            {
+              "name": "Campo 2",
+              "value": "={{ $json[\"Campo 2\"] }}"
+            },
+            {
+              "name": "Campo 3",
+              "value": "={{ $json[\"Campo 3\"] }}"
+            },
+            {
+              "name": "Campo 4",
+              "value": "={{ $json[\"Campo 4\"] }}"
+            },
+            {
+              "name": "Campo 5",
+              "value": "={{ $json[\"Campo 5\"] }}"
+            },
+            {
+              "name": "Etiqueta 1",
+              "value": "={{ $json[\"Etiqueta 1\"] }}"
+            },
+            {
+              "name": "Etiqueta 2",
+              "value": "={{ $json[\"Etiqueta 2\"] }}"
+            },
+            {
+              "name": "Etiqueta 3",
+              "value": "={{ $json[\"Etiqueta 3\"] }}"
+            },
+            {
+              "name": "Etiqueta 4",
+              "value": "={{ $json[\"Etiqueta 4\"] }}"
+            },
+            {
+              "name": "Etiqueta 5",
+              "value": "={{ $json[\"Etiqueta 5\"] }}"
+            }
+          ],
+          "number": [
+            {
+              "name": "ID Campo 1",
+              "value": 1272059
+            },
+            {
+              "name": "ID Campo 2"
+            },
+            {
+              "name": "ID Campo 3"
+            },
+            {
+              "name": "ID Campo 4"
+            },
+            {
+              "name": "ID Campo 5"
+            },
+            {
+              "name": "ID da Etiqueta 1"
+            },
+            {
+              "name": "ID da Etiqueta 2"
+            },
+            {
+              "name": "ID da Etiqueta 3"
+            },
+            {
+              "name": "ID da Etiqueta 4"
+            },
+            {
+              "name": "ID da Etiqueta 5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "626f5c58-cccc-4972-ac69-5ec2ebe85743",
+      "name": "Set Definir Dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1260,
+        1180
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "content": "Aqui é onde se define o ID dos campos personalizados e Etiquetas\n\nSe não houver campos ou etiquetas suficientes, deixar com valor ZERO (0)",
+        "height": 271.10534846884894,
+        "width": 328.9656098204857
+      },
+      "id": "127e71a4-7610-4949-8815-2c666a64d621",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1360,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "WhatsappValidado",
+              "value": "={{$json[\"whatsapp\"]}}"
+            },
+            {
+              "name": "endpoint",
+              "value": "https://backend.clickbot.com.br/api/v1/webhook/"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Dados Validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -760,
+        1180
+      ],
+      "id": "6291d0db-c72c-46aa-8128-d2e72d02c6ae"
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replace(' ','').replace('(','').replace(')','').replace(' ','').replace(' ','').replace('-','').replace(' ','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        -1000,
+        1180
+      ],
+      "typeVersion": 1,
+      "id": "6ad83873-152b-44c5-a1c2-945aa0bf3d97"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "={{ $json[\"WhatsappValidado\"] }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[0] }}\n"
+            },
+            {
+              "name": "=last_name",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[1] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[2] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[3] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[4] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[5] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[6] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[7] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[8] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[9] }} {{ $node[\"Set Definir Dados\"].json[\"Nome\"].split(' ')[10] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b94cc4e9-205c-4d5d-bf00-9c5838f0c525",
+      "name": "HTTP Request Cadastrar Usuario",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -520,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "e5bynmleyyZWGnuO",
+          "name": "API - REDE SOLAR"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/{{ $node[\"Set Definir Dados\"].json[\"ID Campo 1\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Campo 1\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e56e96ad-c465-433a-8381-b3b9fc3dbac5",
+      "name": "HTTP Request Atualizar Campo 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        1400
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "e5bynmleyyZWGnuO",
+          "name": "API - REDE SOLAR"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/{{ $node[\"Set Definir Dados\"].json[\"ID Campo 5\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Campo 5\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "29ecd754-6884-4f8c-9078-fc958ab2252b",
+      "name": "HTTP Request Atualizar Campo 5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        2220
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/{{ $node[\"Set Definir Dados\"].json[\"ID Campo 4\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Campo 4\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "77e12ab6-7f53-4ef1-941f-4abafd0ce75f",
+      "name": "HTTP Request Atualizar Campo 4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        2000
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/{{ $node[\"Set Definir Dados\"].json[\"ID Campo 3\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Campo 3\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cb65dc6e-bb37-4a03-b06f-92cf5424e826",
+      "name": "HTTP Request Atualizar Campo 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        1800
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/{{ $node[\"Set Definir Dados\"].json[\"ID Campo 2\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $node[\"Set Definir Dados\"].json[\"Campo 2\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f8dac22e-89b6-4537-ac77-b330d4a670ff",
+      "name": "HTTP Request Atualizar Campo 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        1600
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "15",
+          "name": "API Colegio Futuro"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Campo 1\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "55058470-f6ff-44ec-b2ab-150ae16fb382",
+      "name": "IF Verificar se possui valor Campo 1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        1420
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Campo 2\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "cce69e1c-8947-415f-b26d-9da71c338352",
+      "name": "IF Verificar se possui valor Campo 2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Campo 3\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "1c651ded-e1b5-45d7-b860-0842995b5286",
+      "name": "IF Verificar se possui valor Campo 3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        1820
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Campo 4\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "b8284662-b582-47cd-9399-e0a8c3431e62",
+      "name": "IF Verificar se possui valor Campo 4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        2020
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Campo 5\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "47533dc7-bda7-4b7a-9dd0-53795d1359ef",
+      "name": "IF Verificar se possui valor Campo 5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        2240
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 2,
+        "unit": "seconds"
+      },
+      "id": "70730497-6614-4560-ad8b-c45198bb9ecf",
+      "name": "Wait aguardar 2 segundos",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        1180
+      ],
+      "webhookId": "2e1772be-228d-40a7-8f65-a8074016de65",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Etiqueta 1\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "d0786adc-74b7-49c9-a4b0-8c8d6b846b21",
+      "name": "IF Verificar se possui etiqueta 1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        460,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Etiqueta 2\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7fa0c9ee-8d80-4f88-b954-c4f72b519356",
+      "name": "IF Verificar se possui etiqueta 2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Etiqueta 3\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "48db35ca-a085-4327-8186-6f2e39e4d6a8",
+      "name": "IF Verificar se possui etiqueta 3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        460,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Etiqueta 4\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "48c69ec5-3511-4aca-822d-a29a5eca95a0",
+      "name": "IF Verificar se possui etiqueta 4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        460,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Set Definir Dados\"].json[\"Etiqueta 5\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "6493dff9-6606-4002-8956-dc43defb48c6",
+      "name": "IF Verificar se possui etiqueta 5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/tags/{{ $node[\"Set Definir Dados\"].json[\"ID da Etiqueta 1\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "52c026ea-320e-4a14-ade7-989411b844b5",
+      "name": "HTTP Request Adicionar Etiqueta 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        760,
+        260
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "15",
+          "name": "API Colegio Futuro"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/tags/{{ $node[\"Set Definir Dados\"].json[\"ID da Etiqueta 2\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "5e2b893e-af61-46fa-9f25-ac8cab895e48",
+      "name": "HTTP Request Adicionar Etiqueta 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        760,
+        460
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/tags/{{ $node[\"Set Definir Dados\"].json[\"ID da Etiqueta 3\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "f6a78414-e0db-4868-8c24-b25a5bf24960",
+      "name": "HTTP Request Adicionar Etiqueta 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        760,
+        680
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/tags/{{ $node[\"Set Definir Dados\"].json[\"ID da Etiqueta 4\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "caf420f9-71c4-4396-97af-d58cafee2fc2",
+      "name": "HTTP Request Adicionar Etiqueta 4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        760,
+        900
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/tags/{{ $node[\"Set Definir Dados\"].json[\"ID da Etiqueta 5\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "f1f9bab3-4638-4b0b-a128-0bf677f8cf3c",
+      "name": "HTTP Request Adicionar Etiqueta 5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        760,
+        1120
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "b8c8b2a6-05e6-4dc0-ae64-0551b47f5deb",
+      "name": "Wait 2 segundos",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        2660
+      ],
+      "webhookId": "c852e30c-2ca2-4d86-8cb0-d09aa07006f6"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1l9iqaestYd0Rdkrk6a8EbKYKf7Fw0Y8YBLtyTd4HtYQ/edit#gid=0",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com\\/\\w+\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l9iqaestYd0Rdkrk6a8EbKYKf7Fw0Y8YBLtyTd4HtYQ/edit#gid=0"
+        },
+        "columnToMatchOn": "Telefone",
+        "valueToMatchOn": "={{ $node[\"Set Definir Dados\"].json[\"Telefone\"] }}",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "Cadastrado",
+              "fieldValue": "Ok"
+            }
+          ]
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "firstDataRow": "={{ $node[\"Split In Batches\"].json[\"row_number\"] }}"
+            }
+          }
+        }
+      },
+      "id": "618c7d0f-7a76-481f-8a64-8fd05a88b1dd",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -200,
+        960
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"Cadastrado\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "9e487fd1-c49e-4d83-a136-d027156ea874",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1940,
+        1200
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "id": "64888723-75eb-421c-9c35-dd31a2b6665e",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2580,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 80,
+        "options": {}
+      },
+      "id": "f83060ef-70db-4e98-9992-81d8a582a0d6",
+      "name": "Split In Batches1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        -1720,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/bot_fields/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "72d15105-0586-47a2-92e7-ef2c5e3ae304",
+      "name": "HTTP Request Cadastrar Usuario1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -1260,
+        480
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "2",
+          "name": "Clicbot-Gabriel"
+        }
+      },
+      "continueOnFail": true
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-10-10T13:29:48.000Z",
+  "versionId": "806e69cf-33da-4334-b816-362cf82bc2a1"
+}
