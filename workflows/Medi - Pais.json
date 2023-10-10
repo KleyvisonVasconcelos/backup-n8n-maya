@@ -11,11 +11,6 @@
           }
         ]
       ]
-    },
-    "Google Sheets": {
-      "main": [
-        []
-      ]
     }
   },
   "createdAt": "2023-08-08T18:40:04.849Z",
@@ -211,9 +206,14 @@
             "REMEDIO": "={{ $json.body.REMEDIO }}",
             "PATOLOGIA": "={{ $json.body.PATOLOGIA }}",
             "OBESIDADE": "={{ $json.body.OBESIDADE }}",
-            "GESTANTE": "={{ $json.body.GESTANTE }}",
             "DIABETES": "={{ $json.body.DIABETES }}",
-            "PRESSÃO": "={{ $json.body.PRESSAO }}"
+            "PRESSÃO": "={{ $json.body.PRESSAO }}",
+            "ACOMPANHAMENTO": "={{ $json.body.ACOMPANHAMENTO }}",
+            "SINTOMA": "={{ $json.body.SINTOMA }}",
+            "LGPD": "={{ $json.body.LGPD }}",
+            "HORA": "={{ $json.body[\"DATA E HORA\"] }}",
+            "CHECKUP": "={{ $json.body.CHECKUP }}",
+            "CRÔNICO": "={{ $json.body.CRONICO }}"
           },
           "matchingColumns": [
             "TELEFONE"
@@ -227,6 +227,16 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "NOME",
@@ -294,15 +304,6 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "GESTANTE",
-              "displayName": "GESTANTE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
               "id": "DIABETES",
               "displayName": "DIABETES",
               "required": false,
@@ -321,13 +322,64 @@
               "canBeUsedToMatch": true
             },
             {
+              "id": "ACOMPANHAMENTO",
+              "displayName": "ACOMPANHAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SINTOMA",
+              "displayName": "SINTOMA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "LGPD",
+              "displayName": "LGPD",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CHECKUP",
+              "displayName": "CHECKUP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CRÔNICO",
+              "displayName": "CRÔNICO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
               "id": "OBSERVAÇÃO",
               "displayName": "OBSERVAÇÃO",
               "required": false,
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             }
           ]
         },
@@ -359,32 +411,39 @@
           "headers": {
             "host": "n8n.mayarj.com",
             "user-agent": "python-requests/2.26.0",
-            "content-length": "294",
+            "content-length": "498",
             "accept": "*/*",
             "accept-encoding": "gzip, deflate",
             "content-type": "application/json",
-            "sentry-trace": "6294d25102634890b17d36bb262ca14b-8994099676f992d2-0",
-            "x-forwarded-for": "54.94.115.142",
+            "sentry-trace": "d3c80a8327bb4727afe3541077e46f03-83543290aa0a9572-0",
+            "x-forwarded-for": "54.207.50.198",
             "x-forwarded-host": "n8n.mayarj.com",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
             "x-forwarded-server": "96550bad8dd9",
-            "x-real-ip": "54.94.115.142"
+            "x-real-ip": "54.207.50.198"
           },
           "params": {},
           "query": {},
           "body": {
             "DATA": "{data}",
+            "LGPD": "{LGPD}",
             "NOME": "{nomepais}",
+            "RISCO": "{RISCO}",
+            "PSAUDE": "{PSAUDE}",
+            "CHECKUP": "{CHECKUP}",
+            "CRONICO": "{CRONICO}",
+            "EMPRESA": "{EMPRESA}",
             "PRESSAO": "{pressao-usuario}",
             "REMEDIO": "{remediopais}",
+            "SINTOMA": "{Sintoma_PAIS}",
             "DIABETES": "{DIABETES}",
             "GESTANTE": "{Gestante}",
             "TELEFONE": "{TELEFONEPAIS}",
             "OBESIDADE": "{GRAU_OBESIDADE}",
             "PATOLOGIA": "{PATOLOGIA_PAIS}",
-            "EMPRESA": "{EMPRESA}",
-            "PSAUDE": "{PSAUDE}"
+            "DATA E HORA": "{HORA_SOLICITAÇÃO}",
+            "ACOMPANHAMENTO": "{Especialidade_PAIS}"
           }
         },
         "pairedItem": {
@@ -406,6 +465,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2023-08-24T00:46:12.000Z",
-  "versionId": "2e192fae-d4df-48ab-96d3-87446f92c626"
+  "updatedAt": "2023-10-10T16:04:20.000Z",
+  "versionId": "0721c1c0-4a8f-4677-9ec3-b77a8f406237"
 }
