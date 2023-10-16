@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -1304,9 +1304,13 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-10-10T15:53:35.000Z",
-  "versionId": "81e4b46c-598d-4997-a358-df1331a72eaa"
+  "triggerCount": 1,
+  "updatedAt": "2023-10-16T10:32:53.000Z",
+  "versionId": "9a3e138c-bc19-493e-9686-d57124cd5532"
 }
