@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -144,7 +144,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "verificar whastsapp",
             "type": "main",
             "index": 0
           }
@@ -156,17 +156,6 @@
         [
           {
             "node": "Split In Batches",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request": {
-      "main": [
-        [
-          {
-            "node": "é whatsapp?",
             "type": "main",
             "index": 0
           }
@@ -293,6 +282,17 @@
         [
           {
             "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verificar whastsapp": {
+      "main": [
+        [
+          {
+            "node": "é whatsapp?",
             "type": "main",
             "index": 0
           }
@@ -511,13 +511,15 @@
         -520,
         1180
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      },
-      "continueOnFail": true
+      }
     },
     {
       "parameters": {
@@ -703,33 +705,6 @@
     },
     {
       "parameters": {
-        "url": "=https://api.z-api.io/instances/3C49AB147B4EA0CB343FAEE82E8B9909/token/9A084FDFC8B6D8675A707E75/phone-exists/{{ $json[\"whatsapp\"].slice(1) }}",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "*/*"
-            },
-            {
-              "name": "Client-Token",
-              "value": "F7d4683405b6a4d1db828b5f1632d348aS"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "f0399b75-8845-407b-bedf-a80bd9de0ef5",
-      "name": "HTTP Request",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        -940,
-        1180
-      ]
-    },
-    {
-      "parameters": {
         "conditions": {
           "string": [
             {
@@ -879,13 +854,15 @@
         100,
         1400
       ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      },
-      "continueOnFail": true
+      }
     },
     {
       "parameters": {
@@ -912,13 +889,15 @@
         100,
         1600
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      },
-      "continueOnFail": true
+      }
     },
     {
       "parameters": {
@@ -945,6 +924,9 @@
         100,
         1800
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
@@ -977,6 +959,9 @@
         100,
         2000
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
@@ -1009,6 +994,9 @@
         100,
         2220
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
@@ -1041,6 +1029,9 @@
         100,
         2420
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "vCIPDPVbQ7zCDlxQ",
@@ -1137,6 +1128,11 @@
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
         "options": {}
       },
       "id": "f1f9bab3-4638-4b0b-a128-0bf677f8cf3c",
@@ -1298,6 +1294,33 @@
         }
       },
       "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "=https://api.z-api.io/instances/3C4E4AD8FAA250141A9DDE9E42240280/token/338CBF4745C2250AD24D7F3D/phone-exists/{{ $json[\"whatsapp\"].slice(1) }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Client-Token",
+              "value": "F5ab8f01d088e42748f242293eaed030dS"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f0399b75-8845-407b-bedf-a80bd9de0ef5",
+      "name": "verificar whastsapp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -940,
+        1180
+      ]
     }
   ],
   "pinData": {},
@@ -1311,6 +1334,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-10-16T10:32:53.000Z",
-  "versionId": "9a3e138c-bc19-493e-9686-d57124cd5532"
+  "updatedAt": "2023-10-16T12:38:52.000Z",
+  "versionId": "60fa1e50-5326-48ad-9e53-ccc93f3c6305"
 }
