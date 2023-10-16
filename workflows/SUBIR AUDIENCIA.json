@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -660,7 +660,7 @@
           "string": [
             {
               "name": "telefone",
-              "value": "={{ $json.PHONE }}"
+              "value": "={{ $json.PHONE.toString() }}"
             },
             {
               "name": "nomeCompleto",
@@ -763,8 +763,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -760,
-        1400
+        -520,
+        1480
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -1334,6 +1334,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-10-16T12:38:52.000Z",
-  "versionId": "60fa1e50-5326-48ad-9e53-ccc93f3c6305"
+  "updatedAt": "2023-10-16T13:25:37.000Z",
+  "versionId": "a889ef62-06dd-4a71-a4e4-3348a0e24f5f"
 }
