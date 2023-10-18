@@ -484,8 +484,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
       "sheetId": 265903553,
-      "lastRevision": 91704,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=91704&exportFormat=xlsx"
+      "lastRevision": 91730,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=91730&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -497,6 +497,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2023-10-18T16:49:10.000Z",
+  "updatedAt": "2023-10-18T18:05:15.000Z",
   "versionId": "00877f1b-aa82-4711-b395-d248425213e9"
 }
