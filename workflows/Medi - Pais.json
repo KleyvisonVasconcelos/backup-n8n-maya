@@ -224,7 +224,8 @@
             "LGPD": "={{ $json.body.LGPD }}",
             "HORA": "={{ $json.body[\"DATA E HORA\"] }}",
             "CHECKUP": "={{ $json.body.CHECKUP }}",
-            "CRÔNICO": "={{ $json.body.CRONICO }}"
+            "CRÔNICO": "={{ $json.body.CRONICO }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}"
           },
           "matchingColumns": [
             "TELEFONE"
@@ -257,6 +258,16 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "TELEFONE",
@@ -426,7 +437,7 @@
       "typeVersion": 1,
       "position": [
         660,
-        800
+        980
       ],
       "webhookId": "fcf7f66c-809d-46f1-a920-c1bd9ebc22c3"
     },
@@ -527,7 +538,7 @@
       "typeVersion": 4,
       "position": [
         900,
-        800
+        980
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -579,11 +590,9 @@
             "OBESIDADE": "{GRAU_OBESIDADE}",
             "PATOLOGIA": "{PATOLOGIA_PAIS}",
             "DATA E HORA": "{HORA_SOLICITAÇÃO}",
-            "ACOMPANHAMENTO": "{Especialidade_PAIS}"
+            "ACOMPANHAMENTO": "{Especialidade_PAIS}",
+            "MATRICULA": "{Especialidade_PAIS}"
           }
-        },
-        "pairedItem": {
-          "item": 0
         }
       }
     ],
@@ -635,6 +644,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2023-10-10T16:12:41.000Z",
-  "versionId": "29d3f2bc-9785-4dd5-826c-6ce640ad092b"
+  "updatedAt": "2023-10-19T12:46:48.000Z",
+  "versionId": "e5ef6f1a-9f16-4ba6-99f2-3bd7b538b513"
 }
