@@ -1,0 +1,2191 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "ABA 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ABA 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 2": {
+      "main": [
+        [
+          {
+            "node": "gestantes  2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 3": {
+      "main": [
+        [
+          {
+            "node": "gestantes 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 5": {
+      "main": [
+        [
+          {
+            "node": "gestantes 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 6": {
+      "main": [
+        [
+          {
+            "node": "gestantes 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 7": {
+      "main": [
+        [
+          {
+            "node": "gestantes 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 8": {
+      "main": [
+        [
+          {
+            "node": "gestantes 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 9": {
+      "main": [
+        [
+          {
+            "node": "gestantes 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABA 4": {
+      "main": [
+        [
+          {
+            "node": "gestantes 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-10-27T14:56:09.264Z",
+  "id": "3fDW7ptw2bNM4jvj",
+  "name": "PUERICULTURA",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "3"
+            }
+          ]
+        }
+      },
+      "id": "b598a499-99b2-4ebb-9dcf-18642735d31b",
+      "name": "ABA 3",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "4"
+            }
+          ]
+        }
+      },
+      "id": "35155714-c25f-456c-9ba9-fecb049ba5b8",
+      "name": "ABA 4",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "5"
+            }
+          ]
+        }
+      },
+      "id": "04bf256c-29f0-42b7-8aa2-267fa954e488",
+      "name": "ABA 5",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "6"
+            }
+          ]
+        }
+      },
+      "id": "1f70605a-06e4-48b8-992d-783011f2aca8",
+      "name": "ABA 6",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "7"
+            }
+          ]
+        }
+      },
+      "id": "7f46171d-1457-4baa-88f3-319dfa0bd06b",
+      "name": "ABA 7",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "8"
+            }
+          ]
+        }
+      },
+      "id": "1a7b8c61-b550-41c0-b41c-a2e5103e20b1",
+      "name": "ABA 8",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "9"
+            }
+          ]
+        }
+      },
+      "id": "70adaebb-0b1d-4c00-950e-62856083d7fe",
+      "name": "ABA 9",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "puericultura",
+        "options": {}
+      },
+      "id": "87c38024-e0ee-4c88-9d96-dfd82a130513",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        240,
+        720
+      ],
+      "webhookId": "5987dab2-8c92-4a9c-a70c-666d00062f97"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "2"
+            }
+          ]
+        }
+      },
+      "id": "64c36184-1d8e-47cc-a01d-9804a81530d0",
+      "name": "ABA 2",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1044814979",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b6d85308-aa92-4bfd-a6bf-59d472c1ef66",
+      "name": "gestantes 3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        900
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 664792711,
+          "mode": "list",
+          "cachedResultName": "GESTANTES 2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=664792711"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "51c93445-5476-4679-80ca-5277fa1d8ec8",
+      "name": "gestantes  2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        740
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "2045529466",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "77e53aea-03de-4236-8a66-75f3168bb851",
+      "name": "gestantes 4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        1040
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1756502948",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e4fbb6e2-74c3-40ec-a998-dfae2d913080",
+      "name": "gestantes 5",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        1180
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1840261495",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "95c7ef07-874f-4567-a6d6-bddaddbf1240",
+      "name": "gestantes 6",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        1320
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1866354203",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4a77a462-eed6-43a0-b7b3-ae19ad37b5c8",
+      "name": "gestantes 7",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        1460
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "337673423",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fc28a60e-43ef-491f-9cab-9693bb573b9a",
+      "name": "gestantes 8",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        1600
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1994543186",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANAS }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}",
+            "DIAGNÓSTICO RECENTE": "={{ $json.body['DIAGNÓSTICO RECENTE'] }}",
+            "MEDICAMENTO": "={{ $json.body.MEDICAMENTO }}",
+            "CRESCIMENTO FETAL": "={{ $json.body['CRESCIMENTO FETAL'] }}",
+            "PESO DO FETO": "={{ $json.body['PESO DO FETO'] }}",
+            "BATIMENTO": "={{ $json.body.BATIMENTO }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "PESO MÃE": "={{ $json.body['PESO MÃE'] }}",
+            "ALTURA MÃE": "={{ $json.body['ALTURA MÃE'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIAGNÓSTICO RECENTE",
+              "displayName": "DIAGNÓSTICO RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIMENTO FETAL",
+              "displayName": "CRESCIMENTO FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO DO FETO",
+              "displayName": "PESO DO FETO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "BATIMENTO",
+              "displayName": "BATIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO MÃE",
+              "displayName": "PESO MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA MÃE",
+              "displayName": "ALTURA MÃE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "74219500-748a-4fe1-8e09-7014ba986a94",
+      "name": "gestantes 9",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1040,
+        1740
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.body.ABA }}",
+              "value2": "1"
+            }
+          ]
+        }
+      },
+      "id": "f4b93c79-0106-4729-96df-29b8766d6a2c",
+      "name": "ABA ",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        740,
+        600
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2023-10-27T14:57:10.000Z",
+  "versionId": "0b2c4a9c-c562-4da5-b683-f5fb9b8ea889"
+}
