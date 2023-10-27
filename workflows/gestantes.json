@@ -1,0 +1,358 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-10-27T14:00:07.846Z",
+  "id": "JavfjYqFtkcVU7VB",
+  "name": "gestantes",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "gestantes",
+        "options": {}
+      },
+      "id": "e6f12875-2eac-4776-bf9f-b999787b086b",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        900,
+        400
+      ],
+      "webhookId": "61884fa1-6bd2-4b7a-bd33-efc7bbf80355"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 823444675,
+          "mode": "list",
+          "cachedResultName": "GESTANTES",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=823444675"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "NOME": "={{ $json.body.NOME }}",
+            "DATA": "={{$now.toFormat(\"dd/MM/yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "SEMANAS": "={{ $json.body.SEMANA }}",
+            "STATUS": "={{ $json.body.STATUS }}",
+            "SEXO": "={{ $json.body.SEXO }}",
+            "UNICO/GEMELAR": "={{ $json.body.UNICO/GEMELAR }}",
+            "TIPO DE PARTO": "={{ $json.body['TIPO DE PARTO'] }}",
+            "EXAMES": "={{ $json.body.EXAMES }}",
+            "CRESCIM. FETAL": "={{ $json.body['CRESCIM. FETAL'] }}",
+            "MEDICAÇÃO": "={{ $json[\"body\"][\"MEDICAÇÃO\"] }}",
+            "ACOMP. MENSAL": "={{ $json.body['ACOMP. MENSAL'] }}",
+            "PATOLOGIA": "={{ $json.body.PATOLOGIA }}",
+            "OUTRO ESPECIALISTA": "={{ $json.body['OUTRO ESPECIALISTA'] }}",
+            "MEDICAMENTO CONTINUO": "={{ $json.body['MEDICAMENTO CONTINUO'] }}",
+            "PESO": "={{ $json.body.PESO }}",
+            "ALTURA": "={{ $json.body.ALTURA }}",
+            "LOCAL DO PARTO": "={{ $json.body['LOCAL DO PARTO'] }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SEMANAS",
+              "displayName": "SEMANAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "STATUS",
+              "displayName": "STATUS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "UNICO/GEMELAR",
+              "displayName": "UNICO/GEMELAR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TIPO DE PARTO",
+              "displayName": "TIPO DE PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EXAMES",
+              "displayName": "EXAMES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRESCIM. FETAL",
+              "displayName": "CRESCIM. FETAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAÇÃO",
+              "displayName": "MEDICAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMP. MENSAL",
+              "displayName": "ACOMP. MENSAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PATOLOGIA",
+              "displayName": "PATOLOGIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OUTRO ESPECIALISTA",
+              "displayName": "OUTRO ESPECIALISTA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MEDICAMENTO CONTINUO",
+              "displayName": "MEDICAMENTO CONTINUO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PESO",
+              "displayName": "PESO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ALTURA",
+              "displayName": "ALTURA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LOCAL DO PARTO",
+              "displayName": "LOCAL DO PARTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "08ff2521-029e-4917-8e5f-12d675be8c62",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1120,
+        400
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "651",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "ad641594588a4f5fa36e17febbf91ad2-a9dea7216c222377-0",
+            "x-forwarded-for": "18.228.38.251",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "96550bad8dd9",
+            "x-real-ip": "18.228.38.251"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "NOME": "{nome-completo}",
+            "TELEFONE": "{telefone}",
+            "MATRICULA": "{MATRICULA}",
+            "EMPRESA": "{EMPRESA}",
+            "SEMANA": "{G - SEMANAS (NUMERO)}",
+            "STATUS": "{G-STATUS}",
+            "UNICO/GEMELAR": "{G-FETO}",
+            "SEXO": "{G-SEXO}",
+            "TIPO DE PARTO": "{G-TIPO DE PARTO}",
+            "EXAMES": "{G-EXAMES}",
+            "CRESCIM. FETAL": "{CRESC_FETO_GESTANTE}",
+            "MEDICAÇÃO": "{G-MEDICAÇÃO}",
+            "ACOMP. MENSAL": "{G-ACOMP. MENSAL}",
+            "PATOLOGIA": "{G-PATOLOGIA}",
+            "OUTRO ESPECIALISTA": "{G-OUTRO ESPECIALISTA}",
+            "MEDICAMENTO CONTINUO": "{G-MEDIC. CONTINUO}",
+            "PESO": "{G-PESO}",
+            "ALTURA": "{G-ALTURA}",
+            "LOCAL DO PARTO": "{G-PARTO-LOCAL}",
+            "PROGRAMA DE SAÚDE": "{PSAUDE}"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-10-27T14:06:35.000Z",
+  "versionId": "f5210f81-ba09-4ccf-8f54-83f4968bc79c"
+}
