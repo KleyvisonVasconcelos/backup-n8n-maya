@@ -95,12 +95,12 @@
             "index": 0
           },
           {
-            "node": "Switch",
+            "node": "Wait 2 segundos",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Wait 2 segundos",
+            "node": "HTTP Request Atualizar Campo data proximo contato",
             "type": "main",
             "index": 0
           }
@@ -144,7 +144,7 @@
       "main": [
         [
           {
-            "node": "verificar whastsapp",
+            "node": "HTTP Request Cadastrar Usuario",
             "type": "main",
             "index": 0
           }
@@ -156,35 +156,6 @@
         [
           {
             "node": "Split In Batches",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "é whatsapp?": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request Cadastrar Usuario",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Google Sheets3",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Google Sheets3": {
-      "main": [
-        [
-          {
-            "node": "Wait 2 segundos",
             "type": "main",
             "index": 0
           }
@@ -282,17 +253,6 @@
         [
           {
             "node": "Split In Batches",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "verificar whastsapp": {
-      "main": [
-        [
-          {
-            "node": "é whatsapp?",
             "type": "main",
             "index": 0
           }
@@ -435,8 +395,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -1260,
-        860
+        -1920,
+        680
       ],
       "continueOnFail": true
     },
@@ -460,8 +420,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -780,
-        820
+        -1440,
+        640
       ],
       "id": "6291d0db-c72c-46aa-8128-d2e72d02c6ae"
     },
@@ -472,8 +432,8 @@
       "name": "Validar Telefone",
       "type": "n8n-nodes-base.function",
       "position": [
-        -1020,
-        840
+        -1680,
+        660
       ],
       "typeVersion": 1,
       "id": "6ad83873-152b-44c5-a1c2-945aa0bf3d97"
@@ -508,7 +468,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -520,
+        -880,
         1180
       ],
       "retryOnFail": true,
@@ -530,8 +490,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        1480,
-        2440
+        100,
+        2820
       ],
       "webhookId": "c852e30c-2ca2-4d86-8cb0-d09aa07006f6"
     },
@@ -541,7 +501,7 @@
           "string": [
             {
               "value1": "={{ $json[\"WHATSAPP CADASTRADO\"] }}",
-              "operation": "isEmpty"
+              "value2": "✅"
             }
           ]
         }
@@ -601,8 +561,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -1260,
-        480
+        -1920,
+        300
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -639,8 +599,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        -460,
-        780
+        -1120,
+        600
       ],
       "id": "7315b6fb-a5ec-4fee-80b3-b8621c664562",
       "retryOnFail": true,
@@ -705,26 +665,6 @@
     },
     {
       "parameters": {
-        "conditions": {
-          "string": [
-            {
-              "value1": "={{ $json.exists.toString() }}",
-              "value2": "true"
-            }
-          ]
-        }
-      },
-      "id": "da2eb6af-be9a-461d-80aa-af1abd8094b1",
-      "name": "é whatsapp?",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        -740,
-        1180
-      ]
-    },
-    {
-      "parameters": {
         "operation": "update",
         "documentId": {
           "__rl": true,
@@ -746,60 +686,7 @@
           "values": [
             {
               "column": "WHATSAPP CADASTRADO",
-              "fieldValue": "=sem whatsapp"
-            }
-          ]
-        },
-        "options": {
-          "locationDefine": {
-            "values": {
-              "firstDataRow": "={{ $('Split In Batches').item.json.row_number }}"
-            }
-          }
-        }
-      },
-      "id": "52ce07dc-729f-4f57-82da-1f6026ccc45a",
-      "name": "Google Sheets3",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 3,
-      "position": [
-        -520,
-        1480
-      ],
-      "retryOnFail": true,
-      "maxTries": 5,
-      "waitBetweenTries": 5000,
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "operation": "update",
-        "documentId": {
-          "__rl": true,
-          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
-          "mode": "list",
-          "cachedResultName": "db_pais",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 887746287,
-          "mode": "list",
-          "cachedResultName": "db_pais",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
-        },
-        "columnToMatchOn": "NOME DO BENEFICIARIO",
-        "valueToMatchOn": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}",
-        "fieldsUi": {
-          "values": [
-            {
-              "column": "WHATSAPP CADASTRADO",
-              "fieldValue": "=✅"
+              "fieldValue": "=✅✅"
             }
           ]
         },
@@ -816,8 +703,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -320,
-        1000
+        -560,
+        860
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -862,7 +749,8 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -897,7 +785,8 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -932,7 +821,8 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -967,7 +857,8 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -1002,7 +893,8 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -1037,7 +929,8 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -1297,30 +1190,38 @@
     },
     {
       "parameters": {
-        "url": "=https://api.z-api.io/instances/3C4E4AD8FAA250141A9DDE9E42240280/token/338CBF4745C2250AD24D7F3D/phone-exists/{{ $json[\"whatsapp\"].slice(1) }}",
-        "sendHeaders": true,
-        "headerParameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1436559/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
           "parameters": [
             {
-              "name": "accept",
-              "value": "*/*"
-            },
-            {
-              "name": "Client-Token",
-              "value": "F5ab8f01d088e42748f242293eaed030dS"
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"AGENDA SUGERIDA PARA PROXIMO CONTATO\"].toString() }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "f0399b75-8845-407b-bedf-a80bd9de0ef5",
-      "name": "verificar whastsapp",
+      "id": "22767328-a27e-45f7-8165-0be2d28a43cf",
+      "name": "HTTP Request Atualizar Campo data proximo contato",
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
+      "typeVersion": 3,
       "position": [
-        -940,
-        1180
-      ]
+        100,
+        2620
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -1334,6 +1235,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-10-16T13:25:37.000Z",
-  "versionId": "a889ef62-06dd-4a71-a4e4-3348a0e24f5f"
+  "updatedAt": "2023-10-27T13:22:46.000Z",
+  "versionId": "acf24458-b6b4-4ba9-a6e2-e559947fc2c2"
 }
