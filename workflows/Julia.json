@@ -523,12 +523,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 17654,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=17654&exportFormat=xlsx"
+      "lastRevision": 17730,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=17730&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-11-06T14:31:19.000Z",
+  "updatedAt": "2023-11-06T16:04:20.000Z",
   "versionId": "56f06268-d0e4-46c6-9b98-827d46f3a6e8"
 }
