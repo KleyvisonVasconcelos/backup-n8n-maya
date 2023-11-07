@@ -569,12 +569,12 @@
     "node:Google Sheets Trigger1": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 65243,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=65243&exportFormat=xlsx"
+      "lastRevision": 65249,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=65249&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-11-07T15:31:32.000Z",
+  "updatedAt": "2023-11-07T17:10:32.000Z",
   "versionId": "2fdc68b4-6103-4709-b6b7-a2b55d08bee4"
 }
