@@ -111,6 +111,50 @@
           }
         ]
       ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "telefone vazio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone vazio1": {
+      "main": [
+        [
+          {
+            "node": "telefone vazio2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone vazio2": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-08-11T05:45:08.671Z",
@@ -248,6 +292,9 @@
         1480,
         300
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "lwN1WWTkm0Pq97WC",
@@ -303,7 +350,7 @@
           "string": [
             {
               "name": "telefone",
-              "value": "={{ $json.TELEFONE }}"
+              "value": "={{ $json.TELEFONE.toString() }}"
             },
             {
               "name": "nomeCompleto",
@@ -487,35 +534,104 @@
         760,
         220
       ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "lwN1WWTkm0Pq97WC",
           "name": "Maya"
         }
       }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
+          "mode": "list",
+          "cachedResultName": "BOT-JULIA",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 448379726,
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726"
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "f8c8a1af-a78b-44a0-ac79-f6cde29b6469",
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        40,
+        640
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "lwN1WWTkm0Pq97WC",
+          "name": "Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.TELEFONE }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "52c3928e-cdbf-44bd-900c-cd9d38457250",
+      "name": "telefone vazio1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        220,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['TELEFONE FORMATADO'] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "2682be40-3606-45c3-a481-dc2a16af9900",
+      "name": "telefone vazio2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        400,
+        620
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "9302bd87-ea23-4f1d-95ed-5abbc3ed846a",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        640
+      ]
     }
   ],
-  "pinData": {
-    "Nome e telefone para validar": [
-      {
-        "json": {
-          "telefone": "5571981719761",
-          "nomeCompleto": "kleyvison vasconcelos"
-        }
-      }
-    ],
-    "Google Sheets Trigger": [
-      {
-        "json": {
-          "row_number": 109,
-          "change_type": "updated",
-          "TELEFONE FORMATADO": "+557181719761",
-          "TELEFONE": "",
-          "NOME": ""
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
@@ -523,12 +639,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 17996,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=17996&exportFormat=xlsx"
+      "lastRevision": 18033,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18033&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-11-08T18:27:29.000Z",
-  "versionId": "d55c80ba-3c98-4ff5-b564-4771cd7bbeda"
+  "updatedAt": "2023-11-08T19:30:17.000Z",
+  "versionId": "5d5eb19f-fdf5-463d-a4c1-32f8582b97ef"
 }
