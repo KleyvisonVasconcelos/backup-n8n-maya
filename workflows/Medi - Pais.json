@@ -443,7 +443,7 @@
     },
     {
       "parameters": {
-        "operation": "appendOrUpdate",
+        "operation": "append",
         "documentId": {
           "__rl": true,
           "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
@@ -453,28 +453,60 @@
         },
         "sheetName": {
           "__rl": true,
-          "value": 79205736,
+          "value": 150588012,
           "mode": "list",
-          "cachedResultName": "ATIVOS",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=79205736"
+          "cachedResultName": "PESQUISA ATIVOS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=150588012"
         },
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
+            "DATA": "={{$now.toFormat(\"dd-MM-yyyy\")}}",
+            "HORA": "={{$now.toFormat(\"HH:mm\")}}",
             "NOME": "={{ $json.body.NOME }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
             "TELEFONE": "={{ $json.body.TELEFONE }}",
-            "ACOMPANHAMENTO ATUAL": "={{ $json.body.PERIODICIDADE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body.PSAUDE }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "ACOMPANHAMENTO": "={{ $json.body.ACOMPANHAMENTO }}",
+            "ESPECIALIDADE": "={{ $json.body.ESPECIALIDADE }}",
             "EXAMES": "={{ $json.body.EXAME }}",
-            "MEDICAÇÃO": "={{ $json.body.MEDICACAO }}",
-            "ESPECIALIDADE": "={{ $json.body.ESPECIALIDADE }}"
+            "REMÉDIO": "={{ $json.body.MEDICACAO }}",
+            "ALTERAÇÃO": "={{ $json.body.ALTERACAO }}",
+            "INTERCORRENCIA": "={{ $json.body.INTERCORRENCIA }}"
           },
-          "matchingColumns": [
-            "TELEFONE"
-          ],
+          "matchingColumns": [],
           "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
             {
               "id": "NOME",
               "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -488,12 +520,29 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
-              "id": "ACOMPANHAMENTO ATUAL",
-              "displayName": "ACOMPANHAMENTO ATUAL",
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMPANHAMENTO",
+              "displayName": "ACOMPANHAMENTO",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -507,8 +556,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "EXAMES",
@@ -520,8 +568,26 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "MEDICAÇÃO",
-              "displayName": "MEDICAÇÃO",
+              "id": "ALTERAÇÃO",
+              "displayName": "ALTERAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "REMÉDIO",
+              "displayName": "REMÉDIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTERCORRENCIA",
+              "displayName": "INTERCORRENCIA",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -602,27 +668,33 @@
           "headers": {
             "host": "n8n.mayarj.com",
             "user-agent": "python-requests/2.26.0",
-            "content-length": "191",
+            "content-length": "398",
             "accept": "*/*",
             "accept-encoding": "gzip, deflate",
             "content-type": "application/json",
-            "sentry-trace": "d0031567868749449e50cbd5569a016d-a9d9483be50b4b74-0",
-            "x-forwarded-for": "15.229.146.128",
+            "sentry-trace": "d415fb21c1094aa5ab71c1d60e2e331e-8ee62e39653f0557-0",
+            "x-forwarded-for": "52.67.52.36",
             "x-forwarded-host": "n8n.mayarj.com",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
             "x-forwarded-server": "96550bad8dd9",
-            "x-real-ip": "15.229.146.128"
+            "x-real-ip": "52.67.52.36"
           },
           "params": {},
           "query": {},
           "body": {
             "NOME": "{nome-completo}",
-            "TELEFONE": "{telefone}",
-            "ACOMPANHAMENTO": "{FAZ_ACOMPANHAMENTO}",
-            "PERIODICIDADE": "{periodicidade_PAIS}",
             "EXAME": "{Exame_Pais}",
-            "MEDICACAO": "{remediopais}"
+            "TELEFONE": "{telefone}",
+            "MEDICACAO": "{remediopais}",
+            "ESPECIALIDADE": "{Especialidade_PAIS}",
+            "PERIODICIDADE": "{periodicidade_PAIS}",
+            "ACOMPANHAMENTO": "{FAZ_ACOMPANHAMENTO}",
+            "MATRICULA": "{MATRICULA}",
+            "PSAUDE": "{PSAUDE}",
+            "EMPRESA": "{EMPRESA}",
+            "INTERCORRENCIA": "{intercorrencia_PAIS}",
+            "ALTERACAO": "{alteração_exame_PAIS}"
           }
         },
         "pairedItem": {
@@ -644,6 +716,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2023-10-19T12:46:48.000Z",
-  "versionId": "e5ef6f1a-9f16-4ba6-99f2-3bd7b538b513"
+  "updatedAt": "2023-11-09T17:16:36.000Z",
+  "versionId": "bc17adc1-19d0-46c5-8dbf-66e008f3a0b7"
 }
