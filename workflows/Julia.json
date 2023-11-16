@@ -639,12 +639,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18127,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18127&exportFormat=xlsx"
+      "lastRevision": 18134,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18134&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-11-16T13:50:10.000Z",
+  "updatedAt": "2023-11-16T18:49:04.000Z",
   "versionId": "5d5eb19f-fdf5-463d-a4c1-32f8582b97ef"
 }
