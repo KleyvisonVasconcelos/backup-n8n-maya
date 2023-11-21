@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "IF",
+            "node": "Split In Batches1",
             "type": "main",
             "index": 0
           }
@@ -38,7 +38,7 @@
       "main": [
         [
           {
-            "node": "Validar Telefone",
+            "node": "IF1",
             "type": "main",
             "index": 0
           }
@@ -108,42 +108,25 @@
             "node": "Switch",
             "type": "main",
             "index": 0
-          }
-        ]
-      ]
-    },
-    "IF": {
-      "main": [
-        [
+          },
           {
-            "node": "Split In Batches1",
+            "node": "HTTP Request Atualizar Campo Especialidade_PAIS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
             "type": "main",
             "index": 0
           }
         ]
-      ]
-    },
-    "Schedule Trigger": {
-      "main": [
-        []
       ]
     },
     "Nome e telefone para validar": {
       "main": [
         [
           {
-            "node": "Formatando Nome e Telefone",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Formatando Nome e Telefone": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request Cadastrar Usuario",
+            "node": "HTTP Request Verificar se é wpp válido",
             "type": "main",
             "index": 0
           }
@@ -247,11 +230,40 @@
         ]
       ]
     },
-    "Wait 2 segundos": {
+    "IF1": {
       "main": [
         [
           {
-            "node": "Split In Batches",
+            "node": "HTTP Request Cadastrar Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets Atualizar telefone não válido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Atualizar telefone não válido": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Verificar se é wpp válido": {
+      "main": [
+        [
+          {
+            "node": "Set Definir Dados",
             "type": "main",
             "index": 0
           }
@@ -270,7 +282,7 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -2880,
+        -3820,
         1200
       ]
     },
@@ -290,14 +302,24 @@
           "cachedResultName": "db_pais",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
         },
-        "options": {}
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "WHATSAPP CADASTRADO",
+              "lookupValue": "✅"
+            }
+          ]
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
       },
       "id": "8e42e356-78fd-4901-8675-5b62fb71b666",
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -2460,
+        -3400,
         1200
       ],
       "credentials": {
@@ -317,7 +339,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -1600,
+        -2540,
         1180
       ]
     },
@@ -327,14 +349,15 @@
           "string": [
             {
               "name": "Nome",
-              "value": "={{ $json[\"Nome\"] }}"
+              "value": "={{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[0] }}"
             },
             {
-              "name": "Sobrenome"
+              "name": "Sobrenome",
+              "value": "={{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[1] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[2] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[3] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[4] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[5] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[6] }}"
             },
             {
               "name": "telefone",
-              "value": "=+{{ $json[\"Telefone\"] }}"
+              "value": "=+{{ $json.phone }}"
             },
             {
               "name": "Campo 1",
@@ -394,8 +417,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -1920,
-        680
+        -1880,
+        1180
       ],
       "continueOnFail": true
     },
@@ -448,15 +471,15 @@
           "parameters": [
             {
               "name": "phone",
-              "value": "={{ $('Formatando Nome e Telefone').item.json[\"whatsapp\"] }}"
+              "value": "={{ $('Set Definir Dados').item.json.telefone }}"
             },
             {
               "name": "first_name",
-              "value": "={{ $('Formatando Nome e Telefone').item.json[\"Nome\"] }}"
+              "value": "={{ $('Set Definir Dados').item.json.Nome }}"
             },
             {
               "name": "=last_name",
-              "value": "={{ $('Formatando Nome e Telefone').item.json[\"Sobrenome\"] }}"
+              "value": "={{ $('Set Definir Dados').item.json.Sobrenome }}"
             }
           ]
         },
@@ -467,8 +490,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -880,
-        1180
+        -1300,
+        1200
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -489,8 +512,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        100,
-        2820
+        -300,
+        3520
       ],
       "webhookId": "305bc370-c952-4aa2-84d4-fcc28392a8a3"
     },
@@ -511,7 +534,7 @@
       "typeVersion": 1,
       "position": [
         -2240,
-        1200
+        520
       ],
       "continueOnFail": true
     },
@@ -544,7 +567,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -2040,
+        -2980,
         1180
       ]
     },
@@ -613,7 +636,7 @@
           "string": [
             {
               "name": "telefone",
-              "value": "={{ $json.PHONE.toString() }}"
+              "value": "={{ $json.PHONE.toString().replaceAll(\"(\",\"\").replaceAll(\")\",\"\").replaceAll(\" \",\"\").replaceAll(\"-\",\"\").replaceAll(\".\",\"\") }}"
             },
             {
               "name": "nomeCompleto",
@@ -627,7 +650,7 @@
       "name": "Nome e telefone para validar",
       "type": "n8n-nodes-base.set",
       "position": [
-        -1380,
+        -2360,
         1180
       ],
       "typeVersion": 1
@@ -641,8 +664,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        -1140,
-        1180
+        -1300,
+        880
       ]
     },
     {
@@ -652,7 +675,7 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -1800,
+        -2740,
         1180
       ]
     },
@@ -696,8 +719,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -560,
-        860
+        -260,
+        3300
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -743,7 +766,7 @@
           "name": "BC MEDI - PAIS"
         }
       },
-      "disabled": true
+      "continueOnFail": true
     },
     {
       "parameters": {
@@ -779,7 +802,7 @@
           "name": "BC MEDI - PAIS"
         }
       },
-      "disabled": true
+      "continueOnFail": true
     },
     {
       "parameters": {
@@ -815,7 +838,7 @@
           "name": "BC MEDI - PAIS"
         }
       },
-      "disabled": true
+      "continueOnFail": true
     },
     {
       "parameters": {
@@ -851,7 +874,7 @@
           "name": "BC MEDI - PAIS"
         }
       },
-      "disabled": true
+      "continueOnFail": true
     },
     {
       "parameters": {
@@ -923,7 +946,7 @@
           "name": "BC MEDI - PAIS"
         }
       },
-      "disabled": true
+      "continueOnFail": true
     },
     {
       "parameters": {
@@ -1013,12 +1036,6 @@
         "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4503062/",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {}
-          ]
-        },
         "options": {}
       },
       "id": "e2652a6f-31b6-4394-b865-6c510d0c9d6e",
@@ -1214,7 +1231,184 @@
           "id": "vCIPDPVbQ7zCDlxQ",
           "name": "BC MEDI - PAIS"
         }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.exists.toString() }}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "74af7079-2717-44f3-ae88-0458fa9966f5",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1620,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "a91f58e2-c4ef-449c-ba67-92f7aff6c58d",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        -1140,
+        1780
+      ],
+      "webhookId": "3c62d4fd-7d20-4bfc-b76e-6d16104ac201"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "columnToMatchOn": "ID",
+        "valueToMatchOn": "={{ $('Split In Batches').item.json.ID }}",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "WHATSAPP CADASTRADO",
+              "fieldValue": "=❌"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "511fcfa2-a0fa-4741-9d01-0bf3195dd385",
+      "name": "Google Sheets Atualizar telefone não válido",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -1300,
+        1480
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WtzcanNTBiAvqMef",
+          "name": "Medi"
+        }
       }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.z-api.io/instances/3BAE860F0ADEB0A7E993D6DE7E9F2DF0/token/5B29C948AD29016FB2E58702/phone-exists/55{{ $json.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Client-Token",
+              "value": "Ff5a9099161b04e319b99c5f785417d9dS"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8d2eb4de-6c2f-44e3-82ae-701576e20276",
+      "name": "HTTP Request Verificar se é wpp válido",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -2100,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1291875/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDICO ESPECIALISTA\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "40aaa3b9-b0ac-4c09-b740-2c6483aa983e",
+      "name": "HTTP Request Atualizar Campo Especialidade_PAIS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        2840
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150085/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDE OBESIDADE\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "12c7981f-15dc-4c5a-be53-838d78a2ad5d",
+      "name": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        3040
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      },
+      "continueOnFail": true
     }
   ],
   "pinData": {},
@@ -1230,6 +1424,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-21T17:04:21.000Z",
-  "versionId": "08334a15-fa19-4899-9f13-495ce6e9ff3b"
+  "updatedAt": "2023-11-21T18:03:37.000Z",
+  "versionId": "ba09f374-ecd2-47e3-90b1-13bf934d6e90"
 }
