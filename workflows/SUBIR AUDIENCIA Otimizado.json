@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -85,7 +85,7 @@
             "index": 0
           },
           {
-            "node": "HTTP Request Atualizar Campo SEXO",
+            "node": "HTTP Request Atualizar Campo G-SEXO",
             "type": "main",
             "index": 0
           },
@@ -100,7 +100,7 @@
             "index": 0
           },
           {
-            "node": "HTTP Request Atualizar Campo data proximo contato",
+            "node": "HTTP Request Atualizar Campo data proximo contato - melhordata",
             "type": "main",
             "index": 0
           },
@@ -116,6 +116,21 @@
           },
           {
             "node": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo DIABETES",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo pressao-usuario",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo Sintoma_PAIS",
             "type": "main",
             "index": 0
           }
@@ -269,6 +284,39 @@
           }
         ]
       ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 2 segundos": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-11-21T16:55:29.917Z",
@@ -305,8 +353,7 @@
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "WHATSAPP CADASTRADO",
-              "lookupValue": "✅"
+              "lookupColumn": "WHATSAPP CADASTRADO"
             }
           ]
         },
@@ -490,8 +537,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -1300,
-        1200
+        -1120,
+        1160
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -512,8 +559,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        -300,
-        3520
+        100,
+        4260
       ],
       "webhookId": "305bc370-c952-4aa2-84d4-fcc28392a8a3"
     },
@@ -553,7 +600,7 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1,
       "position": [
-        -3140,
+        -3700,
         980
       ]
     },
@@ -593,41 +640,6 @@
         }
       },
       "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "authentication": "headerAuth",
-        "requestMethod": "POST",
-        "url": "https://conectawebhook.com.br/api/v1/webhook/subscriber/",
-        "options": {},
-        "bodyParametersUi": {
-          "parameter": [
-            {
-              "name": "phone",
-              "value": "={{ $json.whatsapp }}"
-            },
-            {
-              "name": "first_name",
-              "value": "={{ $json.Nome }}"
-            },
-            {
-              "name": "last_name",
-              "value": "={{ $json.Sobrenome }}"
-            }
-          ]
-        }
-      },
-      "name": "Cadastrando na Audiência",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 1,
-      "position": [
-        -1120,
-        600
-      ],
-      "id": "cc4c9ac4-6637-4932-80fb-5e94b1559f0e",
-      "retryOnFail": true,
-      "maxTries": 5,
-      "waitBetweenTries": 5000
     },
     {
       "parameters": {
@@ -719,8 +731,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -260,
-        3300
+        80,
+        3980
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -815,7 +827,7 @@
           "parameters": [
             {
               "name": "value",
-              "value": "={{ $('Split In Batches').item.json['GRUPO DE DISPARO DE MATERIAL - BOT'] }}"
+              "value": "={{ $('Split In Batches').item.json['MOTIVO DO ACOMPANHAMENTO'] }}"
             }
           ]
         },
@@ -875,42 +887,6 @@
         }
       },
       "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150088/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "value",
-              "value": "={{ $('Split In Batches').item.json.SEXO }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "a5a233c4-61bc-4ddc-847f-23edfd64403c",
-      "name": "HTTP Request Atualizar Campo SEXO",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        100,
-        2220
-      ],
-      "retryOnFail": true,
-      "maxTries": 5,
-      "waitBetweenTries": 5000,
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
-        }
-      },
-      "disabled": true
     },
     {
       "parameters": {
@@ -1200,42 +1176,6 @@
     },
     {
       "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1436559/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "value",
-              "value": "={{ $('Split In Batches').item.json[\"AGENDA SUGERIDA PARA PROXIMO CONTATO\"].toString() }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "e638e206-a600-4096-b776-ce5a528edcf6",
-      "name": "HTTP Request Atualizar Campo data proximo contato",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        100,
-        2620
-      ],
-      "retryOnFail": true,
-      "maxTries": 5,
-      "waitBetweenTries": 5000,
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
         "conditions": {
           "string": [
             {
@@ -1291,7 +1231,7 @@
           "values": [
             {
               "column": "WHATSAPP CADASTRADO",
-              "fieldValue": "=❌"
+              "fieldValue": "=SEM WHATSAPP"
             }
           ]
         },
@@ -1409,6 +1349,185 @@
         }
       },
       "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150087/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDE DIABETES\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7339b6da-b6d6-4f5f-8fc5-9472760b606b",
+      "name": "HTTP Request Atualizar Campo DIABETES",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        3220
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150086/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDE HIPERTENSAO\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ae81cd59-c345-421c-af86-48da43a38a18",
+      "name": "HTTP Request Atualizar Campo pressao-usuario",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        3460
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1291745/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"QUEIXA RELATADA\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "107a0294-a4de-4c5a-a6aa-da9adb6d7d51",
+      "name": "HTTP Request Atualizar Campo Sintoma_PAIS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        3640
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1420389/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json.SEXO }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a5a233c4-61bc-4ddc-847f-23edfd64403c",
+      "name": "HTTP Request Atualizar Campo G-SEXO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        2220
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1436559/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"AGENDA SUGERIDA PARA PROXIMO CONTATO\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e638e206-a600-4096-b776-ce5a528edcf6",
+      "name": "HTTP Request Atualizar Campo data proximo contato - melhordata",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        100,
+        2620
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "vCIPDPVbQ7zCDlxQ",
+          "name": "BC MEDI - PAIS"
+        }
+      },
+      "continueOnFail": true
     }
   ],
   "pinData": {},
@@ -1424,6 +1543,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-21T18:03:37.000Z",
-  "versionId": "ba09f374-ecd2-47e3-90b1-13bf934d6e90"
+  "updatedAt": "2023-11-21T18:54:46.000Z",
+  "versionId": "fffe90a5-a58a-4cfc-977a-65fa078a196c"
 }
