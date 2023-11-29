@@ -1,0 +1,312 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-11-24T09:55:17.602Z",
+  "id": "1WxU9NLxPd8QDMRQ",
+  "meta": null,
+  "name": "LIGAÇÃO SOLICITADA MEDI",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fe676992-1c3f-40c9-a682-a0bef74a2f63",
+        "options": {}
+      },
+      "id": "847ad9b8-3912-4e93-818c-37e5186c846c",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        620,
+        260
+      ],
+      "webhookId": "fe676992-1c3f-40c9-a682-a0bef74a2f63"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8",
+          "mode": "list",
+          "cachedResultName": "PAIS - MEDI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "PESQUISA PAIS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1GjS3h0eaYJs-2zaBEnlCN3ljpCtNmmWE7GQFCPR_a_8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "LIGAÇÃO SOLICITADA": "={{ $json.body.LIGAÇÃO }}",
+            "DATA-CHAMADO": "={{ $json.body['DATA CHAMADO'] }}",
+            "HORA-CHAMADO": "={{ $json.body['HORA CHAMADO'] }}",
+            "MATRÍCULA": "={{ $json.body.MATRICULA }}",
+            "DATA": "={{ $json.body['DATA RESPOSTA'] }}",
+            "HORA": "={{ $json.body['DATA RESPOSTA'] }}",
+            "NOME": "={{ $json.body.NOME }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "PROGRAMA DE SAÚDE": "={{ $json.body['PROGRAMA DE SAÚDE'] }}",
+            "EMPRESA": "={{ $json.body.EMPRESA }}",
+            "REMEDIO": "={{ $json.body.REMEDIO }}",
+            "PATOLOGIA": "={{ $json.body.PATOLOGIA }}",
+            "OBESIDADE": "={{ $json.body.OBESIDADE }}",
+            "DIABETES": "={{ $json.body.DIABETES }}",
+            "PRESSÃO": "={{ $json.body.PRESSÃO }}",
+            "SINTOMA": "={{ $json.body.SINTOMA }}",
+            "LGPD": "={{ $json.body.LGPD }}",
+            "CHECKUP": "={{ $json.body.CHECKUP }}",
+            "CRÔNICO": "={{ $json.body.CRONICO }}",
+            "ACOMPANHAMENTO": "={{ $json.body.ACOMPANHAMENTO }}"
+          },
+          "matchingColumns": [
+            "LIGAÇÃO SOLICITADA"
+          ],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA",
+              "displayName": "HORA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MATRÍCULA",
+              "displayName": "MATRÍCULA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PROGRAMA DE SAÚDE",
+              "displayName": "PROGRAMA DE SAÚDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "EMPRESA",
+              "displayName": "EMPRESA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "REMEDIO",
+              "displayName": "REMEDIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PATOLOGIA",
+              "displayName": "PATOLOGIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OBESIDADE",
+              "displayName": "OBESIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DIABETES",
+              "displayName": "DIABETES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PRESSÃO",
+              "displayName": "PRESSÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ACOMPANHAMENTO",
+              "displayName": "ACOMPANHAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SINTOMA",
+              "displayName": "SINTOMA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LGPD",
+              "displayName": "LGPD",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECKUP",
+              "displayName": "CHECKUP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CRÔNICO",
+              "displayName": "CRÔNICO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "OBSERVAÇÃO",
+              "displayName": "OBSERVAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DATA-CHAMADO",
+              "displayName": "DATA-CHAMADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HORA-CHAMADO",
+              "displayName": "HORA-CHAMADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LIGAÇÃO SOLICITADA",
+              "displayName": "LIGAÇÃO SOLICITADA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bfee1714-6467-4b89-9466-86e0452b823c",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        840,
+        260
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-11-27T12:51:28.000Z",
+  "versionId": "48fb5950-7c86-4916-bc9e-1766ff79b0de"
+}
