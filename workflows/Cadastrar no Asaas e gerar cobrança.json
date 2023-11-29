@@ -476,8 +476,8 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -587,6 +587,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-22T18:46:54.000Z",
-  "versionId": "a3a251df-522a-4a9d-a4db-2d96d33d9983"
+  "updatedAt": "2023-11-29T20:09:46.000Z",
+  "versionId": "69fc37c3-a97c-4207-8fd4-a989bcc0b62e"
 }
