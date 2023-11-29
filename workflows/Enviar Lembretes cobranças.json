@@ -752,8 +752,9 @@
       ]
     }
   },
-  "createdAt": "2023-08-03T08:02:30.542Z",
-  "id": "ehJek80JUntIJmiG",
+  "createdAt": "2023-11-22T17:44:41.067Z",
+  "id": "kUsPCVmhd5QR4C8j",
+  "meta": null,
   "name": "Enviar Lembretes cobranças",
   "nodes": [
     {
@@ -766,68 +767,68 @@
           ]
         }
       },
-      "id": "a990d297-3621-4929-9683-9b29b51872b4",
+      "id": "f358e213-484f-48dc-8d58-8de7e0c6789b",
       "name": "Cron",
       "type": "n8n-nodes-base.cron",
       "typeVersion": 1,
       "position": [
-        -1040,
-        1080
+        -240,
+        1340
       ]
     },
     {
       "parameters": {},
-      "id": "84b2b6d0-319a-450c-9bf1-8353241bc9de",
+      "id": "7dca5fcd-b8e8-4380-a026-32d51140e226",
       "name": "Lembrete (-5d)",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -340,
-        700
+        460,
+        960
       ]
     },
     {
       "parameters": {},
-      "id": "b788842a-432e-4990-9c48-4558a47fa7d7",
+      "id": "3459811d-237e-40e8-817c-ce092f23dedb",
       "name": "Lembrete (-1d)",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -340,
-        1080
+        460,
+        1340
       ]
     },
     {
       "parameters": {},
-      "id": "dc16e2b1-74a8-4f1a-b041-88af5050da21",
+      "id": "a7b5c4fc-b851-4e7b-a183-786be6d1ed33",
       "name": "Lembrete (no dia)",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -340,
-        1460
+        460,
+        1720
       ]
     },
     {
       "parameters": {},
-      "id": "a4ab0740-90da-439d-b625-c8ccf854cc06",
+      "id": "52cb3014-0160-4204-84f1-e991ffaa988e",
       "name": "❌ Atrasado (OVERDUE)",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -660,
-        280
+        140,
+        540
       ]
     },
     {
       "parameters": {},
-      "id": "6791c539-90ec-4b5b-8d14-259a0a5dc75e",
+      "id": "1d7348af-ee3b-4724-9b4d-b3062461ea78",
       "name": "⏱️ Aguardando (PENDING)",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -660,
-        1080
+        140,
+        1340
       ]
     },
     {
@@ -850,18 +851,18 @@
         },
         "options": {}
       },
-      "id": "8dc4b0a0-9de6-49bc-878f-ac55b044c64d",
+      "id": "9a677429-54ea-453c-ab4d-56c23903b583",
       "name": "HTTP Request",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -340,
-        200
+        460,
+        460
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -889,30 +890,30 @@
         },
         "options": {}
       },
-      "id": "53683bb2-5877-4438-8e4c-b82ac5285a9a",
+      "id": "3dee64c7-e32e-4ca2-a2a8-336336f43345",
       "name": "HTTP Request1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -340,
-        360
+        460,
+        620
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
     {
       "parameters": {},
-      "id": "81e03309-906c-4248-b369-167bf20adb09",
+      "id": "de7cf376-c6ec-4e26-ad47-3412a1178349",
       "name": "Merge",
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        140,
-        300
+        940,
+        560
       ]
     },
     {
@@ -920,13 +921,13 @@
         "fieldToSplitOut": "data",
         "options": {}
       },
-      "id": "e0862b88-019c-45c3-921a-bc479165e685",
+      "id": "4f84a1a2-6233-44bf-a2fd-760e20d723ac",
       "name": "Item Lists",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 2.2,
       "position": [
-        -120,
-        200
+        680,
+        460
       ]
     },
     {
@@ -934,13 +935,13 @@
         "fieldToSplitOut": "data",
         "options": {}
       },
-      "id": "ec3c06fa-f35a-47a0-b666-b207876ee733",
+      "id": "f64f20d3-5737-4fa3-8307-fc7831c5b810",
       "name": "Item Lists1",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 2.2,
       "position": [
-        -120,
-        360
+        680,
+        620
       ]
     },
     {
@@ -960,20 +961,20 @@
         },
         "options": {}
       },
-      "id": "ac25a908-3409-4692-a830-1019da7c485f",
+      "id": "c0a03ae2-ff78-4d13-acbf-c97ec5fdd93a",
       "name": "salvando link",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1780,
-        300
+        2580,
+        560
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -989,17 +990,17 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        580,
-        300
+        1380,
+        560
       ],
-      "id": "b4d36dae-0e31-4c93-95f3-c46012e09b95",
+      "id": "9b999efa-79c1-4a84-a17e-a8ac76387750",
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1010,11 +1011,11 @@
       "name": "Validar Telefone",
       "type": "n8n-nodes-base.function",
       "position": [
-        1320,
-        300
+        2120,
+        560
       ],
       "typeVersion": 1,
-      "id": "d5850dee-3bfa-4e6e-a049-6e8be2afa9ef"
+      "id": "ecfade64-2ebc-4113-9140-4a8ec1d3fc36"
     },
     {
       "parameters": {
@@ -1026,16 +1027,16 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        1540,
-        300
+        2340,
+        560
       ],
-      "id": "de50cba0-8d1a-4e2c-9211-6a6e0c87001e",
+      "id": "664436e2-c436-4633-bf47-546e1575ea16",
       "retryOnFail": true,
       "waitBetweenTries": 5000,
       "maxTries": 5,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1045,13 +1046,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "21abd132-9362-4cde-98ba-43d3d8fadf50",
+      "id": "122dff19-c324-4b86-9459-299f38315c7e",
       "name": "1 por vez",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        360,
-        300
+        1160,
+        560
       ]
     },
     {
@@ -1071,20 +1072,20 @@
         },
         "options": {}
       },
-      "id": "358337b9-705f-42ab-b855-944ebedf1f01",
+      "id": "1f1a5892-a944-4ddc-b65e-05bab58478b0",
       "name": "enviar fluxo cobranca vencida",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2020,
-        300
+        2820,
+        560
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1094,13 +1095,13 @@
         "amount": 5,
         "unit": "seconds"
       },
-      "id": "20c9fcd9-e923-4ea8-b239-9a87505c48ba",
+      "id": "15e13b43-9dda-4c1e-a53d-c0527c358586",
       "name": "Wait",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2240,
-        300
+        3040,
+        560
       ],
       "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
     },
@@ -1132,18 +1133,18 @@
         },
         "options": {}
       },
-      "id": "c6537f87-3de4-4861-bc4b-6eeea0021a0b",
+      "id": "d8787730-a692-476f-b1a5-a009c1ca459b",
       "name": "HTTP Request2",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        140,
-        1460
+        940,
+        1720
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1154,13 +1155,13 @@
         "toFormat": "YYYY-MM-DD",
         "options": {}
       },
-      "id": "bbb121fc-5c3f-472f-b79a-517e667d4a6e",
+      "id": "a37e3f78-e523-42b0-bf49-316304680946",
       "name": "data-hoje",
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        -120,
-        1460
+        680,
+        1720
       ]
     },
     {
@@ -1168,13 +1169,13 @@
         "fieldToSplitOut": "data",
         "options": {}
       },
-      "id": "76291707-28c9-4301-a173-65d2b195f70b",
+      "id": "00c8b456-db99-48c3-882a-bb50eb844627",
       "name": "Item Lists2",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 2.2,
       "position": [
-        360,
-        1460
+        1160,
+        1720
       ]
     },
     {
@@ -1194,20 +1195,20 @@
         },
         "options": {}
       },
-      "id": "3ec1744e-6b74-4e10-ad75-0b8d65a0a73d",
+      "id": "c02a937b-540a-4d3e-8fb3-98ccd1472acb",
       "name": "salvando link1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2240,
-        1460
+        3040,
+        1720
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1223,17 +1224,17 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        1060,
-        1460
+        1860,
+        1720
       ],
-      "id": "6e14d750-c3b8-4bf0-9aea-d3622ba7281b",
+      "id": "e1cb79ee-a768-49c8-b3b3-c2d107bedc87",
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1247,16 +1248,16 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2020,
-        1460
+        2820,
+        1720
       ],
-      "id": "8fa07f6e-80a9-43a4-89a0-6fa84f561ec5",
+      "id": "ff1510e1-ece9-4578-9808-edf36840c177",
       "retryOnFail": true,
       "waitBetweenTries": 5000,
       "maxTries": 5,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1266,13 +1267,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "3f52d241-a27c-420e-94d8-9e430093cf30",
+      "id": "960e4b2a-8d16-438a-aad3-f313b95634b2",
       "name": "1 por vez1",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        820,
-        1460
+        1620,
+        1720
       ]
     },
     {
@@ -1280,13 +1281,13 @@
         "amount": 5,
         "unit": "seconds"
       },
-      "id": "cef61eb2-4177-415e-a991-c8f958e744cb",
+      "id": "81843bc0-6318-43dd-894a-e5eed2d9e0e7",
       "name": "Wait1",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2700,
-        1460
+        3500,
+        1720
       ],
       "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
     },
@@ -1302,13 +1303,13 @@
           ]
         }
       },
-      "id": "bcbb04ed-e5c0-4280-9094-103b3d01f45c",
+      "id": "77e3ff7a-673e-49b3-b72f-31667e3f7212",
       "name": "adesao?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        580,
-        1460
+        1380,
+        1720
       ]
     },
     {
@@ -1328,20 +1329,20 @@
         },
         "options": {}
       },
-      "id": "422c4f48-65c2-4bd2-b5a9-37fe74a961fd",
+      "id": "d0129ab8-dded-4f76-b501-070eaf8357a3",
       "name": "enviar fluxo LEMBRETE",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2480,
-        1460
+        3280,
+        1720
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1357,13 +1358,13 @@
           ]
         }
       },
-      "id": "9e96e236-fd28-452b-9927-7742e4fdce89",
+      "id": "2d28ba43-e588-4dfd-953a-691f4539b3b8",
       "name": "IF1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        760,
-        300
+        1560,
+        560
       ]
     },
     {
@@ -1378,13 +1379,13 @@
         },
         "options": {}
       },
-      "id": "430071e4-e3f0-4118-bade-a972f5d04239",
+      "id": "4de6e2c5-9f61-4059-aa04-a56433b42670",
       "name": "definindo telefone2",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1020,
-        240
+        1820,
+        500
       ]
     },
     {
@@ -1399,13 +1400,13 @@
         },
         "options": {}
       },
-      "id": "0638aec2-5381-42ea-a27e-52b2a9e88cd3",
+      "id": "b1297a4b-d966-4b47-b3d2-57572eed1b95",
       "name": "definindo telefone3",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1020,
-        380
+        1820,
+        640
       ]
     },
     {
@@ -1415,11 +1416,11 @@
       "name": "Validar Telefone2",
       "type": "n8n-nodes-base.function",
       "position": [
-        1820,
-        1460
+        2620,
+        1720
       ],
       "typeVersion": 1,
-      "id": "d8ca520c-1bf9-4734-8fc5-34bade5446cd"
+      "id": "b80c32f5-92a4-409b-b5af-6f681ab87405"
     },
     {
       "parameters": {
@@ -1432,13 +1433,13 @@
           ]
         }
       },
-      "id": "ee4c312e-c1e0-408a-a8ae-8a1ce407ad80",
+      "id": "7291b5d0-8c36-400a-8fa1-05ab740d79c5",
       "name": "IF",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        1260,
-        1460
+        2060,
+        1720
       ]
     },
     {
@@ -1453,13 +1454,13 @@
         },
         "options": {}
       },
-      "id": "0d4ac4eb-347f-40d3-9cf1-521a278436bd",
+      "id": "d97c4c8a-68d5-4826-8d25-cc908f100e6b",
       "name": "definindo telefone",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
-        1380
+        2320,
+        1640
       ]
     },
     {
@@ -1474,13 +1475,13 @@
         },
         "options": {}
       },
-      "id": "e18afcb5-f6f8-4d2a-a7b4-def6888f9709",
+      "id": "3ccffafb-5fb3-4659-b96b-9188483a291f",
       "name": "definindo telefone4",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
-        1540
+        2320,
+        1800
       ]
     },
     {
@@ -1511,18 +1512,18 @@
         },
         "options": {}
       },
-      "id": "95708dce-20f8-469a-8ecf-6c7d2a375217",
+      "id": "57ccff85-a0c5-4ab2-8d48-6c311cd68228",
       "name": "HTTP Request3",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        140,
-        1080
+        940,
+        1340
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1531,13 +1532,13 @@
         "fieldToSplitOut": "data",
         "options": {}
       },
-      "id": "b0127f19-b646-4e7c-8bae-dbfd2fb71665",
+      "id": "99fbb3a2-0303-48e5-b6e0-57fc745e1a92",
       "name": "Item Lists3",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 2.2,
       "position": [
-        360,
-        1080
+        1160,
+        1340
       ]
     },
     {
@@ -1557,20 +1558,20 @@
         },
         "options": {}
       },
-      "id": "7b890b79-a37e-45e9-aec1-4fdc03edfe8c",
+      "id": "9c2918f8-8eb4-4845-9308-d23190889949",
       "name": "salvando link2",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2240,
-        1080
+        3040,
+        1340
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1586,17 +1587,17 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        1060,
-        1080
+        1860,
+        1340
       ],
-      "id": "6b8bfa71-a096-4d4d-be68-9d2883b2d34f",
+      "id": "1359bb93-d399-4c02-9c2b-c6c91dc9ee67",
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1610,16 +1611,16 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2020,
-        1080
+        2820,
+        1340
       ],
-      "id": "ef41f24c-d21a-4016-be92-18c8fa3f21df",
+      "id": "1ae0c091-89ed-43c2-ba99-ba45a78f1d5e",
       "retryOnFail": true,
       "waitBetweenTries": 5000,
       "maxTries": 5,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1629,13 +1630,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "c88739da-5e01-4041-8db1-8c8f779ede3d",
+      "id": "3e98daf7-c224-4c09-8ffe-335e6ae581f7",
       "name": "1 por vez2",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        820,
-        1080
+        1620,
+        1340
       ]
     },
     {
@@ -1643,13 +1644,13 @@
         "amount": 5,
         "unit": "seconds"
       },
-      "id": "d11df1d7-8251-46d7-9653-bee2ea1d6d6c",
+      "id": "d205f9b7-67a6-4d71-b7b4-1bb90d2496e7",
       "name": "Wait2",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2700,
-        1080
+        3500,
+        1340
       ],
       "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
     },
@@ -1665,13 +1666,13 @@
           ]
         }
       },
-      "id": "f865719b-b9b0-49af-ac6a-d962d8de2423",
+      "id": "22ee7cde-7f70-4d18-a3d0-0b3b74b19630",
       "name": "adesao?1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        580,
-        1080
+        1380,
+        1340
       ]
     },
     {
@@ -1691,20 +1692,20 @@
         },
         "options": {}
       },
-      "id": "ea2a13ba-44d3-45ac-aa7d-f8fb469e3d73",
+      "id": "3f9e31dc-874c-4fcb-a16d-e134b2a63556",
       "name": "enviar fluxo LEMBRETE1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2480,
-        1080
+        3280,
+        1340
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1716,11 +1717,11 @@
       "name": "Validar Telefone3",
       "type": "n8n-nodes-base.function",
       "position": [
-        1820,
-        1080
+        2620,
+        1340
       ],
       "typeVersion": 1,
-      "id": "4c8a4467-82ab-4365-846c-5247360779c2"
+      "id": "e03cdd23-9aaa-42be-96e1-4d4b1b04e489"
     },
     {
       "parameters": {
@@ -1733,13 +1734,13 @@
           ]
         }
       },
-      "id": "51df9b9d-0a4a-4171-b4bc-45299b2a2ff1",
+      "id": "1583078b-3b28-4a81-8a37-b49aeeff39ef",
       "name": "IF2",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        1260,
-        1080
+        2060,
+        1340
       ]
     },
     {
@@ -1754,13 +1755,13 @@
         },
         "options": {}
       },
-      "id": "68fe43ba-1867-45c9-81da-bbee47a81ef0",
+      "id": "59568924-4ff2-48e0-9d0b-7b767de9abc9",
       "name": "definindo telefone1",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
-        1000
+        2320,
+        1260
       ]
     },
     {
@@ -1775,13 +1776,13 @@
         },
         "options": {}
       },
-      "id": "df83841f-3391-44fa-a83c-39b770635b60",
+      "id": "53653ab1-a0e4-45ba-b6f5-510f4ec0ff54",
       "name": "definindo telefone5",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
-        1160
+        2320,
+        1420
       ]
     },
     {
@@ -1792,13 +1793,13 @@
         "dataPropertyName": "data-busca",
         "options": {}
       },
-      "id": "3ae3ffca-9d94-4fc9-806e-fa8360de3c91",
+      "id": "a9230018-98d5-4f83-9959-9d2d7c3128ab",
       "name": "data D-1",
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        -120,
-        1080
+        680,
+        1340
       ]
     },
     {
@@ -1829,18 +1830,18 @@
         },
         "options": {}
       },
-      "id": "325a952a-cfdf-4897-98bd-1085a2574610",
+      "id": "6363f45a-c548-4c38-bcb0-bf9d85fc07ba",
       "name": "HTTP Request4",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        140,
-        700
+        940,
+        960
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1849,13 +1850,13 @@
         "fieldToSplitOut": "data",
         "options": {}
       },
-      "id": "005c417a-db78-4bb3-8e81-f87c91ff6fc2",
+      "id": "e82ee7ac-414b-4fd8-95f7-3c2cd0ba1183",
       "name": "Item Lists4",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 2.2,
       "position": [
-        360,
-        700
+        1160,
+        960
       ]
     },
     {
@@ -1875,20 +1876,20 @@
         },
         "options": {}
       },
-      "id": "acf2bcdf-43c3-4c0b-a46a-e73006eddd9f",
+      "id": "e49280ff-aad3-4593-8eb7-6ce40da377e9",
       "name": "salvando link3",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2240,
-        700
+        3040,
+        960
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1904,17 +1905,17 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        1060,
-        700
+        1860,
+        960
       ],
-      "id": "3dda3e1f-d620-4509-a6c8-606ee045a0bc",
+      "id": "6775b36c-1faa-4a15-aee9-28e3bfa851aa",
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -1928,16 +1929,16 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2020,
-        700
+        2820,
+        960
       ],
-      "id": "05697c01-6913-47cf-8fc7-cf6b08bf5074",
+      "id": "22175dcc-cde1-4b8c-9171-1f7d8be7532e",
       "retryOnFail": true,
       "waitBetweenTries": 5000,
       "maxTries": 5,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1947,13 +1948,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "c34fe7e0-a194-46ab-9b57-24ebad7c0cb0",
+      "id": "bb8ab850-1256-40c4-b790-3ddad33dedcb",
       "name": "1 por vez3",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        820,
-        700
+        1620,
+        960
       ]
     },
     {
@@ -1961,13 +1962,13 @@
         "amount": 5,
         "unit": "seconds"
       },
-      "id": "4143ccd4-fe7f-4ec3-a266-945e800e84c6",
+      "id": "37937d5a-5f97-4b47-bbf9-75c7d56be6cc",
       "name": "Wait3",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2700,
-        700
+        3500,
+        960
       ],
       "webhookId": "85d2caef-88e0-4775-9c8d-e8cf88125175"
     },
@@ -1983,13 +1984,13 @@
           ]
         }
       },
-      "id": "84a544fb-f705-474a-bf26-e084a1a2ed2e",
+      "id": "77e6c0ec-3bf4-4b91-86a6-b4851f141770",
       "name": "adesao?2",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        580,
-        700
+        1380,
+        960
       ]
     },
     {
@@ -2009,20 +2010,20 @@
         },
         "options": {}
       },
-      "id": "cf592a3e-3b0b-4e44-a753-aae1992c428c",
+      "id": "4d3faaf6-d226-4349-8823-5ecc50d3aaa9",
       "name": "enviar fluxo LEMBRETE2",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2480,
-        700
+        3280,
+        960
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -2034,11 +2035,11 @@
       "name": "Validar Telefone4",
       "type": "n8n-nodes-base.function",
       "position": [
-        1820,
-        700
+        2620,
+        960
       ],
       "typeVersion": 1,
-      "id": "ae7771c1-2f96-4a7d-a68d-0bf0678c2816"
+      "id": "a0fcc586-5f2e-4567-aa49-f56362bb2586"
     },
     {
       "parameters": {
@@ -2051,13 +2052,13 @@
           ]
         }
       },
-      "id": "2a10a536-4ecc-4d7f-ac20-c70d168b6427",
+      "id": "525e16b0-f003-4b41-8394-c9da4627310d",
       "name": "IF3",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        1260,
-        700
+        2060,
+        960
       ]
     },
     {
@@ -2072,13 +2073,13 @@
         },
         "options": {}
       },
-      "id": "e3b1bed7-ad77-49d0-a936-5fa4e8df6054",
+      "id": "edc7bd34-bcdd-41e2-90a1-9d0d28c0ca87",
       "name": "definindo telefone6",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
-        620
+        2320,
+        880
       ]
     },
     {
@@ -2093,13 +2094,13 @@
         },
         "options": {}
       },
-      "id": "5d2ce385-6857-47f0-9379-4bbf92eb6d34",
+      "id": "5848cebc-2ca4-4489-a028-b356cfe81a9c",
       "name": "definindo telefone7",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
-        780
+        2320,
+        1040
       ]
     },
     {
@@ -2110,13 +2111,13 @@
         "dataPropertyName": "data-busca",
         "options": {}
       },
-      "id": "2f05f82b-2e77-42dc-b169-4be745fcac0a",
+      "id": "cbdbdbae-ebe8-4648-957f-8eb85a0735b7",
       "name": "data D-5",
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        -120,
-        700
+        680,
+        960
       ]
     },
     {
@@ -2129,13 +2130,13 @@
           ]
         }
       },
-      "id": "a935ab4b-c2fa-4e54-bf46-53ba4a17bc75",
+      "id": "d30807ad-74ea-402d-a0bd-8cd7ef361cdc",
       "name": "Cron1",
       "type": "n8n-nodes-base.cron",
       "typeVersion": 1,
       "position": [
-        -1020,
-        280
+        -220,
+        540
       ]
     }
   ],
@@ -2146,13 +2147,13 @@
   "staticData": null,
   "tags": [
     {
-      "id": "WVFbq3skbZP8DMK0",
-      "createdAt": "2023-08-11T02:32:29.267Z",
-      "updatedAt": "2023-08-11T02:32:29.267Z",
+      "createdAt": "2023-11-22T17:42:30.840Z",
+      "updatedAt": "2023-11-22T17:42:30.840Z",
+      "id": "0gOZgGnm1GKApPtB",
       "name": "Maya"
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2023-09-26T13:47:34.000Z",
-  "versionId": "1c107e0b-73e9-4cc9-9013-481524611248"
+  "updatedAt": "2023-11-22T17:47:15.000Z",
+  "versionId": "8006ee99-e900-472c-bb9c-b49a3a3db3a4"
 }
