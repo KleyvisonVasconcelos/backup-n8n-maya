@@ -272,8 +272,9 @@
       ]
     }
   },
-  "createdAt": "2023-08-02T21:48:46.734Z",
-  "id": "z4Y9H7lVNLQBtT0w",
+  "createdAt": "2023-11-22T18:45:17.269Z",
+  "id": "4zjYFMHe8X8ZOSui",
+  "meta": null,
   "name": "Recebendo dados asaas",
   "nodes": [
     {
@@ -282,13 +283,13 @@
         "path": "recebendo-dados-asaas11",
         "options": {}
       },
-      "id": "e7d636cf-c010-498b-9e0f-25343d73621d",
+      "id": "4496b6d5-f278-4f57-9980-0423ef5e9b9a",
       "name": "Webhook",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
-        -220,
-        40
+        1000,
+        420
       ],
       "webhookId": "88dbb469-d25f-4afa-9897-8f18ca96bebe"
     },
@@ -304,10 +305,10 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        -140,
-        320
+        1080,
+        700
       ],
-      "id": "ce859470-d52f-4a03-bbd3-622194713f4e"
+      "id": "715f8402-b745-4bd2-92de-71f3f5a1d497"
     },
     {
       "parameters": {
@@ -320,14 +321,14 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        880,
-        320
+        2100,
+        700
       ],
-      "id": "579b9ad8-be6e-4d01-b0d2-0c038444aabf",
+      "id": "5615fdf9-6dce-44d4-9050-dea2d722557a",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
         }
       }
     },
@@ -346,10 +347,10 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        480,
-        320
+        1700,
+        700
       ],
-      "id": "55cc4699-9dbd-4760-a24e-09abe1bc4c45"
+      "id": "cefdd4a3-c2d2-43dc-a4c2-df9bf000479e"
     },
     {
       "parameters": {
@@ -366,10 +367,10 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        80,
-        320
+        1300,
+        700
       ],
-      "id": "9559fbad-5b19-411b-b428-5607246501fb"
+      "id": "09559dd8-34f0-4245-ad3c-bb4bae136978"
     },
     {
       "parameters": {
@@ -383,10 +384,10 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        280,
-        320
+        1500,
+        700
       ],
-      "id": "23b4f22d-8f4b-4c2b-b690-8b2ece05f7b8"
+      "id": "bef12329-1402-4117-aa87-20dc9f41a170"
     },
     {
       "parameters": {
@@ -400,10 +401,10 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        680,
-        320
+        1900,
+        700
       ],
-      "id": "4827cc30-8f74-4731-806b-06b0d3bf84c1"
+      "id": "19f6e06b-7c3e-4b02-9c37-bbde1b27117e"
     },
     {
       "parameters": {
@@ -466,10 +467,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        2120,
-        320
+        3340,
+        700
       ],
-      "id": "bed2d9a7-9490-43bc-af01-8f399dfee91f"
+      "id": "6c6b7d08-7ec7-4758-9afb-382115ee6c2c"
     },
     {
       "parameters": {
@@ -535,10 +536,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -140,
-        500
+        1080,
+        880
       ],
-      "id": "d3599da3-2785-4199-8c09-433632964169"
+      "id": "69492bc3-be96-442d-becc-c7aa0b170b79"
     },
     {
       "parameters": {
@@ -552,13 +553,13 @@
           ]
         }
       },
-      "id": "d975cfc6-14a4-483a-9117-8f8d3b14810a",
+      "id": "0a560215-1ab9-44a7-9da5-e5a884c5eff5",
       "name": "Pagamento Deletado?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -380,
-        420
+        840,
+        800
       ]
     },
     {
@@ -573,16 +574,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
       "position": [
-        80,
-        500
+        1300,
+        880
       ],
-      "id": "70fce77a-15d1-4a14-91ca-f87e3b946274",
-      "credentials": {
-        "googleApi": {
-          "id": "5",
-          "name": "Google account"
-        }
-      },
+      "id": "a704efbc-b289-4ce0-ae6c-b45eadc20d99",
       "disabled": true
     },
     {
@@ -592,11 +587,11 @@
       "name": "Validar Telefone",
       "type": "n8n-nodes-base.function",
       "position": [
-        1700,
-        320
+        2920,
+        700
       ],
       "typeVersion": 1,
-      "id": "92bc70ff-69bb-4faa-a731-7c7566d8a739"
+      "id": "c25edc8e-7ae7-41a1-bd54-766792d9ccee"
     },
     {
       "parameters": {
@@ -625,13 +620,13 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        1920,
-        320
+        3140,
+        700
       ],
-      "id": "20a5e140-5cd7-4a1d-8804-6d8e5bc92bc9",
+      "id": "edf1dcf0-a910-4de4-b0b8-16b9d32d1c20",
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       },
@@ -832,20 +827,21 @@
         },
         "options": {}
       },
-      "id": "6fab3eac-cea2-4dfa-b1d7-ee25d289d514",
+      "id": "347ecabb-9a26-4ad9-8c81-c6fd32a45fe6",
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4,
       "position": [
-        2360,
-        320
+        3580,
+        700
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "lwN1WWTkm0Pq97WC",
-          "name": "Maya"
+          "id": "mE3Eh83aYMwpRDSp",
+          "name": "Google Sheets account"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -853,13 +849,13 @@
         "path": "recebendo-dados-asaas",
         "options": {}
       },
-      "id": "77c0c95e-23d5-49e0-8cf5-038372d9131e",
+      "id": "30b9c43d-992f-47ac-96f4-4e755f62ab77",
       "name": "Webhook1",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
-        -640,
-        420
+        580,
+        800
       ],
       "webhookId": "56118588-f8d0-4a5f-a22a-682e8515d095"
     },
@@ -878,24 +874,24 @@
           ]
         }
       },
-      "id": "cd7279ec-a79d-4c05-a704-677acf767d45",
+      "id": "91ab6a2f-7c23-4831-8cff-056c096f55f8",
       "name": "CARTAO DE CRÉDITO-CONFIRMADO",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2860,
-        380
+        4080,
+        760
       ]
     },
     {
       "parameters": {},
-      "id": "549cabd5-a013-4760-9fc5-2aa54f099405",
+      "id": "7802d40a-84d6-466d-95db-90bf63be73e3",
       "name": "No Operation, do nothing",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        3080,
-        220
+        4300,
+        600
       ]
     },
     {
@@ -909,13 +905,13 @@
           ]
         }
       },
-      "id": "b77fb75a-8d9f-4e7e-bf36-fa043aed7bdd",
+      "id": "65854fdf-d531-4396-a459-c8b4a95a08ee",
       "name": "cobrança recebida?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2640,
-        320
+        3860,
+        700
       ]
     },
     {
@@ -935,17 +931,17 @@
         },
         "options": {}
       },
-      "id": "5aad93c7-2c4d-4d27-95c3-59aab6d62cfe",
+      "id": "f733058e-28ec-4c1b-ab85-1342d9d02d03",
       "name": "enviar fluxo cobranca recebida",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        3640,
-        400
+        4860,
+        780
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -962,13 +958,13 @@
           ]
         }
       },
-      "id": "6ef8d25f-c081-4a51-846e-b3c75f43d82f",
+      "id": "40955bf2-d53f-437b-b663-736a51552634",
       "name": "Cliente Novo",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        3300,
-        220
+        4520,
+        600
       ]
     },
     {
@@ -978,18 +974,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "0fcdef68-e35e-461f-b6d2-5b2b33bf25f6",
+      "id": "c549f4b4-488d-403d-8240-7b1ab99194b5",
       "name": "buscando dados assinatura asaas",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        3640,
-        140
+        4860,
+        520
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
         }
       }
     },
@@ -1026,18 +1022,18 @@
         },
         "options": {}
       },
-      "id": "07100d19-2421-4574-b878-caf97d4e1b14",
+      "id": "c8d4cb81-7ad6-4995-b5f7-131073165270",
       "name": "Atualizando descricao assinatura",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        3880,
-        140
+        5100,
+        520
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "Ki7uXQCaX0ZIPpIH",
-          "name": "Asaas - Maya"
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
         }
       }
     },
@@ -1058,17 +1054,17 @@
         },
         "options": {}
       },
-      "id": "f7ead904-ad9e-4110-935b-cb087be0308f",
+      "id": "1d10676a-4639-4e62-8e40-1c4893414ac9",
       "name": "enviar fluxo cliente novo",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        4120,
-        140
+        5340,
+        520
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "l1F04yrg6P1fiSSY",
+          "id": "pCMjftibfRSpRtqc",
           "name": "BC - Maya"
         }
       }
@@ -1084,13 +1080,13 @@
           ]
         }
       },
-      "id": "67bb9f0d-3ac0-40ec-a518-3c4a77359e76",
+      "id": "aaf44c1b-78f3-407b-9b8d-aadea750b5d1",
       "name": "IF1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        1120,
-        320
+        2340,
+        700
       ]
     },
     {
@@ -1105,13 +1101,13 @@
         },
         "options": {}
       },
-      "id": "0f74ce0a-9458-4bd2-9c0a-26034457e51a",
+      "id": "33e2d7f6-233e-4329-a500-d04cffbf8319",
       "name": "definindo telefone2",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1380,
-        240
+        2600,
+        620
       ]
     },
     {
@@ -1126,13 +1122,13 @@
         },
         "options": {}
       },
-      "id": "226193f2-95dc-4613-a47a-93957d6acb42",
+      "id": "c488bbf9-fe8a-4689-a99e-4f4badff9f71",
       "name": "definindo telefone3",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1380,
-        400
+        2600,
+        780
       ]
     }
   ],
@@ -1308,15 +1304,8 @@
     "executionOrder": "v1"
   },
   "staticData": null,
-  "tags": [
-    {
-      "id": "WVFbq3skbZP8DMK0",
-      "createdAt": "2023-08-11T02:32:29.267Z",
-      "updatedAt": "2023-08-11T02:32:29.267Z",
-      "name": "Maya"
-    }
-  ],
+  "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-08-11T02:33:50.000Z",
-  "versionId": "b2d0ff56-dd3a-4aae-8551-bcb2353c636f"
+  "updatedAt": "2023-11-24T18:10:03.000Z",
+  "versionId": "830475e3-c3aa-4df7-83b6-0bab972d68df"
 }
