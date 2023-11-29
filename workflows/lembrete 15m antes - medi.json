@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "a cada 5 minutos": {
       "main": [
@@ -35,8 +35,9 @@
       ]
     }
   },
-  "createdAt": "2023-08-09T05:26:19.402Z",
-  "id": "iJWybQ2DuvkBPj5h",
+  "createdAt": "2023-11-22T18:25:35.645Z",
+  "id": "eZ88PqaU27uGJ4GN",
+  "meta": null,
   "name": "lembrete 15m antes - medi",
   "nodes": [
     {
@@ -93,13 +94,13 @@
           ]
         }
       },
-      "id": "732213e2-f161-43d6-9104-a53ce10f39a9",
+      "id": "57ed3f48-4198-4baa-9828-1a7f907381e4",
       "name": "a cada 5 minutos",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.1,
       "position": [
-        520,
-        380
+        360,
+        660
       ]
     },
     {
@@ -130,18 +131,18 @@
           "returnAllMatches": "returnAllMatches"
         }
       },
-      "id": "5e453a6d-b4df-436a-bd23-7fdb22abeb25",
+      "id": "5ee6a22e-f28d-4dd7-ac04-b7442fc35f0c",
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4,
       "position": [
-        1240,
-        380
+        1080,
+        660
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
         }
       }
     },
@@ -156,13 +157,13 @@
           "timezone": true
         }
       },
-      "id": "abb2067d-2f0a-4ce2-89c9-0e240d70a6b9",
+      "id": "1e05c288-d4fc-4590-b561-6bccd0565878",
       "name": "Date & Time",
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2,
       "position": [
-        1000,
-        380
+        840,
+        660
       ]
     },
     {
@@ -173,13 +174,13 @@
         "duration": 15,
         "outputFieldName": "data hora"
       },
-      "id": "9960d226-86bd-4c72-8064-745d17559bf6",
+      "id": "b67a6754-60cd-4778-afef-689c38992c4a",
       "name": "Date & Time1",
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 2,
       "position": [
-        760,
-        380
+        600,
+        660
       ]
     }
   ],
@@ -187,16 +188,13 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
-  "tags": [
-    {
-      "id": "hclMiW9LVIyi2C4n",
-      "createdAt": "2023-08-11T02:32:22.208Z",
-      "updatedAt": "2023-08-11T02:32:22.208Z",
-      "name": "Medi"
+  "staticData": {
+    "node:a cada 5 minutos": {
+      "recurrencyRules": []
     }
-  ],
-  "triggerCount": 0,
-  "updatedAt": "2023-08-11T02:33:12.000Z",
-  "versionId": "adc51150-cd0a-457e-a3ca-d3f9d18a00d6"
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-11-22T18:26:28.000Z",
+  "versionId": "9785ee7e-8199-46a4-9ce3-432676717b4e"
 }
