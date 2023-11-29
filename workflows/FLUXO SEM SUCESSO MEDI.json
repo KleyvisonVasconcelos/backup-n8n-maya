@@ -101,8 +101,9 @@
       ]
     }
   },
-  "createdAt": "2023-08-08T14:05:33.466Z",
-  "id": "Hw9tvebD4r1GT3al",
+  "createdAt": "2023-11-22T17:57:42.344Z",
+  "id": "CE4HQty2d9lb0Com",
+  "meta": null,
   "name": "FLUXO SEM SUCESSO MEDI",
   "nodes": [
     {
@@ -110,13 +111,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "060abefd-8a55-4e44-8abe-1b1ad207d1d4",
+      "id": "95cdef85-24f6-42ae-9929-2f7bd03738ab",
       "name": "Split In Batches",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        1380,
-        400
+        1700,
+        280
       ]
     },
     {
@@ -124,13 +125,13 @@
         "amount": 5,
         "unit": "seconds"
       },
-      "id": "288603da-1bda-4adf-ae45-6492dbb8680c",
+      "id": "1b9dd885-597e-4e20-bcb3-8d3e43e2e25d",
       "name": "Wait",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2720,
-        400
+        3040,
+        280
       ],
       "webhookId": "a34129e0-1898-4406-bfe9-4ea12bc3da5c"
     },
@@ -151,12 +152,12 @@
         },
         "options": {}
       },
-      "id": "b9499741-2d26-4382-995e-e5c261f29ca8",
+      "id": "4c2e6d89-b158-4e41-895b-17fe11480009",
       "name": "Nome e telefone para validar",
       "type": "n8n-nodes-base.set",
       "position": [
-        1640,
-        400
+        1960,
+        280
       ],
       "typeVersion": 1
     },
@@ -164,13 +165,13 @@
       "parameters": {
         "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
       },
-      "id": "ebf55062-b805-402f-8a3a-a7a657dab240",
+      "id": "df87a36a-2e68-40a1-be60-c8bddae458ca",
       "name": "Formatando Nome e Telefone",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        1860,
-        400
+        2180,
+        280
       ]
     },
     {
@@ -190,21 +191,21 @@
         },
         "options": {}
       },
-      "id": "b1f2dd8a-f9c1-492b-af4c-ab9411440dc4",
+      "id": "552067a2-aeaf-4cb4-8545-5ec72b7135ed",
       "name": "enviar fluxo sem sucesso",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2300,
-        400
+        2620,
+        280
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "dkIpx7dLWsY7G36g",
-          "name": "BC - MEDI"
+          "id": "VJyVQKQpJZR7MMgc",
+          "name": "BC - Medi"
         }
       }
     },
@@ -235,17 +236,17 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2080,
-        400
+        2400,
+        280
       ],
-      "id": "8a09bf92-08b5-406d-9af3-58833407bcc6",
+      "id": "5d4ebe2e-7c83-47c5-8471-9ad84e8f6d59",
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "dkIpx7dLWsY7G36g",
-          "name": "BC - MEDI"
+          "id": "VJyVQKQpJZR7MMgc",
+          "name": "BC - Medi"
         }
       }
     },
@@ -278,18 +279,18 @@
           ]
         }
       },
-      "id": "73f7f636-df16-4cd3-b48b-973b05697455",
+      "id": "c8ba92d4-13d7-4c23-babd-05a6f659d7e9",
       "name": "Google Sheets Trigger",
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        900,
-        400
+        1220,
+        280
       ],
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
-          "id": "Lybs51xNjhYXenys",
-          "name": "trigger medi"
+          "id": "q2koHOT5akHVDoQ9",
+          "name": "medi "
         }
       }
     },
@@ -308,13 +309,13 @@
           ]
         }
       },
-      "id": "4de66613-4de8-40f6-9ff3-acda1a61f0b5",
+      "id": "abfcea7e-21c9-4150-a5d0-f458a2390e77",
       "name": "IF",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        1140,
-        400
+        1460,
+        280
       ]
     },
     {
@@ -443,18 +444,18 @@
           }
         }
       },
-      "id": "f510ee02-b94e-4565-8aac-f9c9c70f6ebc",
+      "id": "ed59f052-b5bf-47fd-aab9-611a9d99292a",
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4,
       "position": [
-        2500,
-        400
+        2820,
+        280
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
         }
       }
     }
@@ -484,19 +485,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
       "sheetId": 265903553,
-      "lastRevision": 107885,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=107885&exportFormat=xlsx"
+      "lastRevision": 112251,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=112251&exportFormat=xlsx"
     }
   },
-  "tags": [
-    {
-      "id": "hclMiW9LVIyi2C4n",
-      "createdAt": "2023-08-11T02:32:22.208Z",
-      "updatedAt": "2023-08-11T02:32:22.208Z",
-      "name": "Medi"
-    }
-  ],
+  "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-21T20:06:50.000Z",
-  "versionId": "00877f1b-aa82-4711-b395-d248425213e9"
+  "updatedAt": "2023-11-28T22:44:58.000Z",
+  "versionId": "9b5a313c-b260-44bb-ae52-22ec7cedc9f1"
 }
