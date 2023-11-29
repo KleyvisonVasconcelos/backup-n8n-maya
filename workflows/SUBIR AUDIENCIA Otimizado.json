@@ -60,11 +60,6 @@
       "main": [
         [
           {
-            "node": "Google Sheets4",
-            "type": "main",
-            "index": 0
-          },
-          {
             "node": "HTTP Request Atualizar Campo EMPRESA",
             "type": "main",
             "index": 0
@@ -133,6 +128,11 @@
             "node": "HTTP Request Atualizar Campo Sintoma_PAIS",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -141,7 +141,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request Verificar se é wpp válido",
+            "node": "Formatando Nome e Telefone",
             "type": "main",
             "index": 0
           }
@@ -317,21 +317,33 @@
           }
         ]
       ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Verificar se é wpp válido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "createdAt": "2023-11-21T16:55:29.917Z",
-  "id": "Tk1IiQLsHjEy41i8",
+  "createdAt": "2023-11-22T17:59:21.197Z",
+  "id": "hR3fA4rAnKCuUwjJ",
+  "meta": null,
   "name": "SUBIR AUDIENCIA Otimizado",
   "nodes": [
     {
       "parameters": {},
-      "id": "72afe1ac-d0c3-497a-bdd9-15e744210a24",
+      "id": "d5995701-dae4-45f7-88f7-bdf10e910b47",
       "name": "When clicking \"Execute Workflow\"",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -3820,
-        1200
+        -3740,
+        1580
       ]
     },
     {
@@ -361,18 +373,18 @@
           "returnAllMatches": "returnAllMatches"
         }
       },
-      "id": "8e42e356-78fd-4901-8675-5b62fb71b666",
+      "id": "96464ee1-3c73-4f03-941d-ac9fcedbfdd4",
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -3400,
-        1200
+        -3340,
+        1580
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
         }
       }
     },
@@ -381,13 +393,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "446dc3fa-9ea2-4c7f-ae78-315bc8b58304",
+      "id": "c25e14e0-9c26-4246-bce7-e4b982c63c3b",
       "name": "Split In Batches",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -2540,
-        1180
+        -2580,
+        1580
       ]
     },
     {
@@ -396,11 +408,11 @@
           "string": [
             {
               "name": "Nome",
-              "value": "={{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[0] }}"
+              "value": "={{ $('Formatando Nome e Telefone').item.json.Nome }}"
             },
             {
               "name": "Sobrenome",
-              "value": "={{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[1] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[2] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[3] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[4] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[5] }} {{ $('Nome e telefone para validar').item.json.nomeCompleto.split(\" \")[6] }}"
+              "value": "={{ $('Formatando Nome e Telefone').item.json.Sobrenome }}"
             },
             {
               "name": "telefone",
@@ -459,13 +471,13 @@
         },
         "options": {}
       },
-      "id": "7743c885-0a0e-48aa-83f7-8b2a40a9e383",
+      "id": "35aff2c3-e599-4f78-852c-9f8042d9ecf1",
       "name": "Set Definir Dados",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -1880,
-        1180
+        -1740,
+        1580
       ],
       "continueOnFail": true
     },
@@ -489,10 +501,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -1440,
-        640
+        -1300,
+        1040
       ],
-      "id": "135976d5-239f-4979-b644-30bad6a0628b"
+      "id": "5a73aee8-dd81-47db-a0f2-faf39a5e1462"
     },
     {
       "parameters": {
@@ -501,11 +513,11 @@
       "name": "Validar Telefone",
       "type": "n8n-nodes-base.function",
       "position": [
-        -1680,
-        660
+        -1540,
+        1060
       ],
       "typeVersion": 1,
-      "id": "7c8d440f-940f-4f4b-806f-a5aa5fc45d62"
+      "id": "d39eabbd-187d-4a93-9f20-f4c619c7ca1a"
     },
     {
       "parameters": {
@@ -532,21 +544,21 @@
         },
         "options": {}
       },
-      "id": "6f2cc848-91dc-46c0-b773-41dd088db7b5",
+      "id": "5af2c61c-3bd8-48cb-ac2c-bc9db189349d",
       "name": "HTTP Request Cadastrar Usuario",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -1120,
-        1160
+        -1040,
+        1580
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       }
     },
@@ -554,13 +566,13 @@
       "parameters": {
         "unit": "seconds"
       },
-      "id": "a3ff0e5b-030f-4e20-aba6-412ecc0b221f",
+      "id": "26905cfc-b189-4735-b311-35d70db52874",
       "name": "Wait 2 segundos",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        100,
-        4260
+        240,
+        4660
       ],
       "webhookId": "305bc370-c952-4aa2-84d4-fcc28392a8a3"
     },
@@ -575,13 +587,13 @@
           ]
         }
       },
-      "id": "0850a757-c562-4849-b54d-9218b47e0cdf",
+      "id": "6202d381-8823-4fdc-968d-2971c5459ef6",
       "name": "IF",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -2240,
-        520
+        -2100,
+        920
       ],
       "continueOnFail": true
     },
@@ -595,13 +607,13 @@
           ]
         }
       },
-      "id": "9dff8838-7113-4346-9b15-627129c4cdc6",
+      "id": "93949864-e229-463f-9766-5078d56bce44",
       "name": "Schedule Trigger",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1,
       "position": [
-        -3700,
-        980
+        -3740,
+        1380
       ]
     },
     {
@@ -609,37 +621,14 @@
         "batchSize": 80,
         "options": {}
       },
-      "id": "5c910fdd-5921-4895-9cde-770e68b05c8f",
+      "id": "85836a63-fc79-40f2-bd93-bf3d53b006d6",
       "name": "Split In Batches1",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -2980,
-        1180
+        -3020,
+        1580
       ]
-    },
-    {
-      "parameters": {
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/bot_fields/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "f0535433-fb7a-4c2e-b8ef-2bb2e67dfc1b",
-      "name": "HTTP Request Cadastrar Usuario1",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        -1920,
-        300
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
-        }
-      },
-      "continueOnFail": true
     },
     {
       "parameters": {
@@ -648,7 +637,7 @@
           "string": [
             {
               "name": "telefone",
-              "value": "={{ $json.PHONE.toString().replaceAll(\"(\",\"\").replaceAll(\")\",\"\").replaceAll(\" \",\"\").replaceAll(\"-\",\"\").replaceAll(\".\",\"\") }}"
+              "value": "={{ $json.PHONE.toString() }}"
             },
             {
               "name": "nomeCompleto",
@@ -658,91 +647,25 @@
         },
         "options": {}
       },
-      "id": "f7444449-26a0-43ad-b6d1-ede69f3bc808",
+      "id": "53f921fe-cd65-4afb-b063-2d9cf3f6275d",
       "name": "Nome e telefone para validar",
       "type": "n8n-nodes-base.set",
       "position": [
-        -2360,
-        1180
+        -2400,
+        1580
       ],
       "typeVersion": 1
     },
     {
-      "parameters": {
-        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
-      },
-      "id": "55c5d428-c505-47ca-8058-70a28c643bfe",
-      "name": "Formatando Nome e Telefone",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 1,
-      "position": [
-        -1300,
-        880
-      ]
-    },
-    {
       "parameters": {},
-      "id": "c58701a9-aafc-4c1c-b6d5-c41bc2e216a2",
+      "id": "9d846f93-aacd-4b1d-a428-70228733700f",
       "name": "No Operation, do nothing",
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -2740,
-        1180
+        -2780,
+        1580
       ]
-    },
-    {
-      "parameters": {
-        "operation": "update",
-        "documentId": {
-          "__rl": true,
-          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
-          "mode": "list",
-          "cachedResultName": "db_pais",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 887746287,
-          "mode": "list",
-          "cachedResultName": "db_pais",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
-        },
-        "columnToMatchOn": "NOME DO BENEFICIARIO",
-        "valueToMatchOn": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}",
-        "fieldsUi": {
-          "values": [
-            {
-              "column": "WHATSAPP CADASTRADO",
-              "fieldValue": "=✅✅"
-            }
-          ]
-        },
-        "options": {
-          "locationDefine": {
-            "values": {
-              "firstDataRow": "={{ $('Split In Batches').item.json.row_number }}"
-            }
-          }
-        }
-      },
-      "id": "ff4ab2cc-0e93-42a7-a0a1-eae9b08a0368",
-      "name": "Google Sheets4",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 3,
-      "position": [
-        80,
-        3980
-      ],
-      "retryOnFail": true,
-      "maxTries": 5,
-      "waitBetweenTries": 5000,
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
-        }
-      }
     },
     {
       "parameters": {
@@ -761,21 +684,21 @@
         },
         "options": {}
       },
-      "id": "f14edd3f-5dd2-45ef-8a35-bfa89c14e7f1",
+      "id": "9f0bb91f-600d-4e07-aa76-4efa8020a6b1",
       "name": "HTTP Request Atualizar Campo EMPRESA",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        1400
+        240,
+        1800
       ],
       "retryOnFail": true,
       "waitBetweenTries": 5000,
       "maxTries": 5,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -797,21 +720,21 @@
         },
         "options": {}
       },
-      "id": "68631b07-6293-4011-9f83-2a6462965faf",
+      "id": "8b43c381-2f24-4937-a151-435aa07a5774",
       "name": "HTTP Request Atualizar Campo  P SAUDE",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        1600
+        240,
+        2000
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -833,21 +756,21 @@
         },
         "options": {}
       },
-      "id": "45459bff-f83f-4dde-8c0a-4e1f0f4f8eb8",
+      "id": "caa8c781-bc17-476f-9488-74d74ee75d04",
       "name": "HTTP Request Atualizar Campo PATOLOGIA",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        1800
+        240,
+        2200
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -869,21 +792,21 @@
         },
         "options": {}
       },
-      "id": "a2371dd8-0eb6-4574-8511-a77b2202df9b",
+      "id": "76fe8f41-2f5c-409e-9a31-04bd26ea6823",
       "name": "HTTP Request Atualizar Campo MATRICULA",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        2000
+        240,
+        2400
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -905,21 +828,21 @@
         },
         "options": {}
       },
-      "id": "2a4cd57a-4660-41c0-a9eb-d06067da4e6c",
+      "id": "a2417b45-6d79-4660-a26e-998ad7c15b5c",
       "name": "HTTP Request Atualizar Campo GRAU DE RISCO",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        2420
+        240,
+        2820
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -945,13 +868,13 @@
         },
         "fallbackOutput": 3
       },
-      "id": "68e9c3ac-e92e-4c7d-ba9e-851896c10ad7",
+      "id": "977eec00-89d1-4baf-9de7-1ebbb5844062",
       "name": "Switch",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        480,
-        100
+        620,
+        500
       ]
     },
     {
@@ -975,13 +898,13 @@
         },
         "fallbackOutput": 3
       },
-      "id": "493d1781-92e4-4dbc-97d2-bb1f15cf4950",
+      "id": "91225fb3-179a-42a7-af88-220d19a7479d",
       "name": "Switch1",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        480,
-        700
+        620,
+        1100
       ]
     },
     {
@@ -997,13 +920,13 @@
         },
         "fallbackOutput": 3
       },
-      "id": "483ac72a-28fc-41f8-beb7-b3223e9ebeaa",
+      "id": "bff223b1-dabc-4c61-8cc5-e5e56633d163",
       "name": "Switch2",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        480,
-        1140
+        620,
+        1540
       ]
     },
     {
@@ -1014,18 +937,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "e2652a6f-31b6-4394-b865-6c510d0c9d6e",
+      "id": "622d3203-a82d-4c96-9926-831c562870da",
       "name": "HTTP Request Adicionar Etiqueta em inclusao",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        20
+        1120,
+        420
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1038,18 +961,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "c434714f-188e-44c6-85ee-5ee07448bcad",
+      "id": "908e38fe-6e2f-4675-be23-4e78950e5f2a",
       "name": "HTTP Request Adicionar Etiqueta em inclusao1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        200
+        1120,
+        600
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1062,18 +985,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "48f1f9fc-8749-4ad2-9a71-bce35fbe0b68",
+      "id": "5008e8f5-4854-4552-9df0-f4aaf1cb7a94",
       "name": "HTTP Request Adicionar Etiqueta em inclusao2",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        400
+        1120,
+        800
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1086,18 +1009,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "8f1eb91b-876d-401c-8f1d-285acad66814",
+      "id": "1f671422-4583-46cb-b5ae-2087fcff6963",
       "name": "HTTP Request Adicionar Etiqueta em inclusao3",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        600
+        1120,
+        1000
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1110,18 +1033,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "19364d53-b12e-4328-8d60-23c4dc676ac0",
+      "id": "23e1a7c1-6eaf-4b41-a8b9-814eefde8216",
       "name": "HTTP Request Adicionar Etiqueta em inclusao4",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        780
+        1120,
+        1180
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1134,18 +1057,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "5b101e26-6c50-4839-9219-6c5ea31ffac9",
+      "id": "8aa4fc8a-d6f2-4754-be5a-cd5e01fc8f0c",
       "name": "HTTP Request Adicionar Etiqueta em inclusao5",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        960
+        1120,
+        1360
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1158,18 +1081,18 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "60742cfb-2cd7-4437-9a49-8e124ac43528",
+      "id": "4af2dd5d-0f25-40a9-bd98-06eb0b37cca2",
       "name": "HTTP Request Adicionar Etiqueta em inclusao6",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        980,
-        1140
+        1120,
+        1540
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1185,26 +1108,26 @@
           ]
         }
       },
-      "id": "74af7079-2717-44f3-ae88-0458fa9966f5",
+      "id": "b5572436-c9bc-4280-9158-b895df566180",
       "name": "IF1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -1620,
-        1180
+        -1480,
+        1580
       ]
     },
     {
       "parameters": {
         "unit": "seconds"
       },
-      "id": "a91f58e2-c4ef-449c-ba67-92f7aff6c58d",
+      "id": "bb21a615-765b-47f3-82ef-ea450f4eb877",
       "name": "Wait",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        -1140,
-        1780
+        -1000,
+        2180
       ],
       "webhookId": "3c62d4fd-7d20-4bfc-b76e-6d16104ac201"
     },
@@ -1237,27 +1160,27 @@
         },
         "options": {}
       },
-      "id": "511fcfa2-a0fa-4741-9d01-0bf3195dd385",
+      "id": "ee3fe0f3-0f77-4f69-8edc-0105446abe58",
       "name": "Google Sheets Atualizar telefone não válido",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -1300,
-        1480
+        -1160,
+        1880
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "WtzcanNTBiAvqMef",
-          "name": "Medi"
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
         }
       }
     },
     {
       "parameters": {
-        "url": "=https://api.z-api.io/instances/3BAE860F0ADEB0A7E993D6DE7E9F2DF0/token/5B29C948AD29016FB2E58702/phone-exists/55{{ $json.telefone }}",
+        "url": "=https://api.z-api.io/instances/3BAE860F0ADEB0A7E993D6DE7E9F2DF0/token/5B29C948AD29016FB2E58702/phone-exists/{{ $json.whatsapp.replace(\"+\",\"\") }}",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1269,13 +1192,13 @@
         },
         "options": {}
       },
-      "id": "8d2eb4de-6c2f-44e3-82ae-701576e20276",
+      "id": "19601ad7-d158-48b1-a9aa-764c9fbd934f",
       "name": "HTTP Request Verificar se é wpp válido",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -2100,
-        1180
+        -1960,
+        1580
       ]
     },
     {
@@ -1295,21 +1218,21 @@
         },
         "options": {}
       },
-      "id": "40aaa3b9-b0ac-4c09-b740-2c6483aa983e",
+      "id": "ceaebfc9-d720-4744-9aea-9b3aedd9bd28",
       "name": "HTTP Request Atualizar Campo Especialidade_PAIS",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        2840
+        240,
+        3240
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1331,21 +1254,21 @@
         },
         "options": {}
       },
-      "id": "12c7981f-15dc-4c5a-be53-838d78a2ad5d",
+      "id": "4be814cc-7e88-4833-bc51-37aebf18fbbe",
       "name": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        3040
+        240,
+        3440
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1367,21 +1290,21 @@
         },
         "options": {}
       },
-      "id": "7339b6da-b6d6-4f5f-8fc5-9472760b606b",
+      "id": "b0e64171-b57f-4d67-8a24-8c93589c94ee",
       "name": "HTTP Request Atualizar Campo DIABETES",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        3220
+        240,
+        3620
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1403,21 +1326,21 @@
         },
         "options": {}
       },
-      "id": "ae81cd59-c345-421c-af86-48da43a38a18",
+      "id": "1d3498c5-2cfe-4610-8ab0-8d7430af4402",
       "name": "HTTP Request Atualizar Campo pressao-usuario",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        3460
+        240,
+        3860
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1439,21 +1362,21 @@
         },
         "options": {}
       },
-      "id": "107a0294-a4de-4c5a-a6aa-da9adb6d7d51",
+      "id": "3e712e80-cc61-469a-8408-642e11d0ded6",
       "name": "HTTP Request Atualizar Campo Sintoma_PAIS",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        3640
+        240,
+        4040
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
@@ -1475,21 +1398,21 @@
         },
         "options": {}
       },
-      "id": "a5a233c4-61bc-4ddc-847f-23edfd64403c",
+      "id": "be42dee5-6268-48cc-bf02-af2c6ae6110d",
       "name": "HTTP Request Atualizar Campo G-SEXO",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        2220
+        240,
+        2620
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       }
     },
@@ -1510,31 +1433,775 @@
         },
         "options": {}
       },
-      "id": "e638e206-a600-4096-b776-ce5a528edcf6",
+      "id": "71a868e8-508c-4d32-ad0d-a28d78f05f60",
       "name": "HTTP Request Atualizar Campo data proximo contato - melhordata",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        100,
-        2620
+        240,
+        3020
       ],
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "vCIPDPVbQ7zCDlxQ",
-          "name": "BC MEDI - PAIS"
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
         }
       },
       "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "WHATSAPP CADASTRADO": "✅✅",
+            "NOME DO BENEFICIARIO": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}"
+          },
+          "matchingColumns": [
+            "NOME DO BENEFICIARIO"
+          ],
+          "schema": [
+            {
+              "id": "EMPRESA DO BENEFICIARIO",
+              "displayName": "EMPRESA DO BENEFICIARIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TIPO CONTRATANTE",
+              "displayName": "TIPO CONTRATANTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "EMPRESA CONTRATANTE",
+              "displayName": "EMPRESA CONTRATANTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OPERADORA DE SAUDE",
+              "displayName": "OPERADORA DE SAUDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "NOME DO PROGRAMA",
+              "displayName": "NOME DO PROGRAMA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MATRICULA DE UTILIZACAO NO PLANO",
+              "displayName": "MATRICULA DE UTILIZACAO NO PLANO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "COD PRODUTO",
+              "displayName": "COD PRODUTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "NOME DO BENEFICIARIO",
+              "displayName": "NOME DO BENEFICIARIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "ENTRADA NO PROGRAMA",
+              "displayName": "ENTRADA NO PROGRAMA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TIT/DEP",
+              "displayName": "TIT/DEP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA DE NASCIMENTO",
+              "displayName": "DATA DE NASCIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "IDADE",
+              "displayName": "IDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "UF",
+              "displayName": "UF",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "NOME DO TITULAR",
+              "displayName": "NOME DO TITULAR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "RESPONSAVEL",
+              "displayName": "RESPONSAVEL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRAU DE PARENTESCO DO RESPONSAVEL",
+              "displayName": "GRAU DE PARENTESCO DO RESPONSAVEL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PROGRAMA DE ATENCAO",
+              "displayName": "PROGRAMA DE ATENCAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRAU DE RISCO",
+              "displayName": "GRAU DE RISCO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO",
+              "displayName": "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MOTIVO DO ACOMPANHAMENTO",
+              "displayName": "MOTIVO DO ACOMPANHAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CID PRINCIPAL",
+              "displayName": "CID PRINCIPAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRUPO DE DOENCAS",
+              "displayName": "GRUPO DE DOENCAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS",
+              "displayName": "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CIDS SECUNDÁRIOS",
+              "displayName": "CIDS SECUNDÁRIOS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO",
+              "displayName": "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE",
+              "displayName": "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "UTI",
+              "displayName": "UTI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA DO ULTIMO CONTATO",
+              "displayName": "DATA DO ULTIMO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "RESPONSAVEL PELO CONTATO",
+              "displayName": "RESPONSAVEL PELO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "HISTORICO DO CONTATO",
+              "displayName": "HISTORICO DO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "STATUS DO ACOMPANHAMENTO MAIS RECENTE",
+              "displayName": "STATUS DO ACOMPANHAMENTO MAIS RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBSERVAÇÕES",
+              "displayName": "OBSERVAÇÕES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "AGENDA SUGERIDA PARA PROXIMO CONTATO",
+              "displayName": "AGENDA SUGERIDA PARA PROXIMO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA DE FINALIZACAO",
+              "displayName": "DATA DE FINALIZACAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CAPTADO VIA",
+              "displayName": "CAPTADO VIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRUPO DE DISPARO DE MATERIAL - BOT",
+              "displayName": "GRUPO DE DISPARO DE MATERIAL - BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "STATUS DA TRIAGEM",
+              "displayName": "STATUS DA TRIAGEM",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TELEFONES DE CONTATO",
+              "displayName": "TELEFONES DE CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PHONE",
+              "displayName": "PHONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "FAIXA ETÁRIA",
+              "displayName": "FAIXA ETÁRIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "FIM",
+              "displayName": "FIM",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "WHATSAPP CADASTRADO",
+              "displayName": "WHATSAPP CADASTRADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PESO(KG)",
+              "displayName": "PESO(KG)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ALTURA(CM)",
+              "displayName": "ALTURA(CM)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDE OBESIDADE",
+              "displayName": "MEDE OBESIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "AFERE GLICOSE",
+              "displayName": "AFERE GLICOSE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDE DIABETES",
+              "displayName": "MEDE DIABETES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "AFERE PRESSAO",
+              "displayName": "AFERE PRESSAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDE HIPERTENSAO",
+              "displayName": "MEDE HIPERTENSAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDICO ESPECIALISTA",
+              "displayName": "MEDICO ESPECIALISTA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "QUEIXA RELATADA",
+              "displayName": "QUEIXA RELATADA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "REMEDIO_BOT",
+              "displayName": "REMEDIO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PATOLOGIA_BOT",
+              "displayName": "PATOLOGIA_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBESIDADE_BOT",
+              "displayName": "OBESIDADE_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DIABETES_BOT",
+              "displayName": "DIABETES_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PRESSAO_BOT",
+              "displayName": "PRESSAO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ACOMPANHAMENTO_BOT",
+              "displayName": "ACOMPANHAMENTO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "SINTOMA_BOT",
+              "displayName": "SINTOMA_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "LGPD_BOT",
+              "displayName": "LGPD_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CHECKUP_BOT",
+              "displayName": "CHECKUP_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CRONICO_BOT",
+              "displayName": "CRONICO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBSERVACAO_BOT",
+              "displayName": "OBSERVACAO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA_CHAMADO_BOT",
+              "displayName": "DATA_CHAMADO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA_INTERACAO_BOT",
+              "displayName": "DATA_INTERACAO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "firstDataRow": "={{ $('Split In Batches').item.json.row_number }}"
+            }
+          }
+        }
+      },
+      "id": "121f686e-d05e-4c6e-ae44-ad9bb14b7410",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        240,
+        4360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "a065d864-c091-4c9d-9fa6-494c1faa5728",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        1580
+      ]
     }
   ],
   "pinData": {},
   "settings": {
-    "executionOrder": "v1",
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner"
+    "executionOrder": "v1"
   },
   "staticData": {
     "node:Schedule Trigger": {
@@ -1543,6 +2210,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-21T18:54:46.000Z",
-  "versionId": "fffe90a5-a58a-4cfc-977a-65fa078a196c"
+  "updatedAt": "2023-11-22T21:29:33.000Z",
+  "versionId": "10882222-75bb-4fd8-9cf6-5f0b5a2b507f"
 }
