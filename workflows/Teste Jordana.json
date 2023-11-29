@@ -1,0 +1,75 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-11-25T00:07:22.668Z",
+  "id": "ZRAY53QGL0ZLy4uB",
+  "meta": null,
+  "name": "Teste Jordana",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "48482621-ffda-45ac-88f9-793e2df0342c",
+        "options": {}
+      },
+      "id": "d68e44b6-440f-4e9e-9835-cb39f4b21fb3",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        620,
+        260
+      ],
+      "webhookId": "48482621-ffda-45ac-88f9-793e2df0342c"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "id": "8ed1e2e4-a5a5-4f29-9508-963dee8bc703",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        840,
+        260
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "aHEtN69GDgd6FTVu",
+          "name": "teste2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-11-26T09:11:35.000Z",
+  "versionId": "9afc6f48-bb31-46b9-baa5-f463b2ca19d0"
+}
