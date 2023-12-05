@@ -485,12 +485,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
       "sheetId": 265903553,
-      "lastRevision": 114936,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=114936&exportFormat=xlsx"
+      "lastRevision": 114952,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=114952&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-05T19:19:55.000Z",
+  "updatedAt": "2023-12-05T20:25:53.000Z",
   "versionId": "9b5a313c-b260-44bb-ae52-22ec7cedc9f1"
 }
