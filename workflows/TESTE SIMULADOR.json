@@ -16,7 +16,18 @@
       "main": [
         [
           {
-            "node": "Respond to Webhook",
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
             "type": "main",
             "index": 0
           }
@@ -50,19 +61,19 @@
         "authentication": "serviceAccount",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181",
           "mode": "url"
         },
         "sheetName": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181",
           "mode": "url"
         },
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "IDADE",
-              "lookupValue": "={\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"operation\": \"update\",\n        \"range\": \"A:C\",\n        \"valueInputMode\": \"USER_ENTERED\",\n        \"data\": \"={{JSON.stringify([{\\\"Faixa Etária\\\":\\\"{{ $json[\\\"faixa_etaria\\\"] }}\\\",\\\"ID do Plano\\\":\\\"{{ $json[\\\"id_do_plano\\\"] }}\\\",\\\"Valor Correspondente\\\":\\\"\\\"}])}}\"\n      },\n      \"name\": \"Google Sheets\",\n      \"type\": \"n8n-nodes-base.googleSheets\",\n      \"typeVersion\": 1,\n      \"position\": [300, 300],\n      \"credentials\": {\n        \"googleSheetsOAuth2User\": \"planilhas23@sheetsvini-391411.iam.gserviceaccount.com\"\n      }\n    },\n    {\n      \"parameters\": {\n        \"functionCode\": \"const faixaEtaria = $json[\\\"faixa_etaria\\\"]; const idDoPlano = $json[\\\"id_do_plano\\\"]; const sheetData = items[0].json[\\\"rows\\\"][0]; let valorCorrespondente = ''; for (const row of sheetData) { if (row[\\\"Faixa Etária\\\"] === faixaEtaria) { valorCorrespondente = row[idDoPlano]; break; } } return [{ json: { valor_correspondente: valorCorrespondente } }];\"\n      },\n      \"name\": \"Execute JavaScript\",\n      \"type\": \"n8n-nodes-base.executeScript\",\n      \"typeVersion\": 1,\n      \"position\": [600, 300]\n    }\n  ],\n  \"connections\": {\n    \"Google Sheets\": {\n      \"main\": [\n        [\n          {\n            \"node\": \"Execute JavaScript\",\n            \"type\": \"main\",\n            \"index\": 0\n          }\n        ]\n      ]\n    }\n  }\n}\n"
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
             }
           ]
         },
@@ -85,17 +96,72 @@
     },
     {
       "parameters": {
-        "respondWith": "json",
+        "fields": {
+          "values": [
+            {
+              "name": "ID",
+              "stringValue": "={{ $('LÊ PLANILHA').item.json.ID }}"
+            }
+          ]
+        },
+        "include": "selected",
+        "includeFields": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
         "options": {}
       },
-      "id": "d31c3a34-0888-44ab-b489-d06f75e35003",
-      "name": "Respond to Webhook",
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1,
+      "id": "6f145d55-7987-4308-a064-d286a20626bb",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
       "position": [
         940,
         180
       ]
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk",
+          "mode": "list",
+          "cachedResultName": "SIMULADOR - PROTÓTIPO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1257034181,
+          "mode": "list",
+          "cachedResultName": "Cópia de Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $json.ID }}"
+            },
+            {
+              "lookupColumn": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
+              "lookupValue": "="
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0b3cc1d8-3134-4af1-ae0b-04869809376f",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        1160,
+        180
+      ],
+      "credentials": {
+        "googleApi": {
+          "id": "zbnWu7CX265Tgd9a",
+          "name": "SIMULADOR (TESTE)"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -105,6 +171,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-12-05T10:13:19.000Z",
-  "versionId": "9e5ef8b7-c60d-4032-866f-2b9bab0d81a8"
+  "updatedAt": "2023-12-05T11:11:43.000Z",
+  "versionId": "432d638e-8ef8-41ec-af81-1003bc9bdfc6"
 }
