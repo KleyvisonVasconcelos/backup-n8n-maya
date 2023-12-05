@@ -1,25 +1,60 @@
 {
   "active": false,
   "connections": {},
-  "createdAt": "2023-11-29T11:30:53.470Z",
-  "id": "x7ZUPAC2ous2Ng4a",
+  "createdAt": "2023-12-05T14:07:22.793Z",
+  "id": "ehnOTjdIWCdrqX2E",
   "meta": null,
   "name": "My workflow",
   "nodes": [
     {
       "parameters": {
-        "path": "65b6431c-c4ba-4da1-9a38-e519fd4c2b8c",
         "options": {}
       },
-      "id": "9efd7edc-8a6a-499e-bc49-e6952e9358a6",
-      "name": "Webhook",
-      "type": "n8n-nodes-base.webhook",
+      "id": "e9e38f11-ea75-457d-9f01-5a209efd6669",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
       "position": [
-        620,
-        260
+        640,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit#gid=0",
+          "mode": "url"
+        },
+        "event": "rowUpdate",
+        "options": {}
+      },
+      "id": "022555b2-2639-44ab-9fff-6cc50d238f0b",
+      "name": "Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        580,
+        280
       ],
-      "webhookId": "65b6431c-c4ba-4da1-9a38-e519fd4c2b8c"
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "EMnN48JyHsTHIk10",
+          "name": "Google Sheets Trigger account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -29,6 +64,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-11-29T11:30:53.470Z",
-  "versionId": "80ce0d77-79b2-410c-9278-99042147b1d6"
+  "updatedAt": "2023-12-05T14:07:22.793Z",
+  "versionId": "86704c17-027d-48d2-8a46-4939c010f500"
 }
