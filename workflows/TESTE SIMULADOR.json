@@ -1,0 +1,83 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-12-04T22:10:57.034Z",
+  "id": "uYcKR6sExO7JQcwe",
+  "meta": null,
+  "name": "TESTE SIMULADOR",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0",
+          "mode": "url"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "IDADE"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1623639e-fd86-40e8-bcf2-796bac24b0e9",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        720,
+        180
+      ],
+      "credentials": {
+        "googleApi": {
+          "id": "zbnWu7CX265Tgd9a",
+          "name": "Google Sheets account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "e1dfb573-a01a-4037-abf2-011a11e47f8e",
+        "options": {}
+      },
+      "id": "b0cfe07d-e6b5-4e64-a52a-cb692d1794cd",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        540,
+        180
+      ],
+      "webhookId": "e1dfb573-a01a-4037-abf2-011a11e47f8e"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-12-05T00:58:04.000Z",
+  "versionId": "2cf6b865-f14a-4131-9d03-e62ab76f6161"
+}
