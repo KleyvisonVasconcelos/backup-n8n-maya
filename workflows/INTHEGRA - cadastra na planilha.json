@@ -11,33 +11,6 @@
           }
         ]
       ]
-    },
-    "Google Sheets": {
-      "main": [
-        []
-      ]
-    },
-    "Google Sheets1": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Edit Fields": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
     }
   },
   "createdAt": "2023-12-05T13:48:22.694Z",
@@ -85,8 +58,7 @@
             "PROCEDIMENTO": "={{ $json.body.PROCEDIMENTO }}",
             "DATA MARCADA": "={{ $json.body['DATA MARCADA'] }}",
             "HORÁRIO MARCADO": "={{ $json.body['HORÁRIO MARCADO'] }}",
-            "AVALIAÇÃO": "={{ $json.body.AVALIAÇÃO }}",
-            "DISPONIBILIDADE": "=SEERRO(PROCV(F5; DISPONIBILIDADE!$A$2:E; 5;);\"\")"
+            "AVALIAÇÃO": "={{ $json.body.AVALIAÇÃO }}"
           },
           "matchingColumns": [
             "CLIENTE"
@@ -180,7 +152,7 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true,
-              "removed": false
+              "removed": true
             },
             {
               "id": "row_number",
@@ -211,91 +183,6 @@
           "name": "Google Sheets account 3"
         }
       }
-    },
-    {
-      "parameters": {
-        "authentication": "serviceAccount",
-        "documentId": {
-          "__rl": true,
-          "value": "1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g",
-          "mode": "list",
-          "cachedResultName": "CONTROLE INTHEGRA",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 1099964777,
-          "mode": "list",
-          "cachedResultName": "DISPONIBILIDADE",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit#gid=1099964777"
-        },
-        "filtersUI": {
-          "values": [
-            {
-              "lookupColumn": "DATA",
-              "lookupValue": "={{ $json['DATA MARCADA'] }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "dc04c85a-524c-4030-9b44-00704af96056",
-      "name": "Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.1,
-      "position": [
-        1060,
-        200
-      ],
-      "credentials": {
-        "googleApi": {
-          "id": "CaRKD3E5hXBssXtA",
-          "name": "Google Sheets account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "fields": {
-          "values": [
-            {
-              "name": "disponibilidade",
-              "stringValue": "={{ $json['DISPONIBILIDADE 2'] }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "6f52029a-ca56-4d2e-a31f-7f5776c4df15",
-      "name": "Edit Fields",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.2,
-      "position": [
-        1200,
-        200
-      ]
-    },
-    {
-      "parameters": {
-        "url": "https://backend.botconversa.com.br/swagger/?format=openapi",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "value": "={{ $json['DISPONIBILIDADE 2'] }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "4420ec8c-1f44-4409-be69-873c464698a5",
-      "name": "HTTP Request",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        1420,
-        200
-      ]
     }
   ],
   "pinData": {},
@@ -305,6 +192,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-05T18:30:10.000Z",
-  "versionId": "f8e3e838-724e-4404-a2b0-5b7925b5ed4a"
+  "updatedAt": "2023-12-05T21:19:51.000Z",
+  "versionId": "eaf12c5f-fc92-4189-808b-8dd6d7b8ec81"
 }
