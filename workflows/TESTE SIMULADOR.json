@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Webhook": {
       "main": [
@@ -27,7 +27,7 @@
       "main": [
         [
           {
-            "node": "Google Sheets",
+            "node": "Respond to Webhook",
             "type": "main",
             "index": 0
           }
@@ -105,7 +105,7 @@
           ]
         },
         "include": "selected",
-        "includeFields": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
+        "includeFields": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}, ['NOME DO PLANO']",
         "options": {}
       },
       "id": "6f145d55-7987-4308-a064-d286a20626bb",
@@ -119,49 +119,20 @@
     },
     {
       "parameters": {
-        "authentication": "serviceAccount",
-        "documentId": {
-          "__rl": true,
-          "value": "1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk",
-          "mode": "list",
-          "cachedResultName": "SIMULADOR - PROTÓTIPO",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 1257034181,
-          "mode": "list",
-          "cachedResultName": "Cópia de Página1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181"
-        },
-        "filtersUI": {
-          "values": [
-            {
-              "lookupColumn": "ID",
-              "lookupValue": "={{ $json.ID }}"
-            },
-            {
-              "lookupColumn": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
-              "lookupValue": "="
-            }
-          ]
-        },
-        "options": {}
+        "respondWith": "text",
+        "responseBody": "=PREÇO",
+        "options": {
+          "responseCode": 200
+        }
       },
-      "id": "0b3cc1d8-3134-4af1-ae0b-04869809376f",
-      "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.1,
+      "id": "e8654c53-3051-45be-b13c-4315fb17d3b6",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
       "position": [
         1160,
         180
-      ],
-      "credentials": {
-        "googleApi": {
-          "id": "zbnWu7CX265Tgd9a",
-          "name": "SIMULADOR (TESTE)"
-        }
-      }
+      ]
     }
   ],
   "pinData": {},
@@ -170,7 +141,7 @@
   },
   "staticData": null,
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-12-05T11:11:43.000Z",
-  "versionId": "432d638e-8ef8-41ec-af81-1003bc9bdfc6"
+  "triggerCount": 1,
+  "updatedAt": "2023-12-05T11:44:47.000Z",
+  "versionId": "12e6fa7a-11db-4efe-9b6b-733454ade12b"
 }
