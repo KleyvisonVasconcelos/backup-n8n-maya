@@ -1,0 +1,197 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-12-05T13:48:22.694Z",
+  "id": "1JIIUGpgQWPG2QJK",
+  "meta": null,
+  "name": "INTHEGRA - cadastra na planilha",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "d812ecb4-b507-4476-a132-9701be094464",
+        "options": {}
+      },
+      "id": "89b05f7b-2575-4b69-a035-67fb3d62da1f",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        540,
+        200
+      ],
+      "webhookId": "d812ecb4-b507-4476-a132-9701be094464"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit#gid=0",
+          "mode": "url"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ENTROU EM CONTATO": "={{ $json.body['ENTROU EM CONTATO'] }}",
+            "CLIENTE": "={{ $json.body.CLIENTE }}",
+            "TELEFONE": "={{ $json.body.TELEFONE }}",
+            "SERVIÇO": "={{ $json.body.SERVIÇO }}",
+            "PROCEDIMENTO": "={{ $json.body.PROCEDIMENTO }}",
+            "DATA MARCADA": "={{ $json.body['DATA MARCADA'] }}",
+            "HORÁRIO MARCADO": "={{ $json.body['HORÁRIO MARCADO'] }}",
+            "AVALIAÇÃO": "={{ $json.body.AVALIAÇÃO }}"
+          },
+          "matchingColumns": [
+            "CLIENTE"
+          ],
+          "schema": [
+            {
+              "id": "ENTROU EM CONTATO",
+              "displayName": "ENTROU EM CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CLIENTE",
+              "displayName": "CLIENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SERVIÇO",
+              "displayName": "SERVIÇO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "PROCEDIMENTO",
+              "displayName": "PROCEDIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "DATA MARCADA",
+              "displayName": "DATA MARCADA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "HORÁRIO MARCADO",
+              "displayName": "HORÁRIO MARCADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "AVALIAÇÃO",
+              "displayName": "AVALIAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "DISPONIBILIDADE",
+              "displayName": "DISPONIBILIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f7d668df-f4a8-4392-adf9-528affaf6374",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        760,
+        200
+      ],
+      "credentials": {
+        "googleApi": {
+          "id": "OKCLs93hX8CtNnXo",
+          "name": "Google Sheets account 3"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-12-05T14:04:45.000Z",
+  "versionId": "e601762e-78c3-40e8-a7de-19b12214e6c1"
+}
