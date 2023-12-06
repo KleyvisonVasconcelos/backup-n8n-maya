@@ -155,6 +155,11 @@
           }
         ]
       ]
+    },
+    "Google Sheets4": {
+      "main": [
+        []
+      ]
     }
   },
   "createdAt": "2023-12-05T23:13:44.286Z",
@@ -186,7 +191,9 @@
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726"
         },
         "options": {
-          "columnsToWatch": []
+          "columnsToWatch": [
+            "NOME"
+          ]
         }
       },
       "id": "22562cb6-ea0a-4ef2-91ba-3c93519ca3e1",
@@ -614,7 +621,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        620,
+        660,
         780
       ]
     },
@@ -625,9 +632,52 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        60,
-        800
+        -60,
+        680
       ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "TELEFONE FORMATADO"
+            }
+          ]
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "f8dd0867-77f0-4868-9589-dc3e9cc2850d",
+      "name": "Google Sheets4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        440,
+        360
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -638,12 +688,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18294,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18294&exportFormat=xlsx"
+      "lastRevision": 18299,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18299&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-06T12:39:57.000Z",
-  "versionId": "7429e1cb-664d-4589-86f8-595a673b735a"
+  "updatedAt": "2023-12-06T18:29:21.000Z",
+  "versionId": "1406af03-5b1f-4c80-9ca3-997c23feadba"
 }
