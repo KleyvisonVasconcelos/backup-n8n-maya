@@ -1,18 +1,6 @@
 {
   "active": false,
-  "connections": {
-    "Calendly Trigger": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    }
-  },
+  "connections": {},
   "createdAt": "2023-12-06T12:45:00.656Z",
   "id": "l1OtgNrtkFu96HFU",
   "meta": null,
@@ -29,7 +17,7 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        620,
+        420,
         180
       ],
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
@@ -43,42 +31,121 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "backend.botconversa.com.br/api/v1/webhook/bot_fields/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/336811849/custom_fields/1596032/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
             {
-              "name": "email",
-              "value": "={{ $json.payload.email }}"
+              "name": "value",
+              "value": "Agendamento n8n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d141c6c0-9fd8-474b-8e65-123adecccee1",
+      "name": "HTTP Request Atualizar campo do usuario BC",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1160,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
             },
             {
-              "name": "nome",
-              "value": "={{ $json.payload.name }}"
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "555185332722"
             },
             {
-              "name": "serviço",
-              "value": "={{ $json.payload.scheduled_event.name }}"
+              "name": "first_name",
+              "value": "João"
+            },
+            {
+              "name": "last_name",
+              "value": "Quadros TESTE"
             }
           ]
         },
         "options": {}
       },
       "id": "03f17152-8bf9-4a63-b7c3-f576043695c5",
-      "name": "HTTP Request",
+      "name": "HTTP Request Cadastrar Usuario BC",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        840,
-        180
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
-        }
-      }
+        880,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/336811849/send_flow/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": 2809836
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "64f5eb62-9362-468e-ae28-99aa00348481",
+      "name": "HTTP Request Enviar Fluxo BC",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1420,
+        160
+      ]
     }
   ],
   "pinData": {
@@ -164,6 +231,6 @@
   },
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-12-06T13:24:34.000Z",
-  "versionId": "64b1053c-8ab0-4210-b90d-3454cb483911"
+  "updatedAt": "2023-12-06T18:52:20.000Z",
+  "versionId": "36e23c65-0c03-4dc2-a76f-1dd7b6fa8390"
 }
