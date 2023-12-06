@@ -1,0 +1,169 @@
+{
+  "active": false,
+  "connections": {
+    "Calendly Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-12-06T12:45:00.656Z",
+  "id": "l1OtgNrtkFu96HFU",
+  "meta": null,
+  "name": "teste cal",
+  "nodes": [
+    {
+      "parameters": {
+        "events": [
+          "invitee.created"
+        ]
+      },
+      "id": "e911bf7c-bcc4-4ac1-a21e-27ffe1e9043f",
+      "name": "Calendly Trigger",
+      "type": "n8n-nodes-base.calendlyTrigger",
+      "typeVersion": 1,
+      "position": [
+        620,
+        180
+      ],
+      "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
+      "credentials": {
+        "calendlyApi": {
+          "id": "JftL0JtjFDIwdLBg",
+          "name": "Calendly account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "backend.botconversa.com.br/api/v1/webhook/bot_fields/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $json.payload.email }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $json.payload.name }}"
+            },
+            {
+              "name": "serviço",
+              "value": "={{ $json.payload.scheduled_event.name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "03f17152-8bf9-4a63-b7c3-f576043695c5",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        840,
+        180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Calendly Trigger": [
+      {
+        "json": {
+          "created_at": "2023-12-06T13:04:15.000000Z",
+          "created_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
+          "event": "invitee.created",
+          "payload": {
+            "cancel_url": "https://calendly.com/cancellations/28503f13-a5e3-4d5a-88a1-6b9bb3290117",
+            "created_at": "2023-12-06T13:04:14.945590Z",
+            "email": "vinicius.faustinoni2022@gmail.com",
+            "event": "https://api.calendly.com/scheduled_events/79f70c48-e8e0-412f-98d3-df351dd8b743",
+            "first_name": null,
+            "invitee_scheduled_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
+            "last_name": null,
+            "name": "MARCUS VINICIUS FAUSTINONI DE FREITAS",
+            "new_invitee": null,
+            "no_show": null,
+            "old_invitee": null,
+            "payment": null,
+            "questions_and_answers": [],
+            "reconfirmation": null,
+            "reschedule_url": "https://calendly.com/reschedulings/28503f13-a5e3-4d5a-88a1-6b9bb3290117",
+            "rescheduled": false,
+            "routing_form_submission": null,
+            "scheduled_event": {
+              "created_at": "2023-12-06T13:04:14.930005Z",
+              "end_time": "2023-12-07T13:00:00.000000Z",
+              "event_guests": [],
+              "event_memberships": [
+                {
+                  "user": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
+                  "user_email": "vinicius.faustinoni2022@gmail.com"
+                }
+              ],
+              "event_type": "https://api.calendly.com/event_types/563ad4a1-e1cd-47ae-8c1f-05626f5391fa",
+              "invitees_counter": {
+                "total": 1,
+                "active": 1,
+                "limit": 1
+              },
+              "location": {
+                "location": null,
+                "type": "custom"
+              },
+              "name": "Marcação de Horário",
+              "start_time": "2023-12-07T12:00:00.000000Z",
+              "status": "active",
+              "updated_at": "2023-12-06T13:04:14.930005Z",
+              "uri": "https://api.calendly.com/scheduled_events/79f70c48-e8e0-412f-98d3-df351dd8b743"
+            },
+            "scheduling_method": null,
+            "status": "active",
+            "text_reminder_number": null,
+            "timezone": "America/Sao_Paulo",
+            "tracking": {
+              "utm_campaign": null,
+              "utm_source": null,
+              "utm_medium": null,
+              "utm_content": null,
+              "utm_term": null,
+              "salesforce_uuid": null
+            },
+            "updated_at": "2023-12-06T13:04:14.945590Z",
+            "uri": "https://api.calendly.com/scheduled_events/79f70c48-e8e0-412f-98d3-df351dd8b743/invitees/28503f13-a5e3-4d5a-88a1-6b9bb3290117"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Calendly Trigger": {
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/f7c07929-4e84-4896-8974-a661b21e1036"
+    }
+  },
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-12-06T13:24:34.000Z",
+  "versionId": "64b1053c-8ab0-4210-b90d-3454cb483911"
+}
