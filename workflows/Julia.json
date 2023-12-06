@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Google Sheets Trigger": {
       "main": [
@@ -334,7 +334,13 @@
       "id": "6c8ecee6-c51d-4dd0-9162-62990b9e51c4",
       "retryOnFail": true,
       "maxTries": 5,
-      "waitBetweenTries": 5000
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     },
     {
       "parameters": {
@@ -460,7 +466,13 @@
       "id": "a76f797d-c6ca-47e0-8736-3628f2141bd6",
       "retryOnFail": true,
       "maxTries": 5,
-      "waitBetweenTries": 5000
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     },
     {
       "parameters": {
@@ -558,7 +570,13 @@
       "position": [
         260,
         800
-      ]
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
     },
     {
       "parameters": {
@@ -616,9 +634,16 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Google Sheets Trigger": {
+      "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
+      "sheetId": 448379726,
+      "lastRevision": 18290,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18290&exportFormat=xlsx"
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-12-05T23:13:56.000Z",
-  "versionId": "67467b0a-6324-4546-b37b-d20666e86a49"
+  "triggerCount": 2,
+  "updatedAt": "2023-12-06T09:16:15.000Z",
+  "versionId": "1e141bb0-e3ce-4b17-9e8b-76bf8218f8f6"
 }
