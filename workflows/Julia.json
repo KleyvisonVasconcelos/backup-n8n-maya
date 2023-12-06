@@ -65,7 +65,7 @@
       "main": [
         [
           {
-            "node": "Wait",
+            "node": "enviar fluxo",
             "type": "main",
             "index": 0
           }
@@ -461,7 +461,7 @@
       "typeVersion": 1,
       "position": [
         1940,
-        540
+        660
       ],
       "id": "a76f797d-c6ca-47e0-8736-3628f2141bd6",
       "retryOnFail": true,
@@ -638,12 +638,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18293,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18293&exportFormat=xlsx"
+      "lastRevision": 18294,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18294&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-06T09:42:20.000Z",
-  "versionId": "09cee392-5661-4421-9cb4-4302a7705b3f"
+  "updatedAt": "2023-12-06T12:39:57.000Z",
+  "versionId": "7429e1cb-664d-4589-86f8-595a673b735a"
 }
