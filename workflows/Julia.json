@@ -3,13 +3,7 @@
   "connections": {
     "Google Sheets Trigger": {
       "main": [
-        [
-          {
-            "node": "telefone vazio",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Split In Batches": {
@@ -149,6 +143,17 @@
           }
         ]
       ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "telefone vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-12-05T23:13:44.286Z",
@@ -179,11 +184,8 @@
           "cachedResultName": "n8n",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726"
         },
-        "options": {
-          "columnsToWatch": [
-            "NOME"
-          ]
-        }
+        "event": "rowAdded",
+        "options": {}
       },
       "id": "22562cb6-ea0a-4ef2-91ba-3c93519ca3e1",
       "name": "Google Sheets Trigger",
@@ -202,7 +204,7 @@
     },
     {
       "parameters": {
-        "batchSize": 1,
+        "batchSize": 3,
         "options": {}
       },
       "id": "0bcecce3-fba6-4818-92c4-d508ba1437b8",
@@ -489,7 +491,7 @@
         "conditions": {
           "string": [
             {
-              "value1": "={{ $json.TELEFONE }}",
+              "value1": "= {{ $json['TELEFONE FORMATADO'] }}",
               "operation": "isEmpty"
             }
           ]
@@ -677,12 +679,13 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18320,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18320&exportFormat=xlsx"
+      "lastRevision": 18333,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18333&exportFormat=xlsx",
+      "lastIndexChecked": 252
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-06T19:29:47.000Z",
-  "versionId": "98165929-5c1e-467e-bb34-a90621264385"
+  "updatedAt": "2023-12-06T19:47:23.000Z",
+  "versionId": "81aa7200-ca8c-44f3-a9f5-87c65b169d5b"
 }
