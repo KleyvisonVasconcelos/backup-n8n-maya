@@ -65,7 +65,7 @@
       "main": [
         [
           {
-            "node": "enviar fluxo",
+            "node": "Wait",
             "type": "main",
             "index": 0
           }
@@ -74,13 +74,7 @@
     },
     "enviar fluxo": {
       "main": [
-        [
-          {
-            "node": "Wait",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Wait": {
@@ -154,11 +148,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "Google Sheets4": {
-      "main": [
-        []
       ]
     }
   },
@@ -468,7 +457,7 @@
       "typeVersion": 1,
       "position": [
         1940,
-        660
+        480
       ],
       "id": "a76f797d-c6ca-47e0-8736-3628f2141bd6",
       "retryOnFail": true,
@@ -688,12 +677,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18299,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18299&exportFormat=xlsx"
+      "lastRevision": 18320,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18320&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-06T18:29:21.000Z",
-  "versionId": "1406af03-5b1f-4c80-9ca3-997c23feadba"
+  "updatedAt": "2023-12-06T19:29:47.000Z",
+  "versionId": "98165929-5c1e-467e-bb34-a90621264385"
 }
