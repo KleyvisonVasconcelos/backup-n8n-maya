@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Calendly Trigger": {
       "main": [
@@ -17,6 +17,17 @@
         [
           {
             "node": "HTTP Request Atualizar campo do usuario BC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Atualizar campo do usuario BC": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Enviar Fluxo BC",
             "type": "main",
             "index": 0
           }
@@ -54,7 +65,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/336811849/custom_fields/1596032/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1596727/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -72,8 +83,8 @@
         "bodyParameters": {
           "parameters": [
             {
-              "name": "=AG-Momento-Escolhido",
-              "value": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.end_time }}"
+              "name": "value",
+              "value": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.start_time }}"
             }
           ]
         },
@@ -118,7 +129,7 @@
             },
             {
               "name": "last_name",
-              "value": "=."
+              "value": "={{ $json.payload.last_name }}"
             }
           ]
         },
@@ -129,14 +140,14 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        640,
+        620,
         180
       ]
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/336811849/send_flow/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/send_flow/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -155,7 +166,7 @@
           "parameters": [
             {
               "name": "flow",
-              "value": 2809836
+              "value": "2880368"
             }
           ]
         },
@@ -166,100 +177,22 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1420,
-        160
+        1040,
+        180
       ]
     }
   ],
-  "pinData": {
-    "Calendly Trigger": [
-      {
-        "json": {
-          "created_at": "2023-12-07T00:20:26.000000Z",
-          "created_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
-          "event": "invitee.created",
-          "payload": {
-            "cancel_url": "https://calendly.com/cancellations/6d3614a8-fc68-406b-88d6-4fdae17e0aef",
-            "created_at": "2023-12-07T00:20:25.635158Z",
-            "email": "oliveiraleticia2702@gmail.com",
-            "event": "https://api.calendly.com/scheduled_events/351b07d9-d44c-45aa-9850-35a9a632e779",
-            "first_name": null,
-            "invitee_scheduled_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
-            "last_name": null,
-            "name": "Leticia Oliveira",
-            "new_invitee": null,
-            "no_show": null,
-            "old_invitee": null,
-            "payment": null,
-            "questions_and_answers": [
-              {
-                "answer": "+55 21 97881-3974",
-                "position": 1,
-                "question": "WhatsApp"
-              }
-            ],
-            "reconfirmation": null,
-            "reschedule_url": "https://calendly.com/reschedulings/6d3614a8-fc68-406b-88d6-4fdae17e0aef",
-            "rescheduled": false,
-            "routing_form_submission": null,
-            "scheduled_event": {
-              "created_at": "2023-12-07T00:20:25.621145Z",
-              "end_time": "2023-12-21T13:30:00.000000Z",
-              "event_guests": [],
-              "event_memberships": [
-                {
-                  "user": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
-                  "user_email": "vinicius.faustinoni2022@gmail.com"
-                }
-              ],
-              "event_type": "https://api.calendly.com/event_types/563ad4a1-e1cd-47ae-8c1f-05626f5391fa",
-              "invitees_counter": {
-                "total": 1,
-                "active": 1,
-                "limit": 1
-              },
-              "location": {
-                "location": null,
-                "type": "custom"
-              },
-              "name": "Marcação de Horário",
-              "start_time": "2023-12-21T12:30:00.000000Z",
-              "status": "active",
-              "updated_at": "2023-12-07T00:20:25.621145Z",
-              "uri": "https://api.calendly.com/scheduled_events/351b07d9-d44c-45aa-9850-35a9a632e779"
-            },
-            "scheduling_method": null,
-            "status": "active",
-            "text_reminder_number": null,
-            "timezone": "America/Sao_Paulo",
-            "tracking": {
-              "utm_campaign": null,
-              "utm_source": null,
-              "utm_medium": null,
-              "utm_content": null,
-              "utm_term": null,
-              "salesforce_uuid": null
-            },
-            "updated_at": "2023-12-07T00:20:25.635158Z",
-            "uri": "https://api.calendly.com/scheduled_events/351b07d9-d44c-45aa-9850-35a9a632e779/invitees/6d3614a8-fc68-406b-88d6-4fdae17e0aef"
-          }
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/1c0e0ce0-432c-4234-b087-4acf522d3a10"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/b9591ab4-1981-41c1-b275-a162fb6e3936"
     }
   },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-12-07T00:25:55.000Z",
-  "versionId": "1fb03e5b-c8e7-4640-ba85-50aa330bd5d1"
+  "triggerCount": 1,
+  "updatedAt": "2023-12-07T01:29:06.000Z",
+  "versionId": "7ea4109e-85ae-4e00-aaeb-b897c989818b"
 }
