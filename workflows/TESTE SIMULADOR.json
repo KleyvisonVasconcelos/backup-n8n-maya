@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "Edit Fields1",
+            "node": "LÊ PLANILHA1",
             "type": "main",
             "index": 0
           }
@@ -25,9 +25,14 @@
     },
     "Edit Fields1": {
       "main": [
+        []
+      ]
+    },
+    "LÊ PLANILHA1": {
+      "main": [
         [
           {
-            "node": "Respond to Webhook",
+            "node": "Edit Fields1",
             "type": "main",
             "index": 0
           }
@@ -74,6 +79,9 @@
             {
               "lookupColumn": "ID",
               "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
+            },
+            {
+              "lookupColumn": "={{ $json.body['FAIXA ETÁRIA'] }}"
             }
           ]
         },
@@ -105,7 +113,7 @@
           ]
         },
         "include": "selected",
-        "includeFields": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}, ['NOME DO PLANO']",
+        "includeFields": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
         "options": {}
       },
       "id": "6f145d55-7987-4308-a064-d286a20626bb",
@@ -113,35 +121,91 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        940,
+        1300,
         180
       ]
     },
     {
       "parameters": {
-        "respondWith": "text",
-        "responseBody": "=PREÇO",
-        "options": {
-          "responseCode": 200
-        }
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk",
+          "mode": "list",
+          "cachedResultName": "SIMULADOR - PROTÓTIPO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "={{ $json.ID }}",
+              "lookupValue": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}"
+            }
+          ]
+        },
+        "options": {}
       },
-      "id": "e8654c53-3051-45be-b13c-4315fb17d3b6",
-      "name": "Respond to Webhook",
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1,
+      "id": "bc1aac08-eee7-4102-849b-5148313e70a6",
+      "name": "LÊ PLANILHA1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
       "position": [
-        1160,
+        940,
         180
-      ]
+      ],
+      "credentials": {
+        "googleApi": {
+          "id": "zbnWu7CX265Tgd9a",
+          "name": "SIMULADOR (TESTE)"
+        }
+      }
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "63",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "79406cbe704d423ca64458f00aa57017-88f2fff454bebc04-0",
+            "x-forwarded-for": "54.232.132.212",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "7836abec8c3d",
+            "x-real-ip": "54.232.132.212"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "ID DO PLANO": "482.398/19-2",
+            "FAIXA ETÁRIA": "29 A 33"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-05T11:44:47.000Z",
-  "versionId": "12e6fa7a-11db-4efe-9b6b-733454ade12b"
+  "updatedAt": "2023-12-07T19:58:25.000Z",
+  "versionId": "5c5be813-fb7b-46d4-849f-ac927d7bec13"
 }
