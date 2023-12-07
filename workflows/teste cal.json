@@ -16,14 +16,47 @@
       "main": [
         [
           {
-            "node": "HTTP Request Atualizar campo do usuario BC",
+            "node": "FORMATA DATA",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "HTTP Request Atualizar campo do usuario BC": {
+    "FORMATA DATA": {
+      "main": [
+        [
+          {
+            "node": "ATUALIZA CAMPO DATA FORMATADA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ATUALIZA CAMPO DATA FORMATADA": {
+      "main": [
+        [
+          {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar campo do usuario BC1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Atualizar campo do usuario BC1": {
       "main": [
         [
           {
@@ -51,7 +84,7 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        420,
+        280,
         180
       ],
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
@@ -61,43 +94,6 @@
           "name": "Calendly account"
         }
       }
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1596727/",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "value",
-              "value": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.start_time }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "d141c6c0-9fd8-474b-8e65-123adecccee1",
-      "name": "HTTP Request Atualizar campo do usuario BC",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        820,
-        180
-      ]
     },
     {
       "parameters": {
@@ -140,14 +136,14 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        620,
-        180
+        520,
+        40
       ]
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/send_flow/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622175/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -165,8 +161,8 @@
         "bodyParameters": {
           "parameters": [
             {
-              "name": "flow",
-              "value": "2880368"
+              "name": "value",
+              "value": "Agendamento1"
             }
           ]
         },
@@ -177,8 +173,122 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1040,
+        1760,
         180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.start_time }}",
+        "format": "custom",
+        "customFormat": "HH:mm",
+        "outputFieldName": "HORAFORMATADA",
+        "options": {
+          "timezone": true
+        }
+      },
+      "id": "7809e7a9-f885-4cc3-8a49-0f22702cce03",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1340,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.start_time }}",
+        "format": "custom",
+        "customFormat": "dd/MM/yyyy",
+        "outputFieldName": "DATAFORMATADA",
+        "options": {
+          "timezone": true
+        }
+      },
+      "id": "fd80bf9d-3e40-445c-af93-f1dac73b6755",
+      "name": "FORMATA DATA",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        800,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622181/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $json.HORAFORMATADA }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3afc767-b8d2-4332-bcaf-71529d447274",
+      "name": "HTTP Request Atualizar campo do usuario BC1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1540,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622175/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $json.DATAFORMATADA }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d141c6c0-9fd8-474b-8e65-123adecccee1",
+      "name": "ATUALIZA CAMPO DATA FORMATADA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1080,
+        40
       ]
     }
   ],
@@ -188,11 +298,11 @@
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/b9591ab4-1981-41c1-b275-a162fb6e3936"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/f9a0b785-f807-43a7-b556-5fc92c4f825f"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-07T01:29:06.000Z",
-  "versionId": "7ea4109e-85ae-4e00-aaeb-b897c989818b"
+  "updatedAt": "2023-12-07T02:13:40.000Z",
+  "versionId": "f79f7eb4-4e8b-427d-977a-2f24fda8efbb"
 }
