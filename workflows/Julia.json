@@ -673,13 +673,13 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18367,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18367&exportFormat=xlsx",
+      "lastRevision": 18370,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18370&exportFormat=xlsx",
       "lastIndexChecked": 252
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-07T00:11:04.000Z",
+  "updatedAt": "2023-12-07T15:12:28.000Z",
   "versionId": "fef54f64-975d-46e9-9aaf-56d72b2a1789"
 }
