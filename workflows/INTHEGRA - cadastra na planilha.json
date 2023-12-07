@@ -37,7 +37,7 @@
     {
       "parameters": {
         "authentication": "serviceAccount",
-        "operation": "append",
+        "operation": "appendOrUpdate",
         "documentId": {
           "__rl": true,
           "value": "https://docs.google.com/spreadsheets/d/1B4sH7mIJ7-HX23Cju1XfTO7JuA30_Dx93kQxE-2bk5g/edit#gid=0",
@@ -192,6 +192,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-05T21:19:51.000Z",
-  "versionId": "eaf12c5f-fc92-4189-808b-8dd6d7b8ec81"
+  "updatedAt": "2023-12-07T00:07:11.000Z",
+  "versionId": "4f6b8619-2433-464f-844c-059f7402b6b2"
 }
