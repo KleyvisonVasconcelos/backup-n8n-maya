@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Google Sheets Trigger": {
       "main": [
@@ -197,7 +197,7 @@
         },
         "options": {
           "columnsToWatch": [
-            "TELEFONE"
+            "TELEFONE FORMATADO"
           ]
         }
       },
@@ -209,6 +209,12 @@
         480,
         540
       ],
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "hzggfIVge1lSLJ6h",
+          "name": "bot.maya.n8n@gmail.com trigger"
+        }
+      },
       "disabled": true
     },
     {
@@ -341,7 +347,13 @@
       "id": "16ed68c1-58a5-4ada-bb9d-853231434903",
       "retryOnFail": true,
       "maxTries": 5,
-      "waitBetweenTries": 5000
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     },
     {
       "parameters": {
@@ -407,7 +419,13 @@
       "id": "fea4dd41-aaff-4465-b6d5-fb23537552fc",
       "retryOnFail": true,
       "maxTries": 5,
-      "waitBetweenTries": 5000
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     },
     {
       "parameters": {
@@ -517,7 +535,9 @@
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188"
         },
         "options": {
-          "columnsToWatch": []
+          "columnsToWatch": [
+            "TELEFONE FORMATADO"
+          ]
         }
       },
       "id": "d185a353-abdc-4b2d-b1f8-7fa9d4554da5",
@@ -540,9 +560,16 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Google Sheets Trigger1": {
+      "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+      "sheetId": 482129188,
+      "lastRevision": 65783,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=65783&exportFormat=xlsx"
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2023-12-05T23:15:50.000Z",
-  "versionId": "eee6bb98-b747-4a16-8d54-68bead79a1b1"
+  "triggerCount": 2,
+  "updatedAt": "2023-12-07T19:22:39.000Z",
+  "versionId": "c800b137-750d-46aa-9263-e2d5816fa880"
 }
