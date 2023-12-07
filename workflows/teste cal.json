@@ -143,7 +143,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622175/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/send_flow",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -161,8 +161,8 @@
         "bodyParameters": {
           "parameters": [
             {
-              "name": "value",
-              "value": "Agendamento1"
+              "name": "flow",
+              "value": "2880368"
             }
           ]
         },
@@ -298,11 +298,11 @@
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/f9a0b785-f807-43a7-b556-5fc92c4f825f"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/d5408f26-f782-472f-8947-6d9c1fc7970b"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-07T02:13:40.000Z",
-  "versionId": "f79f7eb4-4e8b-427d-977a-2f24fda8efbb"
+  "updatedAt": "2023-12-07T10:49:24.000Z",
+  "versionId": "f0c5ac84-d50e-4e17-a89b-8e83c000b659"
 }
