@@ -244,7 +244,13 @@
       "position": [
         1180,
         540
-      ]
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
     },
     {
       "parameters": {
@@ -279,7 +285,13 @@
       "id": "f9dd07a7-2881-4729-b734-11fbc0bc17f4",
       "retryOnFail": true,
       "maxTries": 5,
-      "waitBetweenTries": 5000
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     },
     {
       "parameters": {
@@ -374,7 +386,13 @@
       "retryOnFail": true,
       "waitBetweenTries": 3000,
       "maxTries": 5,
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
     },
     {
       "parameters": {
@@ -401,7 +419,13 @@
       "id": "2ca6e244-80e3-4a82-bda6-ffe596f561b5",
       "retryOnFail": true,
       "maxTries": 5,
-      "waitBetweenTries": 5000
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     },
     {
       "parameters": {
@@ -463,7 +487,13 @@
       "position": [
         460,
         460
-      ]
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
     }
   ],
   "pinData": {
@@ -493,6 +523,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-12-05T23:16:27.000Z",
-  "versionId": "0d7b9d20-a5c9-4fe4-9083-4a1f4ecf0ac0"
+  "updatedAt": "2023-12-07T19:24:19.000Z",
+  "versionId": "a829682e-5f73-413f-bb71-35f4b4f15e26"
 }
