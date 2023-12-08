@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "FORMATA DATA",
+            "node": "LINK DE REAGENDAMENTO",
             "type": "main",
             "index": 0
           }
@@ -49,18 +49,29 @@
       "main": [
         [
           {
-            "node": "HTTP Request Atualizar campo do usuario BC1",
+            "node": "CADASTRA HORA",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "HTTP Request Atualizar campo do usuario BC1": {
+    "CADASTRA HORA": {
       "main": [
         [
           {
             "node": "HTTP Request Enviar Fluxo BC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LINK DE REAGENDAMENTO": {
+      "main": [
+        [
+          {
+            "node": "FORMATA DATA",
             "type": "main",
             "index": 0
           }
@@ -136,14 +147,14 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        520,
-        40
+        440,
+        180
       ]
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/send_flow/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/244078404/send_flow/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -220,44 +231,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622181/",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "value",
-              "value": "={{ $json.HORAFORMATADA }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "b3afc767-b8d2-4332-bcaf-71529d447274",
-      "name": "HTTP Request Atualizar campo do usuario BC1",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        1540,
-        40
-      ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622175/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/244078404/custom_fields/1622175/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -290,19 +264,171 @@
         1080,
         40
       ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622181/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $json.HORAFORMATADA }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3afc767-b8d2-4332-bcaf-71529d447274",
+      "name": "CADASTRA HORA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1540,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/244078404/custom_fields/1626889/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "= {{ $('Calendly Trigger').item.json.payload.reschedule_url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4e32feb3-1877-4715-9fdc-d83d2ab29c7a",
+      "name": "LINK DE REAGENDAMENTO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        620,
+        180
+      ]
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Calendly Trigger": [
+      {
+        "json": {
+          "created_at": "2023-12-08T09:31:10.000000Z",
+          "created_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
+          "event": "invitee.created",
+          "payload": {
+            "cancel_url": "https://calendly.com/cancellations/4f785769-101c-4b25-817c-a0de2388b6a4",
+            "created_at": "2023-12-08T09:31:09.780777Z",
+            "email": "vinicius.faustinoni2022@gmail.com",
+            "event": "https://api.calendly.com/scheduled_events/84f210a2-9cc8-4a92-b5ef-c61deb08c33b",
+            "first_name": "VINI",
+            "invitee_scheduled_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
+            "last_name": "DE FREITAS",
+            "name": "VINI DE FREITAS",
+            "new_invitee": null,
+            "no_show": null,
+            "old_invitee": null,
+            "payment": null,
+            "questions_and_answers": [
+              {
+                "answer": "+55 21 99259-3830",
+                "position": 1,
+                "question": "WhatsApp"
+              }
+            ],
+            "reconfirmation": null,
+            "reschedule_url": "https://calendly.com/reschedulings/4f785769-101c-4b25-817c-a0de2388b6a4",
+            "rescheduled": false,
+            "routing_form_submission": null,
+            "scheduled_event": {
+              "created_at": "2023-12-08T09:31:09.758915Z",
+              "end_time": "2023-12-12T16:30:00.000000Z",
+              "event_guests": [],
+              "event_memberships": [
+                {
+                  "user": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
+                  "user_email": "vinicius.faustinoni2022@gmail.com"
+                }
+              ],
+              "event_type": "https://api.calendly.com/event_types/563ad4a1-e1cd-47ae-8c1f-05626f5391fa",
+              "invitees_counter": {
+                "total": 1,
+                "active": 1,
+                "limit": 1
+              },
+              "location": {
+                "location": null,
+                "type": "custom"
+              },
+              "name": "Marcação de Horário",
+              "start_time": "2023-12-12T15:30:00.000000Z",
+              "status": "active",
+              "updated_at": "2023-12-08T09:31:09.758915Z",
+              "uri": "https://api.calendly.com/scheduled_events/84f210a2-9cc8-4a92-b5ef-c61deb08c33b"
+            },
+            "scheduling_method": null,
+            "status": "active",
+            "text_reminder_number": null,
+            "timezone": "America/Sao_Paulo",
+            "tracking": {
+              "utm_campaign": null,
+              "utm_source": null,
+              "utm_medium": null,
+              "utm_content": null,
+              "utm_term": null,
+              "salesforce_uuid": null
+            },
+            "updated_at": "2023-12-08T09:31:09.780777Z",
+            "uri": "https://api.calendly.com/scheduled_events/84f210a2-9cc8-4a92-b5ef-c61deb08c33b/invitees/4f785769-101c-4b25-817c-a0de2388b6a4"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/a25db776-0561-4a3c-91c3-9eae2e717930"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/ed513587-9b62-4482-b322-4f2bb3542936"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-07T21:40:01.000Z",
-  "versionId": "62877166-2c94-4c55-abbe-fde9883c61f0"
+  "updatedAt": "2023-12-08T10:16:07.000Z",
+  "versionId": "6969f6ed-11bf-4dea-b07a-de80e022f713"
 }
