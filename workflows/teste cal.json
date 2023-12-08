@@ -5,7 +5,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request Cadastrar Usuario BC",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           }
@@ -14,13 +14,7 @@
     },
     "HTTP Request Cadastrar Usuario BC": {
       "main": [
-        [
-          {
-            "node": "LINK DE REAGENDAMENTO",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "FORMATA DATA": {
@@ -77,6 +71,17 @@
           }
         ]
       ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "LINK DE REAGENDAMENTO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-12-06T12:45:00.656Z",
@@ -95,7 +100,7 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        280,
+        140,
         180
       ],
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
@@ -132,7 +137,7 @@
             },
             {
               "name": "first_name",
-              "value": "={{ $json.payload.name }}"
+              "value": "={{ $json.payload.first_name }}"
             },
             {
               "name": "last_name",
@@ -147,14 +152,13 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        440,
-        180
+        40,
+        420
       ]
     },
     {
       "parameters": {
-        "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/send_flow/",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/%2B5521992593830",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -167,18 +171,9 @@
               "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
             },
             {
-              "name": "subscriber"
+              "name": "subscriber",
+              "value": "={{ $('HTTP Request').item.json.id }}"
             }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": 2880368
-            },
-            {}
           ]
         },
         "options": {}
@@ -266,7 +261,7 @@
       "typeVersion": 4.1,
       "position": [
         1080,
-        40
+        180
       ]
     },
     {
@@ -303,7 +298,7 @@
       "typeVersion": 4.1,
       "position": [
         1540,
-        40
+        180
       ]
     },
     {
@@ -342,6 +337,37 @@
         620,
         180
       ]
+    },
+    {
+      "parameters": {
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/%2B5521992593830",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
+            },
+            {
+              "name": "phone",
+              "value": "={{ $json.payload.questions_and_answers[0].answer }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "315d3881-9301-42a8-960c-08a43e0c3146",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        360,
+        180
+      ]
     }
   ],
   "pinData": {},
@@ -350,11 +376,11 @@
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/89908c1f-30e4-422b-830d-4ea4d34685c4"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/daca065e-75ac-45e6-a7e9-92b9f388a191"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-08T15:18:20.000Z",
-  "versionId": "590d93dc-12fb-4022-bd16-daf2b1a3dfc0"
+  "updatedAt": "2023-12-08T16:26:47.000Z",
+  "versionId": "5d09a903-b21d-4a0e-8375-12c7b3010453"
 }
