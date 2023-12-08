@@ -71,7 +71,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Nome e telefone para validar",
             "type": "main",
             "index": 0
           }
@@ -81,6 +81,28 @@
     "Calendly Trigger1": {
       "main": [
         []
+      ]
+    },
+    "Nome e telefone para validar": {
+      "main": [
+        [
+          {
+            "node": "Formatando Nome e Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
@@ -101,8 +123,8 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        40,
-        -20
+        -420,
+        180
       ],
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
       "credentials": {
@@ -163,19 +185,6 @@
         "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('HTTP Request').item.json.id }}/send_flow/",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            }
-          ]
-        },
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
@@ -245,20 +254,9 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/244078404/custom_fields/1622175/",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            }
-          ]
-        },
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('HTTP Request').item.json[\"id\"] }}/custom_fields/1622175/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
@@ -277,25 +275,20 @@
       "position": [
         1080,
         180
-      ]
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
+        }
+      }
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/326910440/custom_fields/1622181/",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            }
-          ]
-        },
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('HTTP Request').item.json[\"id\"] }}/custom_fields/1622181/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
@@ -314,7 +307,13 @@
       "position": [
         1540,
         180
-      ]
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
+        }
+      }
     },
     {
       "parameters": {
@@ -355,24 +354,9 @@
     },
     {
       "parameters": {
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/%2B5521992593830",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            },
-            {
-              "name": "phone",
-              "value": "={{ $json.payload.questions_and_answers[0].answer }}"
-            }
-          ]
-        },
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
       "id": "315d3881-9301-42a8-960c-08a43e0c3146",
@@ -382,7 +366,13 @@
       "position": [
         360,
         180
-      ]
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
+        }
+      }
     },
     {
       "parameters": {
@@ -395,8 +385,8 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        80,
-        180
+        400,
+        -80
       ],
       "webhookId": "820edf65-c42b-4270-be89-3f52306c6f84",
       "credentials": {
@@ -405,6 +395,45 @@
           "name": "Calendly account"
         }
       }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "telefone",
+              "value": "={{ $json.payload.questions_and_answers[0].answer }}"
+            },
+            {
+              "name": "nomeCompleto",
+              "value": "={{ $json.payload.name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dc9b8aa5-86d7-4473-bf0f-9139326aae35",
+      "name": "Nome e telefone para validar",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -120,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "bae5c0ea-43f2-4c55-af20-032b4cdfb9a6",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        140,
+        180
+      ]
     }
   ],
   "pinData": {
@@ -491,14 +520,14 @@
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/5540aa94-0af5-4a47-940c-343addc84924"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/ab2b8703-5179-47e1-9e80-b0307e914f88"
     },
     "node:Calendly Trigger1": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/9aaae5ba-a69c-4d8e-b835-b256b5ec01e3"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/4bc32bca-f154-499e-9229-f28e5dd23af9"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-08T21:17:32.000Z",
-  "versionId": "cb923854-718b-4160-8e30-d7eaacf70770"
+  "updatedAt": "2023-12-08T21:37:59.000Z",
+  "versionId": "57ad12be-9254-4918-b1b3-72b80985be53"
 }
