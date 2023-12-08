@@ -67,7 +67,7 @@
         ]
       ]
     },
-    "Calendly Trigger1": {
+    "Calendly Trigger": {
       "main": [
         [
           {
@@ -76,6 +76,11 @@
             "index": 0
           }
         ]
+      ]
+    },
+    "Calendly Trigger1": {
+      "main": [
+        []
       ]
     }
   },
@@ -86,6 +91,7 @@
   "nodes": [
     {
       "parameters": {
+        "scope": "organization",
         "events": [
           "invitee.created"
         ]
@@ -95,8 +101,8 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        60,
-        20
+        40,
+        -20
       ],
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
       "credentials": {
@@ -191,8 +197,8 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "gYSqrX1lg3dfFWry",
-          "name": "Header Auth account"
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
         }
       }
     },
@@ -389,7 +395,7 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        120,
+        80,
         180
       ],
       "webhookId": "820edf65-c42b-4270-be89-3f52306c6f84",
@@ -485,14 +491,14 @@
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/3c118d06-57d2-4175-b055-0b949e519836"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/5540aa94-0af5-4a47-940c-343addc84924"
     },
     "node:Calendly Trigger1": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/3c118d06-57d2-4175-b055-0b949e519836"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/9aaae5ba-a69c-4d8e-b835-b256b5ec01e3"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-08T17:30:17.000Z",
-  "versionId": "230d95aa-09e2-40e0-8c0a-4798b127aa28"
+  "updatedAt": "2023-12-08T21:17:32.000Z",
+  "versionId": "cb923854-718b-4160-8e30-d7eaacf70770"
 }
