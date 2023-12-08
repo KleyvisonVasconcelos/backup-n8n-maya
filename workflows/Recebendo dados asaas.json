@@ -12,17 +12,6 @@
         ]
       ]
     },
-    "buscar informações do cliente": {
-      "main": [
-        [
-          {
-            "node": "IF1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "data -1D": {
       "main": [
         [
@@ -71,7 +60,7 @@
       "main": [
         [
           {
-            "node": "Google Sheets",
+            "node": "cobrança recebida?",
             "type": "main",
             "index": 0
           }
@@ -101,39 +90,6 @@
         [
           {
             "node": "Definindo Valores em Branco",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Validar Telefone": {
-      "main": [
-        [
-          {
-            "node": "Cadastrando na Audiência",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Cadastrando na Audiência": {
-      "main": [
-        [
-          {
-            "node": "Definindo Valores",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Google Sheets": {
-      "main": [
-        [
-          {
-            "node": "cobrança recebida?",
             "type": "main",
             "index": 0
           }
@@ -253,7 +209,7 @@
       "main": [
         [
           {
-            "node": "Validar Telefone",
+            "node": "Nome e telefone para validar",
             "type": "main",
             "index": 0
           }
@@ -264,7 +220,51 @@
       "main": [
         [
           {
-            "node": "Validar Telefone",
+            "node": "Nome e telefone para validar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nome e telefone para validar": {
+      "main": [
+        [
+          {
+            "node": "Formatando Nome e Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência": {
+      "main": [
+        [
+          {
+            "node": "Definindo Valores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar informações do cliente": {
+      "main": [
+        [
+          {
+            "node": "IF1",
             "type": "main",
             "index": 0
           }
@@ -309,28 +309,6 @@
         700
       ],
       "id": "715f8402-b745-4bd2-92de-71f3f5a1d497"
-    },
-    {
-      "parameters": {
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "url": "=https://www.asaas.com/api/v3/customers/{{$json[\"body\"][\"payment\"][\"customer\"]}}",
-        "options": {}
-      },
-      "name": "buscar informações do cliente",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        2100,
-        700
-      ],
-      "id": "5615fdf9-6dce-44d4-9050-dea2d722557a",
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "Va5qrgh0YRss7hJN",
-          "name": "Asaas"
-        }
-      }
     },
     {
       "parameters": {
@@ -467,7 +445,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3340,
+        3620,
         700
       ],
       "id": "6c6b7d08-7ec7-4758-9afb-382115ee6c2c"
@@ -579,58 +557,6 @@
       ],
       "id": "a704efbc-b289-4ce0-ae6c-b45eadc20d99",
       "disabled": true
-    },
-    {
-      "parameters": {
-        "functionCode": "var telefone = items[0].json.telefone.replaceAll(' ','').replaceAll('(','').replaceAll(')','').replaceAll('-','').replaceAll(',','').replaceAll('.','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
-      },
-      "name": "Validar Telefone",
-      "type": "n8n-nodes-base.function",
-      "position": [
-        2920,
-        700
-      ],
-      "typeVersion": 1,
-      "id": "c25edc8e-7ae7-41a1-bd54-766792d9ccee"
-    },
-    {
-      "parameters": {
-        "authentication": "headerAuth",
-        "requestMethod": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
-        "options": {},
-        "bodyParametersUi": {
-          "parameter": [
-            {
-              "name": "phone",
-              "value": "={{$json[\"whatsapp\"]}}"
-            },
-            {
-              "name": "first_name",
-              "value": "={{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[0]}}"
-            },
-            {
-              "name": "last_name",
-              "value": "={{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[1]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[2]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[3]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[4]}} {{$node[\"buscar informações do cliente\"].json[\"name\"].split(' ')[5]}}"
-            }
-          ]
-        }
-      },
-      "name": "Cadastrando na Audiência",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 1,
-      "position": [
-        3140,
-        700
-      ],
-      "id": "edf1dcf0-a910-4de4-b0b8-16b9d32d1c20",
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
-        }
-      },
-      "continueOnFail": true
     },
     {
       "parameters": {
@@ -832,8 +758,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4,
       "position": [
-        3580,
-        700
+        3620,
+        460
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -913,38 +839,6 @@
         3860,
         700
       ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência').item.json[\"id\"] }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": "1658862"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "f733058e-28ec-4c1b-ab85-1342d9d02d03",
-      "name": "enviar fluxo cobranca recebida",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        4860,
-        780
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
-        }
-      }
     },
     {
       "parameters": {
@@ -1086,7 +980,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2340,
+        2320,
         700
       ]
     },
@@ -1107,7 +1001,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        2600,
+        2580,
         620
       ]
     },
@@ -1128,9 +1022,147 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        2600,
+        2580,
         780
       ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "telefone",
+              "value": "={{ $json.telefone }}"
+            },
+            {
+              "name": "nomeCompleto",
+              "value": "={{ $json.name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f6cab971-3fd1-4db4-80b3-392eb08f2fe0",
+      "name": "Nome e telefone para validar",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2940,
+        700
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "cb8ce9f1-1b9b-4ee5-8846-2599d7d79ab9",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        3180,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{$json[\"whatsapp\"]}}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $json.Nome }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $json.Sobrenome }}"
+            }
+          ]
+        }
+      },
+      "name": "Cadastrando na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        3400,
+        700
+      ],
+      "id": "edf1dcf0-a910-4de4-b0b8-16b9d32d1c20",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência').item.json[\"id\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "1658862"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f733058e-28ec-4c1b-ab85-1342d9d02d03",
+      "name": "enviar fluxo cobranca recebida",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        4860,
+        780
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://www.asaas.com/api/v3/customers/{{$json[\"body\"][\"payment\"][\"customer\"]}}",
+        "options": {}
+      },
+      "name": "buscar informações do cliente",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        700
+      ],
+      "id": "5615fdf9-6dce-44d4-9050-dea2d722557a",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
     }
   ],
   "pinData": {
@@ -1314,6 +1346,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2023-12-08T17:27:51.000Z",
-  "versionId": "2d5306d8-04cf-44d4-858d-1806607e4095"
+  "updatedAt": "2023-12-08T17:36:06.000Z",
+  "versionId": "7b0edf17-9466-42f5-a6bf-7837bb428859"
 }
