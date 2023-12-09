@@ -65,17 +65,6 @@
       "main": [
         [
           {
-            "node": "enviar fluxo",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "enviar fluxo": {
-      "main": [
-        [
-          {
             "node": "Wait",
             "type": "main",
             "index": 0
@@ -288,8 +277,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "vcTgtpRQsAxtAlGp",
+          "name": "BC - VINI"
         }
       }
     },
@@ -413,8 +402,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        1440,
-        740
+        1480,
+        980
       ],
       "id": "2ca6e244-80e3-4a82-bda6-ffe596f561b5",
       "retryOnFail": true,
@@ -422,8 +411,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "vcTgtpRQsAxtAlGp",
+          "name": "BC - VINI"
         }
       }
     },
@@ -497,14 +486,6 @@
     }
   ],
   "pinData": {
-    "Nome e telefone para validar": [
-      {
-        "json": {
-          "telefone": "5571981719761",
-          "nomeCompleto": "kleyvison vasconcelos"
-        }
-      }
-    ],
     "Google Sheets Trigger": [
       {
         "json": {
@@ -523,6 +504,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-12-07T19:44:01.000Z",
-  "versionId": "a829682e-5f73-413f-bb71-35f4b4f15e26"
+  "updatedAt": "2023-12-09T10:26:04.000Z",
+  "versionId": "c4cfbc8c-b3cd-4cc3-bcae-27685f4fc9e7"
 }
