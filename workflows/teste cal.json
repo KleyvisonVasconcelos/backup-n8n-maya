@@ -16,18 +16,7 @@
       "main": [
         [
           {
-            "node": "Date & Time1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Date & Time1": {
-      "main": [
-        [
-          {
-            "node": "CADASTRA HORA",
+            "node": "FORMATA HORA",
             "type": "main",
             "index": 0
           }
@@ -38,7 +27,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request Enviar Fluxo BC",
+            "node": "ENVIA O FLUXO AG CONFIRMADO",
             "type": "main",
             "index": 0
           }
@@ -50,28 +39,6 @@
         [
           {
             "node": "FORMATA DATA",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request": {
-      "main": [
-        [
-          {
-            "node": "LINK DE REAGENDAMENTO",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Calendly Trigger": {
-      "main": [
-        [
-          {
-            "node": "Nome e telefone para validar",
             "type": "main",
             "index": 0
           }
@@ -93,7 +60,40 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "BUSCA USER PELO TELEFONE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "BUSCA USER PELO TELEFONE": {
+      "main": [
+        [
+          {
+            "node": "LINK DE REAGENDAMENTO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FORMATA HORA": {
+      "main": [
+        [
+          {
+            "node": "CADASTRA HORA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NOVO AGENDAMENTO NO CALENDLY": {
+      "main": [
+        [
+          {
+            "node": "Nome e telefone para validar",
             "type": "main",
             "index": 0
           }
@@ -108,83 +108,8 @@
   "nodes": [
     {
       "parameters": {
-        "scope": "organization",
-        "events": [
-          "invitee.created"
-        ]
-      },
-      "id": "e911bf7c-bcc4-4ac1-a21e-27ffe1e9043f",
-      "name": "Calendly Trigger",
-      "type": "n8n-nodes-base.calendlyTrigger",
-      "typeVersion": 1,
-      "position": [
-        -340,
-        180
-      ],
-      "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
-      "credentials": {
-        "calendlyApi": {
-          "id": "JftL0JtjFDIwdLBg",
-          "name": "Calendly account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('HTTP Request').item.json.id }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": 2880368
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "64f5eb62-9362-468e-ae28-99aa00348481",
-      "name": "HTTP Request Enviar Fluxo BC",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        1760,
-        180
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "Z8gB5CQhoQFgqoYJ",
-          "name": "BC - TESTES"
-        }
-      }
-    },
-    {
-      "parameters": {
         "operation": "formatDate",
-        "date": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.start_time }}",
-        "format": "custom",
-        "customFormat": "HH:mm",
-        "outputFieldName": "HORAFORMATADA",
-        "options": {
-          "timezone": true
-        }
-      },
-      "id": "7809e7a9-f885-4cc3-8a49-0f22702cce03",
-      "name": "Date & Time1",
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 2,
-      "position": [
-        1340,
-        180
-      ]
-    },
-    {
-      "parameters": {
-        "operation": "formatDate",
-        "date": "={{ $('Calendly Trigger').item.json.payload.scheduled_event.start_time }}",
+        "date": "={{ $('NOVO AGENDAMENTO NO CALENDLY').item.json.payload.scheduled_event.start_time }}",
         "format": "custom",
         "customFormat": "dd/MM/yyyy",
         "outputFieldName": "DATAFORMATADA",
@@ -198,13 +123,13 @@
       "typeVersion": 2,
       "position": [
         860,
-        180
+        80
       ]
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('HTTP Request').item.json[\"id\"] }}/custom_fields/1622175/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('BUSCA USER PELO TELEFONE').item.json[\"id\"] }}/custom_fields/1622175/",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
@@ -236,7 +161,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('HTTP Request').item.json[\"id\"] }}/custom_fields/1622181/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('BUSCA USER PELO TELEFONE').item.json[\"id\"] }}/custom_fields/1622181/",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
@@ -287,7 +212,7 @@
           "parameters": [
             {
               "name": "value",
-              "value": "= {{ $('Calendly Trigger').item.json.payload.reschedule_url }}"
+              "value": "= {{ $('NOVO AGENDAMENTO NO CALENDLY').item.json.payload.reschedule_url }}"
             }
           ]
         },
@@ -301,28 +226,6 @@
         620,
         180
       ]
-    },
-    {
-      "parameters": {
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "315d3881-9301-42a8-960c-08a43e0c3146",
-      "name": "HTTP Request",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        360,
-        180
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "Z8gB5CQhoQFgqoYJ",
-          "name": "BC - TESTES"
-        }
-      }
     },
     {
       "parameters": {
@@ -345,8 +248,8 @@
       "name": "Nome e telefone para validar",
       "type": "n8n-nodes-base.set",
       "position": [
-        -120,
-        180
+        -100,
+        60
       ],
       "typeVersion": 1
     },
@@ -362,6 +265,103 @@
         140,
         180
       ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $json[\"whatsapp\"] }}/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "315d3881-9301-42a8-960c-08a43e0c3146",
+      "name": "BUSCA USER PELO TELEFONE",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        380,
+        80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $('NOVO AGENDAMENTO NO CALENDLY').item.json.payload.scheduled_event.start_time }}",
+        "format": "custom",
+        "customFormat": "HH:mm",
+        "outputFieldName": "HORAFORMATADA",
+        "options": {
+          "timezone": true
+        }
+      },
+      "id": "7809e7a9-f885-4cc3-8a49-0f22702cce03",
+      "name": "FORMATA HORA",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('BUSCA USER PELO TELEFONE').item.json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": 2880368
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "64f5eb62-9362-468e-ae28-99aa00348481",
+      "name": "ENVIA O FLUXO AG CONFIRMADO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1760,
+        80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "scope": "organization",
+        "events": [
+          "invitee.created"
+        ]
+      },
+      "id": "e911bf7c-bcc4-4ac1-a21e-27ffe1e9043f",
+      "name": "NOVO AGENDAMENTO NO CALENDLY",
+      "type": "n8n-nodes-base.calendlyTrigger",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        180
+      ],
+      "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
+      "credentials": {
+        "calendlyApi": {
+          "id": "JftL0JtjFDIwdLBg",
+          "name": "Calendly account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -369,13 +369,14 @@
     "executionOrder": "v1"
   },
   "staticData": {
-    "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/70172fc5-8138-4460-8ceb-1ff8bdf0f90d"
-    },
-    "node:Calendly Trigger1": {}
+    "node:Calendly Trigger": {},
+    "node:Calendly Trigger1": {},
+    "node:NOVO AGENDAMENTO NO CALENDLY": {
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/f7e6975d-d809-4700-948e-03925a973a91"
+    }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-09T00:33:29.000Z",
-  "versionId": "4749723b-5084-4901-9164-0b5ee6eafac6"
+  "updatedAt": "2023-12-09T01:55:55.000Z",
+  "versionId": "9c825518-af75-4f97-99bf-e1e5b0e8b321"
 }
