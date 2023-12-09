@@ -78,11 +78,6 @@
         ]
       ]
     },
-    "Calendly Trigger1": {
-      "main": [
-        []
-      ]
-    },
     "Nome e telefone para validar": {
       "main": [
         [
@@ -123,7 +118,7 @@
       "type": "n8n-nodes-base.calendlyTrigger",
       "typeVersion": 1,
       "position": [
-        -420,
+        -340,
         180
       ],
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
@@ -133,51 +128,6 @@
           "name": "Calendly account"
         }
       }
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "0e314400-da9a-434d-bcf3-f3d32f9e722c"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "phone",
-              "value": "={{ $json.payload.questions_and_answers[0].answer }}"
-            },
-            {
-              "name": "first_name",
-              "value": "={{ $json.payload.first_name }}"
-            },
-            {
-              "name": "last_name",
-              "value": "={{ $json.payload.last_name }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "03f17152-8bf9-4a63-b7c3-f576043695c5",
-      "name": "HTTP Request Cadastrar Usuario BC",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        40,
-        420
-      ]
     },
     {
       "parameters": {
@@ -376,28 +326,6 @@
     },
     {
       "parameters": {
-        "events": [
-          "invitee.created"
-        ]
-      },
-      "id": "ad66a8d2-df4e-4677-9a33-f744d896378b",
-      "name": "Calendly Trigger1",
-      "type": "n8n-nodes-base.calendlyTrigger",
-      "typeVersion": 1,
-      "position": [
-        400,
-        -80
-      ],
-      "webhookId": "820edf65-c42b-4270-be89-3f52306c6f84",
-      "credentials": {
-        "calendlyApi": {
-          "id": "JftL0JtjFDIwdLBg",
-          "name": "Calendly account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "keepOnlySet": true,
         "values": {
           "string": [
@@ -436,98 +364,18 @@
       ]
     }
   ],
-  "pinData": {
-    "Calendly Trigger": [
-      {
-        "json": {
-          "created_at": "2023-12-08T17:03:10.000000Z",
-          "created_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
-          "event": "invitee.created",
-          "payload": {
-            "cancel_url": "https://calendly.com/cancellations/efc9512f-ce43-4165-ad4d-5922fb9e5ca1",
-            "created_at": "2023-12-08T17:03:09.710215Z",
-            "email": "vinicius.faustinoni2022@gmail.com",
-            "event": "https://api.calendly.com/scheduled_events/ebda83e0-1d45-4340-9b0f-5ffce3c63ce5",
-            "first_name": "Marcus",
-            "invitee_scheduled_by": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
-            "last_name": "Freitas",
-            "name": "Marcus Freitas",
-            "new_invitee": null,
-            "no_show": null,
-            "old_invitee": null,
-            "payment": null,
-            "questions_and_answers": [
-              {
-                "answer": "+55 21 97881-3974",
-                "position": 1,
-                "question": "WhatsApp"
-              }
-            ],
-            "reconfirmation": null,
-            "reschedule_url": "https://calendly.com/reschedulings/efc9512f-ce43-4165-ad4d-5922fb9e5ca1",
-            "rescheduled": false,
-            "routing_form_submission": null,
-            "scheduled_event": {
-              "created_at": "2023-12-08T17:03:09.690128Z",
-              "end_time": "2023-12-12T19:30:00.000000Z",
-              "event_guests": [],
-              "event_memberships": [
-                {
-                  "user": "https://api.calendly.com/users/3c97993c-c722-468c-b76e-7201a2420c90",
-                  "user_email": "vinicius.faustinoni2022@gmail.com"
-                }
-              ],
-              "event_type": "https://api.calendly.com/event_types/563ad4a1-e1cd-47ae-8c1f-05626f5391fa",
-              "invitees_counter": {
-                "total": 1,
-                "active": 1,
-                "limit": 1
-              },
-              "location": {
-                "location": null,
-                "type": "custom"
-              },
-              "name": "Marcação de Horário",
-              "start_time": "2023-12-12T18:30:00.000000Z",
-              "status": "active",
-              "updated_at": "2023-12-08T17:03:09.690128Z",
-              "uri": "https://api.calendly.com/scheduled_events/ebda83e0-1d45-4340-9b0f-5ffce3c63ce5"
-            },
-            "scheduling_method": null,
-            "status": "active",
-            "text_reminder_number": null,
-            "timezone": "America/Sao_Paulo",
-            "tracking": {
-              "utm_campaign": null,
-              "utm_source": null,
-              "utm_medium": null,
-              "utm_content": null,
-              "utm_term": null,
-              "salesforce_uuid": null
-            },
-            "updated_at": "2023-12-08T17:03:09.710215Z",
-            "uri": "https://api.calendly.com/scheduled_events/ebda83e0-1d45-4340-9b0f-5ffce3c63ce5/invitees/efc9512f-ce43-4165-ad4d-5922fb9e5ca1"
-          }
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": {
     "node:Calendly Trigger": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/ab2b8703-5179-47e1-9e80-b0307e914f88"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/70172fc5-8138-4460-8ceb-1ff8bdf0f90d"
     },
-    "node:Calendly Trigger1": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/4bc32bca-f154-499e-9229-f28e5dd23af9"
-    }
+    "node:Calendly Trigger1": {}
   },
   "tags": [],
-  "triggerCount": 2,
-  "updatedAt": "2023-12-08T21:37:59.000Z",
-  "versionId": "57ad12be-9254-4918-b1b3-72b80985be53"
+  "triggerCount": 1,
+  "updatedAt": "2023-12-09T00:33:29.000Z",
+  "versionId": "4749723b-5084-4901-9164-0b5ee6eafac6"
 }
