@@ -350,8 +350,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "EnweQS0a3c3jn7qF",
+          "name": "BC - SEBASTIAN"
         }
       }
     },
@@ -422,8 +422,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "EnweQS0a3c3jn7qF",
+          "name": "BC - SEBASTIAN"
         }
       }
     },
@@ -570,6 +570,6 @@
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-07T19:22:39.000Z",
-  "versionId": "c800b137-750d-46aa-9263-e2d5816fa880"
+  "updatedAt": "2023-12-09T10:27:09.000Z",
+  "versionId": "6801bd9f-6e49-4e2f-8d0b-774825498c9f"
 }
