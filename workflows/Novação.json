@@ -292,8 +292,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "ZYzYBpqA2kckgfrY",
+          "name": "BC - NOVAÇÃO"
         }
       }
     },
@@ -424,8 +424,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "pCMjftibfRSpRtqc",
-          "name": "BC - Maya"
+          "id": "ZYzYBpqA2kckgfrY",
+          "name": "BC - NOVAÇÃO"
         }
       }
     },
@@ -524,12 +524,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1KL2EcLmy9yxRtvtNNHOduFU8XLtHmRA6SrCMs4uD-Ww",
       "sheetId": "0",
-      "lastRevision": 256,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KL2EcLmy9yxRtvtNNHOduFU8XLtHmRA6SrCMs4uD-Ww&revision=256&exportFormat=xlsx"
+      "lastRevision": 257,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KL2EcLmy9yxRtvtNNHOduFU8XLtHmRA6SrCMs4uD-Ww&revision=257&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-07T19:24:10.000Z",
-  "versionId": "d2357ce6-c301-4384-8a1b-70f8e9d90740"
+  "updatedAt": "2023-12-09T10:24:44.000Z",
+  "versionId": "8367d07a-4bbb-4c9c-bdad-36d7a77411c6"
 }
