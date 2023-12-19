@@ -1,0 +1,142 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-12-19T22:21:11.563Z",
+  "id": "9sMBGzGcSePcgPeS",
+  "meta": null,
+  "name": "JORDANA",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "a9da7230-c3b7-4638-a370-ff6fc9e626d4",
+        "options": {}
+      },
+      "id": "0559e380-d7e6-419b-be8a-70c3b3264c6b",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        540,
+        200
+      ],
+      "webhookId": "a9da7230-c3b7-4638-a370-ff6fc9e626d4"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1t360taDguhCz3fe9iLBj_RItcS6QkVP9LvsnSMjBAlk",
+          "mode": "list",
+          "cachedResultName": "CONTROLE JORDANA",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t360taDguhCz3fe9iLBj_RItcS6QkVP9LvsnSMjBAlk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t360taDguhCz3fe9iLBj_RItcS6QkVP9LvsnSMjBAlk/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "MOMENTO DO CHAMADO": "={{ $json.body['MOMENTO DO CHAMADO'] }}",
+            "NOME": "={{ $json.body['NOME DO LEAD'] }}",
+            "TELEFONE": "={{ $json.body['TELEFONE DO LEAD'] }}",
+            "IDADES": "={{ $json.body.IDADES }}",
+            "ELEGIBILIDADE": "={{ $json.body.ELEGIBILIDADE }}"
+          },
+          "matchingColumns": [
+            "MOMENTO DO CHAMADO"
+          ],
+          "schema": [
+            {
+              "id": "MOMENTO DO CHAMADO",
+              "displayName": "MOMENTO DO CHAMADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IDADES",
+              "displayName": "IDADES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ELEGIBILIDADE",
+              "displayName": "ELEGIBILIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ccc70628-a101-46dc-8d28-d9170161d7f3",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        740,
+        200
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Cgmgitz8hHNbDrfy",
+          "name": "JORDANA"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-12-19T22:27:15.000Z",
+  "versionId": "068809a8-3942-4970-bb7c-55cdfa63ef7c"
+}
