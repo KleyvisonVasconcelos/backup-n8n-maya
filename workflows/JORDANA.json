@@ -58,7 +58,8 @@
             "NOME": "={{ $json.body['NOME DO LEAD'] }}",
             "TELEFONE": "={{ $json.body['TELEFONE DO LEAD'] }}",
             "IDADES": "={{ $json.body.IDADES }}",
-            "ELEGIBILIDADE": "={{ $json.body.ELEGIBILIDADE }}"
+            "ELEGIBILIDADE": "={{ $json.body.ELEGIBILIDADE }}",
+            "STATUS": "={{ $json.body.STATUS }}"
           },
           "matchingColumns": [
             "MOMENTO DO CHAMADO"
@@ -109,6 +110,36 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true
+            },
+            {
+              "id": "STATUS",
+              "displayName": "STATUS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "VALOR",
+              "displayName": "VALOR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "OBSERVAÇÃO",
+              "displayName": "OBSERVAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
             }
           ]
         },
@@ -137,6 +168,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-19T22:27:15.000Z",
-  "versionId": "068809a8-3942-4970-bb7c-55cdfa63ef7c"
+  "updatedAt": "2023-12-21T16:13:51.000Z",
+  "versionId": "96412c46-fbea-47a8-9fba-255ed9dfb2e5"
 }
