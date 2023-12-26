@@ -543,19 +543,19 @@
     "node:Google Sheets Trigger1": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 66284,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66284&exportFormat=xlsx",
+      "lastRevision": 66288,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66288&exportFormat=xlsx",
       "lastIndexChecked": 325
     },
     "node:Google Sheets Trigger": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 66282,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66282&exportFormat=xlsx"
+      "lastRevision": 66287,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66287&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2023-12-21T16:19:12.000Z",
+  "updatedAt": "2023-12-26T14:54:13.000Z",
   "versionId": "95352dee-93b1-447b-a757-3c4903e96fb0"
 }
