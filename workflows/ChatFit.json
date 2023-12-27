@@ -1,0 +1,96 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "OpenAI1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-12-27T11:16:53.144Z",
+  "id": "eSlwd6YfXyQEL6iM",
+  "meta": null,
+  "name": "ChatFit",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "b041ef86-2680-4625-bcd2-c4efaa47598f",
+        "options": {}
+      },
+      "id": "6c17723c-fddf-4727-b455-0fb032454277",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        620,
+        260
+      ],
+      "webhookId": "b041ef86-2680-4625-bcd2-c4efaa47598f"
+    },
+    {
+      "parameters": {
+        "resource": "chat",
+        "model": "gpt-4-1106-preview",
+        "prompt": {
+          "messages": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "87789f15-ec45-4ab7-88f6-c0cf51336800",
+      "name": "OpenAI1",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        800,
+        260
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "gNHLAmYjI95t95YI",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "99605c22-b886-4021-85ae-2370d84b1262",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1000,
+        260
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-12-27T11:23:10.000Z",
+  "versionId": "f976887a-df84-4257-b70c-f3d7b493a5b3"
+}
