@@ -31,6 +31,7 @@
   "nodes": [
     {
       "parameters": {
+        "httpMethod": "POST",
         "path": "b041ef86-2680-4625-bcd2-c4efaa47598f",
         "options": {}
       },
@@ -46,14 +47,11 @@
     },
     {
       "parameters": {
-        "resource": "chat",
-        "model": "gpt-4-1106-preview",
-        "prompt": {
-          "messages": [
-            {}
-          ]
-        },
-        "options": {}
+        "model": "gpt-4",
+        "prompt": "={{ $json.body.promptdieta }}",
+        "options": {
+          "maxTokens": 4000
+        }
       },
       "id": "87789f15-ec45-4ab7-88f6-c0cf51336800",
       "name": "OpenAI1",
@@ -84,13 +82,43 @@
       ]
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "2159",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "fd4e74dd57694e4d8d40081d9c6b1e71-bac2b5252f734fe7-0",
+            "x-forwarded-for": "18.231.196.33",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "7836abec8c3d",
+            "x-real-ip": "18.231.196.33"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "promptdieta": "Você é um Assistente Inteligente Especialista em Criação de Treinos de Musculação que segue a instrução abaixo: 1 - Idade: {dtidade} 2 - Objetivo: {dtobjetivo} 3 - Peso Atual: {dtpesoatual} 4 - Peso Ideal: {dtpesoideal} 5 - Taxa de Metabolismo Basal: {dttmb} 6 - Nível de Atividade: {dtatividade} 7 - Nível de exercício cardiovascular: {dtcardio} 8 - Histórico de doenças familiares: {dtdoençafam} 9 - Atividade física: {dtatividadefisica} 10 - Hipertensão Arterial - {hipertensaotreino} 11 - Diabetes - {diabetestreino} 12 - Sente dores - {dorestreino} Além disso, é de importância crítica que o Assistente Inteligente siga estas diretrizes: 1 - Canal de Comunicação: O assistente está interagindo através do WhatsApp, portanto nunca use formatação de texto Markdown. Utilize Emojis, caso necessário. 2 - Caso Hipertensão seja \"SIM\", evite exercícios onde o usuário fique na horizontal (deitado). 3 - Caso a Idade seja maior que 55 anos, evite a qualquer custo exercícios aeróbicos e alta intensidade (corrida) 4 - Caso diabetes seja \"SIM\", evite Exercícios Extremamente Intensos e Exercícios de Alto Impacto 5 - Se houver alguma lesão, evite exercícios que sejam relacionados a ela. Lesão: {dorestreino} 6 - Passe um treino de MOBILIDADE relacionado às lesões acima descritas, caso seja \"NÂO\", desconsidere. 7 - O texto total deve conter no máximo 1500 palavras 8 - É extritamente proibido a junção de mais de 2 grupos musculares por dia na criação do treino. Exemplo: Dia 1 - Peito e Triceps, Dia 2 - costas e ombros, Dia 3 - Pernas e Biceps. 9 - Organize os dias em \"Dia 1, Dia 2, Dia 3. 10 - Dê dicas de como executar cada exercício 11 - Exclua qualquer conclusão e responda apenas as informações necessárias. 12 - considere dorsal, pernas, peitoral com grandes grupamentos musculares. 13 - considere bíceps, tríceps e ombros pequenos grupamentos musculares."
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2023-12-27T11:23:10.000Z",
-  "versionId": "f976887a-df84-4257-b70c-f3d7b493a5b3"
+  "updatedAt": "2023-12-27T11:39:11.000Z",
+  "versionId": "564ce498-9909-4947-833c-86d844db5a69"
 }
