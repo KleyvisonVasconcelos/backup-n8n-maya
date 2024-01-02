@@ -369,14 +369,12 @@
     "executionOrder": "v1"
   },
   "staticData": {
-    "node:Calendly Trigger": {},
-    "node:Calendly Trigger1": {},
     "node:NOVO AGENDAMENTO NO CALENDLY": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/f7e6975d-d809-4700-948e-03925a973a91"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/ae09aa0c-5e03-4ae6-b2e7-9d47e1735e5e"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-09T01:55:55.000Z",
+  "updatedAt": "2024-01-02T12:28:13.000Z",
   "versionId": "9c825518-af75-4f97-99bf-e1e5b0e8b321"
 }
