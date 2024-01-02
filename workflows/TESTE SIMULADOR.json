@@ -22,22 +22,6 @@
           }
         ]
       ]
-    },
-    "Edit Fields1": {
-      "main": [
-        []
-      ]
-    },
-    "LÊ PLANILHA1": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
     }
   },
   "createdAt": "2023-12-04T22:10:57.034Z",
@@ -66,23 +50,33 @@
         "authentication": "serviceAccount",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181",
-          "mode": "url"
+          "value": "1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk",
+          "mode": "list",
+          "cachedResultName": "SIMULADOR - PROTÓTIPO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181",
-          "mode": "url"
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0"
         },
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "ID",
+              "lookupColumn": "IDADE",
+              "lookupValue": "={{ $json.body['FAIXA ETÁRIA'] }}"
+            },
+            {
+              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
               "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
             },
             {
-              "lookupColumn": "={{ $json.body['FAIXA ETÁRIA'] }}"
-            }
+              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
+              "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
+            },
+            {}
           ]
         },
         "options": {}
@@ -104,29 +98,6 @@
     },
     {
       "parameters": {
-        "fields": {
-          "values": [
-            {
-              "name": "ID",
-              "stringValue": "={{ $('LÊ PLANILHA').item.json.ID }}"
-            }
-          ]
-        },
-        "include": "selected",
-        "includeFields": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
-        "options": {}
-      },
-      "id": "6f145d55-7987-4308-a064-d286a20626bb",
-      "name": "Edit Fields1",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.2,
-      "position": [
-        1140,
-        180
-      ]
-    },
-    {
-      "parameters": {
         "authentication": "serviceAccount",
         "documentId": {
           "__rl": true,
@@ -145,19 +116,19 @@
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "={{ $json.ID }}",
-              "lookupValue": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}"
+              "lookupColumn": "={{ $('Webhook').item.json.body['ID DO PLANO'] }}",
+              "lookupValue": "="
             }
           ]
         },
         "options": {}
       },
-      "id": "bc1aac08-eee7-4102-849b-5148313e70a6",
+      "id": "1090e00a-e395-4ee1-91e0-251a34833335",
       "name": "LÊ PLANILHA1",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        940,
+        900,
         180
       ],
       "credentials": {
@@ -198,6 +169,21 @@
           "item": 0
         }
       }
+    ],
+    "LÊ PLANILHA": [
+      {
+        "json": {
+          "row_number": 5,
+          "IDADE": "29 A 33",
+          "482.398/19-2": "R$ 225,67",
+          "475.465/16-4": "R$246,18"
+        },
+        "pairedItem": [
+          {
+            "item": 0
+          }
+        ]
+      }
     ]
   },
   "settings": {
@@ -206,6 +192,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-12-07T21:28:05.000Z",
-  "versionId": "4247f1a0-681b-4871-ac95-bc77ad4b86a0"
+  "updatedAt": "2024-01-02T10:29:31.000Z",
+  "versionId": "bd29a8e2-f14a-40e0-8af4-011edffbe9f1"
 }
