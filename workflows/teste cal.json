@@ -212,7 +212,7 @@
           "parameters": [
             {
               "name": "value",
-              "value": "= {{ $('NOVO AGENDAMENTO NO CALENDLY').item.json.payload.reschedule_url }}"
+              "value": "={{ $json.variables.ID_CALENDLY }}"
             }
           ]
         },
@@ -239,6 +239,14 @@
             {
               "name": "nomeCompleto",
               "value": "={{ $json.payload.name }}"
+            },
+            {
+              "name": "Cancelamento",
+              "value": "={{ $json.payload.cancel_url }}"
+            },
+            {
+              "name": "Reagendamento",
+              "value": "={{ $json.payload.reschedule_url }}"
             }
           ]
         },
@@ -358,8 +366,8 @@
       "webhookId": "f90e7310-5475-4d30-9bce-edc392ad751a",
       "credentials": {
         "calendlyApi": {
-          "id": "JftL0JtjFDIwdLBg",
-          "name": "Calendly account"
+          "id": "U5NZ3jvFzOm9WTN8",
+          "name": "Calendly account 2"
         }
       }
     }
@@ -370,11 +378,11 @@
   },
   "staticData": {
     "node:NOVO AGENDAMENTO NO CALENDLY": {
-      "webhookURI": "https://api.calendly.com/webhook_subscriptions/ae09aa0c-5e03-4ae6-b2e7-9d47e1735e5e"
+      "webhookURI": "https://api.calendly.com/webhook_subscriptions/84374e9c-929a-4e2b-8fcb-6a99d90e8e35"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-02T12:28:13.000Z",
-  "versionId": "9c825518-af75-4f97-99bf-e1e5b0e8b321"
+  "updatedAt": "2024-01-02T13:01:09.000Z",
+  "versionId": "03f8c037-0233-4810-91ec-172faf216ca7"
 }
