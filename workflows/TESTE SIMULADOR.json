@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "LÊ PLANILHA1",
+            "node": "Code",
             "type": "main",
             "index": 0
           }
@@ -69,14 +69,8 @@
               "lookupValue": "={{ $json.body['FAIXA ETÁRIA'] }}"
             },
             {
-              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
-              "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
-            },
-            {
-              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
-              "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
-            },
-            {}
+              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}"
+            }
           ]
         },
         "options": {}
@@ -98,45 +92,38 @@
     },
     {
       "parameters": {
-        "authentication": "serviceAccount",
+        "jsCode": "// Receba a faixa etária e o ID do plano do input do nó anterior.\n// Substitua 'webhookData' pelo nome real do seu nó de entrada, se necessário.\nconst faixaEtariaDesejada = items[0].json[\"FAIXA ETÁRIA\"];\nconst idDoPlano = items[0].json[\"ID DO PLANO\"];\n\n// Encontre a linha correspondente.\nconst linhaCorrespondente = items.find(item => item.json.IDADE === faixaEtariaDesejada && item.json[idDoPlano] !== undefined);\n\n// Verifique se encontramos a linha.\nif (linhaCorrespondente) {\n  // Retorne o número da linha.\n  return [{ json: { \"numeroDaLinha\": linhaCorrespondente.json.row_number } }];\n} else {\n  // Se não encontrar, retorne um erro.\n  return [{ json: { \"erro\": \"A linha correspondente não foi encontrada.\" } }];\n}\n"
+      },
+      "id": "cdeb83a9-19c5-4d08-ae7c-51a18150ab8a",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        180
+      ]
+    },
+    {
+      "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk",
-          "mode": "list",
-          "cachedResultName": "SIMULADOR - PROTÓTIPO",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit?usp=drivesdk"
+          "value": "={{ $json.row_number }}",
+          "mode": "id"
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
           "mode": "list",
-          "cachedResultName": "Página1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0"
-        },
-        "filtersUI": {
-          "values": [
-            {
-              "lookupColumn": "={{ $('Webhook').item.json.body['ID DO PLANO'] }}",
-              "lookupValue": "="
-            }
-          ]
-        },
-        "options": {}
+          "value": ""
+        }
       },
-      "id": "1090e00a-e395-4ee1-91e0-251a34833335",
-      "name": "LÊ PLANILHA1",
+      "id": "7603696c-4096-46be-b467-c0a3b0a1b236",
+      "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        900,
-        180
-      ],
-      "credentials": {
-        "googleApi": {
-          "id": "zbnWu7CX265Tgd9a",
-          "name": "SIMULADOR (TESTE)"
-        }
-      }
+        940,
+        0
+      ]
     }
   ],
   "pinData": {
@@ -192,6 +179,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-02T10:29:31.000Z",
-  "versionId": "bd29a8e2-f14a-40e0-8af4-011edffbe9f1"
+  "updatedAt": "2024-01-02T11:24:18.000Z",
+  "versionId": "93d17bf7-9820-408b-b5ce-39bcfea84023"
 }
