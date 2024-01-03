@@ -5,7 +5,7 @@
       "main": [
         [
           {
-            "node": "LÊ PLANILHA",
+            "node": "Edit Fields",
             "type": "main",
             "index": 0
           }
@@ -17,6 +17,17 @@
         [
           {
             "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "LÊ PLANILHA",
             "type": "main",
             "index": 0
           }
@@ -40,7 +51,7 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
-        540,
+        220,
         180
       ],
       "webhookId": "e1dfb573-a01a-4037-abf2-011a11e47f8e"
@@ -65,11 +76,12 @@
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "IDADE",
+              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
               "lookupValue": "={{ $json.body['FAIXA ETÁRIA'] }}"
             },
             {
-              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}"
+              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
+              "lookupValue": "="
             }
           ]
         },
@@ -80,7 +92,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        720,
+        540,
         180
       ],
       "credentials": {
@@ -92,37 +104,40 @@
     },
     {
       "parameters": {
-        "jsCode": "// Receba a faixa etária e o ID do plano do input do nó anterior.\n// Substitua 'webhookData' pelo nome real do seu nó de entrada, se necessário.\nconst faixaEtariaDesejada = items[0].json[\"FAIXA ETÁRIA\"];\nconst idDoPlano = items[0].json[\"ID DO PLANO\"];\n\n// Encontre a linha correspondente.\nconst linhaCorrespondente = items.find(item => item.json.IDADE === faixaEtariaDesejada && item.json[idDoPlano] !== undefined);\n\n// Verifique se encontramos a linha.\nif (linhaCorrespondente) {\n  // Retorne o número da linha.\n  return [{ json: { \"numeroDaLinha\": linhaCorrespondente.json.row_number } }];\n} else {\n  // Se não encontrar, retorne um erro.\n  return [{ json: { \"erro\": \"A linha correspondente não foi encontrada.\" } }];\n}\n"
+        "jsCode": "// Substitua 'NOME DA COLUNA' pelo nome exato da coluna de onde você quer pegar o valor da quinta linha\nconst nomeDaColuna = \"{{ $json.body['ID DO PLANO'] }}\";\nconst Linha = items[{ $json.row_number }].json[nomeDaColuna]; // Indexação começa em 0, então o índice 4 é a quinta linha\n\nreturn [{ json: { \"VALOR NA QUINTA LINHA\": Linha } }];\n"
       },
       "id": "cdeb83a9-19c5-4d08-ae7c-51a18150ab8a",
       "name": "Code",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        960,
+        880,
         180
       ]
     },
     {
       "parameters": {
-        "documentId": {
-          "__rl": true,
-          "value": "={{ $json.row_number }}",
-          "mode": "id"
+        "fields": {
+          "values": [
+            {
+              "name": "ID",
+              "stringValue": "={{ $json.body['ID DO PLANO'] }}"
+            },
+            {
+              "name": "IDADE",
+              "stringValue": "={{ $json.body['FAIXA ETÁRIA'] }}"
+            }
+          ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {}
       },
-      "id": "7603696c-4096-46be-b467-c0a3b0a1b236",
-      "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.1,
+      "id": "241a5445-eff6-422b-9837-b76c0ce96b36",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
       "position": [
-        940,
-        0
+        380,
+        180
       ]
     }
   ],
@@ -157,19 +172,36 @@
         }
       }
     ],
-    "LÊ PLANILHA": [
+    "Edit Fields": [
       {
         "json": {
-          "row_number": 5,
-          "IDADE": "29 A 33",
-          "482.398/19-2": "R$ 225,67",
-          "475.465/16-4": "R$246,18"
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "63",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "79406cbe704d423ca64458f00aa57017-88f2fff454bebc04-0",
+            "x-forwarded-for": "54.232.132.212",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "7836abec8c3d",
+            "x-real-ip": "54.232.132.212"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "ID DO PLANO": "482.398/19-2",
+            "FAIXA ETÁRIA": "29 A 33"
+          },
+          "ID": "482.398/19-2",
+          "IDADE": "29 A 33"
         },
-        "pairedItem": [
-          {
-            "item": 0
-          }
-        ]
+        "pairedItem": {
+          "item": 0
+        }
       }
     ]
   },
@@ -179,6 +211,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-02T11:24:18.000Z",
-  "versionId": "93d17bf7-9820-408b-b5ce-39bcfea84023"
+  "updatedAt": "2024-01-03T12:02:20.000Z",
+  "versionId": "f7ed2ada-958d-44e1-b292-a233a2bd36be"
 }
