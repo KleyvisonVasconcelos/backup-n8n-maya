@@ -5,7 +5,7 @@
       "main": [
         [
           {
-            "node": "Edit Fields",
+            "node": "LÊ PLANILHA",
             "type": "main",
             "index": 0
           }
@@ -16,18 +16,66 @@
       "main": [
         [
           {
-            "node": "Code",
+            "node": "Switch",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Edit Fields": {
+    "Switch": {
       "main": [
         [
           {
-            "node": "LÊ PLANILHA",
+            "node": "0 A 18",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "0 A ",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "29 A 33",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "0 A 18": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "0 A ": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "29 A 33": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
             "type": "main",
             "index": 0
           }
@@ -68,20 +116,16 @@
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
+          "value": 1257034181,
           "mode": "list",
-          "cachedResultName": "Página1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=0"
+          "cachedResultName": "Cópia de Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181"
         },
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
-              "lookupValue": "={{ $json.body['FAIXA ETÁRIA'] }}"
-            },
-            {
-              "lookupColumn": "={{ $json.body['ID DO PLANO'] }}",
-              "lookupValue": "="
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
             }
           ]
         },
@@ -92,7 +136,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        540,
+        440,
         180
       ],
       "credentials": {
@@ -111,8 +155,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        880,
-        180
+        520,
+        -60
       ]
     },
     {
@@ -136,8 +180,130 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        380,
-        180
+        320,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['29 A 33'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "b691879f-d8e0-445a-808a-f6ba656067bf",
+      "name": "29 A 33",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['0 A 18'].replaceAll(\"R$\",\"\").replaceAll(\" \",\"\").replaceAll(\",\",\".\") }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "3d54e021-1a2d-40f5-8f88-e3bf588bcd88",
+      "name": "0 A 18",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "0 A 18",
+              "outputKey": "0"
+            },
+            {
+              "value2": "19 A 23",
+              "outputKey": "1"
+            },
+            {
+              "value2": "24 A 28",
+              "outputKey": "2"
+            },
+            {
+              "value2": "29 A 33",
+              "outputKey": "3"
+            }
+          ]
+        }
+      },
+      "id": "f12aa1ad-ea79-4005-80d3-a93bb0824167",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [
+        660,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['0 A 18'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "d40cf8d5-b386-41a0-a43a-419b6752fe60",
+      "name": "0 A ",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "valor formatado",
+              "type": "numberValue",
+              "numberValue": "={{ $json['VALOR PLANO'].replaceAll(\"R$\",\"\").replaceAll(\" \",\"\").replaceAll(\",\",\".\") }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1e8a3f3-0114-4337-a34a-7f6f76f6ae9a",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        1300,
+        20
       ]
     }
   ],
@@ -164,11 +330,8 @@
           "query": {},
           "body": {
             "ID DO PLANO": "482.398/19-2",
-            "FAIXA ETÁRIA": "29 A 33"
+            "FAIXA ETÁRIA": "0 A 18"
           }
-        },
-        "pairedItem": {
-          "item": 0
         }
       }
     ],
@@ -211,6 +374,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-03T12:02:20.000Z",
-  "versionId": "f7ed2ada-958d-44e1-b292-a233a2bd36be"
+  "updatedAt": "2024-01-03T15:23:42.000Z",
+  "versionId": "c0952163-a54a-4b53-bea6-bd21446691cb"
 }
