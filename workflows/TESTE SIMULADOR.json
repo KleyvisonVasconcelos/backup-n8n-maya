@@ -16,33 +16,7 @@
       "main": [
         [
           {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "0 A 18",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "0 A ",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [],
-        [
-          {
-            "node": "29 A 33",
+            "node": "FORMATANDO",
             "type": "main",
             "index": 0
           }
@@ -53,29 +27,7 @@
       "main": [
         [
           {
-            "node": "Edit Fields1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "0 A ": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "29 A 33": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields1",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           }
@@ -92,6 +44,7 @@
       "parameters": {
         "httpMethod": "POST",
         "path": "e1dfb573-a01a-4037-abf2-011a11e47f8e",
+        "responseMode": "lastNode",
         "options": {}
       },
       "id": "b0cfe07d-e6b5-4e64-a52a-cb692d1794cd",
@@ -230,40 +183,6 @@
     },
     {
       "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Webhook').item.json.body['FAIXA ETÁRIA'] }}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "0 A 18",
-              "outputKey": "0"
-            },
-            {
-              "value2": "19 A 23",
-              "outputKey": "1"
-            },
-            {
-              "value2": "24 A 28",
-              "outputKey": "2"
-            },
-            {
-              "value2": "29 A 33",
-              "outputKey": "3"
-            }
-          ]
-        }
-      },
-      "id": "f12aa1ad-ea79-4005-80d3-a93bb0824167",
-      "name": "Switch",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 2,
-      "position": [
-        660,
-        140
-      ]
-    },
-    {
-      "parameters": {
         "fields": {
           "values": [
             {
@@ -286,24 +205,53 @@
     },
     {
       "parameters": {
+        "options": {}
+      },
+      "id": "192a9912-dce1-43a8-b705-7244921a2231",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1140,
+        -140
+      ]
+    },
+    {
+      "parameters": {
         "fields": {
           "values": [
             {
-              "name": "valor formatado",
+              "name": "0 A 18",
               "type": "numberValue",
-              "numberValue": "={{ $json['VALOR PLANO'].replaceAll(\"R$\",\"\").replaceAll(\" \",\"\").replaceAll(\",\",\".\") }}"
+              "numberValue": "={{ $json['0 A 18'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "19 A 23",
+              "type": "numberValue",
+              "numberValue": "={{ $json['19 A 23'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "24 A 28",
+              "type": "numberValue",
+              "numberValue": "={{ $json['24 A 28'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "29 A 33",
+              "type": "numberValue",
+              "numberValue": "={{ $json['29 A 33'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
             }
           ]
         },
+        "include": "none",
         "options": {}
       },
-      "id": "a1e8a3f3-0114-4337-a34a-7f6f76f6ae9a",
-      "name": "Edit Fields1",
+      "id": "b3df378c-bd1a-48e0-a499-3660806637ef",
+      "name": "FORMATANDO",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        1300,
-        20
+        640,
+        180
       ]
     }
   ],
@@ -374,6 +322,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-03T15:23:42.000Z",
-  "versionId": "c0952163-a54a-4b53-bea6-bd21446691cb"
+  "updatedAt": "2024-01-03T15:38:57.000Z",
+  "versionId": "e6656ca8-0417-4cd1-a00b-db00813c7821"
 }
