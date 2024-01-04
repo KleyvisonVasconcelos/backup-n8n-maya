@@ -303,7 +303,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        240,
+        280,
         700
       ],
       "credentials": {
@@ -1290,6 +1290,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-04T11:28:29.000Z",
-  "versionId": "9f6aabf1-bba2-4e16-a214-90b8c17eded4"
+  "updatedAt": "2024-01-04T11:31:40.000Z",
+  "versionId": "96241c9c-fafa-4615-9062-1db95386dafb"
 }
