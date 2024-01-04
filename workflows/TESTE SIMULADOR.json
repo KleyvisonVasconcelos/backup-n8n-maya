@@ -41,6 +41,51 @@
             "node": "0 A 18",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "19 A 23",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "24 A 28",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "29 A 33",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "34 A 38",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "39 A 43",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "44 A 48",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "49 A 53",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "54 A 58",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "59 OU MAIS",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -71,7 +116,7 @@
       "main": [
         [
           {
-            "node": "0 a 18",
+            "node": "HTTP Request1",
             "type": "main",
             "index": 0
           }
@@ -387,6 +432,10 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "0 A 18",
+              "value": "={{ $('0 A 18').item.json['VALOR PLANO'] }}"
             }
           ]
         },
@@ -397,7 +446,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1420,
+        1440,
         -420
       ]
     },
@@ -918,7 +967,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699421/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -938,12 +987,57 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "19 A 23",
+              "value": "={{ $('19 A 23').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "b1fd30fc-e016-46e8-94e9-01e3525ff1c3",
+      "id": "593f03c8-6b9b-41a3-a673-72affdcfddb9",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        -240
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699422/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "24 A 28",
+              "value": "={{ $('24 A 28').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ce79d9ec-55c9-4347-a192-7cc9fa8a6e08",
       "name": "HTTP Request2",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -955,7 +1049,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699423/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -975,12 +1069,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "29 A 33",
+              "value": "={{ $('29 A 33').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "112b57f8-b84c-4c00-9e6a-8ffea7b85e87",
+      "id": "c916b0b4-94a6-43d1-9e51-3e142b56a9fe",
       "name": "HTTP Request3",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -992,7 +1090,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699495/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1012,12 +1110,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "34 A 38",
+              "value": "={{ $('34 A 38').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "580566d2-e1f0-44cc-ab74-104359b4f1c2",
+      "id": "a6107c37-2350-43bb-b103-d8b54289e18a",
       "name": "HTTP Request4",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -1029,7 +1131,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699425/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1049,12 +1151,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "39 A 43",
+              "value": "={{ $('39 A 43').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "1ae0fda7-2a6a-4645-80ff-fb7e1679a6b9",
+      "id": "bd327272-4e5a-4610-ac3f-d3b84d0e66df",
       "name": "HTTP Request5",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -1066,7 +1172,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699426/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1086,12 +1192,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "44 A 48",
+              "value": "={{ $('44 A 48').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "f06a87d8-c4d6-4a39-948a-556a1e96e610",
+      "id": "18cfbe0c-38b6-499a-9682-621122484ca0",
       "name": "HTTP Request6",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -1103,7 +1213,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699427/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1123,12 +1233,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "49 A 53",
+              "value": "={{ $('49 A 53').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "3057e4e2-35d4-4133-8b2b-7dd39bfcb850",
+      "id": "e6c58ac9-3762-4fc4-9386-391a716fd1c6",
       "name": "HTTP Request7",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -1140,7 +1254,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699428/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1160,12 +1274,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "54 A 58",
+              "value": "={{ $('54 A 58').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "5cc18750-5034-4511-920e-8094b156c013",
+      "id": "a90f0fd3-c3fa-4ef5-8f21-772eab5d50ff",
       "name": "HTTP Request8",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -1177,7 +1295,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699429/",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -1197,12 +1315,16 @@
             {
               "name": "value",
               "value": true
+            },
+            {
+              "name": "54 A 58",
+              "value": "={{ $('59 OU MAIS').item.json['VALOR PLANO'] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "2ceacdf5-8446-4b04-a732-5c40527d0d05",
+      "id": "17ce7390-3190-4174-945a-e0f45b85b5da",
       "name": "HTTP Request9",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -1210,83 +1332,15 @@
         1440,
         920
       ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            },
-            {
-              "name": "API-KEY",
-              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "value",
-              "value": true
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "011443a8-ca29-4c04-a554-6d5d4b8909b0",
-      "name": "0 a 18",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        1440,
-        -240
-      ]
     }
   ],
-  "pinData": {
-    "Webhook": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8n.mayarj.com",
-            "user-agent": "python-requests/2.26.0",
-            "content-length": "61",
-            "accept": "*/*",
-            "accept-encoding": "gzip, deflate",
-            "content-type": "application/json",
-            "sentry-trace": "5198cd9a031b43f0bd735d78f7163517-bf6b628da70a68e1-0",
-            "x-forwarded-for": "52.67.221.146",
-            "x-forwarded-host": "n8n.mayarj.com",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "7836abec8c3d",
-            "x-real-ip": "52.67.221.146"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "ID DO PLANO": "482.398/19-2",
-            "telefone": "+5521992593830"
-          }
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-04T09:22:36.000Z",
-  "versionId": "f9d4f5d0-e3b8-4f07-b3d3-5a0fd6d47cb5"
+  "updatedAt": "2024-01-04T09:41:07.000Z",
+  "versionId": "0f54bf0d-4613-4220-a13a-d3395892d439"
 }
