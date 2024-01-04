@@ -27,7 +27,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Encontra na Audiência",
             "type": "main",
             "index": 0
           }
@@ -41,49 +41,15 @@
             "node": "0 A 18",
             "type": "main",
             "index": 0
-          },
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência": {
+      "main": [
+        [
           {
-            "node": "19 A 23",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "24 A 28",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "29 A 33",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "34 A 38",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "39 A 43",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "44 A 48",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "49 A 53",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "54 A 58",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "59 OU MAIS",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           }
@@ -94,84 +60,18 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Encontra na Audiência1",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "29 A 33": {
+    "Encontra na Audiência1": {
       "main": [
         [
           {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "34 A 38": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "39 A 43": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "44 A 48": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "49 A 53": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "54 A 58": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "59 OU MAIS": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
+            "node": "0 a 18",
             "type": "main",
             "index": 0
           }
@@ -182,7 +82,172 @@
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Encontra na Audiência2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "29 A 33": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "34 A 38": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "39 A 43": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "44 A 48": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "49 A 53": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "54 A 58": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "59 OU MAIS": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência6": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência7": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência8": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência9": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request9",
             "type": "main",
             "index": 0
           }
@@ -256,44 +321,6 @@
     },
     {
       "parameters": {
-        "jsCode": "// Substitua 'NOME DA COLUNA' pelo nome exato da coluna de onde você quer pegar o valor da quinta linha\nconst nomeDaColuna = \"{{ $json.body['ID DO PLANO'] }}\";\nconst Linha = items[{ $json.row_number }].json[nomeDaColuna]; // Indexação começa em 0, então o índice 4 é a quinta linha\n\nreturn [{ json: { \"VALOR NA QUINTA LINHA\": Linha } }];\n"
-      },
-      "id": "cdeb83a9-19c5-4d08-ae7c-51a18150ab8a",
-      "name": "Code",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        520,
-        -60
-      ]
-    },
-    {
-      "parameters": {
-        "fields": {
-          "values": [
-            {
-              "name": "ID",
-              "stringValue": "={{ $json.body['ID DO PLANO'] }}"
-            },
-            {
-              "name": "IDADE",
-              "stringValue": "={{ $json.body['FAIXA ETÁRIA'] }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "241a5445-eff6-422b-9837-b76c0ce96b36",
-      "name": "Edit Fields",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.2,
-      "position": [
-        320,
-        -60
-      ]
-    },
-    {
-      "parameters": {
         "fields": {
           "values": [
             {
@@ -340,14 +367,26 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://backend.botconversa.com.br/swagger/?format=openapi",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
             {
-              "name": "0 A 18"
+              "name": "value",
+              "value": true
             }
           ]
         },
@@ -358,15 +397,9 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1460,
-        60
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "Z8gB5CQhoQFgqoYJ",
-          "name": "BC - TESTES"
-        }
-      }
+        1420,
+        -420
+      ]
     },
     {
       "parameters": {
@@ -611,6 +644,609 @@
         960,
         -80
       ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7118dc7a-4f51-4d34-bd91-75d54ce6739c",
+      "name": "Encontra na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        -420
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a450d458-3d2a-4148-be92-efe1ceb7d421",
+      "name": "Encontra na Audiência1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        -240
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "db2b186d-f4a9-4e31-8dbb-67b5d8d00335",
+      "name": "Encontra na Audiência2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa62fbbc-3dc0-449d-95f5-049a795d39e7",
+      "name": "Encontra na Audiência3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ee30f269-5b17-441a-b67b-33fb77e2e3dd",
+      "name": "Encontra na Audiência4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "167acdcd-e61f-45d7-bf5c-f9e76a6d8d8a",
+      "name": "Encontra na Audiência5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7706a20a-c91d-4cd9-8042-1801a3b41866",
+      "name": "Encontra na Audiência6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "740200b9-9eec-4ddc-bac3-9fc0b9c7585c",
+      "name": "Encontra na Audiência7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f152ee7d-8bc8-4979-bf68-d429196c7ae8",
+      "name": "Encontra na Audiência8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a6dde10c-ae3e-4add-a5d7-3632d1f3b8ce",
+      "name": "Encontra na Audiência9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b1fd30fc-e016-46e8-94e9-01e3525ff1c3",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "112b57f8-b84c-4c00-9e6a-8ffea7b85e87",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "580566d2-e1f0-44cc-ab74-104359b4f1c2",
+      "name": "HTTP Request4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1ae0fda7-2a6a-4645-80ff-fb7e1679a6b9",
+      "name": "HTTP Request5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f06a87d8-c4d6-4a39-948a-556a1e96e610",
+      "name": "HTTP Request6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3057e4e2-35d4-4133-8b2b-7dd39bfcb850",
+      "name": "HTTP Request7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5cc18750-5034-4511-920e-8094b156c013",
+      "name": "HTTP Request8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2ceacdf5-8446-4b04-a732-5c40527d0d05",
+      "name": "HTTP Request9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "011443a8-ca29-4c04-a554-6d5d4b8909b0",
+      "name": "0 a 18",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        -240
+      ]
     }
   ],
   "pinData": {
@@ -620,53 +1256,24 @@
           "headers": {
             "host": "n8n.mayarj.com",
             "user-agent": "python-requests/2.26.0",
-            "content-length": "63",
+            "content-length": "61",
             "accept": "*/*",
             "accept-encoding": "gzip, deflate",
             "content-type": "application/json",
-            "sentry-trace": "79406cbe704d423ca64458f00aa57017-88f2fff454bebc04-0",
-            "x-forwarded-for": "54.232.132.212",
+            "sentry-trace": "5198cd9a031b43f0bd735d78f7163517-bf6b628da70a68e1-0",
+            "x-forwarded-for": "52.67.221.146",
             "x-forwarded-host": "n8n.mayarj.com",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
             "x-forwarded-server": "7836abec8c3d",
-            "x-real-ip": "54.232.132.212"
+            "x-real-ip": "52.67.221.146"
           },
           "params": {},
           "query": {},
           "body": {
             "ID DO PLANO": "482.398/19-2",
-            "FAIXA ETÁRIA": "0 A 18"
+            "telefone": "+5521992593830"
           }
-        }
-      }
-    ],
-    "Edit Fields": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8n.mayarj.com",
-            "user-agent": "python-requests/2.26.0",
-            "content-length": "63",
-            "accept": "*/*",
-            "accept-encoding": "gzip, deflate",
-            "content-type": "application/json",
-            "sentry-trace": "79406cbe704d423ca64458f00aa57017-88f2fff454bebc04-0",
-            "x-forwarded-for": "54.232.132.212",
-            "x-forwarded-host": "n8n.mayarj.com",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "7836abec8c3d",
-            "x-real-ip": "54.232.132.212"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "ID DO PLANO": "482.398/19-2",
-            "FAIXA ETÁRIA": "29 A 33"
-          },
-          "ID": "482.398/19-2",
-          "IDADE": "29 A 33"
         },
         "pairedItem": {
           "item": 0
@@ -680,6 +1287,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-04T08:19:57.000Z",
-  "versionId": "12e834b3-3422-4303-89fc-2c6260fd4f6a"
+  "updatedAt": "2024-01-04T09:22:36.000Z",
+  "versionId": "f9d4f5d0-e3b8-4f07-b3d3-5a0fd6d47cb5"
 }
