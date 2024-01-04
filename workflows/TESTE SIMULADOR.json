@@ -33,6 +33,161 @@
           }
         ]
       ]
+    },
+    "FORMATANDO": {
+      "main": [
+        [
+          {
+            "node": "0 A 18",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "19 A 23",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "24 A 28",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "29 A 33",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "34 A 38",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "39 A 43",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "44 A 48",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "49 A 53",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "54 A 58",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "59 OU MAIS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "19 A 23": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "29 A 33": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "34 A 38": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "39 A 43": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "44 A 48": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "49 A 53": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "54 A 58": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "59 OU MAIS": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "24 A 28": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-12-04T22:10:57.034Z",
@@ -155,8 +310,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        920,
-        340
+        960,
+        80
       ]
     },
     {
@@ -165,7 +320,8 @@
           "values": [
             {
               "name": "VALOR PLANO",
-              "stringValue": "={{ $json['0 A 18'].replaceAll(\"R$\",\"\").replaceAll(\" \",\"\").replaceAll(\",\",\".\") }}"
+              "type": "numberValue",
+              "numberValue": "={{ $json['0 A 18'] }}"
             }
           ]
         },
@@ -177,34 +333,24 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        920,
-        -140
+        960,
+        -420
       ]
     },
     {
       "parameters": {
-        "fields": {
-          "values": [
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/swagger/?format=openapi",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
             {
-              "name": "VALOR PLANO",
-              "stringValue": "={{ $json['0 A 18'] }}"
+              "name": "0 A 18"
             }
           ]
         },
-        "include": "none",
-        "options": {}
-      },
-      "id": "d40cf8d5-b386-41a0-a43a-419b6752fe60",
-      "name": "0 A ",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.2,
-      "position": [
-        920,
-        20
-      ]
-    },
-    {
-      "parameters": {
         "options": {}
       },
       "id": "192a9912-dce1-43a8-b705-7244921a2231",
@@ -212,9 +358,15 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1140,
-        -140
-      ]
+        1460,
+        60
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Z8gB5CQhoQFgqoYJ",
+          "name": "BC - TESTES"
+        }
+      }
     },
     {
       "parameters": {
@@ -239,6 +391,36 @@
               "name": "29 A 33",
               "type": "numberValue",
               "numberValue": "={{ $json['29 A 33'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "34 A 38",
+              "type": "numberValue",
+              "numberValue": "={{ $json['34 A 38'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "39 A 43",
+              "type": "numberValue",
+              "numberValue": "={{ $json['39 A 43'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "44 A 48",
+              "type": "numberValue",
+              "numberValue": "={{ $json['44 A 48'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "49 A 53",
+              "type": "numberValue",
+              "numberValue": "={{ $json['49 A 53'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "54 A 58",
+              "type": "numberValue",
+              "numberValue": "={{ $json['54 A 58'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "59 OU MAIS",
+              "type": "numberValue",
+              "numberValue": "={{ $json['59 OU MAIS'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
             }
           ]
         },
@@ -252,6 +434,182 @@
       "position": [
         640,
         180
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['19 A 23'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "d40cf8d5-b386-41a0-a43a-419b6752fe60",
+      "name": "19 A 23",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        -240
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['34 A 38'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "19448c72-f93e-48a0-b260-4ffc24f1ce71",
+      "name": "34 A 38",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['39 A 43'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "edb7b07d-31b2-4979-a6f2-9e76d4cc5487",
+      "name": "39 A 43",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['44 A 48'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "f3f627fa-d473-43ed-b129-1b8242e093e3",
+      "name": "44 A 48",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['49 A 53'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "61c1d1c0-0944-4d0e-87ba-0641b1953e00",
+      "name": "49 A 53",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['54 A 58'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "2b33a3be-b31a-4ab2-840a-2e6a9cfbdf4d",
+      "name": "54 A 58",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['59 OU MAIS'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "fc96a7f5-8c9f-4010-a0ae-64e5c740ff0e",
+      "name": "59 OU MAIS",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['24 A 28'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "4fd571e4-b42f-4d2b-bbdc-1a169ab5228b",
+      "name": "24 A 28",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        960,
+        -80
       ]
     }
   ],
@@ -322,6 +680,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-03T15:38:57.000Z",
-  "versionId": "e6656ca8-0417-4cd1-a00b-db00813c7821"
+  "updatedAt": "2024-01-04T08:19:57.000Z",
+  "versionId": "12e834b3-3422-4303-89fc-2c6260fd4f6a"
 }
