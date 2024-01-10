@@ -1,0 +1,1290 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "LÊ PLANILHA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LÊ PLANILHA": {
+      "main": [
+        [
+          {
+            "node": "FORMATANDO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "0 A 18": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "19 A 23": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "24 A 28": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "29 A 33": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "34 A 38": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "39 A 43": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "44 A 48": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "49 A 53": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "54 A 58": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "59 OU MAIS": {
+      "main": [
+        [
+          {
+            "node": "Encontra na Audiência9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência6": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência7": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência8": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Encontra na Audiência9": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-10T11:39:01.830Z",
+  "id": "wZCNPaWP66xSjjMy",
+  "meta": null,
+  "name": "SIMULADOR SEBASTIAN",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "e1dfb573-a01a-4037-abf2-011a11e47f8e",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "abb76940-8a72-4e0a-a11d-8e36b849ae55",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        80,
+        700
+      ],
+      "webhookId": "64ff2388-de0f-4198-b721-51d658dcb4c2"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk",
+          "mode": "list",
+          "cachedResultName": "SIMULADOR - PROTÓTIPO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1257034181,
+          "mode": "list",
+          "cachedResultName": "Cópia de Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZL7sRjir8Mt2l2YBPr5Uuk2MUfnshfO4bsWLzQOIYNk/edit#gid=1257034181"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $json.body['ID DO PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a9b2800f-1f60-4ddc-a684-199db408bb2c",
+      "name": "LÊ PLANILHA",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        280,
+        700
+      ],
+      "credentials": {
+        "googleApi": {
+          "id": "zbnWu7CX265Tgd9a",
+          "name": "SIMULADOR (TESTE)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['29 A 33'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "038ef6d8-1b0c-43b4-be66-603372ea6577",
+      "name": "29 A 33",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "type": "numberValue",
+              "numberValue": "={{ $json['0 A 18'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "ed88b17b-cb05-4f0d-8f3f-c0e9b2f2cb63",
+      "name": "0 A 18",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699420/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "0 A 18",
+              "value": "={{ $('0 A 18').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5c4d2ea5-3418-4242-b342-b082aba94941",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "0 A 18",
+              "type": "numberValue",
+              "numberValue": "={{ $json['0 A 18'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "19 A 23",
+              "type": "numberValue",
+              "numberValue": "={{ $json['19 A 23'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "24 A 28",
+              "type": "numberValue",
+              "numberValue": "={{ $json['24 A 28'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "29 A 33",
+              "type": "numberValue",
+              "numberValue": "={{ $json['29 A 33'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "34 A 38",
+              "type": "numberValue",
+              "numberValue": "={{ $json['34 A 38'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "39 A 43",
+              "type": "numberValue",
+              "numberValue": "={{ $json['39 A 43'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "44 A 48",
+              "type": "numberValue",
+              "numberValue": "={{ $json['44 A 48'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "49 A 53",
+              "type": "numberValue",
+              "numberValue": "={{ $json['49 A 53'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "54 A 58",
+              "type": "numberValue",
+              "numberValue": "={{ $json['54 A 58'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            },
+            {
+              "name": "59 OU MAIS",
+              "type": "numberValue",
+              "numberValue": "={{ $json['59 OU MAIS'].replaceAll(\" \",\"\").replaceAll(\"R$\",\"\").replaceAll(\",\",\".\") }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "a3cbb46d-e30e-4f84-bcb1-1dc8d34a72ff",
+      "name": "FORMATANDO",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        460,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['19 A 23'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "e4cac326-1c80-4d0b-90b9-3347ce49c026",
+      "name": "19 A 23",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['34 A 38'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "8d067ece-79bc-49fc-bf99-a4fa6c0a8123",
+      "name": "34 A 38",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['39 A 43'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "f09c00fe-d9bf-4f47-a4bc-d3aac0074b05",
+      "name": "39 A 43",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['44 A 48'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "a970fc5e-7ca1-4c29-81df-41fc84f27b76",
+      "name": "44 A 48",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['49 A 53'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "10d37991-afa4-486c-aa09-cf362971d54c",
+      "name": "49 A 53",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['54 A 58'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "efeb9305-44ef-4439-ac89-ceb4b9e9c51a",
+      "name": "54 A 58",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['59 OU MAIS'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "ddaf2aa2-4586-4355-be00-329c673e7712",
+      "name": "59 OU MAIS",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "VALOR PLANO",
+              "stringValue": "={{ $json['24 A 28'] }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "48910fcc-f0e4-4e61-9bce-4d3017c41d65",
+      "name": "24 A 28",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        920,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d26b65cf-f940-4b2c-8c4e-8fd14cc99f9b",
+      "name": "Encontra na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c3230979-ca56-4f7a-ab8b-6ff41bfb5a8b",
+      "name": "Encontra na Audiência1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "99a2a4bc-b6a9-472c-8bd6-1aade15f4a7e",
+      "name": "Encontra na Audiência2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0ae0673a-cea9-42d2-ad27-48dcdc007c7b",
+      "name": "Encontra na Audiência3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "248cf962-0849-4e7e-9b49-b3800243266e",
+      "name": "Encontra na Audiência4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "47a931eb-69f6-4053-85ae-1369b3ec66ff",
+      "name": "Encontra na Audiência5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5d2b3bca-dcd6-4570-a056-28ec79c5dae6",
+      "name": "Encontra na Audiência6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "feeaf07e-4b48-4f61-b224-510b8a107f6f",
+      "name": "Encontra na Audiência7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "97823790-8556-48f1-85ae-337be356ff33",
+      "name": "Encontra na Audiência8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/{{ $('Webhook').item.json.body.telefone }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9a518197-2c59-4f02-9108-ad795318e4b3",
+      "name": "Encontra na Audiência9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1180,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699421/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "19 A 23",
+              "value": "={{ $('19 A 23').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "709baf0e-979f-47a0-860c-88185199abf2",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699422/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "24 A 28",
+              "value": "={{ $('24 A 28').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8f05fd2b-ae5c-41c6-a330-dfcd9a70a7dd",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699423/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "29 A 33",
+              "value": "={{ $('29 A 33').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6473aa49-7b2a-426e-8423-963511073bf4",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699495/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "34 A 38",
+              "value": "={{ $('34 A 38').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c0718143-4a55-4462-9ba7-81341c7e3385",
+      "name": "HTTP Request4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699425/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "39 A 43",
+              "value": "={{ $('39 A 43').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c352fca3-1aea-469f-9f16-35f7e3a72cb7",
+      "name": "HTTP Request5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699426/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "44 A 48",
+              "value": "={{ $('44 A 48').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9bf69260-43da-4f95-a7b4-ad0ccc67de1c",
+      "name": "HTTP Request6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699427/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "49 A 53",
+              "value": "={{ $('49 A 53').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9f24be6c-4d01-4da9-85a6-892bf4eef2f8",
+      "name": "HTTP Request7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699428/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "54 A 58",
+              "value": "={{ $('54 A 58').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "71691c04-f571-4b9a-9589-c5fdc34db6b2",
+      "name": "HTTP Request8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/custom_fields/1699429/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e5cd78a9-a90c-452c-8015-49c3d86407b8"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": true
+            },
+            {
+              "name": "54 A 58",
+              "value": "={{ $('59 OU MAIS').item.json['VALOR PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2f8f288a-ff31-4bc6-acda-f8f7d5064e9a",
+      "name": "HTTP Request9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        940
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-10T11:39:01.830Z",
+  "versionId": "11131b4c-79b2-45ad-9902-98e7dcaa0a90"
+}
