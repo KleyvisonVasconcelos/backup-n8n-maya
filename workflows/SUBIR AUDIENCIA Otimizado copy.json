@@ -1,0 +1,2222 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split In Batches": {
+      "main": [
+        [
+          {
+            "node": "Nome e telefone para validar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Definir Dados": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Telefone": {
+      "main": [
+        [
+          {
+            "node": "Dados Validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Cadastrar Usuario": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Atualizar Campo EMPRESA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo  P SAUDE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo PATOLOGIA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo MATRICULA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo G-SEXO",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo GRAU DE RISCO",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait 2 segundos",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo data proximo contato - melhordata",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo Especialidade_PAIS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo DIABETES",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo pressao-usuario",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo Sintoma_PAIS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nome e telefone para validar": {
+      "main": [
+        [
+          {
+            "node": "Formatando Nome e Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split In Batches1": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Cadastrar Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets Atualizar telefone não válido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Atualizar telefone não válido": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Verificar se é wpp válido": {
+      "main": [
+        [
+          {
+            "node": "Set Definir Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 2 segundos": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Verificar se é wpp válido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-11T22:29:40.282Z",
+  "id": "8pxKTQrfA6eotkqY",
+  "meta": null,
+  "name": "SUBIR AUDIENCIA Otimizado copy",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "44486c59-3cce-4ee4-b3bd-1315e8196825",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3740,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "WHATSAPP CADASTRADO"
+            }
+          ]
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "44659172-51ad-420b-97f8-cf5616f39d53",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -3340,
+        1580
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "8720e439-3dfa-4636-a57a-7408afb65c6b",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        -2580,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Nome",
+              "value": "={{ $('Formatando Nome e Telefone').item.json.Nome }}"
+            },
+            {
+              "name": "Sobrenome",
+              "value": "={{ $('Formatando Nome e Telefone').item.json.Sobrenome }}"
+            },
+            {
+              "name": "telefone",
+              "value": "=+{{ $json.phone }}"
+            },
+            {
+              "name": "Campo 1",
+              "value": "="
+            },
+            {
+              "name": "Campo 2",
+              "value": "="
+            },
+            {
+              "name": "Campo 3",
+              "value": "="
+            },
+            {
+              "name": "Campo 4",
+              "value": "="
+            }
+          ],
+          "number": [
+            {
+              "name": "ID Campo 1",
+              "value": 1272059
+            },
+            {
+              "name": "ID Campo 2"
+            },
+            {
+              "name": "ID Campo 3"
+            },
+            {
+              "name": "ID Campo 4"
+            },
+            {
+              "name": "ID Campo 5"
+            },
+            {
+              "name": "ID da Etiqueta 1"
+            },
+            {
+              "name": "ID da Etiqueta 2"
+            },
+            {
+              "name": "ID da Etiqueta 3"
+            },
+            {
+              "name": "ID da Etiqueta 4"
+            },
+            {
+              "name": "ID da Etiqueta 5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1ab01661-8fa0-4d8e-838f-9cda080a8da9",
+      "name": "Set Definir Dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1740,
+        1580
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "WhatsappValidado",
+              "value": "={{$json[\"whatsapp\"]}}"
+            },
+            {
+              "name": "endpoint",
+              "value": "https://backend.clickbot.com.br/api/v1/webhook/"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Dados Validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1300,
+        1040
+      ],
+      "id": "573fd235-a1f1-479d-a82f-9887276cdf0d"
+    },
+    {
+      "parameters": {
+        "functionCode": "var telefone = items[0].json.telefone.replace(' ','').replace('(','').replace(')','').replace(' ','').replace(' ','').replace('-','').replace(' ','');\nvar ddd = telefone.slice(2,4);\nvar ddi = telefone.charAt(0);\nvar ddx = telefone.slice(0,2);\nvar length = telefone.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = telefone.slice(0,3);\n    telefone = parseInt(telefone.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      telefone = parseInt(telefone.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      telefone = parseInt(telefone).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  telefone = parseInt(telefone).toString();\n  ddi = 'não informado';\n}\n\nddd = telefone.slice(0,2);\ntelefone = telefone.slice(2);\nif (ddd > 28){\n  telefone = telefone.slice(-8);\n} else {\n  telefone = '9'+telefone.slice(-8);\n}\nvar whatsapp = '+55'+ddd+telefone;\n\nreturn [\n  {\n    json: {\n      ddi,\n      ddd,\n      telefone,\n      whatsapp,   \n    }\n  }\n];"
+      },
+      "name": "Validar Telefone",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        -1560,
+        1040
+      ],
+      "typeVersion": 1,
+      "id": "8b655bb4-dd4e-4d80-800e-b93ed297e623"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "={{ $('Set Definir Dados').item.json.telefone }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $('Set Definir Dados').item.json.Nome }}"
+            },
+            {
+              "name": "=last_name",
+              "value": "={{ $('Set Definir Dados').item.json.Sobrenome }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dfce9e1f-1f67-425d-b019-3f1987f9a104",
+      "name": "HTTP Request Cadastrar Usuario",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -1040,
+        1580
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "99645c8c-6505-4e21-9be7-d20907559abc",
+      "name": "Wait 2 segundos",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        240,
+        4660
+      ],
+      "webhookId": "cb631e92-510d-4f95-af72-41cbadcd645e"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"WHATSAPP CADASTRADO\"] }}",
+              "value2": "✅"
+            }
+          ]
+        }
+      },
+      "id": "9620e451-6221-48f4-9fbb-dc45ae98713e",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2100,
+        920
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "id": "1ebc841d-1fe8-4bca-8b6c-61b14eadbd19",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3740,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 80,
+        "options": {}
+      },
+      "id": "4d40a65f-b126-48f3-845c-4ad1b6dfb32a",
+      "name": "Split In Batches1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        -3020,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "telefone",
+              "value": "={{ $json.PHONE.toString() }}"
+            },
+            {
+              "name": "nomeCompleto",
+              "value": "={{ $json['NOME DO BENEFICIARIO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa0890e3-9c23-4442-9400-f75848bfc901",
+      "name": "Nome e telefone para validar",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -2400,
+        1580
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "243f1079-e2bc-47b0-9ac0-75eb47368df6",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -2780,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150096/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json['EMPRESA DO BENEFICIARIO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "11fa2288-9a01-4a62-8f7d-f480310ca393",
+      "name": "HTTP Request Atualizar Campo EMPRESA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        1800
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150097/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json['NOME DO PROGRAMA'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5d51472e-fbb5-49df-a781-58e648c79eb4",
+      "name": "HTTP Request Atualizar Campo  P SAUDE",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        2000
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150064/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json['MOTIVO DO ACOMPANHAMENTO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fce90aef-a622-4f91-95bf-8d3c47327c75",
+      "name": "HTTP Request Atualizar Campo PATOLOGIA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        2200
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1383308/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json['MATRICULA DE UTILIZACAO NO PLANO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "10f933c1-6bcf-4072-8b28-6f7faeea003b",
+      "name": "HTTP Request Atualizar Campo MATRICULA",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        2400
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150091/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json['GRAU DE RISCO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5101d118-9b23-45fc-85ef-448731e2ea72",
+      "name": "HTTP Request Atualizar Campo GRAU DE RISCO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        2820
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM INCLUSAO"
+            },
+            {
+              "value2": "EM RECUPERACAO",
+              "output": 1
+            },
+            {
+              "value2": "ABORDADO PELO BOT",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "c56fdb24-e86c-4b23-a8e9-d8310d39e333",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        620,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "INCLUSO"
+            },
+            {
+              "value2": "FINALIZADO",
+              "output": 1
+            },
+            {
+              "value2": "RECUPERADO",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "1dc2f271-14d4-41fd-82cf-46e281f47564",
+      "name": "Switch1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        620,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM CLASSIFICACAO"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "ab324f39-989d-4cc1-889d-4bd765717d98",
+      "name": "Switch2",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        620,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4503062/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "04b0f7a8-3336-46d8-aba5-14ffe9f7a327",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        420
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4503066/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "bbceb34c-f9ab-4e82-8a3c-6664fd48a97a",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        600
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961557/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "15f3e965-ef14-4a1c-b09f-c53eaa9604cb",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        800
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961559/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "1bcd38ec-a1e1-4d9d-a0e0-c5e7ac44e786",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1000
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961560/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "71501350-59c1-4d89-b89f-3d9af2a1ee55",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961564/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "73ae1052-6e7b-42df-97cb-9901a59aae38",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961563/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "7d7374b8-7ae6-435b-9b39-aaa08d73bd9d",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        1540
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.exists.toString() }}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "df0904bd-a7d7-4dda-9244-850a0ad0c0f8",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1480,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "09c72b57-cf10-49b5-a6ad-3627356028d2",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        2180
+      ],
+      "webhookId": "997fbd1a-ee7f-4dde-9cac-f20de804a7fa"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "columnToMatchOn": "ID",
+        "valueToMatchOn": "={{ $('Split In Batches').item.json.ID }}",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "WHATSAPP CADASTRADO",
+              "fieldValue": "=SEM WHATSAPP"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4a282139-6d4d-4ed0-baa6-d9926b6daa68",
+      "name": "Google Sheets Atualizar telefone não válido",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -1160,
+        1880
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.z-api.io/instances/3BAE860F0ADEB0A7E993D6DE7E9F2DF0/token/5B29C948AD29016FB2E58702/phone-exists/{{ $json.whatsapp.replace(\"+\",\"\") }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Client-Token",
+              "value": "Ff5a9099161b04e319b99c5f785417d9dS"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bb251504-376f-46ea-b5fc-72509de7a060",
+      "name": "HTTP Request Verificar se é wpp válido",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -1960,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1291875/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDICO ESPECIALISTA\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "563cee7e-40ef-461c-a2b1-faee43c9c448",
+      "name": "HTTP Request Atualizar Campo Especialidade_PAIS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        3240
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150085/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDE OBESIDADE\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c722cdea-79d1-494c-86f8-828f54987aa3",
+      "name": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        3440
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150087/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDE DIABETES\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8acbc588-f469-487e-8f46-4d7fa61fd769",
+      "name": "HTTP Request Atualizar Campo DIABETES",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        3620
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1150086/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"MEDE HIPERTENSAO\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "193139a0-fcc3-454c-938b-e3ba62d256a2",
+      "name": "HTTP Request Atualizar Campo pressao-usuario",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        3860
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1291745/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"QUEIXA RELATADA\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a8a3baa3-e697-4989-9812-fe5267ea267f",
+      "name": "HTTP Request Atualizar Campo Sintoma_PAIS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        4040
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1420389/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json.SEXO }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4036b910-9fcc-48d4-9d12-d60e405cb406",
+      "name": "HTTP Request Atualizar Campo G-SEXO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        2620
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1436559/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('Split In Batches').item.json[\"AGENDA SUGERIDA PARA PROXIMO CONTATO\"].toString() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ac3a28ae-56b5-4143-82e3-2d7e33d0034f",
+      "name": "HTTP Request Atualizar Campo data proximo contato - melhordata",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        240,
+        3020
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "WHATSAPP CADASTRADO": "✅✅",
+            "NOME DO BENEFICIARIO": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}"
+          },
+          "matchingColumns": [
+            "NOME DO BENEFICIARIO"
+          ],
+          "schema": [
+            {
+              "id": "EMPRESA DO BENEFICIARIO",
+              "displayName": "EMPRESA DO BENEFICIARIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TIPO CONTRATANTE",
+              "displayName": "TIPO CONTRATANTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "EMPRESA CONTRATANTE",
+              "displayName": "EMPRESA CONTRATANTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OPERADORA DE SAUDE",
+              "displayName": "OPERADORA DE SAUDE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "NOME DO PROGRAMA",
+              "displayName": "NOME DO PROGRAMA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MATRICULA DE UTILIZACAO NO PLANO",
+              "displayName": "MATRICULA DE UTILIZACAO NO PLANO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "COD PRODUTO",
+              "displayName": "COD PRODUTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "NOME DO BENEFICIARIO",
+              "displayName": "NOME DO BENEFICIARIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "ENTRADA NO PROGRAMA",
+              "displayName": "ENTRADA NO PROGRAMA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TIT/DEP",
+              "displayName": "TIT/DEP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA DE NASCIMENTO",
+              "displayName": "DATA DE NASCIMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "IDADE",
+              "displayName": "IDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "SEXO",
+              "displayName": "SEXO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "UF",
+              "displayName": "UF",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "NOME DO TITULAR",
+              "displayName": "NOME DO TITULAR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "RESPONSAVEL",
+              "displayName": "RESPONSAVEL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRAU DE PARENTESCO DO RESPONSAVEL",
+              "displayName": "GRAU DE PARENTESCO DO RESPONSAVEL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PROGRAMA DE ATENCAO",
+              "displayName": "PROGRAMA DE ATENCAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRAU DE RISCO",
+              "displayName": "GRAU DE RISCO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO",
+              "displayName": "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MOTIVO DO ACOMPANHAMENTO",
+              "displayName": "MOTIVO DO ACOMPANHAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CID PRINCIPAL",
+              "displayName": "CID PRINCIPAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRUPO DE DOENCAS",
+              "displayName": "GRUPO DE DOENCAS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS",
+              "displayName": "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CIDS SECUNDÁRIOS",
+              "displayName": "CIDS SECUNDÁRIOS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO",
+              "displayName": "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE",
+              "displayName": "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "UTI",
+              "displayName": "UTI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA DO ULTIMO CONTATO",
+              "displayName": "DATA DO ULTIMO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "RESPONSAVEL PELO CONTATO",
+              "displayName": "RESPONSAVEL PELO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "HISTORICO DO CONTATO",
+              "displayName": "HISTORICO DO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "STATUS DO ACOMPANHAMENTO MAIS RECENTE",
+              "displayName": "STATUS DO ACOMPANHAMENTO MAIS RECENTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBSERVAÇÕES",
+              "displayName": "OBSERVAÇÕES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "AGENDA SUGERIDA PARA PROXIMO CONTATO",
+              "displayName": "AGENDA SUGERIDA PARA PROXIMO CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA DE FINALIZACAO",
+              "displayName": "DATA DE FINALIZACAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CAPTADO VIA",
+              "displayName": "CAPTADO VIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "GRUPO DE DISPARO DE MATERIAL - BOT",
+              "displayName": "GRUPO DE DISPARO DE MATERIAL - BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "STATUS DA TRIAGEM",
+              "displayName": "STATUS DA TRIAGEM",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TELEFONES DE CONTATO",
+              "displayName": "TELEFONES DE CONTATO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PHONE",
+              "displayName": "PHONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "FAIXA ETÁRIA",
+              "displayName": "FAIXA ETÁRIA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "FIM",
+              "displayName": "FIM",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "WHATSAPP CADASTRADO",
+              "displayName": "WHATSAPP CADASTRADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "MEDICAMENTO",
+              "displayName": "MEDICAMENTO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PESO(KG)",
+              "displayName": "PESO(KG)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ALTURA(CM)",
+              "displayName": "ALTURA(CM)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDE OBESIDADE",
+              "displayName": "MEDE OBESIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "AFERE GLICOSE",
+              "displayName": "AFERE GLICOSE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDE DIABETES",
+              "displayName": "MEDE DIABETES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "AFERE PRESSAO",
+              "displayName": "AFERE PRESSAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDE HIPERTENSAO",
+              "displayName": "MEDE HIPERTENSAO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "MEDICO ESPECIALISTA",
+              "displayName": "MEDICO ESPECIALISTA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "QUEIXA RELATADA",
+              "displayName": "QUEIXA RELATADA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "REMEDIO_BOT",
+              "displayName": "REMEDIO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PATOLOGIA_BOT",
+              "displayName": "PATOLOGIA_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBESIDADE_BOT",
+              "displayName": "OBESIDADE_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DIABETES_BOT",
+              "displayName": "DIABETES_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "PRESSAO_BOT",
+              "displayName": "PRESSAO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "ACOMPANHAMENTO_BOT",
+              "displayName": "ACOMPANHAMENTO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "SINTOMA_BOT",
+              "displayName": "SINTOMA_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "LGPD_BOT",
+              "displayName": "LGPD_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CHECKUP_BOT",
+              "displayName": "CHECKUP_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "CRONICO_BOT",
+              "displayName": "CRONICO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBSERVACAO_BOT",
+              "displayName": "OBSERVACAO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA_CHAMADO_BOT",
+              "displayName": "DATA_CHAMADO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "DATA_INTERACAO_BOT",
+              "displayName": "DATA_INTERACAO_BOT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "firstDataRow": "={{ $('Split In Batches').item.json.row_number }}"
+            }
+          }
+        }
+      },
+      "id": "f08dbbdf-17e1-4ece-8da9-3598843d4b1a",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        240,
+        4360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "31cce368-4ff9-48ae-8635-b72539e8ae3c",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        1580
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-01-11T21:50:39.405Z",
+      "updatedAt": "2024-01-11T21:50:39.405Z",
+      "id": "RvIHquTBgwK9F8iE",
+      "name": "Medi"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-11T22:29:40.282Z",
+  "versionId": "fe21b7e2-5d86-4e99-ab26-b362a839f7c8"
+}
