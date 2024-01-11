@@ -513,8 +513,8 @@
       "name": "Validar Telefone",
       "type": "n8n-nodes-base.function",
       "position": [
-        -1540,
-        1060
+        -1560,
+        1040
       ],
       "typeVersion": 1,
       "id": "d39eabbd-187d-4a93-9f20-f4c619c7ca1a"
@@ -2208,8 +2208,15 @@
       "recurrencyRules": []
     }
   },
-  "tags": [],
+  "tags": [
+    {
+      "createdAt": "2024-01-11T21:50:39.405Z",
+      "updatedAt": "2024-01-11T21:50:39.405Z",
+      "id": "RvIHquTBgwK9F8iE",
+      "name": "Medi"
+    }
+  ],
   "triggerCount": 1,
-  "updatedAt": "2023-11-22T21:29:33.000Z",
-  "versionId": "10882222-75bb-4fd8-9cf6-5f0b5a2b507f"
+  "updatedAt": "2024-01-11T22:29:20.000Z",
+  "versionId": "0819c957-0070-420a-9344-3d8f76cd360e"
 }
