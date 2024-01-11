@@ -193,8 +193,15 @@
       "recurrencyRules": []
     }
   },
-  "tags": [],
+  "tags": [
+    {
+      "createdAt": "2024-01-11T21:50:39.405Z",
+      "updatedAt": "2024-01-11T21:50:39.405Z",
+      "id": "RvIHquTBgwK9F8iE",
+      "name": "Medi"
+    }
+  ],
   "triggerCount": 1,
-  "updatedAt": "2023-11-22T18:26:28.000Z",
-  "versionId": "9785ee7e-8199-46a4-9ce3-432676717b4e"
+  "updatedAt": "2024-01-11T22:06:19.000Z",
+  "versionId": "8646146f-5258-4396-bcc5-2e9852333221"
 }
