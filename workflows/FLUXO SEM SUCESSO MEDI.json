@@ -485,12 +485,19 @@
     "node:Google Sheets Trigger": {
       "documentId": "1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI",
       "sheetId": 265903553,
-      "lastRevision": 130470,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=130470&exportFormat=xlsx"
+      "lastRevision": 130530,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1wirN-vIslfaKAAjP_ssJU0w5pGhXrsNC57RNK3cookI&revision=130530&exportFormat=xlsx"
     }
   },
-  "tags": [],
+  "tags": [
+    {
+      "createdAt": "2024-01-11T21:50:39.405Z",
+      "updatedAt": "2024-01-11T21:50:39.405Z",
+      "id": "RvIHquTBgwK9F8iE",
+      "name": "Medi"
+    }
+  ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-11T21:02:57.000Z",
-  "versionId": "9b5a313c-b260-44bb-ae52-22ec7cedc9f1"
+  "updatedAt": "2024-01-11T22:30:15.000Z",
+  "versionId": "2bd7fca3-945f-4a2e-b9b4-e8a104864ade"
 }
