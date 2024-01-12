@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -27,7 +27,7 @@
       "main": [
         [
           {
-            "node": "Edit Fields1",
+            "node": "Nome e telefone para validar",
             "type": "main",
             "index": 0
           }
@@ -38,7 +38,7 @@
       "main": [
         [
           {
-            "node": "IF1",
+            "node": "whatsapp valido?",
             "type": "main",
             "index": 0
           }
@@ -141,7 +141,7 @@
       "main": [
         [
           {
-            "node": "Split In Batches",
+            "node": "Edit Fields1",
             "type": "main",
             "index": 0
           }
@@ -234,50 +234,11 @@
         ]
       ]
     },
-    "IF1": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request Cadastrar Usuario",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Google Sheets Atualizar telefone não válido",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Google Sheets Atualizar telefone não válido": {
       "main": [
         [
           {
             "node": "Wait",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request Verificar se é wpp válido": {
-      "main": [
-        []
-      ]
-    },
-    "Wait": {
-      "main": [
-        []
-      ]
-    },
-    "Wait 2 segundos": {
-      "main": [
-        [
-          {
-            "node": "Split In Batches",
             "type": "main",
             "index": 0
           }
@@ -383,17 +344,6 @@
         ]
       ]
     },
-    "HTTP Request Cadastrar Usuario1": {
-      "main": [
-        [
-          {
-            "node": "No Operation, do nothing1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "No Operation, do nothing1": {
       "main": [
         [
@@ -491,7 +441,7 @@
       "main": [
         [
           {
-            "node": "Nome e telefone para validar",
+            "node": "Split In Batches",
             "type": "main",
             "index": 0
           }
@@ -520,9 +470,113 @@
         ]
       ]
     },
-    "Item Lists1": {
+    "HTTP Request Verificar se é wpp válido": {
       "main": [
-        []
+        [
+          {
+            "node": "Set Definir Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "cadastrado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrado?": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets Atualizar telefone não válido",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "whatsapp valido?": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "cadastrado?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrado?1": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Cadastrar Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 2 segundos": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
@@ -594,13 +648,12 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -3400,
+        -3000,
         1580
       ]
     },
     {
       "parameters": {
-        "keepOnlySet": true,
         "values": {
           "string": [
             {
@@ -746,7 +799,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -900,
+        -680,
         1560
       ],
       "retryOnFail": true,
@@ -768,7 +821,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        240,
+        460,
         4660
       ],
       "webhookId": "cb631e92-510d-4f95-af72-41cbadcd645e"
@@ -834,7 +887,7 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -3600,
+        -3620,
         1580
       ]
     },
@@ -860,7 +913,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         1800
       ],
       "retryOnFail": true,
@@ -896,7 +949,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         2000
       ],
       "retryOnFail": true,
@@ -932,7 +985,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         2200
       ],
       "retryOnFail": true,
@@ -968,7 +1021,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         2400
       ],
       "retryOnFail": true,
@@ -1004,7 +1057,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         2820
       ],
       "retryOnFail": true,
@@ -1044,7 +1097,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        840,
+        1060,
         500
       ]
     },
@@ -1074,7 +1127,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        840,
+        1060,
         1100
       ]
     },
@@ -1096,7 +1149,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        840,
+        1060,
         1540
       ]
     },
@@ -1113,7 +1166,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         420
       ],
       "credentials": {
@@ -1137,7 +1190,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         600
       ],
       "credentials": {
@@ -1161,7 +1214,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         800
       ],
       "credentials": {
@@ -1185,7 +1238,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         1000
       ],
       "credentials": {
@@ -1209,7 +1262,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         1180
       ],
       "credentials": {
@@ -1233,7 +1286,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         1360
       ],
       "credentials": {
@@ -1257,7 +1310,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1340,
+        1560,
         1540
       ],
       "credentials": {
@@ -1270,26 +1323,6 @@
     },
     {
       "parameters": {
-        "conditions": {
-          "string": [
-            {
-              "value1": "={{ $json.exists.toString() }}",
-              "value2": "true"
-            }
-          ]
-        }
-      },
-      "id": "df0904bd-a7d7-4dda-9244-850a0ad0c0f8",
-      "name": "IF1",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        -1340,
-        1580
-      ]
-    },
-    {
-      "parameters": {
         "unit": "seconds"
       },
       "id": "09c72b57-cf10-49b5-a6ad-3627356028d2",
@@ -1297,7 +1330,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        -1000,
+        -500,
         2180
       ],
       "webhookId": "997fbd1a-ee7f-4dde-9cac-f20de804a7fa"
@@ -1336,8 +1369,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -1160,
-        1880
+        -700,
+        1980
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -1394,7 +1427,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         3240
       ],
       "retryOnFail": true,
@@ -1430,7 +1463,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         3440
       ],
       "retryOnFail": true,
@@ -1466,7 +1499,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         3620
       ],
       "retryOnFail": true,
@@ -1502,7 +1535,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         3860
       ],
       "retryOnFail": true,
@@ -1538,7 +1571,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         4040
       ],
       "retryOnFail": true,
@@ -1574,7 +1607,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         2620
       ],
       "retryOnFail": true,
@@ -1609,7 +1642,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        460,
+        680,
         3020
       ],
       "retryOnFail": true,
@@ -2346,7 +2379,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        240,
+        460,
         4360
       ],
       "credentials": {
@@ -2391,15 +2424,16 @@
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        -5120,
-        2240
+        -5960,
+        2500
       ],
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
           "id": "q2koHOT5akHVDoQ9",
           "name": "medi "
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -2422,8 +2456,8 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 1,
       "position": [
-        -4900,
-        2240
+        -5740,
+        2500
       ]
     },
     {
@@ -2435,8 +2469,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4460,
-        2240
+        -5300,
+        2500
       ]
     },
     {
@@ -2456,8 +2490,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        -4660,
-        2240
+        -5500,
+        2500
       ]
     },
     {
@@ -2481,8 +2515,8 @@
       "name": "Nome e telefone para validar1",
       "type": "n8n-nodes-base.set",
       "position": [
-        -4240,
-        2240
+        -5080,
+        2500
       ],
       "typeVersion": 1
     },
@@ -2505,8 +2539,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -3800,
-        2240
+        -4640,
+        2500
       ]
     },
     {
@@ -2519,8 +2553,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        -4020,
-        2240
+        -4860,
+        2500
       ]
     },
     {
@@ -2539,8 +2573,8 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 1,
       "position": [
-        -3580,
-        2240
+        -4420,
+        2500
       ]
     },
     {
@@ -2573,8 +2607,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        -3080,
-        2240
+        -3920,
+        2500
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -2606,742 +2640,9 @@
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        -3340,
-        2240
+        -4180,
+        2500
       ]
-    },
-    {
-      "parameters": {
-        "operation": "update",
-        "documentId": {
-          "__rl": true,
-          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
-          "mode": "list",
-          "cachedResultName": "db_pais",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 887746287,
-          "mode": "list",
-          "cachedResultName": "db_pais",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "WHATSAPP CADASTRADO": "✅✅",
-            "NOME DO BENEFICIARIO": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}"
-          },
-          "matchingColumns": [
-            "NOME DO BENEFICIARIO"
-          ],
-          "schema": [
-            {
-              "id": "EMPRESA DO BENEFICIARIO",
-              "displayName": "EMPRESA DO BENEFICIARIO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "TIPO CONTRATANTE",
-              "displayName": "TIPO CONTRATANTE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "EMPRESA CONTRATANTE",
-              "displayName": "EMPRESA CONTRATANTE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "OPERADORA DE SAUDE",
-              "displayName": "OPERADORA DE SAUDE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "NOME DO PROGRAMA",
-              "displayName": "NOME DO PROGRAMA",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "MATRICULA DE UTILIZACAO NO PLANO",
-              "displayName": "MATRICULA DE UTILIZACAO NO PLANO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "COD PRODUTO",
-              "displayName": "COD PRODUTO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "NOME DO BENEFICIARIO",
-              "displayName": "NOME DO BENEFICIARIO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "ENTRADA NO PROGRAMA",
-              "displayName": "ENTRADA NO PROGRAMA",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "TIT/DEP",
-              "displayName": "TIT/DEP",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA DE NASCIMENTO",
-              "displayName": "DATA DE NASCIMENTO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "IDADE",
-              "displayName": "IDADE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "SEXO",
-              "displayName": "SEXO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "UF",
-              "displayName": "UF",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "NOME DO TITULAR",
-              "displayName": "NOME DO TITULAR",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "RESPONSAVEL",
-              "displayName": "RESPONSAVEL",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "GRAU DE PARENTESCO DO RESPONSAVEL",
-              "displayName": "GRAU DE PARENTESCO DO RESPONSAVEL",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "PROGRAMA DE ATENCAO",
-              "displayName": "PROGRAMA DE ATENCAO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "GRAU DE RISCO",
-              "displayName": "GRAU DE RISCO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO",
-              "displayName": "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "MOTIVO DO ACOMPANHAMENTO",
-              "displayName": "MOTIVO DO ACOMPANHAMENTO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "CID PRINCIPAL",
-              "displayName": "CID PRINCIPAL",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "GRUPO DE DOENCAS",
-              "displayName": "GRUPO DE DOENCAS",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS",
-              "displayName": "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "CIDS SECUNDÁRIOS",
-              "displayName": "CIDS SECUNDÁRIOS",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO",
-              "displayName": "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE",
-              "displayName": "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "UTI",
-              "displayName": "UTI",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA DO ULTIMO CONTATO",
-              "displayName": "DATA DO ULTIMO CONTATO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "RESPONSAVEL PELO CONTATO",
-              "displayName": "RESPONSAVEL PELO CONTATO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "HISTORICO DO CONTATO",
-              "displayName": "HISTORICO DO CONTATO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "STATUS DO ACOMPANHAMENTO MAIS RECENTE",
-              "displayName": "STATUS DO ACOMPANHAMENTO MAIS RECENTE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "OBSERVAÇÕES",
-              "displayName": "OBSERVAÇÕES",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "AGENDA SUGERIDA PARA PROXIMO CONTATO",
-              "displayName": "AGENDA SUGERIDA PARA PROXIMO CONTATO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA DE FINALIZACAO",
-              "displayName": "DATA DE FINALIZACAO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "CAPTADO VIA",
-              "displayName": "CAPTADO VIA",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "ID",
-              "displayName": "ID",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "GRUPO DE DISPARO DE MATERIAL - BOT",
-              "displayName": "GRUPO DE DISPARO DE MATERIAL - BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "STATUS DA TRIAGEM",
-              "displayName": "STATUS DA TRIAGEM",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "TELEFONES DE CONTATO",
-              "displayName": "TELEFONES DE CONTATO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "PHONE",
-              "displayName": "PHONE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "FAIXA ETÁRIA",
-              "displayName": "FAIXA ETÁRIA",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "FIM",
-              "displayName": "FIM",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "WHATSAPP CADASTRADO",
-              "displayName": "WHATSAPP CADASTRADO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "MEDICAMENTO",
-              "displayName": "MEDICAMENTO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "PESO(KG)",
-              "displayName": "PESO(KG)",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "ALTURA(CM)",
-              "displayName": "ALTURA(CM)",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "MEDE OBESIDADE",
-              "displayName": "MEDE OBESIDADE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "AFERE GLICOSE",
-              "displayName": "AFERE GLICOSE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "MEDE DIABETES",
-              "displayName": "MEDE DIABETES",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "AFERE PRESSAO",
-              "displayName": "AFERE PRESSAO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "MEDE HIPERTENSAO",
-              "displayName": "MEDE HIPERTENSAO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "MEDICO ESPECIALISTA",
-              "displayName": "MEDICO ESPECIALISTA",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "QUEIXA RELATADA",
-              "displayName": "QUEIXA RELATADA",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "REMEDIO_BOT",
-              "displayName": "REMEDIO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "PATOLOGIA_BOT",
-              "displayName": "PATOLOGIA_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "OBESIDADE_BOT",
-              "displayName": "OBESIDADE_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DIABETES_BOT",
-              "displayName": "DIABETES_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "PRESSAO_BOT",
-              "displayName": "PRESSAO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "ACOMPANHAMENTO_BOT",
-              "displayName": "ACOMPANHAMENTO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "SINTOMA_BOT",
-              "displayName": "SINTOMA_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "LGPD_BOT",
-              "displayName": "LGPD_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "CHECKUP_BOT",
-              "displayName": "CHECKUP_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "CRONICO_BOT",
-              "displayName": "CRONICO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "OBSERVACAO_BOT",
-              "displayName": "OBSERVACAO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA_CHAMADO_BOT",
-              "displayName": "DATA_CHAMADO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "DATA_INTERACAO_BOT",
-              "displayName": "DATA_INTERACAO_BOT",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": true
-            },
-            {
-              "id": "row_number",
-              "displayName": "row_number",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "readOnly": true,
-              "removed": true
-            }
-          ]
-        },
-        "options": {
-          "locationDefine": {
-            "values": {
-              "firstDataRow": "={{ $('Split In Batches').item.json.row_number }}"
-            }
-          }
-        }
-      },
-      "id": "77af8d2d-05a1-4f95-888d-dbaa79ead398",
-      "name": "Google Sheets2",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.1,
-      "position": [
-        -1180,
-        3540
-      ],
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "7pdm5d8YpeYmTF0Y",
-          "name": "medi"
-        }
-      }
     },
     {
       "parameters": {
@@ -3352,7 +2653,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2900,
+        -3220,
         1580
       ]
     },
@@ -3373,7 +2674,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        -3140,
+        -3420,
         1580
       ]
     },
@@ -3384,7 +2685,7 @@
           "string": [
             {
               "name": "telefone",
-              "value": "={{ $json.PHONE.toString() }}"
+              "value": "={{ $json.TelSeparado }}"
             },
             {
               "name": "nomeCompleto",
@@ -3441,6 +2742,148 @@
       "position": [
         -1960,
         1420
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $('Split In Batches').item.json.ID }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aac27e5d-1fa5-4df4-b419-0f764d0d81c6",
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        -1140,
+        1800
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['WHATSAPP CADASTRADO'] }}",
+              "value2": "✅✅"
+            }
+          ]
+        }
+      },
+      "id": "fb98b520-9480-42f6-8069-f3e5cde3e028",
+      "name": "cadastrado?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -940,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.exists.toString() }}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "df0904bd-a7d7-4dda-9244-850a0ad0c0f8",
+      "name": "whatsapp valido?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1340,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $('Split In Batches').item.json.ID }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5a202f8b-2b54-4ebc-ad7b-f0cb9b822530",
+      "name": "Google Sheets4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        -1140,
+        1440
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['WHATSAPP CADASTRADO'] }}",
+              "value2": "✅✅"
+            }
+          ]
+        }
+      },
+      "id": "971f67a1-ba82-46e6-b79d-f92766479129",
+      "name": "cadastrado?1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        1440
       ]
     }
   ],
@@ -3534,6 +2977,171 @@
         }
       }
     ],
+    "Google Sheets3": [
+      {
+        "json": {
+          "row_number": 7,
+          "EMPRESA DO BENEFICIARIO": "ASTCERJ",
+          "TIPO CONTRATANTE": "ASSOCIACAO",
+          "EMPRESA CONTRATANTE": "MEDI",
+          "OPERADORA DE SAUDE": "AMIL",
+          "NOME DO PROGRAMA": "ASTCERJ SAUDE",
+          "MATRICULA DE UTILIZACAO NO PLANO": "972499431",
+          "COD PRODUTO": "",
+          "NOME DO BENEFICIARIO": "ILDA NEVES GONZAGA",
+          "ENTRADA NO PROGRAMA": "23/08/2017",
+          "TIT/DEP": "DEPENDENTE",
+          "DATA DE NASCIMENTO": "11/06/1930",
+          "IDADE": 94,
+          "SEXO": "FEMININO",
+          "UF": "",
+          "NOME DO TITULAR": "ADELEA NEVES GONZAGA BARBOSA",
+          "RESPONSAVEL": "ADELEA",
+          "GRAU DE PARENTESCO DO RESPONSAVEL": "FILHO (A)",
+          "PROGRAMA DE ATENCAO": "SENIORS",
+          "GRAU DE RISCO": "MEDIO",
+          "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO": "",
+          "MOTIVO DO ACOMPANHAMENTO": "HIPERTENSAO ARTERIAL",
+          "CID PRINCIPAL": "I15",
+          "GRUPO DE DOENCAS": "DOENCA DO APARELHO CIRCULATORIO",
+          "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS": "HIPERCOLESTEROLEMIA / HIPOTIREOIDISMO / BRONCOESPASMO /  /  /  / ",
+          "CIDS SECUNDÁRIOS": "",
+          "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO": "",
+          "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE": "",
+          "UTI": "",
+          "DATA DO ULTIMO CONTATO": "11/01/2024",
+          "RESPONSAVEL PELO CONTATO": "THAYNAN LIMA",
+          "HISTORICO DO CONTATO": "SWELEN 27/04/2020\nEM CONTATO 21994786483 SRA ADELEA (FILHA) INFORMOU BENEFICIARIA ESTAVEL, SEM INTERCORRENCIAS. ACOMPANHAMENTO TRIMESTRAL COM CARDIOLOGISTA, ENDOCRINOLOGISTA E ORTOPEDISTA. EM USO DE CORDAREX, SOMALGIN CARDIO 81, DIOSMIN, NIMOVAS 30, LAMOTRIGINA, PURAN 50MG, SINVASTATINA 20 E CENTRUM PARA HIPERTENSAO ARTERIAL, INSUFICIENCIA VASCULAR, DEPRESSAO, HIPOTIREOIDISMO, HIPERCOLESTEROLEMIA E SUPLIMENTO POIS APRESENTA POUCO APETITE E ALIMENTAÇAO IRREGULAR. TOMOU VACINA CONTRA GRIPE. RESPEITANDO O DISTANCIAMENTO SOCIAL. PERMANECE MEDIDAS.\n\n********************************************\n\nGABRIELE GONCALVES 14/07/2021\nEM CONTATO COM A BENEFICIARIA, SEM SUCESSO, DA ERRO, NAO POSSUI WHATSAPP. \n\n********************************************\n\nGABRIELE GONCALVES 18/08/2021\nEM CONTATO SEM SUCESSO, FICA MUDO. 2 TENTATIVAS \n\n**********************************\nGIZELE LOPES 20/08/2021\n\nEM CONTATO COM 21 24730163, Sr.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA FAZ ACOMPANHAMENTO COM CARDIOLOGISTA ANUALMENTE, NEUROLOGISTA SEMESTRALMENTE, FEZ RESSONANCIA DO CRANIO A POUCO TEMPO, FEZ AS DUAS DOSES DA VACINA CONTRA COVID19 (CORONAVAC), FEZ A VACINA DA GRIPE, FEZ A VACINA DA PNEUMONIA, NAO POSSUI INDICACAO PARA REALIZAR PROCEDIMENTOS E EXAMES DE ALTAS COMPLEXIDADES. FAZ USO DAS MESMAS MEDICACOES NÃO HOUVE MUDANCA. \n\nAMANDA SALDANHA 21/10\n\nEM CONTATO COM 21 994786483, BENEFICIARIA INFORMA QUE ESTA EM ACOMPANHAMENTO MEDICO COM ONCOLOGISTA MENSAL, RECEBEU EM JULH9O DIAGNOSTICO DE LEUCEMIA, TRANSPLANTE DE MEDULA EM JANEIRO, REALIZOU QUIOMIOTERAPIA DEZ/2020 E RADIOTERAPIA 15 SESSOES TAMBÉM EM 2020, NEGA CIRURGIAS E EXAMES DE ALTA COMPLEXIDADE, FAZ USO DE VARIOS MEDICAMENTOS CONTINUOS, REFERE HAS E DIABETES MELLITUS, MEDIDAS ANTROPOMETRICAS 64KG E 1,57CM, REALIZOU AS TRES DOSES DA VACINA CONTRA O COVID19.\n\nGIZELE LOPES 23/11/2021\n\nEM CONTATO COM 21 24730163, SEM SUCESSO SO CHAMA E CAI. \n\nGIZELE LOPES 25/11/2021\n \nEM CONTATO COM 21 24730163, SR.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA ESTA ESTAVEL, EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, TEM TIO PROBLEMAS COM RELACAO A MEMORIA, NAO PASSOU MAIORES INFORMACOES. \n\nAMANDA SALDANHA 250322\n\nEM CONTATO 2124730163, SSRA ADELEA, INFORMA QUE NO DIA 23 DE DEZEMBRO DE 2021, BENEFICIARIA REALIZOU UMA CIRURGIA DEVIDO A FRATURA NA CABEÇA DO FEMUR DIREITO, UTILIZOU PROTESE, EM FISIOTERAPIA 3X POR SEMANA, DEAMBULA COM ANDADOR. EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, CARTEIRA DE VACINACAO EM DIA. ACOMPANHAMENTO MEDICO COM CARDIOLOGISTA E NEUROLOGISTA. NEGA INDICACOES CIRURGIAS E EXAMES DE ALTA COMPLEXIDADES. \n\n\nKAROLINE RODRIGUES 26/07/2022\n\nEM CONTATO PELO NÚMERO 21 24730163\nSRA. ADELEIA INFORMA QUE BENEFICIÁRIA ENCONTRASE ESTÁVEL, INFORMA QUE DEVIDO A QUEDA EM DEZEMBRO QUEBROU A CABEÇA DO FEMUR DIREITO E PRECISOU PASSAR POR PROCEDIMENTOS, ATUALMENTE ENCONTRASE EM RECUPERAÇÃO, REALIZA ACOMPANHAEMENTO MÉDICO COM GERIATRA, REALIZA USO DOS MESMOS MEDICAMENTOS CONTÍNUOS SEM ALTERAÇÕES, NEGA INDICAÇÃO PARA CIRURGIA E IRÁ REALIZAR EXAMES DE ROTINA, NÃO RECEBEU DIAGNOSTICOS MÉDICO RECENTEMENTE, INFORMA VACINAS EM DIA E SEM MAIS INFORMAÇÕES\n\nAMANDA SALDANHA 291122\n\nEM CONTATO COM21 24730163, CHAMA ATE CAIR. \n\n\nAMANDA SALDANHA 100323\n\nEM CONTATO COM 21 24730163, CHAMA ATE CAIR.\nENVIADO MENSAGEM\n\n_____________________//____________________\nTHAYNAN LIMA 11/01/2024\nEM CONTATOP COM O NUMERO 2124730163 , GRAVE SEU RECADO 3 TENTATIVA SEM SUCESSO",
+          "STATUS DO ACOMPANHAMENTO MAIS RECENTE": "ACOMPANHAMENTO SEM SUCESSO",
+          "OBSERVAÇÕES": "NAO POSSUI WHATSAPP",
+          "AGENDA SUGERIDA PARA PROXIMO CONTATO": "20/05/2024",
+          "DATA DE FINALIZACAO": "",
+          "CAPTADO VIA": "",
+          "ID": 6,
+          "GRUPO DE DISPARO DE MATERIAL - BOT": "2. Do Sistema Cardiológico e Circulatório",
+          "STATUS DA TRIAGEM": "RECUPERADO",
+          "TELEFONES DE CONTATO": "2124730163",
+          "PHONE": "2124730163",
+          "FAIXA ETÁRIA": "59 +",
+          "FIM": "",
+          "WHATSAPP CADASTRADO": "SEM WHATSAPP",
+          "MEDICAMENTO": "",
+          "PESO(KG)": "",
+          "ALTURA(CM)": "",
+          "MEDE OBESIDADE": "",
+          "AFERE GLICOSE": "",
+          "MEDE DIABETES": "",
+          "AFERE PRESSAO": "",
+          "MEDE HIPERTENSAO": "",
+          "MEDICO ESPECIALISTA": "",
+          "QUEIXA RELATADA": "",
+          "REMEDIO_BOT": "",
+          "PATOLOGIA_BOT": "",
+          "OBESIDADE_BOT": "",
+          "DIABETES_BOT": "",
+          "PRESSAO_BOT": "",
+          "ACOMPANHAMENTO_BOT": "",
+          "SINTOMA_BOT": "",
+          "LGPD_BOT": "",
+          "CHECKUP_BOT": "",
+          "CRONICO_BOT": "",
+          "OBSERVACAO_BOT": "",
+          "DATA_CHAMADO_BOT": "",
+          "DATA_INTERACAO_BOT": "",
+          "LIGACAO_SOLICITADA_BOT": "",
+          "DATA_SOLICITACAO_LIGACAO_BOT": ""
+        },
+        "pairedItem": [
+          {
+            "item": 0
+          }
+        ]
+      }
+    ],
+    "HTTP Request Verificar se é wpp válido": [
+      {
+        "json": {
+          "exists": true,
+          "phone": null
+        }
+      }
+    ],
+    "Google Sheets4": [
+      {
+        "json": {
+          "row_number": 7,
+          "EMPRESA DO BENEFICIARIO": "ASTCERJ",
+          "TIPO CONTRATANTE": "ASSOCIACAO",
+          "EMPRESA CONTRATANTE": "MEDI",
+          "OPERADORA DE SAUDE": "AMIL",
+          "NOME DO PROGRAMA": "ASTCERJ SAUDE",
+          "MATRICULA DE UTILIZACAO NO PLANO": "972499431",
+          "COD PRODUTO": "",
+          "NOME DO BENEFICIARIO": "ILDA NEVES GONZAGA",
+          "ENTRADA NO PROGRAMA": "23/08/2017",
+          "TIT/DEP": "DEPENDENTE",
+          "DATA DE NASCIMENTO": "11/06/1930",
+          "IDADE": 94,
+          "SEXO": "FEMININO",
+          "UF": "",
+          "NOME DO TITULAR": "ADELEA NEVES GONZAGA BARBOSA",
+          "RESPONSAVEL": "ADELEA",
+          "GRAU DE PARENTESCO DO RESPONSAVEL": "FILHO (A)",
+          "PROGRAMA DE ATENCAO": "SENIORS",
+          "GRAU DE RISCO": "MEDIO",
+          "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO": "",
+          "MOTIVO DO ACOMPANHAMENTO": "HIPERTENSAO ARTERIAL",
+          "CID PRINCIPAL": "I15",
+          "GRUPO DE DOENCAS": "DOENCA DO APARELHO CIRCULATORIO",
+          "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS": "HIPERCOLESTEROLEMIA / HIPOTIREOIDISMO / BRONCOESPASMO /  /  /  / ",
+          "CIDS SECUNDÁRIOS": "",
+          "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO": "",
+          "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE": "",
+          "UTI": "",
+          "DATA DO ULTIMO CONTATO": "11/01/2024",
+          "RESPONSAVEL PELO CONTATO": "THAYNAN LIMA",
+          "HISTORICO DO CONTATO": "SWELEN 27/04/2020\nEM CONTATO 21994786483 SRA ADELEA (FILHA) INFORMOU BENEFICIARIA ESTAVEL, SEM INTERCORRENCIAS. ACOMPANHAMENTO TRIMESTRAL COM CARDIOLOGISTA, ENDOCRINOLOGISTA E ORTOPEDISTA. EM USO DE CORDAREX, SOMALGIN CARDIO 81, DIOSMIN, NIMOVAS 30, LAMOTRIGINA, PURAN 50MG, SINVASTATINA 20 E CENTRUM PARA HIPERTENSAO ARTERIAL, INSUFICIENCIA VASCULAR, DEPRESSAO, HIPOTIREOIDISMO, HIPERCOLESTEROLEMIA E SUPLIMENTO POIS APRESENTA POUCO APETITE E ALIMENTAÇAO IRREGULAR. TOMOU VACINA CONTRA GRIPE. RESPEITANDO O DISTANCIAMENTO SOCIAL. PERMANECE MEDIDAS.\n\n********************************************\n\nGABRIELE GONCALVES 14/07/2021\nEM CONTATO COM A BENEFICIARIA, SEM SUCESSO, DA ERRO, NAO POSSUI WHATSAPP. \n\n********************************************\n\nGABRIELE GONCALVES 18/08/2021\nEM CONTATO SEM SUCESSO, FICA MUDO. 2 TENTATIVAS \n\n**********************************\nGIZELE LOPES 20/08/2021\n\nEM CONTATO COM 21 24730163, Sr.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA FAZ ACOMPANHAMENTO COM CARDIOLOGISTA ANUALMENTE, NEUROLOGISTA SEMESTRALMENTE, FEZ RESSONANCIA DO CRANIO A POUCO TEMPO, FEZ AS DUAS DOSES DA VACINA CONTRA COVID19 (CORONAVAC), FEZ A VACINA DA GRIPE, FEZ A VACINA DA PNEUMONIA, NAO POSSUI INDICACAO PARA REALIZAR PROCEDIMENTOS E EXAMES DE ALTAS COMPLEXIDADES. FAZ USO DAS MESMAS MEDICACOES NÃO HOUVE MUDANCA. \n\nAMANDA SALDANHA 21/10\n\nEM CONTATO COM 21 994786483, BENEFICIARIA INFORMA QUE ESTA EM ACOMPANHAMENTO MEDICO COM ONCOLOGISTA MENSAL, RECEBEU EM JULH9O DIAGNOSTICO DE LEUCEMIA, TRANSPLANTE DE MEDULA EM JANEIRO, REALIZOU QUIOMIOTERAPIA DEZ/2020 E RADIOTERAPIA 15 SESSOES TAMBÉM EM 2020, NEGA CIRURGIAS E EXAMES DE ALTA COMPLEXIDADE, FAZ USO DE VARIOS MEDICAMENTOS CONTINUOS, REFERE HAS E DIABETES MELLITUS, MEDIDAS ANTROPOMETRICAS 64KG E 1,57CM, REALIZOU AS TRES DOSES DA VACINA CONTRA O COVID19.\n\nGIZELE LOPES 23/11/2021\n\nEM CONTATO COM 21 24730163, SEM SUCESSO SO CHAMA E CAI. \n\nGIZELE LOPES 25/11/2021\n \nEM CONTATO COM 21 24730163, SR.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA ESTA ESTAVEL, EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, TEM TIO PROBLEMAS COM RELACAO A MEMORIA, NAO PASSOU MAIORES INFORMACOES. \n\nAMANDA SALDANHA 250322\n\nEM CONTATO 2124730163, SSRA ADELEA, INFORMA QUE NO DIA 23 DE DEZEMBRO DE 2021, BENEFICIARIA REALIZOU UMA CIRURGIA DEVIDO A FRATURA NA CABEÇA DO FEMUR DIREITO, UTILIZOU PROTESE, EM FISIOTERAPIA 3X POR SEMANA, DEAMBULA COM ANDADOR. EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, CARTEIRA DE VACINACAO EM DIA. ACOMPANHAMENTO MEDICO COM CARDIOLOGISTA E NEUROLOGISTA. NEGA INDICACOES CIRURGIAS E EXAMES DE ALTA COMPLEXIDADES. \n\n\nKAROLINE RODRIGUES 26/07/2022\n\nEM CONTATO PELO NÚMERO 21 24730163\nSRA. ADELEIA INFORMA QUE BENEFICIÁRIA ENCONTRASE ESTÁVEL, INFORMA QUE DEVIDO A QUEDA EM DEZEMBRO QUEBROU A CABEÇA DO FEMUR DIREITO E PRECISOU PASSAR POR PROCEDIMENTOS, ATUALMENTE ENCONTRASE EM RECUPERAÇÃO, REALIZA ACOMPANHAEMENTO MÉDICO COM GERIATRA, REALIZA USO DOS MESMOS MEDICAMENTOS CONTÍNUOS SEM ALTERAÇÕES, NEGA INDICAÇÃO PARA CIRURGIA E IRÁ REALIZAR EXAMES DE ROTINA, NÃO RECEBEU DIAGNOSTICOS MÉDICO RECENTEMENTE, INFORMA VACINAS EM DIA E SEM MAIS INFORMAÇÕES\n\nAMANDA SALDANHA 291122\n\nEM CONTATO COM21 24730163, CHAMA ATE CAIR. \n\n\nAMANDA SALDANHA 100323\n\nEM CONTATO COM 21 24730163, CHAMA ATE CAIR.\nENVIADO MENSAGEM\n\n_____________________//____________________\nTHAYNAN LIMA 11/01/2024\nEM CONTATOP COM O NUMERO 2124730163 , GRAVE SEU RECADO 3 TENTATIVA SEM SUCESSO",
+          "STATUS DO ACOMPANHAMENTO MAIS RECENTE": "ACOMPANHAMENTO SEM SUCESSO",
+          "OBSERVAÇÕES": "NAO POSSUI WHATSAPP",
+          "AGENDA SUGERIDA PARA PROXIMO CONTATO": "20/05/2024",
+          "DATA DE FINALIZACAO": "",
+          "CAPTADO VIA": "",
+          "ID": 6,
+          "GRUPO DE DISPARO DE MATERIAL - BOT": "2. Do Sistema Cardiológico e Circulatório",
+          "STATUS DA TRIAGEM": "RECUPERADO",
+          "TELEFONES DE CONTATO": "2124730163",
+          "PHONE": "2124730163",
+          "FAIXA ETÁRIA": "59 +",
+          "FIM": "",
+          "WHATSAPP CADASTRADO": "SEM WHATSAPP",
+          "MEDICAMENTO": "",
+          "PESO(KG)": "",
+          "ALTURA(CM)": "",
+          "MEDE OBESIDADE": "",
+          "AFERE GLICOSE": "",
+          "MEDE DIABETES": "",
+          "AFERE PRESSAO": "",
+          "MEDE HIPERTENSAO": "",
+          "MEDICO ESPECIALISTA": "",
+          "QUEIXA RELATADA": "",
+          "REMEDIO_BOT": "",
+          "PATOLOGIA_BOT": "",
+          "OBESIDADE_BOT": "",
+          "DIABETES_BOT": "",
+          "PRESSAO_BOT": "",
+          "ACOMPANHAMENTO_BOT": "",
+          "SINTOMA_BOT": "",
+          "LGPD_BOT": "",
+          "CHECKUP_BOT": "",
+          "CRONICO_BOT": "",
+          "OBSERVACAO_BOT": "",
+          "DATA_CHAMADO_BOT": "",
+          "DATA_INTERACAO_BOT": "",
+          "LIGACAO_SOLICITADA_BOT": "",
+          "DATA_SOLICITACAO_LIGACAO_BOT": ""
+        }
+      }
+    ],
     "Google Sheets": [
       {
         "json": {
@@ -3576,7 +3184,7 @@
           "ID": 6,
           "GRUPO DE DISPARO DE MATERIAL - BOT": "2. Do Sistema Cardiológico e Circulatório",
           "STATUS DA TRIAGEM": "RECUPERADO",
-          "TELEFONES DE CONTATO": "2124730163 / 2124730163",
+          "TELEFONES DE CONTATO": "2124730163",
           "PHONE": "2124730163",
           "FAIXA ETÁRIA": "59 +",
           "FIM": "",
@@ -3608,14 +3216,6 @@
           "DATA_SOLICITACAO_LIGACAO_BOT": ""
         }
       }
-    ],
-    "HTTP Request Verificar se é wpp válido": [
-      {
-        "json": {
-          "exists": true,
-          "phone": 5521924730163
-        }
-      }
     ]
   },
   "settings": {
@@ -3635,6 +3235,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-11T23:29:39.000Z",
-  "versionId": "d588cfb0-4072-4627-a647-e8114d094709"
+  "updatedAt": "2024-01-12T00:07:23.000Z",
+  "versionId": "c0183e0b-f158-4436-94d3-cad11941ae2c"
 }
