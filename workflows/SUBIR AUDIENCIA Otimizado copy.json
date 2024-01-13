@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -408,14 +408,14 @@
       "main": [
         [
           {
-            "node": "Google Sheets Atualizar telefone não válido",
+            "node": "Wait",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "Wait",
+            "node": "Google Sheets Atualizar telefone não válido",
             "type": "main",
             "index": 0
           }
@@ -803,12 +803,11 @@
       "position": [
         -5460,
         1380
-      ],
-      "disabled": true
+      ]
     },
     {
       "parameters": {
-        "batchSize": 1,
+        "batchSize": 80,
         "options": {}
       },
       "id": "4d40a65f-b126-48f3-845c-4ad1b6dfb32a",
@@ -1309,8 +1308,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -400,
-        1980
+        -460,
+        2040
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -3431,7 +3430,8 @@
             ]
           },
           "jsonParseBody": true,
-          "onlyContent": true
+          "onlyContent": true,
+          "parallelMessages": 1
         }
       },
       "id": "b03fdd3b-5062-40d1-ac1d-28dfbbd85dcb",
@@ -3553,7 +3553,7 @@
       "name": "Medi"
     }
   ],
-  "triggerCount": 1,
-  "updatedAt": "2024-01-13T16:29:31.000Z",
-  "versionId": "c7982f3e-5420-499d-b6a4-b5906764f5fc"
+  "triggerCount": 2,
+  "updatedAt": "2024-01-13T17:22:45.000Z",
+  "versionId": "fa4014ec-3fe9-41a7-98ee-fd33388ca465"
 }
