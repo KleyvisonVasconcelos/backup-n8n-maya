@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -27,7 +27,7 @@
       "main": [
         [
           {
-            "node": "Edit Fields1",
+            "node": "Nome e telefone para validar",
             "type": "main",
             "index": 0
           }
@@ -141,7 +141,7 @@
       "main": [
         [
           {
-            "node": "Split In Batches",
+            "node": "RabbitMQ",
             "type": "main",
             "index": 0
           }
@@ -353,7 +353,7 @@
       "main": [
         [
           {
-            "node": "Nome e telefone para validar",
+            "node": "Split In Batches",
             "type": "main",
             "index": 0
           }
@@ -433,7 +433,7 @@
         ],
         [
           {
-            "node": "Google Sheets3",
+            "node": "No Operation, do nothing2",
             "type": "main",
             "index": 0
           }
@@ -490,6 +490,28 @@
           }
         ]
       ]
+    },
+    "No Operation, do nothing2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RabbitMQ Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-01-11T22:29:40.282Z",
@@ -504,9 +526,10 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -4500,
+        -5460,
         1580
-      ]
+      ],
+      "disabled": true
     },
     {
       "parameters": {
@@ -544,7 +567,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -4100,
+        -5060,
         1580
       ],
       "credentials": {
@@ -564,7 +587,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -3120,
+        -2600,
         1580
       ]
     },
@@ -778,13 +801,14 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1,
       "position": [
-        -4500,
+        -5460,
         1380
-      ]
+      ],
+      "disabled": true
     },
     {
       "parameters": {
-        "batchSize": 80,
+        "batchSize": 1,
         "options": {}
       },
       "id": "4d40a65f-b126-48f3-845c-4ad1b6dfb32a",
@@ -792,7 +816,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -3840,
+        -4800,
         1580
       ]
     },
@@ -803,7 +827,7 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -3620,
+        -4580,
         1580
       ]
     },
@@ -1246,8 +1270,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        -500,
-        2180
+        -60,
+        2160
       ],
       "webhookId": "997fbd1a-ee7f-4dde-9cac-f20de804a7fa"
     },
@@ -1285,7 +1309,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -700,
+        -400,
         1980
       ],
       "retryOnFail": true,
@@ -2374,7 +2398,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2620,
+        -2860,
         1580
       ]
     },
@@ -2395,7 +2419,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        -2880,
+        -3120,
         1580
       ]
     },
@@ -2496,8 +2520,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        -1140,
-        1800
+        -920,
+        1860
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -2522,8 +2546,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -940,
-        2000
+        -640,
+        1860
       ]
     },
     {
@@ -3353,9 +3377,160 @@
           "name": "medi"
         }
       }
+    },
+    {
+      "parameters": {},
+      "id": "116223d4-3ed9-4911-bd08-d18488ac7dd7",
+      "name": "No Operation, do nothing2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1120,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "subir audiencia",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          }
+        }
+      },
+      "id": "90a3c296-c886-4e60-be8f-2e1e0f36646a",
+      "name": "RabbitMQ",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1.1,
+      "position": [
+        -4360,
+        1580
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "zgS6vltXIo2S17Ev",
+          "name": "Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "subir audiencia",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "jsonParseBody": true,
+          "onlyContent": true
+        }
+      },
+      "id": "b03fdd3b-5062-40d1-ac1d-28dfbbd85dcb",
+      "name": "RabbitMQ Trigger",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3400,
+        1580
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "zgS6vltXIo2S17Ev",
+          "name": "Maya"
+        }
+      }
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "RabbitMQ Trigger": [
+      {
+        "json": {
+          "row_number": 7,
+          "EMPRESA DO BENEFICIARIO": "ASTCERJ",
+          "TIPO CONTRATANTE": "ASSOCIACAO",
+          "EMPRESA CONTRATANTE": "MEDI",
+          "OPERADORA DE SAUDE": "AMIL",
+          "NOME DO PROGRAMA": "ASTCERJ SAUDE",
+          "MATRICULA DE UTILIZACAO NO PLANO": "972499431",
+          "COD PRODUTO": "",
+          "NOME DO BENEFICIARIO": "ILDA NEVES GONZAGA",
+          "ENTRADA NO PROGRAMA": "23/08/2017",
+          "TIT/DEP": "DEPENDENTE",
+          "DATA DE NASCIMENTO": "11/06/1930",
+          "IDADE": 94,
+          "SEXO": "FEMININO",
+          "UF": "",
+          "NOME DO TITULAR": "ADELEA NEVES GONZAGA BARBOSA",
+          "RESPONSAVEL": "ADELEA",
+          "GRAU DE PARENTESCO DO RESPONSAVEL": "FILHO (A)",
+          "PROGRAMA DE ATENCAO": "SENIORS",
+          "GRAU DE RISCO": "MEDIO",
+          "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO": "",
+          "MOTIVO DO ACOMPANHAMENTO": "HIPERTENSAO ARTERIAL",
+          "CID PRINCIPAL": "I15",
+          "GRUPO DE DOENCAS": "DOENCA DO APARELHO CIRCULATORIO",
+          "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS": "HIPERCOLESTEROLEMIA / HIPOTIREOIDISMO / BRONCOESPASMO /  /  /  / ",
+          "CIDS SECUNDÁRIOS": "",
+          "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO": "",
+          "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE": "",
+          "UTI": "",
+          "DATA DO ULTIMO CONTATO": "11/01/2024",
+          "RESPONSAVEL PELO CONTATO": "THAYNAN LIMA",
+          "HISTORICO DO CONTATO": "SWELEN 27/04/2020\nEM CONTATO 21994786483 SRA ADELEA (FILHA) INFORMOU BENEFICIARIA ESTAVEL, SEM INTERCORRENCIAS. ACOMPANHAMENTO TRIMESTRAL COM CARDIOLOGISTA, ENDOCRINOLOGISTA E ORTOPEDISTA. EM USO DE CORDAREX, SOMALGIN CARDIO 81, DIOSMIN, NIMOVAS 30, LAMOTRIGINA, PURAN 50MG, SINVASTATINA 20 E CENTRUM PARA HIPERTENSAO ARTERIAL, INSUFICIENCIA VASCULAR, DEPRESSAO, HIPOTIREOIDISMO, HIPERCOLESTEROLEMIA E SUPLIMENTO POIS APRESENTA POUCO APETITE E ALIMENTAÇAO IRREGULAR. TOMOU VACINA CONTRA GRIPE. RESPEITANDO O DISTANCIAMENTO SOCIAL. PERMANECE MEDIDAS.\n\n********************************************\n\nGABRIELE GONCALVES 14/07/2021\nEM CONTATO COM A BENEFICIARIA, SEM SUCESSO, DA ERRO, NAO POSSUI WHATSAPP. \n\n********************************************\n\nGABRIELE GONCALVES 18/08/2021\nEM CONTATO SEM SUCESSO, FICA MUDO. 2 TENTATIVAS \n\n**********************************\nGIZELE LOPES 20/08/2021\n\nEM CONTATO COM 21 24730163, Sr.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA FAZ ACOMPANHAMENTO COM CARDIOLOGISTA ANUALMENTE, NEUROLOGISTA SEMESTRALMENTE, FEZ RESSONANCIA DO CRANIO A POUCO TEMPO, FEZ AS DUAS DOSES DA VACINA CONTRA COVID19 (CORONAVAC), FEZ A VACINA DA GRIPE, FEZ A VACINA DA PNEUMONIA, NAO POSSUI INDICACAO PARA REALIZAR PROCEDIMENTOS E EXAMES DE ALTAS COMPLEXIDADES. FAZ USO DAS MESMAS MEDICACOES NÃO HOUVE MUDANCA. \n\nAMANDA SALDANHA 21/10\n\nEM CONTATO COM 21 994786483, BENEFICIARIA INFORMA QUE ESTA EM ACOMPANHAMENTO MEDICO COM ONCOLOGISTA MENSAL, RECEBEU EM JULH9O DIAGNOSTICO DE LEUCEMIA, TRANSPLANTE DE MEDULA EM JANEIRO, REALIZOU QUIOMIOTERAPIA DEZ/2020 E RADIOTERAPIA 15 SESSOES TAMBÉM EM 2020, NEGA CIRURGIAS E EXAMES DE ALTA COMPLEXIDADE, FAZ USO DE VARIOS MEDICAMENTOS CONTINUOS, REFERE HAS E DIABETES MELLITUS, MEDIDAS ANTROPOMETRICAS 64KG E 1,57CM, REALIZOU AS TRES DOSES DA VACINA CONTRA O COVID19.\n\nGIZELE LOPES 23/11/2021\n\nEM CONTATO COM 21 24730163, SEM SUCESSO SO CHAMA E CAI. \n\nGIZELE LOPES 25/11/2021\n \nEM CONTATO COM 21 24730163, SR.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA ESTA ESTAVEL, EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, TEM TIO PROBLEMAS COM RELACAO A MEMORIA, NAO PASSOU MAIORES INFORMACOES. \n\nAMANDA SALDANHA 250322\n\nEM CONTATO 2124730163, SSRA ADELEA, INFORMA QUE NO DIA 23 DE DEZEMBRO DE 2021, BENEFICIARIA REALIZOU UMA CIRURGIA DEVIDO A FRATURA NA CABEÇA DO FEMUR DIREITO, UTILIZOU PROTESE, EM FISIOTERAPIA 3X POR SEMANA, DEAMBULA COM ANDADOR. EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, CARTEIRA DE VACINACAO EM DIA. ACOMPANHAMENTO MEDICO COM CARDIOLOGISTA E NEUROLOGISTA. NEGA INDICACOES CIRURGIAS E EXAMES DE ALTA COMPLEXIDADES. \n\n\nKAROLINE RODRIGUES 26/07/2022\n\nEM CONTATO PELO NÚMERO 21 24730163\nSRA. ADELEIA INFORMA QUE BENEFICIÁRIA ENCONTRASE ESTÁVEL, INFORMA QUE DEVIDO A QUEDA EM DEZEMBRO QUEBROU A CABEÇA DO FEMUR DIREITO E PRECISOU PASSAR POR PROCEDIMENTOS, ATUALMENTE ENCONTRASE EM RECUPERAÇÃO, REALIZA ACOMPANHAEMENTO MÉDICO COM GERIATRA, REALIZA USO DOS MESMOS MEDICAMENTOS CONTÍNUOS SEM ALTERAÇÕES, NEGA INDICAÇÃO PARA CIRURGIA E IRÁ REALIZAR EXAMES DE ROTINA, NÃO RECEBEU DIAGNOSTICOS MÉDICO RECENTEMENTE, INFORMA VACINAS EM DIA E SEM MAIS INFORMAÇÕES\n\nAMANDA SALDANHA 291122\n\nEM CONTATO COM21 24730163, CHAMA ATE CAIR. \n\n\nAMANDA SALDANHA 100323\n\nEM CONTATO COM 21 24730163, CHAMA ATE CAIR.\nENVIADO MENSAGEM\n\n_____________________//____________________\nTHAYNAN LIMA 11/01/2024\nEM CONTATOP COM O NUMERO 2124730163 , GRAVE SEU RECADO 3 TENTATIVA SEM SUCESSO",
+          "STATUS DO ACOMPANHAMENTO MAIS RECENTE": "ACOMPANHAMENTO SEM SUCESSO",
+          "OBSERVAÇÕES": "NAO POSSUI WHATSAPP",
+          "AGENDA SUGERIDA PARA PROXIMO CONTATO": "20/05/2024",
+          "DATA DE FINALIZACAO": "",
+          "CAPTADO VIA": "",
+          "ID": 6,
+          "GRUPO DE DISPARO DE MATERIAL - BOT": "2. Do Sistema Cardiológico e Circulatório",
+          "STATUS DA TRIAGEM": "RECUPERADO",
+          "TELEFONES DE CONTATO": "2124730163",
+          "PHONE": "2124730163",
+          "FAIXA ETÁRIA": "59 +",
+          "FIM": "",
+          "WHATSAPP CADASTRADO": "",
+          "MEDICAMENTO": "",
+          "PESO(KG)": "",
+          "ALTURA(CM)": "",
+          "MEDE OBESIDADE": "",
+          "AFERE GLICOSE": "",
+          "MEDE DIABETES": "",
+          "AFERE PRESSAO": "",
+          "MEDE HIPERTENSAO": "",
+          "MEDICO ESPECIALISTA": "",
+          "QUEIXA RELATADA": "",
+          "REMEDIO_BOT": "",
+          "PATOLOGIA_BOT": "",
+          "OBESIDADE_BOT": "",
+          "DIABETES_BOT": "",
+          "PRESSAO_BOT": "",
+          "ACOMPANHAMENTO_BOT": "",
+          "SINTOMA_BOT": "",
+          "LGPD_BOT": "",
+          "CHECKUP_BOT": "",
+          "CRONICO_BOT": "",
+          "OBSERVACAO_BOT": "",
+          "DATA_CHAMADO_BOT": "",
+          "DATA_INTERACAO_BOT": "",
+          "LIGACAO_SOLICITADA_BOT": "",
+          "DATA_SOLICITACAO_LIGACAO_BOT": ""
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -3379,6 +3554,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-13T15:30:33.000Z",
-  "versionId": "f9035e81-2ab9-460c-bccd-0001c547057c"
+  "updatedAt": "2024-01-13T16:29:31.000Z",
+  "versionId": "c7982f3e-5420-499d-b6a4-b5906764f5fc"
 }
