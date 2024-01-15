@@ -3532,7 +3532,10 @@
     ]
   },
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
   },
   "staticData": {
     "node:Schedule Trigger": {
@@ -3554,6 +3557,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2024-01-13T17:22:45.000Z",
-  "versionId": "fa4014ec-3fe9-41a7-98ee-fd33388ca465"
+  "updatedAt": "2024-01-15T00:59:37.000Z",
+  "versionId": "8349caae-6981-4dfb-a5f5-79a166c17f3f"
 }
