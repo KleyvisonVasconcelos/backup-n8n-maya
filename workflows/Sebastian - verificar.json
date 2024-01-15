@@ -1,0 +1,105 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-15T14:46:34.538Z",
+  "id": "30FSlwzpDi5I9XQQ",
+  "meta": null,
+  "name": "Sebastian - verificar",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "TELEFONE FORMATADO",
+              "lookupValue": "={{ $json.body.telefone }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fc157ec8-3def-4eb1-8437-3a46312e2cd5",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        720,
+        1100
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 3000,
+      "maxTries": 5,
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "verificar-planilha-sebastian",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "379999bd-c413-4160-a746-3bf358cfe31c",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        520,
+        1100
+      ],
+      "webhookId": "b73f5aec-d641-4f50-a222-d09b028474e8"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Google Sheets Trigger1": {
+      "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+      "sheetId": 482129188,
+      "lastRevision": 66518,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66518&exportFormat=xlsx",
+      "lastIndexChecked": 325
+    },
+    "node:Google Sheets Trigger": {
+      "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+      "sheetId": 482129188,
+      "lastRevision": 66529,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66529&exportFormat=xlsx"
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-15T14:47:02.000Z",
+  "versionId": "b222ab32-2eda-4968-8f5d-2f15c57b892a"
+}
