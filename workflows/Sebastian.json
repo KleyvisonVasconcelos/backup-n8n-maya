@@ -96,13 +96,7 @@
     },
     "enviar fluxo": {
       "main": [
-        [
-          {
-            "node": "Wait",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     }
   },
@@ -395,7 +389,7 @@
       "typeVersion": 1,
       "position": [
         2000,
-        660
+        620
       ],
       "id": "fea4dd41-aaff-4465-b6d5-fb23537552fc",
       "retryOnFail": true,
@@ -406,7 +400,8 @@
           "id": "EnweQS0a3c3jn7qF",
           "name": "BC - SEBASTIAN"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -543,19 +538,19 @@
     "node:Google Sheets Trigger1": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 66487,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66487&exportFormat=xlsx",
+      "lastRevision": 66502,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66502&exportFormat=xlsx",
       "lastIndexChecked": 325
     },
     "node:Google Sheets Trigger": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 66487,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66487&exportFormat=xlsx"
+      "lastRevision": 66501,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66501&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2024-01-14T13:17:33.000Z",
-  "versionId": "78846770-44af-40ba-a60c-f92d9f0b7e1a"
+  "updatedAt": "2024-01-15T14:21:57.000Z",
+  "versionId": "18fa0da5-7cc7-4aeb-96f7-926449599324"
 }
