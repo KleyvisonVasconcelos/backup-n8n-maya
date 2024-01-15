@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "Split In Batches1",
+            "node": "Filter",
             "type": "main",
             "index": 0
           }
@@ -512,6 +512,17 @@
           }
         ]
       ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-01-11T22:29:40.282Z",
@@ -817,7 +828,7 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 1,
       "position": [
-        -4800,
+        -4580,
         1580
       ],
       "disabled": true
@@ -829,7 +840,7 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        -4580,
+        -4360,
         1580
       ]
     },
@@ -3420,7 +3431,7 @@
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1.1,
       "position": [
-        -4360,
+        -4140,
         1580
       ],
       "credentials": {
@@ -3461,6 +3472,27 @@
           "name": "Maya"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['STATUS DA TRIAGEM'] }}",
+              "operation": "notEqual",
+              "value2": "FINALIZADO"
+            }
+          ]
+        }
+      },
+      "id": "00088e3b-880f-4172-8b0f-e185d929808c",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        -4840,
+        1580
+      ]
     }
   ],
   "pinData": {
@@ -3569,6 +3601,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-15T05:35:18.000Z",
-  "versionId": "df1ba00b-d73f-42df-a7f4-042ce5c82e2e"
+  "updatedAt": "2024-01-15T10:30:19.000Z",
+  "versionId": "516d4f52-8af5-45bf-9e78-a98cb1278412"
 }
