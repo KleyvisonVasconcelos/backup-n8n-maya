@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "When clicking \"Execute Workflow\"": {
       "main": [
@@ -3455,7 +3455,7 @@
           },
           "jsonParseBody": true,
           "onlyContent": true,
-          "parallelMessages": 2
+          "parallelMessages": 3
         }
       },
       "id": "b03fdd3b-5062-40d1-ac1d-28dfbbd85dcb",
@@ -3601,6 +3601,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-15T10:30:19.000Z",
-  "versionId": "516d4f52-8af5-45bf-9e78-a98cb1278412"
+  "updatedAt": "2024-01-15T10:36:32.000Z",
+  "versionId": "d9620fb6-f3d7-4c55-85fd-2f110967812c"
 }
