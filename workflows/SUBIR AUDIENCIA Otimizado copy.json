@@ -152,21 +152,21 @@
       "main": [
         [
           {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao",
+            "node": "em inclusao",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao1",
+            "node": "em recuperacao",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao2",
+            "node": "HTTP Request Adicionar Etiqueta abordado pelo bot",
             "type": "main",
             "index": 0
           }
@@ -184,21 +184,21 @@
       "main": [
         [
           {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao3",
+            "node": "INCLUSO",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao4",
+            "node": "finalizado",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao5",
+            "node": "recuperado",
             "type": "main",
             "index": 0
           }
@@ -1104,150 +1104,6 @@
         1060,
         1540
       ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4503062/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "04b0f7a8-3336-46d8-aba5-14ffe9f7a327",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        420
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4503066/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "bbceb34c-f9ab-4e82-8a3c-6664fd48a97a",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao1",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        600
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961557/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "15f3e965-ef14-4a1c-b09f-c53eaa9604cb",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao2",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        800
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961559/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "1bcd38ec-a1e1-4d9d-a0e0-c5e7ac44e786",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao3",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        1000
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961560/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "71501350-59c1-4d89-b89f-3d9af2a1ee55",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao4",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        1180
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961564/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "73ae1052-6e7b-42df-97cb-9901a59aae38",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao5",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        1360
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
     },
     {
       "parameters": {
@@ -3491,6 +3347,195 @@
         -4840,
         1580
       ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119653"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "71501350-59c1-4d89-b89f-3d9af2a1ee55",
+      "name": "finalizado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119523"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "73ae1052-6e7b-42df-97cb-9901a59aae38",
+      "name": "recuperado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119370"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "04b0f7a8-3336-46d8-aba5-14ffe9f7a327",
+      "name": "em inclusao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        420
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119462"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bbceb34c-f9ab-4e82-8a3c-6664fd48a97a",
+      "name": "em recuperacao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        600
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961557/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "15f3e965-ef14-4a1c-b09f-c53eaa9604cb",
+      "name": "HTTP Request Adicionar Etiqueta abordado pelo bot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        800
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119473"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1bcd38ec-a1e1-4d9d-a0e0-c5e7ac44e786",
+      "name": "INCLUSO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1000
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
     }
   ],
   "pinData": {
@@ -3586,8 +3631,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
       "sheetId": 887746287,
-      "lastRevision": 89350,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=89350&exportFormat=xlsx"
+      "lastRevision": 89437,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=89437&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -3599,6 +3644,6 @@
     }
   ],
   "triggerCount": 3,
-  "updatedAt": "2024-01-17T13:27:52.000Z",
-  "versionId": "14c15026-2077-41bf-b2f9-eced78076c37"
+  "updatedAt": "2024-01-17T14:29:50.000Z",
+  "versionId": "d89601a2-a291-410f-be85-5e7ec6007b97"
 }
