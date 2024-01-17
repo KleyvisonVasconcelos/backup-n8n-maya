@@ -39,23 +39,104 @@
         "operation": "appendOrUpdate",
         "documentId": {
           "__rl": true,
-          "value": "1VCrc-z6pwrFWgO1LfquevdP2hmUdlXNzwNpHKMZG1LY",
-          "mode": "list",
-          "cachedResultName": "CONTROLE - BENEVIX",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VCrc-z6pwrFWgO1LfquevdP2hmUdlXNzwNpHKMZG1LY/edit?usp=drivesdk"
+          "value": "https://docs.google.com/spreadsheets/d/1WhWMK4_IjK2wIrwhf2pd-hNqFTRmbwD5agGZ2LSMQLY/edit#gid=0",
+          "mode": "url"
         },
         "sheetName": {
           "__rl": true,
-          "value": "gid=0",
-          "mode": "list",
-          "cachedResultName": "LEADS",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VCrc-z6pwrFWgO1LfquevdP2hmUdlXNzwNpHKMZG1LY/edit#gid=0"
+          "value": "https://docs.google.com/spreadsheets/d/1WhWMK4_IjK2wIrwhf2pd-hNqFTRmbwD5agGZ2LSMQLY/edit#gid=0",
+          "mode": "url"
         },
         "columns": {
           "mappingMode": "defineBelow",
-          "value": {},
-          "matchingColumns": [],
-          "schema": []
+          "value": {
+            "MOMENTO DO CHAMADO": "={{ $json.body['MOMENTO DO CHAMADO'] }}",
+            "NOME": "={{ $json.body['NOME DO LEAD'] }}",
+            "TELEFONE": "={{ $json.body['TELEFONE DO LEAD'] }}",
+            "IDADES": "={{ $json.body.IDADES }}",
+            "STATUS": "NOVO LEAD"
+          },
+          "matchingColumns": [
+            "MOMENTO DO CHAMADO"
+          ],
+          "schema": [
+            {
+              "id": "MOMENTO DO CHAMADO",
+              "displayName": "MOMENTO DO CHAMADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IDADES",
+              "displayName": "IDADES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "STATUS",
+              "displayName": "STATUS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CORRETOR",
+              "displayName": "CORRETOR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "VALOR",
+              "displayName": "VALOR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "OBSERVAÇÃO",
+              "displayName": "OBSERVAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ]
         },
         "options": {}
       },
@@ -69,53 +150,19 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "Cgmgitz8hHNbDrfy",
-          "name": "JORDANA"
+          "id": "r2uO2y607ENLZiT1",
+          "name": "BENEVIX"
         }
       }
     }
   ],
-  "pinData": {
-    "Webhook1": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8n.mayarj.com",
-            "user-agent": "python-requests/2.26.0",
-            "content-length": "162",
-            "accept": "*/*",
-            "accept-encoding": "gzip, deflate",
-            "content-type": "application/json",
-            "sentry-trace": "72aec2ed34b94b468c9bea9c68df71d7-90352a0a546bdd48-0",
-            "x-forwarded-for": "15.228.75.163",
-            "x-forwarded-host": "n8n.mayarj.com",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "7836abec8c3d",
-            "x-real-ip": "15.228.75.163"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "IDADES": "{IDADES}",
-            "STATUS": "NOVO LEAD",
-            "NOME DO LEAD": "{nome-completo}",
-            "TELEFONE DO LEAD": "{telefone}",
-            "MOMENTO DO CHAMADO": "{Momento_ChamadoLeadH}"
-          }
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-17T12:26:25.000Z",
-  "versionId": "ec06df14-037a-4ed7-9728-449249e5f88d"
+  "updatedAt": "2024-01-17T12:35:17.000Z",
+  "versionId": "7d3fa8d0-7493-4542-87c6-2294f95c0cdb"
 }
