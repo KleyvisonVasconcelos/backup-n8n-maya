@@ -1,11 +1,11 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
-    "Webhook": {
+    "Webhook1": {
       "main": [
         [
           {
-            "node": "Google Sheets",
+            "node": "Google Sheets1",
             "type": "main",
             "index": 0
           }
@@ -21,18 +21,18 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "a9da7230-c3b7-4638-a370-ff6fc9e626d4",
+        "path": "4596c22c-f0f0-4a2e-a641-1de8769b5b8e",
         "options": {}
       },
-      "id": "2e843770-be02-40aa-9d66-996d230594a5",
-      "name": "Webhook",
+      "id": "5b36f000-0be5-4ae1-aca8-2200f1e7e9ca",
+      "name": "Webhook1",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
         540,
         200
       ],
-      "webhookId": "5785a05b-88f0-4079-93de-5349a5104a73"
+      "webhookId": "4596c22c-f0f0-4a2e-a641-1de8769b5b8e"
     },
     {
       "parameters": {
@@ -53,104 +53,18 @@
         },
         "columns": {
           "mappingMode": "defineBelow",
-          "value": {
-            "MOMENTO DO CHAMADO": "={{ $json.body['MOMENTO DO CHAMADO'] }}",
-            "NOME": "={{ $json.body['NOME DO LEAD'] }}",
-            "TELEFONE": "={{ $json.body['TELEFONE DO LEAD'] }}",
-            "IDADES": "={{ $json.body.IDADES }}",
-            "ELEGIBILIDADE": "={{ $json.body.ELEGIBILIDADE }}",
-            "STATUS": "={{ $json.body.STATUS }}"
-          },
-          "matchingColumns": [
-            "MOMENTO DO CHAMADO"
-          ],
-          "schema": [
-            {
-              "id": "MOMENTO DO CHAMADO",
-              "displayName": "MOMENTO DO CHAMADO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "NOME",
-              "displayName": "NOME",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TELEFONE",
-              "displayName": "TELEFONE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "IDADES",
-              "displayName": "IDADES",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ELEGIBILIDADE",
-              "displayName": "ELEGIBILIDADE",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "STATUS",
-              "displayName": "STATUS",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "VALOR",
-              "displayName": "VALOR",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "OBSERVAÇÃO",
-              "displayName": "OBSERVAÇÃO",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            }
-          ]
+          "value": {},
+          "matchingColumns": [],
+          "schema": []
         },
         "options": {}
       },
-      "id": "72a9e782-cc80-4f2c-8d76-d1006ffacb67",
-      "name": "Google Sheets",
+      "id": "4c8ed6d0-7cda-48ba-9920-7ea2dbe423b4",
+      "name": "Google Sheets1",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        740,
+        800,
         200
       ],
       "credentials": {
@@ -161,13 +75,47 @@
       }
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Webhook1": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.mayarj.com",
+            "user-agent": "python-requests/2.26.0",
+            "content-length": "162",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate",
+            "content-type": "application/json",
+            "sentry-trace": "72aec2ed34b94b468c9bea9c68df71d7-90352a0a546bdd48-0",
+            "x-forwarded-for": "15.228.75.163",
+            "x-forwarded-host": "n8n.mayarj.com",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "7836abec8c3d",
+            "x-real-ip": "15.228.75.163"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "IDADES": "{IDADES}",
+            "STATUS": "NOVO LEAD",
+            "NOME DO LEAD": "{nome-completo}",
+            "TELEFONE DO LEAD": "{telefone}",
+            "MOMENTO DO CHAMADO": "{Momento_ChamadoLeadH}"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-17T10:34:24.000Z",
-  "versionId": "605f9fce-4967-4a7a-aebb-39ef89714389"
+  "updatedAt": "2024-01-17T12:26:25.000Z",
+  "versionId": "ec06df14-037a-4ed7-9728-449249e5f88d"
 }
