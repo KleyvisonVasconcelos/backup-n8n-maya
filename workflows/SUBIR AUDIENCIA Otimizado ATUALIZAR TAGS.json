@@ -1,0 +1,1284 @@
+{
+  "active": true,
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split In Batches": {
+      "main": [
+        [
+          {
+            "node": "Nome e telefone para validar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Definir Dados": {
+      "main": [
+        [
+          {
+            "node": "whatsapp valido?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "em inclusao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "em recuperacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta abordado pelo bot",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "INCLUSO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "finalizado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "recuperado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Atualizar telefone não válido": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nome e telefone para validar": {
+      "main": [
+        [
+          {
+            "node": "Formatando Nome e Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Verificar se é wpp válido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Verificar se é wpp válido": {
+      "main": [
+        [
+          {
+            "node": "Set Definir Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "cadastrado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrado?": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets Atualizar telefone não válido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "whatsapp valido?": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Cadastrar Usuario1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RabbitMQ Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "RabbitMQ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request Cadastrar Usuario1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-17T14:47:16.950Z",
+  "id": "roW1FNTsowI4nPh6",
+  "meta": null,
+  "name": "SUBIR AUDIENCIA Otimizado ATUALIZAR TAGS",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "f3205ebb-f38f-42f6-9163-87bdf8c52d24",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -5460,
+        1580
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "options": {
+          "returnAllMatches": "returnAllMatches"
+        }
+      },
+      "id": "88a44b18-6dcb-4469-9085-9e7b3c29e287",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -5140,
+        1580
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "f55ebd60-ffd6-4714-9d77-2fa88f01b953",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        -2600,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Nome",
+              "value": "={{ $('Formatando Nome e Telefone').item.json.Nome }}"
+            },
+            {
+              "name": "Sobrenome",
+              "value": "={{ $('Formatando Nome e Telefone').item.json.Sobrenome }}"
+            },
+            {
+              "name": "telefone",
+              "value": "=+{{ $json.phone }}"
+            },
+            {
+              "name": "Campo 1",
+              "value": "="
+            },
+            {
+              "name": "Campo 2",
+              "value": "="
+            },
+            {
+              "name": "Campo 3",
+              "value": "="
+            },
+            {
+              "name": "Campo 4",
+              "value": "="
+            }
+          ],
+          "number": [
+            {
+              "name": "ID Campo 1",
+              "value": 1272059
+            },
+            {
+              "name": "ID Campo 2"
+            },
+            {
+              "name": "ID Campo 3"
+            },
+            {
+              "name": "ID Campo 4"
+            },
+            {
+              "name": "ID Campo 5"
+            },
+            {
+              "name": "ID da Etiqueta 1"
+            },
+            {
+              "name": "ID da Etiqueta 2"
+            },
+            {
+              "name": "ID da Etiqueta 3"
+            },
+            {
+              "name": "ID da Etiqueta 4"
+            },
+            {
+              "name": "ID da Etiqueta 5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3d6cf82c-f18e-4cef-b48e-f248003ff9e6",
+      "name": "Set Definir Dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1600,
+        1580
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM INCLUSAO"
+            },
+            {
+              "value2": "EM RECUPERACAO",
+              "output": 1
+            },
+            {
+              "value2": "ABORDADO PELO BOT",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "fc06e97e-f9f0-4d5d-986d-523cfbded8ca",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "INCLUSO"
+            },
+            {
+              "value2": "FINALIZADO",
+              "output": 1
+            },
+            {
+              "value2": "RECUPERADO",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "a773939a-c492-4ab5-80ee-49d2641938f6",
+      "name": "Switch1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        1100
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM CLASSIFICACAO"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "3184320d-8117-4275-ae17-8ca757c9c7fd",
+      "name": "Switch2",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961563/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "2404d2cb-7e23-4d50-a388-dc55df317f76",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1540
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "44315572-1f11-4abf-b17b-bbf66739a0d6",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        2160
+      ],
+      "webhookId": "9571105e-ee9d-43c6-bf7f-a992b306a9ba",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "columnToMatchOn": "ID",
+        "valueToMatchOn": "={{ $('Split In Batches').item.json.ID }}",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "WHATSAPP CADASTRADO",
+              "fieldValue": "=SEM WHATSAPP"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1b952c14-70be-4f0b-8d89-08ab9cce3788",
+      "name": "Google Sheets Atualizar telefone não válido",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -460,
+        2040
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.z-api.io/instances/3BAE860F0ADEB0A7E993D6DE7E9F2DF0/token/5B29C948AD29016FB2E58702/phone-exists/{{ $json.whatsapp.replace(\"+\",\"\") }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Client-Token",
+              "value": "Ff5a9099161b04e319b99c5f785417d9dS"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "56fbeb80-fc1f-421f-b68b-af22f7c554be",
+      "name": "HTTP Request Verificar se é wpp válido",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -1900,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// A string de entrada contendo números de telefone separados por vírgulas\nconst inputString = items[0].json.TEXTO;\n\n// Separando a string em um array de números de telefone\nconst textoArray = inputString.split('/');\n\n// Iterando sobre o array e criando objetos com os dados necessários\nconst resultado = textoArray.map(numero => {\n    return {\nTelSeparado: numero,\n...items[0].json\n        // Adicione outras colunas conforme necessário\n    };\n});\n\n// Saída dos dados no formato adequado para o n8n\nreturn resultado;\n"
+      },
+      "id": "76a39a6b-fbc5-42b7-8883-ca8027b21bb4",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2860,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "TEXTO",
+              "stringValue": "={{ $json['TELEFONES DE CONTATO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7527f38b-5aa6-46f6-9c45-f8dd7bcc1bf3",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        -3120,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "telefone",
+              "value": "={{ $json.TelSeparado }}"
+            },
+            {
+              "name": "nomeCompleto",
+              "value": "={{ $json['NOME DO BENEFICIARIO'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1bc9852e-d96f-4311-a42f-00dcff31fe33",
+      "name": "Nome e telefone para validar",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -2380,
+        1580
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = item.json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = item.json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "77511c6c-2c62-45be-890a-a7d5975511a3",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -2140,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $('Split In Batches').item.json.ID }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "04df1314-f48c-4e61-93bc-e6682d8f85bf",
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        -920,
+        1860
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['WHATSAPP CADASTRADO'] }}",
+              "value2": "✅✅"
+            }
+          ]
+        }
+      },
+      "id": "71f815b4-5aed-4357-926b-70d37e7fda90",
+      "name": "cadastrado?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        1860
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.exists.toString() }}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "de427124-2d45-48ce-a1a3-c5e101d322c7",
+      "name": "whatsapp valido?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1340,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $('Split In Batches').item.json.ID }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f65de22b-f686-4cc0-85a2-c33ea2297262",
+      "name": "Google Sheets4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        -1080,
+        1420
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "9c213690-dd95-48ee-a35e-7b6d12bafcd4",
+      "name": "No Operation, do nothing2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1120,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "ATUALIZAR CAMPOS",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          }
+        }
+      },
+      "id": "a3cb9718-055e-4ca9-b827-9b938b909961",
+      "name": "RabbitMQ",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1.1,
+      "position": [
+        -4560,
+        1580
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "zgS6vltXIo2S17Ev",
+          "name": "Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "ATUALIZAR CAMPOS",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "jsonParseBody": true,
+          "onlyContent": true,
+          "parallelMessages": 3
+        }
+      },
+      "id": "31005e0f-27ae-4241-b9f2-0f8b64f9a431",
+      "name": "RabbitMQ Trigger",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -3400,
+        1580
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "zgS6vltXIo2S17Ev",
+          "name": "Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json['WHATSAPP CADASTRADO'] }}",
+              "value2": "✅✅"
+            },
+            {
+              "value1": "={{ $json['AGENDA SUGERIDA PARA PROXIMO CONTATO'] }}",
+              "operation": "notEqual",
+              "value2": "13/11/2023"
+            },
+            {
+              "value1": "={{ $json['AGENDA SUGERIDA PARA PROXIMO CONTATO'] }}",
+              "operation": "notEqual",
+              "value2": "17/11/2023"
+            }
+          ]
+        }
+      },
+      "id": "e6ba7109-5243-42f6-8693-3534711d3964",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 1,
+      "position": [
+        -4880,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119653"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ba60e18f-b0b7-43b8-b972-0ea40e3226b6",
+      "name": "finalizado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119523"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "22edb50f-efbb-4c98-b308-4aad8ca685d2",
+      "name": "recuperado",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1360
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119370"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "342fe01a-ba35-453d-9862-894ca5bab4fa",
+      "name": "em inclusao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        420
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119462"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c0e94d1c-87f3-4e41-9263-64defc045bfb",
+      "name": "em recuperacao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        600
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961557/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "fadb83c8-2d10-454b-959c-687a62a196c7",
+      "name": "HTTP Request Adicionar Etiqueta abordado pelo bot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        800
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119473"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3f19f675-56ce-4aef-938a-f3eb60041ef7",
+      "name": "INCLUSO",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        1560,
+        1000
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "={{ $('Set Definir Dados').item.json.telefone }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $('Set Definir Dados').item.json.Nome }}"
+            },
+            {
+              "name": "=last_name",
+              "value": "={{ $('Set Definir Dados').item.json.Sobrenome }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d653a064-f5af-453a-a5c9-75b72d36248f",
+      "name": "HTTP Request Cadastrar Usuario1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        -720,
+        1340
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "RabbitMQ Trigger": [
+      {
+        "json": {
+          "row_number": 7,
+          "EMPRESA DO BENEFICIARIO": "ASTCERJ",
+          "TIPO CONTRATANTE": "ASSOCIACAO",
+          "EMPRESA CONTRATANTE": "MEDI",
+          "OPERADORA DE SAUDE": "AMIL",
+          "NOME DO PROGRAMA": "ASTCERJ SAUDE",
+          "MATRICULA DE UTILIZACAO NO PLANO": "972499431",
+          "COD PRODUTO": "",
+          "NOME DO BENEFICIARIO": "ILDA NEVES GONZAGA",
+          "ENTRADA NO PROGRAMA": "23/08/2017",
+          "TIT/DEP": "DEPENDENTE",
+          "DATA DE NASCIMENTO": "11/06/1930",
+          "IDADE": 94,
+          "SEXO": "FEMININO",
+          "UF": "",
+          "NOME DO TITULAR": "ADELEA NEVES GONZAGA BARBOSA",
+          "RESPONSAVEL": "ADELEA",
+          "GRAU DE PARENTESCO DO RESPONSAVEL": "FILHO (A)",
+          "PROGRAMA DE ATENCAO": "SENIORS",
+          "GRAU DE RISCO": "MEDIO",
+          "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO": "",
+          "MOTIVO DO ACOMPANHAMENTO": "HIPERTENSAO ARTERIAL",
+          "CID PRINCIPAL": "I15",
+          "GRUPO DE DOENCAS": "DOENCA DO APARELHO CIRCULATORIO",
+          "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS": "HIPERCOLESTEROLEMIA / HIPOTIREOIDISMO / BRONCOESPASMO /  /  /  / ",
+          "CIDS SECUNDÁRIOS": "",
+          "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO": "",
+          "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE": "",
+          "UTI": "",
+          "DATA DO ULTIMO CONTATO": "11/01/2024",
+          "RESPONSAVEL PELO CONTATO": "THAYNAN LIMA",
+          "HISTORICO DO CONTATO": "SWELEN 27/04/2020\nEM CONTATO 21994786483 SRA ADELEA (FILHA) INFORMOU BENEFICIARIA ESTAVEL, SEM INTERCORRENCIAS. ACOMPANHAMENTO TRIMESTRAL COM CARDIOLOGISTA, ENDOCRINOLOGISTA E ORTOPEDISTA. EM USO DE CORDAREX, SOMALGIN CARDIO 81, DIOSMIN, NIMOVAS 30, LAMOTRIGINA, PURAN 50MG, SINVASTATINA 20 E CENTRUM PARA HIPERTENSAO ARTERIAL, INSUFICIENCIA VASCULAR, DEPRESSAO, HIPOTIREOIDISMO, HIPERCOLESTEROLEMIA E SUPLIMENTO POIS APRESENTA POUCO APETITE E ALIMENTAÇAO IRREGULAR. TOMOU VACINA CONTRA GRIPE. RESPEITANDO O DISTANCIAMENTO SOCIAL. PERMANECE MEDIDAS.\n\n********************************************\n\nGABRIELE GONCALVES 14/07/2021\nEM CONTATO COM A BENEFICIARIA, SEM SUCESSO, DA ERRO, NAO POSSUI WHATSAPP. \n\n********************************************\n\nGABRIELE GONCALVES 18/08/2021\nEM CONTATO SEM SUCESSO, FICA MUDO. 2 TENTATIVAS \n\n**********************************\nGIZELE LOPES 20/08/2021\n\nEM CONTATO COM 21 24730163, Sr.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA FAZ ACOMPANHAMENTO COM CARDIOLOGISTA ANUALMENTE, NEUROLOGISTA SEMESTRALMENTE, FEZ RESSONANCIA DO CRANIO A POUCO TEMPO, FEZ AS DUAS DOSES DA VACINA CONTRA COVID19 (CORONAVAC), FEZ A VACINA DA GRIPE, FEZ A VACINA DA PNEUMONIA, NAO POSSUI INDICACAO PARA REALIZAR PROCEDIMENTOS E EXAMES DE ALTAS COMPLEXIDADES. FAZ USO DAS MESMAS MEDICACOES NÃO HOUVE MUDANCA. \n\nAMANDA SALDANHA 21/10\n\nEM CONTATO COM 21 994786483, BENEFICIARIA INFORMA QUE ESTA EM ACOMPANHAMENTO MEDICO COM ONCOLOGISTA MENSAL, RECEBEU EM JULH9O DIAGNOSTICO DE LEUCEMIA, TRANSPLANTE DE MEDULA EM JANEIRO, REALIZOU QUIOMIOTERAPIA DEZ/2020 E RADIOTERAPIA 15 SESSOES TAMBÉM EM 2020, NEGA CIRURGIAS E EXAMES DE ALTA COMPLEXIDADE, FAZ USO DE VARIOS MEDICAMENTOS CONTINUOS, REFERE HAS E DIABETES MELLITUS, MEDIDAS ANTROPOMETRICAS 64KG E 1,57CM, REALIZOU AS TRES DOSES DA VACINA CONTRA O COVID19.\n\nGIZELE LOPES 23/11/2021\n\nEM CONTATO COM 21 24730163, SEM SUCESSO SO CHAMA E CAI. \n\nGIZELE LOPES 25/11/2021\n \nEM CONTATO COM 21 24730163, SR.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA ESTA ESTAVEL, EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, TEM TIO PROBLEMAS COM RELACAO A MEMORIA, NAO PASSOU MAIORES INFORMACOES. \n\nAMANDA SALDANHA 250322\n\nEM CONTATO 2124730163, SSRA ADELEA, INFORMA QUE NO DIA 23 DE DEZEMBRO DE 2021, BENEFICIARIA REALIZOU UMA CIRURGIA DEVIDO A FRATURA NA CABEÇA DO FEMUR DIREITO, UTILIZOU PROTESE, EM FISIOTERAPIA 3X POR SEMANA, DEAMBULA COM ANDADOR. EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, CARTEIRA DE VACINACAO EM DIA. ACOMPANHAMENTO MEDICO COM CARDIOLOGISTA E NEUROLOGISTA. NEGA INDICACOES CIRURGIAS E EXAMES DE ALTA COMPLEXIDADES. \n\n\nKAROLINE RODRIGUES 26/07/2022\n\nEM CONTATO PELO NÚMERO 21 24730163\nSRA. ADELEIA INFORMA QUE BENEFICIÁRIA ENCONTRASE ESTÁVEL, INFORMA QUE DEVIDO A QUEDA EM DEZEMBRO QUEBROU A CABEÇA DO FEMUR DIREITO E PRECISOU PASSAR POR PROCEDIMENTOS, ATUALMENTE ENCONTRASE EM RECUPERAÇÃO, REALIZA ACOMPANHAEMENTO MÉDICO COM GERIATRA, REALIZA USO DOS MESMOS MEDICAMENTOS CONTÍNUOS SEM ALTERAÇÕES, NEGA INDICAÇÃO PARA CIRURGIA E IRÁ REALIZAR EXAMES DE ROTINA, NÃO RECEBEU DIAGNOSTICOS MÉDICO RECENTEMENTE, INFORMA VACINAS EM DIA E SEM MAIS INFORMAÇÕES\n\nAMANDA SALDANHA 291122\n\nEM CONTATO COM21 24730163, CHAMA ATE CAIR. \n\n\nAMANDA SALDANHA 100323\n\nEM CONTATO COM 21 24730163, CHAMA ATE CAIR.\nENVIADO MENSAGEM\n\n_____________________//____________________\nTHAYNAN LIMA 11/01/2024\nEM CONTATOP COM O NUMERO 2124730163 , GRAVE SEU RECADO 3 TENTATIVA SEM SUCESSO",
+          "STATUS DO ACOMPANHAMENTO MAIS RECENTE": "ACOMPANHAMENTO SEM SUCESSO",
+          "OBSERVAÇÕES": "NAO POSSUI WHATSAPP",
+          "AGENDA SUGERIDA PARA PROXIMO CONTATO": "20/05/2024",
+          "DATA DE FINALIZACAO": "",
+          "CAPTADO VIA": "",
+          "ID": 6,
+          "GRUPO DE DISPARO DE MATERIAL - BOT": "2. Do Sistema Cardiológico e Circulatório",
+          "STATUS DA TRIAGEM": "RECUPERADO",
+          "TELEFONES DE CONTATO": "2124730163",
+          "PHONE": "2124730163",
+          "FAIXA ETÁRIA": "59 +",
+          "FIM": "",
+          "WHATSAPP CADASTRADO": "",
+          "MEDICAMENTO": "",
+          "PESO(KG)": "",
+          "ALTURA(CM)": "",
+          "MEDE OBESIDADE": "",
+          "AFERE GLICOSE": "",
+          "MEDE DIABETES": "",
+          "AFERE PRESSAO": "",
+          "MEDE HIPERTENSAO": "",
+          "MEDICO ESPECIALISTA": "",
+          "QUEIXA RELATADA": "",
+          "REMEDIO_BOT": "",
+          "PATOLOGIA_BOT": "",
+          "OBESIDADE_BOT": "",
+          "DIABETES_BOT": "",
+          "PRESSAO_BOT": "",
+          "ACOMPANHAMENTO_BOT": "",
+          "SINTOMA_BOT": "",
+          "LGPD_BOT": "",
+          "CHECKUP_BOT": "",
+          "CRONICO_BOT": "",
+          "OBSERVACAO_BOT": "",
+          "DATA_CHAMADO_BOT": "",
+          "DATA_INTERACAO_BOT": "",
+          "LIGACAO_SOLICITADA_BOT": "",
+          "DATA_SOLICITACAO_LIGACAO_BOT": ""
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    },
+    "node:Google Sheets Trigger": {
+      "documentId": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+      "sheetId": 887746287,
+      "lastRevision": 89499,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=89499&exportFormat=xlsx"
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2024-01-11T21:50:39.405Z",
+      "updatedAt": "2024-01-11T21:50:39.405Z",
+      "id": "RvIHquTBgwK9F8iE",
+      "name": "Medi"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-17T15:21:22.000Z",
+  "versionId": "deac671d-4dfd-430b-950d-fb556bc09dcb"
+}
