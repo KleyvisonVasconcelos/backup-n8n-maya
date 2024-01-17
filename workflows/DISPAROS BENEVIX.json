@@ -1,0 +1,173 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-17T10:33:53.160Z",
+  "id": "0vlTJTblLMLgNVoY",
+  "meta": null,
+  "name": "DISPAROS BENEVIX",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "a9da7230-c3b7-4638-a370-ff6fc9e626d4",
+        "options": {}
+      },
+      "id": "2e843770-be02-40aa-9d66-996d230594a5",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        540,
+        200
+      ],
+      "webhookId": "5785a05b-88f0-4079-93de-5349a5104a73"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1VCrc-z6pwrFWgO1LfquevdP2hmUdlXNzwNpHKMZG1LY",
+          "mode": "list",
+          "cachedResultName": "CONTROLE - BENEVIX",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VCrc-z6pwrFWgO1LfquevdP2hmUdlXNzwNpHKMZG1LY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "LEADS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VCrc-z6pwrFWgO1LfquevdP2hmUdlXNzwNpHKMZG1LY/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "MOMENTO DO CHAMADO": "={{ $json.body['MOMENTO DO CHAMADO'] }}",
+            "NOME": "={{ $json.body['NOME DO LEAD'] }}",
+            "TELEFONE": "={{ $json.body['TELEFONE DO LEAD'] }}",
+            "IDADES": "={{ $json.body.IDADES }}",
+            "ELEGIBILIDADE": "={{ $json.body.ELEGIBILIDADE }}",
+            "STATUS": "={{ $json.body.STATUS }}"
+          },
+          "matchingColumns": [
+            "MOMENTO DO CHAMADO"
+          ],
+          "schema": [
+            {
+              "id": "MOMENTO DO CHAMADO",
+              "displayName": "MOMENTO DO CHAMADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IDADES",
+              "displayName": "IDADES",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ELEGIBILIDADE",
+              "displayName": "ELEGIBILIDADE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "STATUS",
+              "displayName": "STATUS",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "VALOR",
+              "displayName": "VALOR",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "OBSERVAÇÃO",
+              "displayName": "OBSERVAÇÃO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "72a9e782-cc80-4f2c-8d76-d1006ffacb67",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        740,
+        200
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Cgmgitz8hHNbDrfy",
+          "name": "JORDANA"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-17T10:34:24.000Z",
+  "versionId": "605f9fce-4967-4a7a-aebb-39ef89714389"
+}
