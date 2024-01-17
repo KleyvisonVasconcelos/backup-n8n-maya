@@ -314,8 +314,7 @@
       "position": [
         -5460,
         1580
-      ],
-      "disabled": true
+      ]
     },
     {
       "parameters": {
@@ -921,7 +920,7 @@
             {
               "value1": "={{ $json['AGENDA SUGERIDA PARA PROXIMO CONTATO'] }}",
               "operation": "notEqual",
-              "value2": "13/11/2023"
+              "value2": "17/11/2023"
             },
             {
               "value1": "={{ $json['AGENDA SUGERIDA PARA PROXIMO CONTATO'] }}",
@@ -1279,6 +1278,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-17T15:21:22.000Z",
-  "versionId": "deac671d-4dfd-430b-950d-fb556bc09dcb"
+  "updatedAt": "2024-01-17T15:57:00.000Z",
+  "versionId": "5dd03c12-2eee-4b05-b24f-3b6e7ec27ee1"
 }
