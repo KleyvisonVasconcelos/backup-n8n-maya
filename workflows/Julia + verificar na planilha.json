@@ -1,0 +1,99 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-18T19:41:15.906Z",
+  "id": "9LVtE4RlbkJeIOgI",
+  "meta": null,
+  "name": "Julia + verificar na planilha",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "verificar-planilha-julia",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "a589ad7d-e5a9-4323-87c4-3c41ee9cd99c",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        980
+      ],
+      "webhookId": "775bec8b-a0ff-4d41-924a-dce0cb8d397e"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "TELEFONE FORMATADO",
+              "lookupValue": "={{ $json.body.telefone }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6b1f5c54-5f4a-4cb2-ad8f-83f579b150dc",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        140,
+        980
+      ],
+      "retryOnFail": true,
+      "waitBetweenTries": 3000,
+      "maxTries": 5,
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Google Sheets Trigger": {
+      "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
+      "sheetId": 448379726,
+      "lastRevision": 18735,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18735&exportFormat=xlsx",
+      "lastIndexChecked": 252
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-18T19:41:39.000Z",
+  "versionId": "2b85598a-f682-4ae1-a5f5-ae3a23f99c3f"
+}
