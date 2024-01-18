@@ -76,7 +76,47 @@
       "main": [
         [
           {
+            "node": "nome e telefone preenchidos?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nome e telefone preenchidos?": {
+      "main": [
+        [
+          {
             "node": "telefone vazio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "1min",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "nome e telefone preenchidos?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1min": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
             "type": "main",
             "index": 0
           }
@@ -114,7 +154,6 @@
         },
         "options": {
           "columnsToWatch": [
-            "NOME",
             "TELEFONE"
           ]
         }
@@ -124,8 +163,8 @@
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        520,
-        640
+        140,
+        660
       ],
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
@@ -382,27 +421,60 @@
     },
     {
       "parameters": {
-        "operation": "delete",
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.TELEFONE }}",
+              "operation": "isNotEmpty"
+            },
+            {
+              "value1": "={{ $json.NOME }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "2f2d3b39-d114-468f-84bf-335c0b25e060",
+      "name": "nome e telefone preenchidos?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        400,
+        660
+      ]
+    },
+    {
+      "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
-          "mode": "url",
-          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+          "value": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+          "mode": "list",
+          "cachedResultName": "BOT-SEBASTIAN",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188",
-          "mode": "url",
-          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
+          "value": 482129188,
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=482129188"
         },
-        "startIndex": "={{ $json.row_number }}"
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "TELEFONE",
+              "lookupValue": "={{ $json.TELEFONE }}"
+            }
+          ]
+        },
+        "options": {}
       },
-      "id": "b9bf2be6-ff45-4330-8cbb-d43c0caf7ce8",
-      "name": "Google Sheets2",
+      "id": "3a17a2df-431e-48ca-9754-31675e2c6b6d",
+      "name": "Google Sheets1",
       "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4,
+      "typeVersion": 4.1,
       "position": [
-        1080,
+        400,
         1040
       ],
       "credentials": {
@@ -411,9 +483,33 @@
           "name": "bot.maya.n8n@gmail.com"
         }
       }
+    },
+    {
+      "parameters": {
+        "unit": "minutes"
+      },
+      "id": "76836840-b82f-45ff-b8ad-5e76bced7df5",
+      "name": "1min",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        400,
+        840
+      ],
+      "webhookId": "6dba5daf-517f-439e-ba0d-a67fa19fc839"
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Google Sheets Trigger": [
+      {
+        "json": {
+          "TELEFONE FORMATADO": "+5521998566186",
+          "TELEFONE": "21998566186",
+          "NOME": "ANDRE TAVARES DE MIRANDA ALVES"
+        }
+      }
+    ]
+  },
   "settings": {
     "executionOrder": "v1"
   },
@@ -428,12 +524,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 66951,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66951&exportFormat=xlsx"
+      "lastRevision": 66972,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=66972&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-18T16:41:31.000Z",
-  "versionId": "03ae0735-7ff1-43c5-9c73-84fe4aaba458"
+  "updatedAt": "2024-01-18T20:19:08.000Z",
+  "versionId": "0b3b3000-0f0b-4d0b-a9ee-8dc114dc04ac"
 }
