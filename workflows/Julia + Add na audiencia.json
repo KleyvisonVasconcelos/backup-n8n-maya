@@ -1,0 +1,529 @@
+{
+  "active": true,
+  "connections": {
+    "Split In Batches": {
+      "main": [
+        [
+          {
+            "node": "Nome e telefone para validar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nome e telefone para validar": {
+      "main": [
+        [
+          {
+            "node": "Formatando Nome e Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone vazio": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "nome e telefone preenchidos?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nome e telefone preenchidos?": {
+      "main": [
+        [
+          {
+            "node": "telefone vazio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "1min",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "nome e telefone preenchidos?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1min": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-12-05T23:13:44.286Z",
+  "id": "Cjy4Wuqs1Wuv6NuL",
+  "meta": null,
+  "name": "Julia + Add na audiencia",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
+          "mode": "list",
+          "cachedResultName": "BOT-JULIA",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 448379726,
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726"
+        },
+        "options": {
+          "columnsToWatch": [
+            "NOME"
+          ]
+        }
+      },
+      "id": "22562cb6-ea0a-4ef2-91ba-3c93519ca3e1",
+      "name": "Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        140,
+        480
+      ],
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "hzggfIVge1lSLJ6h",
+          "name": "bot.maya.n8n@gmail.com trigger"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "0bcecce3-fba6-4818-92c4-d508ba1437b8",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        900,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726",
+          "mode": "url",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726",
+          "mode": "url",
+          "__regex": "https:\\/\\/docs\\.google\\.com/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+\\/edit\\#gid=([0-9]+)"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "TELEFONE FORMATADO": "={{ $json.whatsapp }}",
+            "TELEFONE": "={{ $('telefone vazio').item.json.TELEFONE }}"
+          },
+          "matchingColumns": [
+            "TELEFONE"
+          ],
+          "schema": [
+            {
+              "id": "TELEFONE FORMATADO",
+              "displayName": "TELEFONE FORMATADO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TELEFONE",
+              "displayName": "TELEFONE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "NOME",
+              "displayName": "NOME",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {
+          "locationDefine": {
+            "values": {
+              "firstDataRow": "={{ $('telefone vazio').item.json.row_number }}"
+            }
+          }
+        }
+      },
+      "id": "9bf406cf-53e8-4cff-aefd-6d3577deec54",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        1700,
+        460
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "https://conectawebhook.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{ $json.whatsapp }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $json.Nome }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $json.Sobrenome }}"
+            }
+          ]
+        }
+      },
+      "name": "Cadastrando na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        660
+      ],
+      "id": "6c8ecee6-c51d-4dd0-9162-62990b9e51c4",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Q3W93rwwK5VFa55P",
+          "name": "BC - JULIA"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "=telefone",
+              "value": "={{ $json.TELEFONE.toString() }}"
+            },
+            {
+              "name": "nomeCompleto",
+              "value": "={{ $json.NOME }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6c3d079b-9dd3-4514-8923-6658a0914063",
+      "name": "Nome e telefone para validar",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1120,
+        480
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = items[0].json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = items[0].json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "a4dec782-de85-46a8-b42a-5dbc00d6ca37",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/send_flow/\n",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "flow",
+              "value": "=302138"
+            }
+          ]
+        }
+      },
+      "name": "enviar fluxo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        660
+      ],
+      "id": "a76f797d-c6ca-47e0-8736-3628f2141bd6",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Q3W93rwwK5VFa55P",
+          "name": "BC - JULIA"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "minutes"
+      },
+      "id": "5644d142-68de-4690-a748-a224343f5209",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        660
+      ],
+      "webhookId": "cf4e8b1f-c2c2-4630-be41-2a9e08a8a2be"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.TELEFONE }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "e68625e6-f383-4116-9e96-c871231de3b9",
+      "name": "telefone vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        620,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.TELEFONE }}",
+              "operation": "isNotEmpty"
+            },
+            {
+              "value1": "={{ $json.NOME }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "8f0ccc81-b818-4f4f-870f-cb70b3e34ed7",
+      "name": "nome e telefone preenchidos?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        380,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
+          "mode": "list",
+          "cachedResultName": "BOT-JULIA",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 448379726,
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o/edit#gid=448379726"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "TELEFONE",
+              "lookupValue": "={{ $json.TELEFONE }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7f4e56cc-502a-4f9a-aacf-abcdcb807556",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        380,
+        860
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "minutes"
+      },
+      "id": "7435a949-3aa9-4d8a-be0d-0d4c1be06d36",
+      "name": "1min",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        380,
+        660
+      ],
+      "webhookId": "6dba5daf-517f-439e-ba0d-a67fa19fc839"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Google Sheets Trigger": {
+      "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
+      "sheetId": 448379726,
+      "lastRevision": 18746,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18746&exportFormat=xlsx",
+      "lastIndexChecked": 252
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-01-18T20:01:43.000Z",
+  "versionId": "680f198a-d522-4d48-8e5d-0ca2ac213240"
+}
