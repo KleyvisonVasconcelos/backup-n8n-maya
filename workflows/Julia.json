@@ -643,13 +643,13 @@
     "node:Google Sheets Trigger": {
       "documentId": "1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o",
       "sheetId": 448379726,
-      "lastRevision": 18709,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18709&exportFormat=xlsx",
+      "lastRevision": 18732,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1_PYgJ1kybEGr2-XK2rjuaWhzfHFgFppDaz0TnIT6b8o&revision=18732&exportFormat=xlsx",
       "lastIndexChecked": 252
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2024-01-18T12:05:47.000Z",
-  "versionId": "aaf9f809-0824-4ab6-b5a9-0311ae3793e8"
+  "updatedAt": "2024-01-18T18:28:57.000Z",
+  "versionId": "c1cd213a-3e86-4dfc-be96-d354b8368591"
 }
