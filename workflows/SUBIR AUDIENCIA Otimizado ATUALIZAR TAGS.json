@@ -892,7 +892,7 @@
           },
           "jsonParseBody": true,
           "onlyContent": true,
-          "parallelMessages": 3
+          "parallelMessages": 2
         }
       },
       "id": "31005e0f-27ae-4241-b9f2-0f8b64f9a431",
@@ -1257,7 +1257,8 @@
   "settings": {
     "executionOrder": "v1",
     "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner"
+    "callerPolicy": "workflowsFromSameOwner",
+    "saveDataSuccessExecution": "none"
   },
   "staticData": {
     "node:Schedule Trigger": {
@@ -1279,6 +1280,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-17T17:33:40.000Z",
-  "versionId": "32a022fa-9be6-4dcb-96ab-401283f5e5a5"
+  "updatedAt": "2024-01-18T12:20:35.000Z",
+  "versionId": "5a56450e-8620-4f93-8e63-76e51eeea9e7"
 }
