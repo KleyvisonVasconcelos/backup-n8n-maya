@@ -105,7 +105,7 @@
       "main": [
         [
           {
-            "node": "nome e telefone preenchidos?",
+            "node": "nome e telefone preenchidos?1",
             "type": "main",
             "index": 0
           }
@@ -117,6 +117,17 @@
         [
           {
             "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nome e telefone preenchidos?1": {
+      "main": [
+        [
+          {
+            "node": "telefone vazio",
             "type": "main",
             "index": 0
           }
@@ -497,6 +508,30 @@
         840
       ],
       "webhookId": "6dba5daf-517f-439e-ba0d-a67fa19fc839"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.TELEFONE }}",
+              "operation": "isNotEmpty"
+            },
+            {
+              "value1": "={{ $json.NOME }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "9a587b1a-d61a-4775-884e-36158caa32df",
+      "name": "nome e telefone preenchidos?1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        600,
+        1040
+      ]
     }
   ],
   "pinData": {
@@ -530,6 +565,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-01-19T20:06:08.000Z",
-  "versionId": "0b3b3000-0f0b-4d0b-a9ee-8dc114dc04ac"
+  "updatedAt": "2024-01-19T20:52:46.000Z",
+  "versionId": "43b27bf6-820c-4914-a917-7e9947dc6468"
 }
