@@ -60,77 +60,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request Atualizar Campo EMPRESA",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo  P SAUDE",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo PATOLOGIA",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo MATRICULA",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo G-SEXO",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo GRAU DE RISCO",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Wait 2 segundos",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo data proximo contato - melhordata",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo Especialidade_PAIS",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo DIABETES",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo pressao-usuario",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo Sintoma_PAIS",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Google Sheets1",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Switch",
+            "node": "IF1",
             "type": "main",
             "index": 0
           }
@@ -452,6 +382,105 @@
           }
         ]
       ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo EMPRESA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo  P SAUDE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo PATOLOGIA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo MATRICULA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo G-SEXO",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo GRAU DE RISCO",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo data proximo contato - melhordata",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo Especialidade_PAIS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo DIABETES",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo pressao-usuario",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request Atualizar Campo Sintoma_PAIS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait 2 segundos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets Atualizar telefone não válido1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Atualizar telefone não válido1": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-01-11T22:29:40.282Z",
@@ -640,7 +669,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        460,
+        680,
         4660
       ],
       "webhookId": "cb631e92-510d-4f95-af72-41cbadcd645e",
@@ -684,7 +713,8 @@
       "position": [
         -5460,
         1380
-      ]
+      ],
+      "disabled": true
     },
     {
       "parameters": {
@@ -734,7 +764,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         1800
       ],
       "retryOnFail": true,
@@ -770,7 +800,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         2000
       ],
       "retryOnFail": true,
@@ -806,7 +836,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         2200
       ],
       "retryOnFail": true,
@@ -842,7 +872,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         2400
       ],
       "retryOnFail": true,
@@ -878,7 +908,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         2820
       ],
       "retryOnFail": true,
@@ -901,7 +931,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        -60,
+        160,
         2160
       ],
       "webhookId": "997fbd1a-ee7f-4dde-9cac-f20de804a7fa",
@@ -941,7 +971,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 3,
       "position": [
-        -460,
+        -240,
         2040
       ],
       "retryOnFail": true,
@@ -999,7 +1029,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         3240
       ],
       "retryOnFail": true,
@@ -1035,7 +1065,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         3440
       ],
       "retryOnFail": true,
@@ -1071,7 +1101,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         3620
       ],
       "retryOnFail": true,
@@ -1107,7 +1137,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         3860
       ],
       "retryOnFail": true,
@@ -1143,7 +1173,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         4040
       ],
       "retryOnFail": true,
@@ -1179,7 +1209,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         2620
       ],
       "retryOnFail": true,
@@ -1214,7 +1244,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         3020
       ],
       "retryOnFail": true,
@@ -1952,7 +1982,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        460,
+        680,
         4360
       ],
       "retryOnFail": true,
@@ -2173,7 +2203,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -640,
+        -420,
         1860
       ]
     },
@@ -2228,7 +2258,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.1,
       "position": [
-        -1140,
+        -1120,
         1440
       ],
       "retryOnFail": true,
@@ -2257,7 +2287,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -960,
+        -900,
         1440
       ]
     },
@@ -3127,7 +3157,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        180,
+        400,
         300
       ]
     },
@@ -3157,7 +3187,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        180,
+        400,
         900
       ]
     },
@@ -3179,7 +3209,7 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 1,
       "position": [
-        180,
+        400,
         1340
       ]
     },
@@ -3196,7 +3226,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         1340
       ],
       "credentials": {
@@ -3229,7 +3259,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         980
       ],
       "credentials": {
@@ -3262,7 +3292,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         1160
       ],
       "credentials": {
@@ -3295,7 +3325,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         220
       ],
       "credentials": {
@@ -3328,7 +3358,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         400
       ],
       "credentials": {
@@ -3352,7 +3382,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         600
       ],
       "credentials": {
@@ -3385,7 +3415,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        680,
+        900,
         800
       ],
       "credentials": {
@@ -3395,57 +3425,124 @@
         }
       },
       "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.full_name.toLowerCase() }}",
+              "value2": "={{ $('Google Sheets4').item.json['NOME DO BENEFICIARIO'].toLowerCase() }}"
+            }
+          ]
+        }
+      },
+      "id": "67232adf-fdc5-4380-bd6e-d38bb82af8ba",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 887746287,
+          "mode": "list",
+          "cachedResultName": "db_pais",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
+        },
+        "columnToMatchOn": "ID",
+        "valueToMatchOn": "={{ $('Split In Batches').item.json.ID }}",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "WHATSAPP CADASTRADO",
+              "fieldValue": "=DUPLICADO"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f91b8b34-8a2d-4a58-a05c-baa1b14e3c29",
+      "name": "Google Sheets Atualizar telefone não válido1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        1700
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7pdm5d8YpeYmTF0Y",
+          "name": "medi"
+        }
+      }
     }
   ],
   "pinData": {
     "RabbitMQ Trigger": [
       {
         "json": {
-          "row_number": 7,
-          "EMPRESA DO BENEFICIARIO": "ASTCERJ",
-          "TIPO CONTRATANTE": "ASSOCIACAO",
-          "EMPRESA CONTRATANTE": "MEDI",
-          "OPERADORA DE SAUDE": "AMIL",
-          "NOME DO PROGRAMA": "ASTCERJ SAUDE",
-          "MATRICULA DE UTILIZACAO NO PLANO": "972499431",
+          "row_number": 1737,
+          "EMPRESA DO BENEFICIARIO": "DAFEL",
+          "TIPO CONTRATANTE": "CORRETORA",
+          "EMPRESA CONTRATANTE": "LUDI",
+          "OPERADORA DE SAUDE": "BRADESCO",
+          "NOME DO PROGRAMA": "SALUDI",
+          "MATRICULA DE UTILIZACAO NO PLANO": "775071002720028",
           "COD PRODUTO": "",
-          "NOME DO BENEFICIARIO": "ILDA NEVES GONZAGA",
-          "ENTRADA NO PROGRAMA": "23/08/2017",
+          "NOME DO BENEFICIARIO": "AMANDA ZAMBELLI ZANELLI OLIVEIRA",
+          "ENTRADA NO PROGRAMA": "16/03/2023",
           "TIT/DEP": "DEPENDENTE",
-          "DATA DE NASCIMENTO": "11/06/1930",
-          "IDADE": 94,
+          "DATA DE NASCIMENTO": "16/03/1946",
+          "IDADE": 78,
           "SEXO": "FEMININO",
-          "UF": "",
-          "NOME DO TITULAR": "ADELEA NEVES GONZAGA BARBOSA",
-          "RESPONSAVEL": "ADELEA",
-          "GRAU DE PARENTESCO DO RESPONSAVEL": "FILHO (A)",
-          "PROGRAMA DE ATENCAO": "SENIORS",
-          "GRAU DE RISCO": "MEDIO",
+          "UF": "RJ, BRASIL",
+          "NOME DO TITULAR": "RENATO FEO DE OLIVEIRA",
+          "RESPONSAVEL": "",
+          "GRAU DE PARENTESCO DO RESPONSAVEL": "",
+          "PROGRAMA DE ATENCAO": "CRONICOS",
+          "GRAU DE RISCO": "MUITO ALTO",
           "DATA PROVAVEL DO PARTO // CIRURGIA // INTERNACAO": "",
-          "MOTIVO DO ACOMPANHAMENTO": "HIPERTENSAO ARTERIAL",
-          "CID PRINCIPAL": "I15",
-          "GRUPO DE DOENCAS": "DOENCA DO APARELHO CIRCULATORIO",
-          "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS": "HIPERCOLESTEROLEMIA / HIPOTIREOIDISMO / BRONCOESPASMO /  /  /  / ",
+          "MOTIVO DO ACOMPANHAMENTO": "ARTRITE REUMATOIDE TERAPIA IMUNOBIOLOGICA",
+          "CID PRINCIPAL": "M01.8",
+          "GRUPO DE DOENCAS": "DOENCAS DO APARELHO OSTEOMUSCULAR",
+          "DESCRIÇÃO DOS MOTIVOS SECUNDÁRIOS": "TRANSTORNOS PSICOSOCIAIS /  /  /  /  / ",
           "CIDS SECUNDÁRIOS": "",
           "DATA CONFIRMADA DO ÚLTIMO PARTO // CIRURGIA // INTERNACAO": "",
           "ÚLTIMO PARTO // CIRURGIA // INTERNACAO ACOMPANHADO PELA EQUIPE": "",
           "UTI": "",
-          "DATA DO ULTIMO CONTATO": "11/01/2024",
-          "RESPONSAVEL PELO CONTATO": "THAYNAN LIMA",
-          "HISTORICO DO CONTATO": "SWELEN 27/04/2020\nEM CONTATO 21994786483 SRA ADELEA (FILHA) INFORMOU BENEFICIARIA ESTAVEL, SEM INTERCORRENCIAS. ACOMPANHAMENTO TRIMESTRAL COM CARDIOLOGISTA, ENDOCRINOLOGISTA E ORTOPEDISTA. EM USO DE CORDAREX, SOMALGIN CARDIO 81, DIOSMIN, NIMOVAS 30, LAMOTRIGINA, PURAN 50MG, SINVASTATINA 20 E CENTRUM PARA HIPERTENSAO ARTERIAL, INSUFICIENCIA VASCULAR, DEPRESSAO, HIPOTIREOIDISMO, HIPERCOLESTEROLEMIA E SUPLIMENTO POIS APRESENTA POUCO APETITE E ALIMENTAÇAO IRREGULAR. TOMOU VACINA CONTRA GRIPE. RESPEITANDO O DISTANCIAMENTO SOCIAL. PERMANECE MEDIDAS.\n\n********************************************\n\nGABRIELE GONCALVES 14/07/2021\nEM CONTATO COM A BENEFICIARIA, SEM SUCESSO, DA ERRO, NAO POSSUI WHATSAPP. \n\n********************************************\n\nGABRIELE GONCALVES 18/08/2021\nEM CONTATO SEM SUCESSO, FICA MUDO. 2 TENTATIVAS \n\n**********************************\nGIZELE LOPES 20/08/2021\n\nEM CONTATO COM 21 24730163, Sr.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA FAZ ACOMPANHAMENTO COM CARDIOLOGISTA ANUALMENTE, NEUROLOGISTA SEMESTRALMENTE, FEZ RESSONANCIA DO CRANIO A POUCO TEMPO, FEZ AS DUAS DOSES DA VACINA CONTRA COVID19 (CORONAVAC), FEZ A VACINA DA GRIPE, FEZ A VACINA DA PNEUMONIA, NAO POSSUI INDICACAO PARA REALIZAR PROCEDIMENTOS E EXAMES DE ALTAS COMPLEXIDADES. FAZ USO DAS MESMAS MEDICACOES NÃO HOUVE MUDANCA. \n\nAMANDA SALDANHA 21/10\n\nEM CONTATO COM 21 994786483, BENEFICIARIA INFORMA QUE ESTA EM ACOMPANHAMENTO MEDICO COM ONCOLOGISTA MENSAL, RECEBEU EM JULH9O DIAGNOSTICO DE LEUCEMIA, TRANSPLANTE DE MEDULA EM JANEIRO, REALIZOU QUIOMIOTERAPIA DEZ/2020 E RADIOTERAPIA 15 SESSOES TAMBÉM EM 2020, NEGA CIRURGIAS E EXAMES DE ALTA COMPLEXIDADE, FAZ USO DE VARIOS MEDICAMENTOS CONTINUOS, REFERE HAS E DIABETES MELLITUS, MEDIDAS ANTROPOMETRICAS 64KG E 1,57CM, REALIZOU AS TRES DOSES DA VACINA CONTRA O COVID19.\n\nGIZELE LOPES 23/11/2021\n\nEM CONTATO COM 21 24730163, SEM SUCESSO SO CHAMA E CAI. \n\nGIZELE LOPES 25/11/2021\n \nEM CONTATO COM 21 24730163, SR.ª ADELEA (FILHA) INFORMOU QUE A BENEFICIARIA ESTA ESTAVEL, EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, TEM TIO PROBLEMAS COM RELACAO A MEMORIA, NAO PASSOU MAIORES INFORMACOES. \n\nAMANDA SALDANHA 250322\n\nEM CONTATO 2124730163, SSRA ADELEA, INFORMA QUE NO DIA 23 DE DEZEMBRO DE 2021, BENEFICIARIA REALIZOU UMA CIRURGIA DEVIDO A FRATURA NA CABEÇA DO FEMUR DIREITO, UTILIZOU PROTESE, EM FISIOTERAPIA 3X POR SEMANA, DEAMBULA COM ANDADOR. EM USO DE CORDAREX, PURAN T4 50 MG, ZICOG PARA MEMORIA, CENTRUM, SINVASTATINA, SOMALGIN CARDIO, \nLAMOTIGINA, DIOSMIN PARA MMII, PESO: 64 KG, ALTURA: 1,57 M, CARTEIRA DE VACINACAO EM DIA. ACOMPANHAMENTO MEDICO COM CARDIOLOGISTA E NEUROLOGISTA. NEGA INDICACOES CIRURGIAS E EXAMES DE ALTA COMPLEXIDADES. \n\n\nKAROLINE RODRIGUES 26/07/2022\n\nEM CONTATO PELO NÚMERO 21 24730163\nSRA. ADELEIA INFORMA QUE BENEFICIÁRIA ENCONTRASE ESTÁVEL, INFORMA QUE DEVIDO A QUEDA EM DEZEMBRO QUEBROU A CABEÇA DO FEMUR DIREITO E PRECISOU PASSAR POR PROCEDIMENTOS, ATUALMENTE ENCONTRASE EM RECUPERAÇÃO, REALIZA ACOMPANHAEMENTO MÉDICO COM GERIATRA, REALIZA USO DOS MESMOS MEDICAMENTOS CONTÍNUOS SEM ALTERAÇÕES, NEGA INDICAÇÃO PARA CIRURGIA E IRÁ REALIZAR EXAMES DE ROTINA, NÃO RECEBEU DIAGNOSTICOS MÉDICO RECENTEMENTE, INFORMA VACINAS EM DIA E SEM MAIS INFORMAÇÕES\n\nAMANDA SALDANHA 291122\n\nEM CONTATO COM21 24730163, CHAMA ATE CAIR. \n\n\nAMANDA SALDANHA 100323\n\nEM CONTATO COM 21 24730163, CHAMA ATE CAIR.\nENVIADO MENSAGEM\n\n_____________________//____________________\nTHAYNAN LIMA 11/01/2024\nEM CONTATOP COM O NUMERO 2124730163 , GRAVE SEU RECADO 3 TENTATIVA SEM SUCESSO",
+          "DATA DO ULTIMO CONTATO": "19/01/2024",
+          "RESPONSAVEL PELO CONTATO": "KAROLINE RODRIGUES",
+          "HISTORICO DO CONTATO": "YASMIN FIDALGO  16/03\n10° MAIOR USUÁRIA NA UTILIZAÇÃO, CONSTANDO TERAPIA IMUNOBIOLÓGICA + MEDICAMENTOS.\nQUESTIONAR A BENEFICIÁRIA QUAL É A PATOLOGIA EM QUESTÃO, TRATAMENTO, ACOMPANHAMENTO DE SAÚDE.\n\nYASMIN FIDALGO  10/04\nCONTATO ATUALIZADO NA PRESENTE DATA: (21) 982244764\n\n\nKAROLINE RODRIGUES 11/04/2023\n\nEM CONTATO PELO NÚMERO 21 982244764(SR. RENATO(PAI) INFORMOU NÚMERO 21 982779337 PARA ENTRARMOS EM CONTATO COM A MESMA)/21 982779337(NÃO CHAMA E CAI DIRETO NA CAIXA DE MENSAGEM) TENTATIVA REALIZADA, SEM SUCESSO\nADICIONADO NO GURU, AGUARDANDO RETORNO\nEM RESPOSTA, BENEFICIÁRIA INFORMA QUE ENCONTRASE ESTÁVEL E NEGA INTERCORRÊNCIAS NA SAÚDE, FAZ USO DE LEFLUNOMIDA 1X/DIA(NOITE) E GOLIMUMABE A CADA 4 SEMANAS DEVIDO DIAGNOSTICO MÉDICO DE ARTRITE REUMATOIDE, REALIZA ACOMPANHAMENTO MÉDICO COM REUMATOLOGISTA DE FORMA VARIÁVEL PODENDO SER MENSAL, A CADA 2 MESES OU TRIMESTRAL, RELATA QUE REALIZOU TERAPIA PSICOLÓGICA DURANTE 5 MESES EM 2022 PORÉM ATUALMENTE NÃO REALIZA MAIS E A MESMA RELATA QUE DEU ABANDONO POR CONTA PRÓPRIA, NEGA INDICAÇÕES PARA REALIZAR CIRURGIA, NEGA INDICAÇÕES PARA REALIZAR EXAMES DE ALTA COMPLEXIDADE, AGUARDANDO MAIORES INFORMAÇÕES\n\n\nKAROLINE RODRIGUES 22/05/2023\n\nEM CONTATO PELO NÚMERO 21 982244764(NÃO CHAMA E CAI DIRETO NA CAIXA DE MENSAGEM) TENTATIVA REALIZADA, SEM SUCESSO\n\nAMANDA SALDANHA 290523\n\nEM CONTATO COM 21982244764, SR RENATO TITULAR E PAI, INFORMA QUE NAO ESTA COM A MESMA NO MOMENTO, PASSA INFORMACOES SUPERFICIAIS. APENAS QUE A MESMA ENCONTRASE ESTAVEL, PROGRAMADO CONTATO PARA O PROXIMO DIA 02/06.\n\n\n\nRAFAELA RIBEIRO  12062023\n\nEM CONTATO COM O NUMERO (21) 982244764, 3 TENTATIVAS, SEM SUCESSO. ENCAMINHADA MENSAGEM NO ZAP GURU.\n\nRENATA GOMES 19/06/23\nEM RETORNO A MENSAGEM AUTOMATICA, BENEFICIARIA INFORMA QUE PERMANECE BEM, CONTINUA REALIZANDO ACOMPANHAMENTO COM REUMATOLOGISTA MENSAL/2 EM 2 MESES, CONTINUA FAZENDO USO DOS MEDICAMENTOS LEFLUNOMIDA E SIMPONI, NEGA PATOLOGIAS, MEDIDAS ANTROPOMETRICAS PESO 58KG E ALTURA 1,65\n\n\nKAROLINE RODRIGUES 19/07/2023\n\nEM CONTATO PELO NÚMERO 21 982244764(SR RENATO ATENDE E INFORMA QUE NÃO SE ENCONTRA COM A BENEFICIÁRIA NO MOMENTO)/21 982779337(CHAMA E CAI DIRETO NA CAIXA DE MENSAGEM) TENTATIVAS REALIZADAS, SEM SUCESSO\nENVIADO WHATSAPP, AGUARDANDO RETORNO\nEM RESPOSTA, BENEFICIÁRIO INFORMA QUE ENCONTRASE ESTÁVEL E NEGA INTERCORRÊNCIAS NA SAÚDE, AGUARDANDO MAIORES INFORMAÇÕES\n\n\nKAROLINE RODRIGUES 29/08/2023\n\nEM CONTATO PELO NUMERO 21 982244764\nSR RENATO(PAI) INFORMA QUE BENEFICIARIA ENCONTRASE ESTAVEL E NEGA TER APRESENTADO INTERCORRENCIAS NA SAUDE, RELATA QUE A MESMA PERMANECE EM ACOMPANHAMENTO MEDICO E NEGA ALTERACOES EM SEUS MEDICAMENTOS, INFORMA QUE O TRATAMENTO TEM OCORRIDO BEM E NEGA ALTERACOES NO QUADRO DE SAUDE, O MESMO AGRADECE PELO CUIDADO E PREOCUPACAO E LOGO ENCERRA A CHAMADA\n\n\nKAROLINE RODRIGUES 06/10/2023\n\nEM CONTATO PELO NUMERO 21 982244764(SR RENATO ATENDE E INFORMA QUE BENEFICIARIA NAO SE ENCONTRA NO MOMENTO E ORIENTA QUE TENTASSEMOS CONTATO DIRETAMENTE PELO NUMERO DA MESMA)/21 982779337(NAO CHAMA E CAI DIRETO NA CAIXA DE MENSAGEM) TENTATIVAS REALIZADAS, SEM SUCESSO\nENVIADO WHATSAPP, AGUARDANDO RETORNO\nEM RESPOSTA, BENEFICIARIA INFORMA QUE ENCONTRASE ESTAVEL E NEGA TER APRESENTADO INTERCORRENCIAS NA SAUDE, PERMANECE EM ACOMPANHAMENTO MEDICO COM REUMATOLOGISTA SENDO A CADA 4 MESES, NEGA REALIZAR ACOMPANHAMENTO MEDICO COM OUTRA ESPECIALIDADE, NEGA ALTERACOES EM MEDICAMENTOS, NEGA INDICACOES PARA REALIZAR EXAMES DE ALTA COMPLEXIDADE OU PROCEDIMENTOS CIRURGICOS, NEGA INVESTIGACAO DE PATOLOGIAS E NOVO DIAGNOSTICO MEDICO RECENTEMENTE\nMEDIDAS ANTROPOMETRICAS: PESO: 60,000KG E ALTURA: 1,65CM\nP.A: NAO POSSUI HABITO DE AFERIR POREM CONSIDERA VALOR NORMAL, 120X80MMHG\n\n\nKAROLINE RODRIGUES 20/12/2023\n\nEM CONTATO PELO NUMERO 21 98224-4764(CHAMA ATE CAIR NA CAIXA DE MENSAGEM) TENTATIVAS REALIZADAS, SEM SUCESSO\nENVIADO WHATSAPP, AGUARDANDO RETORNO\nMENSAGEM NAO VISUALIZADA, SEM RETORNO\n\n\nKAROLINE RODRIGUES 19/01/2024\n\nENVIADO WHATSAPP, AGUARDANDO RETORNO",
           "STATUS DO ACOMPANHAMENTO MAIS RECENTE": "ACOMPANHAMENTO SEM SUCESSO",
-          "OBSERVAÇÕES": "NAO POSSUI WHATSAPP",
-          "AGENDA SUGERIDA PARA PROXIMO CONTATO": "20/05/2024",
+          "OBSERVAÇÕES": "CONTATO ATUALIZADO ",
+          "AGENDA SUGERIDA PARA PROXIMO CONTATO": "16/02/2024",
           "DATA DE FINALIZACAO": "",
           "CAPTADO VIA": "",
-          "ID": 6,
-          "GRUPO DE DISPARO DE MATERIAL - BOT": "2. Do Sistema Cardiológico e Circulatório",
-          "STATUS DA TRIAGEM": "RECUPERADO",
-          "TELEFONES DE CONTATO": "2124730163",
-          "PHONE": "2124730163",
+          "ID": 1736,
+          "GRUPO DE DISPARO DE MATERIAL - BOT": "7. Do Sistema Ósseo e Muscular",
+          "STATUS DA TRIAGEM": "INCLUSO",
+          "TELEFONES DE CONTATO": "(21) 982244764",
+          "PHONE": "(21)982244764",
           "FAIXA ETÁRIA": "59 +",
           "FIM": "",
-          "WHATSAPP CADASTRADO": "",
+          "WHATSAPP CADASTRADO": " ",
           "MEDICAMENTO": "",
           "PESO(KG)": "",
           "ALTURA(CM)": "",
@@ -3471,9 +3568,6 @@
           "DATA_INTERACAO_BOT": "",
           "LIGACAO_SOLICITADA_BOT": "",
           "DATA_SOLICITACAO_LIGACAO_BOT": ""
-        },
-        "pairedItem": {
-          "item": 0
         }
       }
     ]
@@ -3491,8 +3585,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
       "sheetId": 887746287,
-      "lastRevision": 91484,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=91484&exportFormat=xlsx"
+      "lastRevision": 91761,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=91761&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -3503,7 +3597,7 @@
       "name": "Medi"
     }
   ],
-  "triggerCount": 3,
-  "updatedAt": "2024-01-19T21:30:20.000Z",
-  "versionId": "9b581f9a-5d22-4468-9d3d-528ea2082aff"
+  "triggerCount": 2,
+  "updatedAt": "2024-01-19T22:30:04.000Z",
+  "versionId": "db3e24b8-ef4b-4a47-8d6c-9b9e61d90519"
 }
