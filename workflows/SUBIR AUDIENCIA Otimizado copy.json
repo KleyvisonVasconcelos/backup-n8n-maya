@@ -100,11 +100,6 @@
             "index": 0
           },
           {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          },
-          {
             "node": "HTTP Request Atualizar Campo Especialidade_PAIS",
             "type": "main",
             "index": 0
@@ -133,6 +128,11 @@
             "node": "Google Sheets1",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -142,81 +142,6 @@
         [
           {
             "node": "RabbitMQ",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "em inclusao",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "em recuperacao",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "HTTP Request Adicionar Etiqueta abordado pelo bot",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Switch1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch1": {
-      "main": [
-        [
-          {
-            "node": "INCLUSO",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "finalizado",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "recuperado",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Switch2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch2": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao6",
             "type": "main",
             "index": 0
           }
@@ -261,77 +186,6 @@
         [
           {
             "node": "Google Sheets2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "No Operation, do nothing1": {
-      "main": [
-        [
-          {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo EMPRESA",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo  P SAUDE",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo PATOLOGIA",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo MATRICULA",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo G-SEXO",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo GRAU DE RISCO",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo Especialidade_PAIS",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo data proximo contato - melhordata",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo GRAU_OBESIDADE",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo DIABETES",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo pressao-usuario",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "HTTP Request Atualizar Campo Sintoma_PAIS",
             "type": "main",
             "index": 0
           }
@@ -523,6 +377,81 @@
           }
         ]
       ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "em inclusao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "em recuperacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta abordado pelo bot",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "INCLUSO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "finalizado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "recuperado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-01-11T22:29:40.282Z",
@@ -557,17 +486,6 @@
           "mode": "list",
           "cachedResultName": "db_pais",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os/edit#gid=887746287"
-        },
-        "filtersUI": {
-          "values": [
-            {
-              "lookupColumn": "WHATSAPP CADASTRADO"
-            },
-            {
-              "lookupColumn": "WHATSAPP CADASTRADO",
-              "lookupValue": " "
-            }
-          ]
         },
         "options": {
           "returnAllMatches": "returnAllMatches"
@@ -617,55 +535,6 @@
             {
               "name": "telefone",
               "value": "=+{{ $json.phone }}"
-            },
-            {
-              "name": "Campo 1",
-              "value": "="
-            },
-            {
-              "name": "Campo 2",
-              "value": "="
-            },
-            {
-              "name": "Campo 3",
-              "value": "="
-            },
-            {
-              "name": "Campo 4",
-              "value": "="
-            }
-          ],
-          "number": [
-            {
-              "name": "ID Campo 1",
-              "value": 1272059
-            },
-            {
-              "name": "ID Campo 2"
-            },
-            {
-              "name": "ID Campo 3"
-            },
-            {
-              "name": "ID Campo 4"
-            },
-            {
-              "name": "ID Campo 5"
-            },
-            {
-              "name": "ID da Etiqueta 1"
-            },
-            {
-              "name": "ID da Etiqueta 2"
-            },
-            {
-              "name": "ID da Etiqueta 3"
-            },
-            {
-              "name": "ID da Etiqueta 4"
-            },
-            {
-              "name": "ID da Etiqueta 5"
             }
           ]
         },
@@ -1015,112 +884,6 @@
       "retryOnFail": true,
       "maxTries": 5,
       "waitBetweenTries": 5000,
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"]}}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "EM INCLUSAO"
-            },
-            {
-              "value2": "EM RECUPERACAO",
-              "output": 1
-            },
-            {
-              "value2": "ABORDADO PELO BOT",
-              "output": 2
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "c56fdb24-e86c-4b23-a8e9-d8310d39e333",
-      "name": "Switch",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        1060,
-        500
-      ]
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "INCLUSO"
-            },
-            {
-              "value2": "FINALIZADO",
-              "output": 1
-            },
-            {
-              "value2": "RECUPERADO",
-              "output": 2
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "1dc2f271-14d4-41fd-82cf-46e281f47564",
-      "name": "Switch1",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        1060,
-        1100
-      ]
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "EM CLASSIFICACAO"
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "ab324f39-989d-4cc1-889d-4bd765717d98",
-      "name": "Switch2",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        1060,
-        1540
-      ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961563/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "7d7374b8-7ae6-435b-9b39-aaa08d73bd9d",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao6",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        1560,
-        1540
-      ],
       "credentials": {
         "httpHeaderAuth": {
           "id": "3MYXa6yjvgMoxfow",
@@ -1486,7 +1249,8 @@
           "mappingMode": "defineBelow",
           "value": {
             "WHATSAPP CADASTRADO": "✅✅",
-            "NOME DO BENEFICIARIO": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}"
+            "NOME DO BENEFICIARIO": "={{ $('Split In Batches').item.json['NOME DO BENEFICIARIO'] }}",
+            "PHONE": "={{ $('Formatando Nome e Telefone').item.json[\"whatsapp\"].replace(\"+\",\"\") }}"
           },
           "matchingColumns": [
             "NOME DO BENEFICIARIO"
@@ -1900,7 +1664,7 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true,
-              "removed": true
+              "removed": false
             },
             {
               "id": "FAIXA ETÁRIA",
@@ -2248,17 +2012,6 @@
           "name": "medi "
         }
       }
-    },
-    {
-      "parameters": {},
-      "id": "9d37905c-4703-419c-ae70-63b0bd35d6e2",
-      "name": "No Operation, do nothing1",
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1,
-      "position": [
-        -1060,
-        2900
-      ]
     },
     {
       "parameters": {
@@ -3350,6 +3103,112 @@
     },
     {
       "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM INCLUSAO"
+            },
+            {
+              "value2": "EM RECUPERACAO",
+              "output": 1
+            },
+            {
+              "value2": "ABORDADO PELO BOT",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "0a0033a9-fc94-46be-b6aa-5ef471f79543",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        180,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "INCLUSO"
+            },
+            {
+              "value2": "FINALIZADO",
+              "output": 1
+            },
+            {
+              "value2": "RECUPERADO",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "b7bddca5-3d57-430a-ad86-1008899d7fa9",
+      "name": "Switch1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        180,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM CLASSIFICACAO"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "d4df6355-1895-4f99-8eeb-9e7daaf5c358",
+      "name": "Switch2",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        180,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961563/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "4e5ef7ba-ca8d-43f8-95fe-43868b6aea33",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        680,
+        1340
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
         "method": "POST",
         "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
         "authentication": "genericCredentialType",
@@ -3365,13 +3224,13 @@
         },
         "options": {}
       },
-      "id": "71501350-59c1-4d89-b89f-3d9af2a1ee55",
+      "id": "9b1fd7f8-aa29-4672-9060-3fd4663b06d0",
       "name": "finalizado",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1560,
-        1180
+        680,
+        980
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -3398,13 +3257,13 @@
         },
         "options": {}
       },
-      "id": "73ae1052-6e7b-42df-97cb-9901a59aae38",
+      "id": "7ff78b11-b98b-4d8c-bc59-7e29e9247ddf",
       "name": "recuperado",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1560,
-        1360
+        680,
+        1160
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -3431,13 +3290,13 @@
         },
         "options": {}
       },
-      "id": "04b0f7a8-3336-46d8-aba5-14ffe9f7a327",
+      "id": "2705906b-9011-43b4-8f81-752f9031b21e",
       "name": "em inclusao",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1560,
-        420
+        680,
+        220
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -3464,13 +3323,13 @@
         },
         "options": {}
       },
-      "id": "bbceb34c-f9ab-4e82-8a3c-6664fd48a97a",
+      "id": "ec6631f0-2fbf-4dea-9b5b-b253e987ddb2",
       "name": "em recuperacao",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1560,
-        600
+        680,
+        400
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -3488,13 +3347,13 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "15f3e965-ef14-4a1c-b09f-c53eaa9604cb",
+      "id": "d3c7580c-e0da-48f6-a56a-d37aed7a9a5a",
       "name": "HTTP Request Adicionar Etiqueta abordado pelo bot",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1560,
-        800
+        680,
+        600
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -3521,13 +3380,13 @@
         },
         "options": {}
       },
-      "id": "1bcd38ec-a1e1-4d9d-a0e0-c5e7ac44e786",
+      "id": "4f556212-99d7-4715-ba16-4943ef0ea414",
       "name": "INCLUSO",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
       "position": [
-        1560,
-        1000
+        680,
+        800
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -3622,7 +3481,8 @@
   "settings": {
     "executionOrder": "v1",
     "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner"
+    "callerPolicy": "workflowsFromSameOwner",
+    "saveDataSuccessExecution": "none"
   },
   "staticData": {
     "node:Schedule Trigger": {
@@ -3631,8 +3491,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
       "sheetId": 887746287,
-      "lastRevision": 91471,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=91471&exportFormat=xlsx"
+      "lastRevision": 91484,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=91484&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -3644,6 +3504,6 @@
     }
   ],
   "triggerCount": 3,
-  "updatedAt": "2024-01-19T20:05:00.000Z",
-  "versionId": "d89601a2-a291-410f-be85-5e7ec6007b97"
+  "updatedAt": "2024-01-19T21:30:20.000Z",
+  "versionId": "9b581f9a-5d22-4468-9d3d-528ea2082aff"
 }
