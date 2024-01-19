@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "Filter",
+            "node": "RabbitMQ",
             "type": "main",
             "index": 0
           }
@@ -271,17 +271,6 @@
         [
           {
             "node": "Edit Fields1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Filter": {
-      "main": [
-        [
-          {
-            "node": "RabbitMQ",
             "type": "main",
             "index": 0
           }
@@ -868,7 +857,7 @@
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1.1,
       "position": [
-        -4560,
+        -4840,
         1580
       ],
       "credentials": {
@@ -909,36 +898,6 @@
           "name": "Maya"
         }
       }
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "string": [
-            {
-              "value1": "={{ $json['WHATSAPP CADASTRADO'] }}",
-              "value2": "✅✅"
-            },
-            {
-              "value1": "{{ $json['AGENDA SUGERIDA PARA PROXIMO CONTATO'] }}",
-              "operation": "notEqual",
-              "value2": "13/11/2023"
-            },
-            {
-              "value1": "={{ $json['AGENDA SUGERIDA PARA PROXIMO CONTATO'] }}",
-              "operation": "notEqual",
-              "value2": "17/11/2023"
-            }
-          ]
-        }
-      },
-      "id": "e6ba7109-5243-42f6-8693-3534711d3964",
-      "name": "Filter",
-      "type": "n8n-nodes-base.filter",
-      "typeVersion": 1,
-      "position": [
-        -4880,
-        1580
-      ]
     },
     {
       "parameters": {
@@ -1280,6 +1239,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-01-18T12:20:35.000Z",
-  "versionId": "5a56450e-8620-4f93-8e63-76e51eeea9e7"
+  "updatedAt": "2024-01-19T21:10:51.000Z",
+  "versionId": "251dfaec-cf80-484e-b563-9cc291ad5e11"
 }
