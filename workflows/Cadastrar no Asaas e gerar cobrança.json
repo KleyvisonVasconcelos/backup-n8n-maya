@@ -146,6 +146,163 @@
           }
         ]
       ]
+    },
+    "Semestral2": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Semestral2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "criando cliente no asaas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criando cliente no asaas1": {
+      "main": [
+        [
+          {
+            "node": "formatando data hoje1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formatando data hoje1": {
+      "main": [
+        [
+          {
+            "node": "Tipo de Plano1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tipo de Plano1": {
+      "main": [
+        [
+          {
+            "node": "Mensal1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Trimestral",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Semestral1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mensal1": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Mensal1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Semestral1": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Semestral1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Plano Mensal1": {
+      "main": [
+        [
+          {
+            "node": "buscando link no asaas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Plano Semestral1": {
+      "main": [
+        [
+          {
+            "node": "buscando link no asaas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscando link no asaas1": {
+      "main": [
+        [
+          {
+            "node": "salvando link1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "salvando link1": {
+      "main": [
+        [
+          {
+            "node": "enviando fluxo com link1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trimestral": {
+      "main": [
+        [
+          {
+            "node": "Gerar Plano Trimestral",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Plano Trimestral": {
+      "main": [
+        [
+          {
+            "node": "buscando link no asaas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-11-22T17:38:53.505Z",
@@ -544,6 +701,461 @@
           "name": "BC - Maya"
         }
       }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "SEMIANNUALLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook1').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas1').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje1').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook1').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e63d9ac3-b2a9-4903-a4e3-64a45bcbb349",
+      "name": "Gerar Plano Semestral2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1200,
+        1900
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "dba110ec-8ba3-435a-9806-a696c9a522a0",
+      "name": "Semestral2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        960,
+        1900
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "cadastro-asaas=====",
+        "options": {}
+      },
+      "id": "95478116-5e7a-466d-b305-f22add47d246",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        20,
+        1200
+      ],
+      "webhookId": "b361ec8a-b87c-450f-a59d-521e2f3cd744"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/customers",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "={{ $json.body.Nome }}"
+            },
+            {
+              "name": "cpfCnpj",
+              "value": "={{ $json.body.CPF }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $json.body['E-mail'] }}"
+            },
+            {
+              "name": "phone",
+              "value": "={{ $json.body.Telefone.slice(3) }}"
+            },
+            {
+              "name": "mobilePhone",
+              "value": "={{ $json.body.Telefone.slice(3) }}"
+            },
+            {
+              "name": "externalReference",
+              "value": "={{ $json.body['ID-BC'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f72408c8-96f7-45c1-841b-e3caf732e6aa",
+      "name": "criando cliente no asaas1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        260,
+        1200
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{$now}}",
+        "format": "yyyy-MM-dd",
+        "outputFieldName": "data-hoje",
+        "options": {}
+      },
+      "id": "f7ff9527-6975-437a-9a6a-ea092022d415",
+      "name": "formatando data hoje1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        480,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Webhook1').item.json.body.Plano }}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "contains",
+              "value2": "Mensal"
+            },
+            {
+              "operation": "contains",
+              "value2": "Trimestral",
+              "output": 1
+            },
+            {
+              "operation": "contains",
+              "value2": "Semestral",
+              "output": 2
+            }
+          ]
+        }
+      },
+      "id": "cd4876ae-ed39-4016-811d-467db7b35623",
+      "name": "Tipo de Plano1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        700,
+        1200
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "8af11906-a6f6-49d2-98be-c9ad276efc2f",
+      "name": "Mensal1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        980,
+        1020
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "019ebc8a-c559-4ebc-8598-a4dabecffec9",
+      "name": "Semestral1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        980,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "MONTHLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook1').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas1').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje1').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook1').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4c747e10-abe9-4383-b646-8759e3dc057b",
+      "name": "Gerar Plano Mensal1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        1020
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "SEMIANNUALLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook1').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas1').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje1').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook1').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bfcd8714-bae0-4bf5-a0ca-2b4a37130405",
+      "name": "Gerar Plano Semestral1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        1340
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://www.asaas.com/api/v3/subscriptions/{{ $json[\"id\"] }}/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "d6fd3a11-16e3-4aa7-b1fa-95b6507a2d9c",
+      "name": "buscando link no asaas1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1600,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Webhook1').item.json[\"body\"][\"ID-BC\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $json.data[0].invoiceUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3eea5fa7-5d65-4856-86a7-8a121df5e032",
+      "name": "salvando link1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1840,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Webhook1').item.json[\"body\"][\"ID-BC\"] }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "580064"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4307494c-188d-401b-9e4e-1d3490ca6a06",
+      "name": "enviando fluxo com link1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2060,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "c047bcf3-21f8-445a-9a85-b1f97998f9af",
+      "name": "Trimestral",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        980,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.asaas.com/api/v3/subscriptions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "billingType",
+              "value": "UNDEFINED"
+            },
+            {
+              "name": "cycle",
+              "value": "QUARTERLY"
+            },
+            {
+              "name": "value",
+              "value": "={{ parseInt($('Webhook1').item.json[\"body\"][\"ValorPlano\"]) }}"
+            },
+            {
+              "name": "customer",
+              "value": "={{ $('criando cliente no asaas1').item.json[\"id\"] }}"
+            },
+            {
+              "name": "nextDueDate",
+              "value": "={{ $('formatando data hoje1').item.json[\"data-hoje\"] }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $('Webhook1').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "88e6f0ab-6ce1-4a38-a945-95c81fbcb9ea",
+      "name": "Gerar Plano Trimestral",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        1180
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
     }
   ],
   "pinData": {
@@ -593,7 +1205,7 @@
       "name": "Maya"
     }
   ],
-  "triggerCount": 1,
-  "updatedAt": "2024-01-23T04:05:14.000Z",
-  "versionId": "f0a21f4a-001f-4c3d-acc0-674255aabec8"
+  "triggerCount": 2,
+  "updatedAt": "2024-01-23T05:05:41.000Z",
+  "versionId": "6336def0-266c-4595-986b-22cec43719cd"
 }
