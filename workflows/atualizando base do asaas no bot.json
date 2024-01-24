@@ -1,0 +1,2658 @@
+{
+  "active": false,
+  "connections": {
+    "buscar clientes": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar clientes1": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar clientes2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "buscar clientes",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscar clientes1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscar clientes2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nome e telefone para validar": {
+      "main": [
+        [
+          {
+            "node": "Formatando Nome e Telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Nome e Telefone": {
+      "main": [
+        [
+          {
+            "node": "Cadastrando na Audiência",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "buscar clientes3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar clientes3": {
+      "main": [
+        [
+          {
+            "node": "buscar clientes4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar clientes4": {
+      "main": [
+        [
+          {
+            "node": "Nome e telefone para validar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cadastrando na Audiência": {
+      "main": [
+        [
+          {
+            "node": "salvando link",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-01-24T05:46:15.540Z",
+  "id": "2Avr93LqkMCZIkZM",
+  "meta": null,
+  "name": "atualizando base do asaas no bot",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://api.asaas.com/v3/customers",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f76f6bc4-427d-4424-8ad2-b13f581ca401",
+      "name": "buscar clientes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -520,
+        560
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.asaas.com/v3/customers",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "offset",
+              "value": "100"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dc3a8122-c5f3-4a8a-a7d8-c530db115ffb",
+      "name": "buscar clientes1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -520,
+        740
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.asaas.com/v3/customers",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "limit",
+              "value": "100"
+            },
+            {
+              "name": "offset",
+              "value": "200"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "21c75013-57e5-4ed4-811c-e35c88f5908b",
+      "name": "buscar clientes2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -520,
+        920
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "4882c201-82fb-4bfc-ba0d-e6527937c941",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "id": "0a3fa560-b5a4-48d5-b5e6-9d011d3ef875",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -140,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "https://conectawebhook.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{ $json.whatsapp }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $json.Nome }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $json.Sobrenome }}"
+            }
+          ]
+        }
+      },
+      "name": "Cadastrando na Audiência",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        820
+      ],
+      "id": "c23e89ba-1303-48a4-8e2b-5b072151fd72",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "telefone",
+              "value": "={{ $('buscar clientes3').item.json.mobilePhone }}"
+            },
+            {
+              "name": "nomeCompleto",
+              "value": "={{ $('buscar clientes3').item.json.name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8de7c154-5abc-4d54-9c7b-1680d7e9bca8",
+      "name": "Nome e telefone para validar",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1400,
+        820
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Obter a string de nome completo do nó anterior\nconst nomeCompleto = item.json.nomeCompleto;\n\n// Função para separar o nome completo em nome e sobrenome\nfunction separarNomeSobrenome(nomeCompleto) {\n  // Verificar se o nome completo é uma string\n  if (typeof nomeCompleto !== 'string') {\n    throw new Error('O nome completo deve ser uma string.');\n  }\n\n  // Dividir o nome completo em palavras\n  const palavras = nomeCompleto.trim().split(' ');\n\n  // Verificar se há mais de uma palavra\n  if (palavras.length === 0) {\n    throw new Error('O nome completo deve conter pelo menos um nome.');\n  }\n\n  // Extrair o primeiro nome\n  const primeiroNome = palavras.shift();\n\n  // Extrair o sobrenome\n  const sobrenome = palavras.length > 0 ? palavras.join(' ') : '.';\n\n  // Formatar o nome e sobrenome com a primeira letra de cada palavra em maiúscula\n  const nomeFormatado = formatarNome(primeiroNome);\n  const sobrenomeFormatado = formatarNome(sobrenome);\n\n  return {\n    nome: nomeFormatado,\n    sobrenome: sobrenomeFormatado\n  };\n}\n\nfunction formatarNome(nome) {\n  return nome\n    .toLowerCase()\n    .split(' ')\n    .map((palavra) => palavra.charAt(0).toUpperCase() + palavra.slice(1))\n    .join(' ');\n}\n\n// Separar o nome completo em nome e sobrenome\nconst resultado = separarNomeSobrenome(nomeCompleto);\n\nvar whatsapp = item.json.telefone.replace(/\\D/g, '');\nvar ddd = whatsapp.slice(2,4);\nvar ddi = whatsapp.charAt(0);\nvar ddx = whatsapp.slice(0,2);\nvar length = whatsapp.length;\nif (length >= 12){\n  if (ddi == '+'){\n    ddi = whatsapp.slice(0,3);\n    whatsapp = parseInt(whatsapp.slice(3)).toString();\n  } else {\n    if (ddx == '55'){\n      whatsapp = parseInt(whatsapp.slice(2)).toString();\n      ddi = \"+55\";\n    } else {\n      whatsapp = parseInt(whatsapp).toString();\n      ddi = 'não informado';\n    }\n  }\n} else {\n  whatsapp = parseInt(whatsapp).toString();\n  ddi = 'não informado';\n}\n\nddd = whatsapp.slice(0,2);\nwhatsapp = whatsapp.slice(2);\nif (ddd > 28){\n  whatsapp = whatsapp.slice(-8);\n} else {\n  whatsapp = '9'+whatsapp.slice(-8);\n}\nvar whatsapp = '+55'+ddd+whatsapp;\n\n// Armazenar o nome e sobrenome nos campos desejados\nreturn {\n  json: {\n    Nome: resultado.nome,\n    Sobrenome: resultado.sobrenome,\n    NomeCompleto: resultado.nome+' '+resultado.sobrenome,\n    whatsapp\n  }\n};\n"
+      },
+      "id": "aecfb636-2962-4601-9ba2-44d53880c1c9",
+      "name": "Formatando Nome e Telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.phone }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "6f59ad1f-2d33-4de7-944c-89b96a345a1a",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        80,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.mobilePhone }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "8a36b0a0-af70-4b99-bd4d-6c0165f27823",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        80,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "telefone",
+              "stringValue": "={{ $json.phone }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9e2b8f9a-6dda-4f39-b922-aecc9d255c43",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        320,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "telefone",
+              "stringValue": "={{ $json.mobilePhone }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "684b36cb-a8ea-48c8-a44d-41711b3054dd",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        320,
+        940
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "c3384a35-14ea-4401-9800-65334a248866",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        660,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://www.asaas.com/api/v3/customers/{{ $json[\"id\"] }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "phone",
+              "value": "={{ $json.telefone }}"
+            },
+            {
+              "name": "mobilePhone",
+              "value": "={{ $json.telefone }}"
+            },
+            {
+              "name": "notificationDisabled",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "205b3b83-b621-46f2-b3f7-406d3d3bb382",
+      "name": "buscar clientes3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        920,
+        820
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://www.asaas.com/api/v3/subscriptions?customer={{ $json.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "ae6635b8-c724-48df-84eb-e2888adf3043",
+      "name": "buscar clientes4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1160,
+        820
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "Va5qrgh0YRss7hJN",
+          "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/387576/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "="
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "de86b76e-ff5f-42d9-9bc1-8aae133f4e93",
+      "name": "salvando link",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2080,
+        820
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "buscar clientes3": [
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046990888",
+          "dateCreated": "2023-01-23",
+          "name": "Vitor Carlos Caetano Jordes",
+          "email": null,
+          "company": null,
+          "phone": "21975191964",
+          "mobilePhone": "21975191964",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "12569520799",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046654575",
+          "dateCreated": "2023-01-17",
+          "name": "Dalner Gomes Pereira",
+          "email": null,
+          "company": null,
+          "phone": "21977196850",
+          "mobilePhone": "21977196850",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "05217376724",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 1
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046587918",
+          "dateCreated": "2023-01-16",
+          "name": "Angela Maria da Silva",
+          "email": null,
+          "company": null,
+          "phone": "21995745795",
+          "mobilePhone": "21995745795",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "80694535753",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 2
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046451782",
+          "dateCreated": "2023-01-13",
+          "name": "Robson Santos",
+          "email": null,
+          "company": null,
+          "phone": "21991282487",
+          "mobilePhone": "21991282487",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "03740832746",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": false,
+          "cannotBeDeletedReason": "Não é possível remover cliente com cobranças antecipadas.",
+          "canEdit": true,
+          "cannotEditReason": "Não é possível remover cliente com cobranças antecipadas.",
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 3
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046253014",
+          "dateCreated": "2023-01-10",
+          "name": "André Silas",
+          "email": null,
+          "company": null,
+          "phone": "21982169312",
+          "mobilePhone": "21982169312",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "82267685515",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 4
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046221038",
+          "dateCreated": "2023-01-10",
+          "name": "Marcelo Francisco de Araújo",
+          "email": null,
+          "company": null,
+          "phone": "21981615500",
+          "mobilePhone": "21981615500",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "05749348717",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 5
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046201691",
+          "dateCreated": "2023-01-10",
+          "name": "Bruno Chaves da Rocha",
+          "email": null,
+          "company": null,
+          "phone": "21992800998",
+          "mobilePhone": "21992800998",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "04123329730",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 6
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000046043144",
+          "dateCreated": "2023-01-07",
+          "name": "Mauro Meneses",
+          "email": null,
+          "company": null,
+          "phone": "21979178410",
+          "mobilePhone": "21979178410",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "04766824792",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 7
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000045967938",
+          "dateCreated": "2023-01-06",
+          "name": "Carlos Roberto da Silva Glória",
+          "email": null,
+          "company": null,
+          "phone": "21993988743",
+          "mobilePhone": "21993988743",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "13852840724",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 8
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000045786902",
+          "dateCreated": "2023-01-04",
+          "name": "Ana Paula Guimarães Verani",
+          "email": null,
+          "company": null,
+          "phone": "21970365616",
+          "mobilePhone": "21970365616",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "78868440768",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 9
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000045662637",
+          "dateCreated": "2023-01-02",
+          "name": "Silvia Clara Lee Ribeiro",
+          "email": null,
+          "company": null,
+          "phone": "21983109111",
+          "mobilePhone": "21983109111",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "10031454771",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 10
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000045468226",
+          "dateCreated": "2022-12-28",
+          "name": "Cleidilson de Queiroz Eugenio",
+          "email": null,
+          "company": null,
+          "phone": "21973603448",
+          "mobilePhone": "21973603448",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "09580600708",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 11
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000043991212",
+          "dateCreated": "2022-12-06",
+          "name": "Maria Elizabete Faustinoni",
+          "email": "betefaustinoni@gmail.com",
+          "company": null,
+          "phone": "21985662362",
+          "mobilePhone": "21985662362",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "02585710718",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": false,
+          "cannotBeDeletedReason": "Não é possível remover cliente com cobranças antecipadas.",
+          "canEdit": true,
+          "cannotEditReason": "Não é possível remover cliente com cobranças antecipadas.",
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 12
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000041008487",
+          "dateCreated": "2022-10-20",
+          "name": "JACQUELINE Maria da Silvia",
+          "email": null,
+          "company": null,
+          "phone": "21981424041",
+          "mobilePhone": "21981424041",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "03449896741",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 13
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000039885096",
+          "dateCreated": "2022-10-03",
+          "name": "Gol financeiro",
+          "email": "financeiro@golcorretora.com.br",
+          "company": null,
+          "phone": "21965884302",
+          "mobilePhone": "21965884302",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "31437507000130",
+          "personType": "JURIDICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 14
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000039621074",
+          "dateCreated": "2022-09-28",
+          "name": "Master Saúde",
+          "email": "financeiro@mastersauderio.com.br",
+          "company": null,
+          "phone": "21981707770",
+          "mobilePhone": "21981707770",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "15050678000156",
+          "personType": "JURIDICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 15
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000038655899",
+          "dateCreated": "2022-09-12",
+          "name": "Pedro Celio Siqueira Soares Celio",
+          "email": "pedroscelios@gmail.com",
+          "company": null,
+          "phone": "21991916504",
+          "mobilePhone": "21991916504",
+          "address": "Rua Vinte e Quatro de Maio",
+          "addressNumber": "1109",
+          "complement": "Casa 4",
+          "province": "Engenho Novo",
+          "postalCode": "20725000",
+          "cpfCnpj": "40032965753",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 16
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000038649801",
+          "dateCreated": "2022-09-12",
+          "name": "Claudia Fernandes Accioly Lins",
+          "email": "claudiaflins@terra.com.br",
+          "company": null,
+          "phone": "21996658743",
+          "mobilePhone": "21996658743",
+          "address": "Rua Gal Goes Monteiro",
+          "addressNumber": "176",
+          "complement": "602",
+          "province": "Botafogo",
+          "postalCode": "22290080",
+          "cpfCnpj": "00909868735",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 17
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000038633144",
+          "dateCreated": "2022-09-12",
+          "name": "Patricia Guerreiro Amorim",
+          "email": "trissinha@gmail.com",
+          "company": null,
+          "phone": "21993412163",
+          "mobilePhone": "21993412163",
+          "address": "Rua Joaquim Martins",
+          "addressNumber": "417",
+          "complement": "Interfone 1",
+          "province": "Piedade",
+          "postalCode": "20745230",
+          "cpfCnpj": "01127459708",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 18
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000037898717",
+          "dateCreated": "2022-08-30",
+          "name": "LUZIA MALLET BOVE",
+          "email": "luziamallet917@gmail.com",
+          "company": null,
+          "phone": "21991750938",
+          "mobilePhone": "21991750938",
+          "address": "Rua Claudino Barata 229 Cá 02 Realengo",
+          "addressNumber": "229",
+          "complement": "Casa 02",
+          "province": "Realengo",
+          "postalCode": "21770200",
+          "cpfCnpj": "98856707772",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 19
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000037496273",
+          "dateCreated": "2022-08-22",
+          "name": "Carolina Dinunci",
+          "email": "carolinadinunci@gmail.com",
+          "company": null,
+          "phone": "21977264127",
+          "mobilePhone": "21977264127",
+          "address": "Rua Ivan Bragança",
+          "addressNumber": "19",
+          "complement": null,
+          "province": "Rocha",
+          "postalCode": "24420640",
+          "cpfCnpj": "16829648769",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 20
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000037483360",
+          "dateCreated": "2022-08-22",
+          "name": "Carlos Alexandre",
+          "email": "carlos.alexandre@ra-beneficios.com.br",
+          "company": null,
+          "phone": "21967191577",
+          "mobilePhone": "21967191577",
+          "address": "AVENIDA MAGÉ",
+          "addressNumber": "272",
+          "complement": "Lote93",
+          "province": "Retiro São Joaquim",
+          "postalCode": "24813342",
+          "cpfCnpj": "03231228760",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11619,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 21
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000037472577",
+          "dateCreated": "2022-08-22",
+          "name": "Roberto Alves",
+          "email": "robertocamposcorretor@gmail.com",
+          "company": null,
+          "phone": "21964213254",
+          "mobilePhone": "21964213254",
+          "address": "Estrada São Pedro",
+          "addressNumber": "1643",
+          "complement": null,
+          "province": "Vista Alegre",
+          "postalCode": "24725270",
+          "cpfCnpj": "09571350761",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 22
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000036417064",
+          "dateCreated": "2022-08-02",
+          "name": "Dalila Saturnino",
+          "email": "saturninodalila@gmail.com",
+          "company": null,
+          "phone": "21983709735",
+          "mobilePhone": "21983709735",
+          "address": "Rua Antônio Carlos Belchior 270",
+          "addressNumber": "270",
+          "complement": "Blc 6 Apt 403",
+          "province": "Campo Grande",
+          "postalCode": "23092093",
+          "cpfCnpj": "16061637799",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 23
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000036384716",
+          "dateCreated": "2022-08-02",
+          "name": "Alessandra de Souza Almeida",
+          "email": "alessandraalmeidacorretora@gmail.com",
+          "company": null,
+          "phone": "21981047936",
+          "mobilePhone": "21981047936",
+          "address": "Rua Otávio Vilela",
+          "addressNumber": "40",
+          "complement": null,
+          "province": "Mutuá",
+          "postalCode": "24460430",
+          "cpfCnpj": "08132027795",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 24
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000035962075",
+          "dateCreated": "2022-07-22",
+          "name": "Elisângela Pacheco Nogueira Emidio",
+          "email": "pacheco_elisangela@yahoo.com.br",
+          "company": null,
+          "phone": "21986663499",
+          "mobilePhone": "21986663499",
+          "address": "EST DE INHOAIBA",
+          "addressNumber": "22",
+          "complement": "22",
+          "province": "Inhoaíba",
+          "postalCode": "23063010",
+          "cpfCnpj": "10581333730",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 25
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000035782309",
+          "dateCreated": "2022-07-19",
+          "name": "Luziane Manoel",
+          "email": "lubmanoel@gmail.com",
+          "company": null,
+          "phone": "21988763941",
+          "mobilePhone": "21988763941",
+          "address": "RUA SABINO BARROSO",
+          "addressNumber": "224/301",
+          "complement": "224/301",
+          "province": "vila valqueire",
+          "postalCode": "21330510",
+          "cpfCnpj": "98206893768",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 26
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000035207802",
+          "dateCreated": "2022-07-07",
+          "name": "Luiz Leonardo Rodrigues de Carvalho Rodrigues",
+          "email": "luiz-leonardo@hotmail.com",
+          "company": null,
+          "phone": "21964814226",
+          "mobilePhone": "21964814226",
+          "address": "Rua Araçari",
+          "addressNumber": "15",
+          "complement": "B",
+          "province": "Iraja",
+          "postalCode": "21371380",
+          "cpfCnpj": "09944103799",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 27
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000034508169",
+          "dateCreated": "2022-06-22",
+          "name": "Filippe Ignácio",
+          "email": "filipe.inacio@hotmail.com",
+          "company": null,
+          "phone": "21972923224",
+          "mobilePhone": "21972923224",
+          "address": "Jorge Barbosa Da Silva 7",
+          "addressNumber": "7",
+          "complement": "Apto 201",
+          "province": "Parque Beira Mar",
+          "postalCode": "25086210",
+          "cpfCnpj": "14551473707",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11614,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 28
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000033288612",
+          "dateCreated": "2022-05-27",
+          "name": "Fernando Camacho",
+          "email": "fernandocamacho@bfccorretora.com",
+          "company": null,
+          "phone": "21981707330",
+          "mobilePhone": "21981707330",
+          "address": "Rua Arealva",
+          "addressNumber": "256",
+          "complement": "Casa",
+          "province": "Sepetiba",
+          "postalCode": "23535052",
+          "cpfCnpj": "00856836710",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 29
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000032800950",
+          "dateCreated": "2022-05-16",
+          "name": "CARLOS HENRIQUE FERREIRA CAVALCANTE JUNIOR",
+          "email": "jrcaval_@hotmail.com",
+          "company": null,
+          "phone": "21972392804",
+          "mobilePhone": "21972392804",
+          "address": "Avenida Rio Branco",
+          "addressNumber": "25",
+          "complement": "907",
+          "province": "Centro",
+          "postalCode": "20090003",
+          "cpfCnpj": "12742178732",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 30
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000030312492",
+          "dateCreated": "2022-03-12",
+          "name": "Mario Fernando Girard D Andrea",
+          "email": "idexconsultoria@gmail.com",
+          "company": null,
+          "phone": "21979722406",
+          "mobilePhone": "21979722406",
+          "address": "Rua Magalhães Couto",
+          "addressNumber": "763",
+          "complement": "Bloco 1 / 102",
+          "province": "Méier",
+          "postalCode": "20735180",
+          "cpfCnpj": "08203175783",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 31
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000029087837",
+          "dateCreated": "2022-02-16",
+          "name": "United Class Corretora de Seguros",
+          "email": "contasapagar@unitedclass.com.br",
+          "company": null,
+          "phone": "21965711506",
+          "mobilePhone": "21965711506",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "27000021000163",
+          "personType": "JURIDICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 32
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000028389781",
+          "dateCreated": "2022-01-31",
+          "name": "United Class 11 Andar",
+          "email": "adrianonunes@unitedclass.com.br",
+          "company": "UNITED CLASS",
+          "phone": "21999849093",
+          "mobilePhone": "21999849093",
+          "address": "Avenida Rio Branco",
+          "addressNumber": "114",
+          "complement": "11 andar",
+          "province": "Centro",
+          "postalCode": "20040001",
+          "cpfCnpj": "27000021000163",
+          "personType": "JURIDICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 33
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000027407403",
+          "dateCreated": "2022-01-06",
+          "name": "Sandro Mendes dos Santos",
+          "email": "sandrorj1972@hotmail.com",
+          "company": null,
+          "phone": "21993662020",
+          "mobilePhone": "21993662020",
+          "address": "Rua das Violetas",
+          "addressNumber": "25",
+          "complement": "Bl 02 apto 206",
+          "province": "Maria Paula",
+          "postalCode": "24754250",
+          "cpfCnpj": "11576314871",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 34
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000026646144",
+          "dateCreated": "2021-12-11",
+          "name": "Roberto Campos Alves",
+          "email": "robertocamposcorretor@gmail.com",
+          "company": null,
+          "phone": "21987974458",
+          "mobilePhone": "21987974458",
+          "address": "Estrada São Pedro",
+          "addressNumber": "1643",
+          "complement": "Casa",
+          "province": "Vista Alegre",
+          "postalCode": "24725270",
+          "cpfCnpj": "09571350761",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 35
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025546474",
+          "dateCreated": "2021-11-10",
+          "name": "Teresinha Rodrigues",
+          "email": "teresinhapaulo2017@gmail.com",
+          "company": null,
+          "phone": "21991002003",
+          "mobilePhone": "21991002003",
+          "address": "Rua Aracari",
+          "addressNumber": "15",
+          "complement": "B",
+          "province": "Irajá",
+          "postalCode": "21371380",
+          "cpfCnpj": "99214580782",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 36
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025353769",
+          "dateCreated": "2021-11-04",
+          "name": "Bianca Dorestes Machado",
+          "email": "biasg204@gmail.com",
+          "company": null,
+          "phone": "21971763177",
+          "mobilePhone": "21971763177",
+          "address": "Rua Antônio Braga Cardoso",
+          "addressNumber": "185",
+          "complement": "Casa 9",
+          "province": "RJ",
+          "postalCode": "24422540",
+          "cpfCnpj": "04803144702",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 37
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025327691",
+          "dateCreated": "2021-11-03",
+          "name": "Ligue Saúde",
+          "email": "Vendasliguesaude@gmail.com",
+          "company": null,
+          "phone": "21964872060",
+          "mobilePhone": "21964872060",
+          "address": null,
+          "addressNumber": null,
+          "complement": null,
+          "province": null,
+          "postalCode": null,
+          "cpfCnpj": "22787890000166",
+          "personType": "JURIDICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": null,
+          "state": null,
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 38
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025324445",
+          "dateCreated": "2021-11-03",
+          "name": "Auxiliadora Maria Valle dos Anjos",
+          "email": "dvallesaude@gmail.com",
+          "company": null,
+          "phone": "21970382013",
+          "mobilePhone": "21970382013",
+          "address": "Avenida Jardel Filho",
+          "addressNumber": "00",
+          "complement": "Qd 228 Lt 26 Apto 202",
+          "province": "RJ",
+          "postalCode": "24934180",
+          "cpfCnpj": "01586046799",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11633,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 39
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025236741",
+          "dateCreated": "2021-10-30",
+          "name": "Rafaela das mercês Souza Corrêa",
+          "email": "rafaelaedilio@gmail.com",
+          "company": null,
+          "phone": "21984131300",
+          "mobilePhone": "21984131300",
+          "address": "Avenida Carlos Lacerda",
+          "addressNumber": "1433",
+          "complement": "Bloco 26 apart 404",
+          "province": "Areal",
+          "postalCode": "24800770",
+          "cpfCnpj": "10317237730",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11619,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 40
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025218015",
+          "dateCreated": "2021-10-29",
+          "name": "Roseni eliziario labre",
+          "email": "eliziariolabreroseni@gmail.com",
+          "company": null,
+          "phone": "21964424885",
+          "mobilePhone": "21964424885",
+          "address": "Rua Itumirim",
+          "addressNumber": "621",
+          "complement": null,
+          "province": "Guaratiba",
+          "postalCode": "23033270",
+          "cpfCnpj": "01363782770",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 41
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000025176788",
+          "dateCreated": "2021-10-28",
+          "name": "Marllon Leyson Silva do Amaral",
+          "email": "corretor.marllonamaral@gmail.com",
+          "company": null,
+          "phone": "21964524294",
+          "mobilePhone": "21964524294",
+          "address": "Rua Zuzu Angel",
+          "addressNumber": "415",
+          "complement": "Qd16",
+          "province": "Itapeba",
+          "postalCode": "24913410",
+          "cpfCnpj": "12112688707",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11633,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 42
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000024850974",
+          "dateCreated": "2021-10-18",
+          "name": "Sandra Lúcia dos Santos Ferreira",
+          "email": "sandratjcrj@gmail.com",
+          "company": null,
+          "phone": "21988580529",
+          "mobilePhone": "21988580529",
+          "address": "Rua Afonso Pena",
+          "addressNumber": "89",
+          "complement": "Casa 5 apt° 101",
+          "province": "Tijuca",
+          "postalCode": "20270242",
+          "cpfCnpj": "94393672704",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 43
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000024729354",
+          "dateCreated": "2021-10-13",
+          "name": "Matheus Gouvea Alves Inocencio",
+          "email": "corretormatheusinocencio@gmail.com",
+          "company": null,
+          "phone": "21970038674",
+          "mobilePhone": "21970038674",
+          "address": "Rua Cisplatina",
+          "addressNumber": "34",
+          "complement": null,
+          "province": "Irajá",
+          "postalCode": "21235070",
+          "cpfCnpj": "16203037796",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 44
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000023932320",
+          "dateCreated": "2021-09-16",
+          "name": "Krystina Britto",
+          "email": "krystina@bol.com.br",
+          "company": null,
+          "phone": "21991555154",
+          "mobilePhone": "21991555154",
+          "address": "Rua João Vicente",
+          "addressNumber": "1099",
+          "complement": "Sobrado",
+          "province": "Oswaldo Cruz",
+          "postalCode": "21340021",
+          "cpfCnpj": "00130003735",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 45
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000023645909",
+          "dateCreated": "2021-09-06",
+          "name": "Andrea Paula Barreto Nejaim Meira",
+          "email": "andrea.vendesaude@gmail.com",
+          "company": null,
+          "phone": "21991200756",
+          "mobilePhone": "21991200756",
+          "address": "Rua Volta",
+          "addressNumber": "276",
+          "complement": "Casa",
+          "province": "Vila da Penha",
+          "postalCode": "21220000",
+          "cpfCnpj": "87881047704",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 46
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000023591324",
+          "dateCreated": "2021-09-03",
+          "name": "Thiago Ribeiro Bonifacio",
+          "email": "bonithiago@outlook.com",
+          "company": null,
+          "phone": "21964225920",
+          "mobilePhone": "21964225920",
+          "address": "Rua Coronel Tedim",
+          "addressNumber": "482",
+          "complement": "Fundos",
+          "province": "RJ",
+          "postalCode": "22740240",
+          "cpfCnpj": "12474067760",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 47
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000023468726",
+          "dateCreated": "2021-08-31",
+          "name": "Elias Nery",
+          "email": "consultor.enery@gmail.com",
+          "company": null,
+          "phone": "21981035560",
+          "mobilePhone": "21981035560",
+          "address": "Rua Vinte e Quatro de Maio",
+          "addressNumber": "859",
+          "complement": null,
+          "province": "Engenho Novo",
+          "postalCode": "20950092",
+          "cpfCnpj": "07225775758",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 48
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000023102091",
+          "dateCreated": "2021-08-17",
+          "name": "MANOEL LUIZ MARTINS FIGUEIREDO",
+          "email": "saudemanoel@gmail.com",
+          "company": null,
+          "phone": "21964130081",
+          "mobilePhone": "21964130081",
+          "address": "Estrada do Viegas",
+          "addressNumber": "717",
+          "complement": null,
+          "province": "Senador Camará",
+          "postalCode": "21832006",
+          "cpfCnpj": "85242640715",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 49
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022969295",
+          "dateCreated": "2021-08-12",
+          "name": "Elza Maria de Souza Curbani",
+          "email": "elzacurbani.saude@hotmail.com",
+          "company": null,
+          "phone": "21976517872",
+          "mobilePhone": "21976517872",
+          "address": "Rua Visconde de Ouro Preto",
+          "addressNumber": "5",
+          "complement": "Casa",
+          "province": "Tauá",
+          "postalCode": "21910520",
+          "cpfCnpj": "89010345734",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 50
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022868799",
+          "dateCreated": "2021-08-09",
+          "name": "Linda Cristina Pessoa Cirilo",
+          "email": "linda.kristina@hotmail.com",
+          "company": null,
+          "phone": "21986892686",
+          "mobilePhone": "21986892686",
+          "address": "Rua Auriflama",
+          "addressNumber": "179",
+          "complement": null,
+          "province": "Rio de Janeiro",
+          "postalCode": "21660070",
+          "cpfCnpj": "93667868715",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11642,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 51
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022751499",
+          "dateCreated": "2021-08-03",
+          "name": "Leonardo Araujo Maraga",
+          "email": "maragaleonardo@gmail.com",
+          "company": null,
+          "phone": "21997919653",
+          "mobilePhone": "21997919653",
+          "address": "Rua Januário Barbosa",
+          "addressNumber": "42",
+          "complement": "Casa",
+          "province": "Vila Três",
+          "postalCode": "24711170",
+          "cpfCnpj": "16060443702",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 52
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022532559",
+          "dateCreated": "2021-07-26",
+          "name": "LUCIMARA OLIVEIRA DA SILVA",
+          "email": "lucimara4055@hotmail.com",
+          "company": null,
+          "phone": "21991048766",
+          "mobilePhone": "21991048766",
+          "address": "Travessa Maurício de Abreu",
+          "addressNumber": "294",
+          "complement": "Casa",
+          "province": "Neves",
+          "postalCode": "24425305",
+          "cpfCnpj": "85257915715",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11643,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 53
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022477090",
+          "dateCreated": "2021-07-22",
+          "name": "Marcela Marques Moret",
+          "email": "marcelamoret@gmail.com",
+          "company": null,
+          "phone": "21998437369",
+          "mobilePhone": "21998437369",
+          "address": "Estrada Adam Blumer",
+          "addressNumber": "6213",
+          "complement": null,
+          "province": "Jardim Esmeralda",
+          "postalCode": "25908683",
+          "cpfCnpj": "08702367769",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11628,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 54
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022469064",
+          "dateCreated": "2021-07-21",
+          "name": "Anderson Teixeira",
+          "email": "aateixeira2017@gmail.com",
+          "company": null,
+          "phone": "21967689898",
+          "mobilePhone": "21967689898",
+          "address": "Rua Senador Lucio Bittencourt",
+          "addressNumber": "24",
+          "complement": null,
+          "province": "Itaipu",
+          "postalCode": "24342040",
+          "cpfCnpj": "96141662749",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11639,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 55
+        }
+      },
+      {
+        "json": {
+          "object": "customer",
+          "id": "cus_000022451110",
+          "dateCreated": "2021-07-21",
+          "name": "MARIA PAULETE DUARTE DA SILVA",
+          "email": "mariapauleteseguros@gmail.com",
+          "company": null,
+          "phone": "21998350655",
+          "mobilePhone": "21998350655",
+          "address": "Avenida Vereador Roberto Garrido de Souza",
+          "addressNumber": "190",
+          "complement": "Mirante da Lagoa",
+          "province": "Lagoa",
+          "postalCode": "27925400",
+          "cpfCnpj": "54881366734",
+          "personType": "FISICA",
+          "deleted": false,
+          "additionalEmails": null,
+          "externalReference": null,
+          "notificationDisabled": true,
+          "observations": null,
+          "municipalInscription": null,
+          "stateInscription": null,
+          "canDelete": true,
+          "cannotBeDeletedReason": null,
+          "canEdit": true,
+          "cannotEditReason": null,
+          "city": 11440,
+          "state": "RJ",
+          "country": "Brasil"
+        },
+        "pairedItem": {
+          "item": 56
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-01-24T06:09:28.000Z",
+  "versionId": "d42e2561-7315-4d60-80ec-f5ff9412ad6d"
+}
