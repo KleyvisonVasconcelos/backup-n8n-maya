@@ -147,17 +147,6 @@
         ]
       ]
     },
-    "Semestral2": {
-      "main": [
-        [
-          {
-            "node": "Gerar Plano Semestral2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Webhook1": {
       "main": [
         [
@@ -704,69 +693,6 @@
     },
     {
       "parameters": {
-        "method": "POST",
-        "url": "https://www.asaas.com/api/v3/subscriptions",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "billingType",
-              "value": "UNDEFINED"
-            },
-            {
-              "name": "cycle",
-              "value": "SEMIANNUALLY"
-            },
-            {
-              "name": "value",
-              "value": "={{ parseInt($('Webhook1').item.json[\"body\"][\"ValorPlano\"]) }}"
-            },
-            {
-              "name": "customer",
-              "value": "={{ $('criando cliente no asaas1').item.json[\"id\"] }}"
-            },
-            {
-              "name": "nextDueDate",
-              "value": "={{ $('formatando data hoje1').item.json[\"data-hoje\"] }}"
-            },
-            {
-              "name": "description",
-              "value": "={{ $('Webhook1').item.json[\"body\"][\"Plano\"] }} (ADESAO)"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "e63d9ac3-b2a9-4903-a4e3-64a45bcbb349",
-      "name": "Gerar Plano Semestral2",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        1200,
-        1900
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "Va5qrgh0YRss7hJN",
-          "name": "Asaas"
-        }
-      }
-    },
-    {
-      "parameters": {},
-      "id": "dba110ec-8ba3-435a-9806-a696c9a522a0",
-      "name": "Semestral2",
-      "type": "n8n-nodes-base.noOp",
-      "typeVersion": 1,
-      "position": [
-        960,
-        1900
-      ]
-    },
-    {
-      "parameters": {
         "httpMethod": "POST",
         "path": "cadastro-asaas=====",
         "options": {}
@@ -1206,6 +1132,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2024-01-23T05:05:41.000Z",
-  "versionId": "6336def0-266c-4595-986b-22cec43719cd"
+  "updatedAt": "2024-01-24T00:51:54.000Z",
+  "versionId": "d74acd36-d4bf-4b13-99c0-39e27ffe26d9"
 }
