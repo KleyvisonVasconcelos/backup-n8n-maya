@@ -158,7 +158,7 @@
         ],
         [
           {
-            "node": "enviar fluxo cobranca recebida",
+            "node": "com simulador?1",
             "type": "main",
             "index": 0
           }
@@ -180,7 +180,7 @@
       "main": [
         [
           {
-            "node": "enviar fluxo cliente novo",
+            "node": "com simulador?",
             "type": "main",
             "index": 0
           }
@@ -265,6 +265,64 @@
         [
           {
             "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "com simulador?": {
+      "main": [
+        [
+          {
+            "node": "inserir tag simulador",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "enviar fluxo cliente novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inserir tag simulador": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo cliente novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "com simulador?1": {
+      "main": [
+        [
+          {
+            "node": "inserir tag simulador1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "enviar fluxo cobranca recebida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "inserir tag simulador1": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo cobranca recebida",
             "type": "main",
             "index": 0
           }
@@ -953,9 +1011,13 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        5340,
-        520
+        5820,
+        540
       ],
+      "executeOnce": false,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
           "id": "pCMjftibfRSpRtqc",
@@ -1128,8 +1190,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        4860,
-        780
+        5400,
+        880
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -1160,6 +1222,100 @@
         "httpHeaderAuth": {
           "id": "Va5qrgh0YRss7hJN",
           "name": "Asaas"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $('Webhook1').item.json.body.payment.description }}",
+              "operation": "contains",
+              "value2": "Simulador"
+            }
+          ]
+        }
+      },
+      "id": "e829fc5b-4aeb-4ce5-a99f-829c4f24d223",
+      "name": "com simulador?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5320,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência').item.json[\"id\"] }}/tags/7052549/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "1471ef70-a8e0-4edc-a71f-1bbab6646a47",
+      "name": "inserir tag simulador",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5560,
+        440
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $('Webhook1').item.json.body.payment.description }}",
+              "operation": "contains",
+              "value2": "Simulador"
+            }
+          ]
+        }
+      },
+      "id": "b61369f7-4690-46e6-baf0-c6e562b7c7e9",
+      "name": "com simulador?1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4860,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('Cadastrando na Audiência').item.json[\"id\"] }}/tags/7052549/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "189979a6-cdd1-4e96-92ce-ae40288634c1",
+      "name": "inserir tag simulador1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5120,
+        780
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
         }
       }
     }
@@ -1345,6 +1501,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2023-12-08T20:35:01.000Z",
-  "versionId": "6ebd4f1f-15a2-46f5-8c1c-e1046a83ee35"
+  "updatedAt": "2024-01-30T01:06:12.000Z",
+  "versionId": "19dd4295-d774-4ed6-a5ad-80e6761505c4"
 }
