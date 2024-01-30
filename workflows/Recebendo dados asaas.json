@@ -158,7 +158,7 @@
         ],
         [
           {
-            "node": "com simulador?1",
+            "node": "enviar fluxo cobranca recebida",
             "type": "main",
             "index": 0
           }
@@ -1289,8 +1289,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        4860,
-        860
+        4880,
+        1120
       ]
     },
     {
@@ -1306,8 +1306,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        5120,
-        780
+        5060,
+        980
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -1501,6 +1501,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2024-01-30T01:06:12.000Z",
-  "versionId": "19dd4295-d774-4ed6-a5ad-80e6761505c4"
+  "updatedAt": "2024-01-30T01:57:05.000Z",
+  "versionId": "d92f4e75-e12a-4edb-8346-13bcd8b9f3df"
 }
