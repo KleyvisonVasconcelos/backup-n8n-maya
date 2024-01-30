@@ -1,0 +1,42 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2024-01-30T03:08:39.375Z",
+  "id": "RVAYBFRcMRuQ7Hpl",
+  "meta": null,
+  "name": "Atualizar Plano com simulador",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "atualizar-plano-simulador",
+        "options": {}
+      },
+      "id": "83630126-21b2-4435-8819-bde649ee90cc",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        960,
+        440
+      ],
+      "webhookId": "16691ed7-539a-4d39-99cb-1704e009ab56"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2023-11-22T17:42:30.840Z",
+      "updatedAt": "2023-11-22T17:42:30.840Z",
+      "id": "0gOZgGnm1GKApPtB",
+      "name": "Maya"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-01-30T03:08:42.000Z",
+  "versionId": "52d019df-4a15-487c-b75c-dfba649e6687"
+}
