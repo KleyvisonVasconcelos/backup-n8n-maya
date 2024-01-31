@@ -328,6 +328,11 @@
           }
         ]
       ]
+    },
+    "enviar fluxo cliente novo": {
+      "main": [
+        []
+      ]
     }
   },
   "createdAt": "2023-11-22T18:45:17.269Z",
@@ -1318,6 +1323,146 @@
           "name": "BC - Maya"
         }
       }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/1790317/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('buscar assinatura cliente').item.json.data[0].id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e9505dcd-031b-4f1f-a7c4-fa593d0d0ac7",
+      "name": "salvando id assinatura",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        6140,
+        300
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/400817/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('atualizar').item.json.cpfCnpj }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ea232672-050e-46db-9af1-532253f27315",
+      "name": "salvando CPF",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        6140,
+        460
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/400824/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('atualizar').item.json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7f47b345-b5b1-4d20-8fb0-2be4def4f44b",
+      "name": "salvando ID Cliente",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        6140,
+        620
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/custom_fields/400824/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "value",
+              "value": "={{ $('buscar assinatura cliente').item.json[\"data\"][0][\"cycle\"].replace(\"MONTHLY\",\"mensal\").replace(\"SEMIANNUALLY\",\"semestral\").replace(\"YEARLY\",\"anual\") }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cb38cf27-bb9e-4f91-9de5-33905dec6a4f",
+      "name": "salvando tipo plano",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        6140,
+        780
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "pCMjftibfRSpRtqc",
+          "name": "BC - Maya"
+        }
+      }
     }
   ],
   "pinData": {
@@ -1501,6 +1646,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2024-01-30T01:57:05.000Z",
-  "versionId": "d92f4e75-e12a-4edb-8346-13bcd8b9f3df"
+  "updatedAt": "2024-01-31T12:53:44.000Z",
+  "versionId": "bd020752-2938-4be3-900b-8590af63755e"
 }
