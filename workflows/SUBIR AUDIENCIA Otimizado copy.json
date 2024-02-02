@@ -308,89 +308,9 @@
         ]
       ]
     },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "em inclusao",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "em recuperacao",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "HTTP Request Adicionar Etiqueta abordado pelo bot",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Switch1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch1": {
-      "main": [
-        [
-          {
-            "node": "INCLUSO",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "finalizado",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "recuperado",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Switch2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch2": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request Adicionar Etiqueta em inclusao6",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "IF1": {
       "main": [
         [
-          {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          },
           {
             "node": "HTTP Request Atualizar Campo EMPRESA",
             "type": "main",
@@ -460,6 +380,11 @@
             "node": "Wait 2 segundos",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Switch3",
+            "type": "main",
+            "index": 0
           }
         ],
         [
@@ -476,6 +401,81 @@
         [
           {
             "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch3": {
+      "main": [
+        [
+          {
+            "node": "em inclusao1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "em recuperacao1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta abordado pelo bot1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch4": {
+      "main": [
+        [
+          {
+            "node": "INCLUSO1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "finalizado1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "recuperado1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request Adicionar Etiqueta em inclusao",
             "type": "main",
             "index": 0
           }
@@ -713,8 +713,7 @@
       "position": [
         -5460,
         1380
-      ],
-      "disabled": true
+      ]
     },
     {
       "parameters": {
@@ -3133,301 +3132,6 @@
     },
     {
       "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"]}}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "EM INCLUSAO"
-            },
-            {
-              "value2": "EM RECUPERACAO",
-              "output": 1
-            },
-            {
-              "value2": "ABORDADO PELO BOT",
-              "output": 2
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "0a0033a9-fc94-46be-b6aa-5ef471f79543",
-      "name": "Switch",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        400,
-        300
-      ]
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "INCLUSO"
-            },
-            {
-              "value2": "FINALIZADO",
-              "output": 1
-            },
-            {
-              "value2": "RECUPERADO",
-              "output": 2
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "b7bddca5-3d57-430a-ad86-1008899d7fa9",
-      "name": "Switch1",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        400,
-        900
-      ]
-    },
-    {
-      "parameters": {
-        "dataType": "string",
-        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
-        "rules": {
-          "rules": [
-            {
-              "value2": "EM CLASSIFICACAO"
-            }
-          ]
-        },
-        "fallbackOutput": 3
-      },
-      "id": "d4df6355-1895-4f99-8eeb-9e7daaf5c358",
-      "name": "Switch2",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 1,
-      "position": [
-        400,
-        1340
-      ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961563/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "4e5ef7ba-ca8d-43f8-95fe-43868b6aea33",
-      "name": "HTTP Request Adicionar Etiqueta em inclusao6",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        1340
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": "3119653"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "9b1fd7f8-aa29-4672-9060-3fd4663b06d0",
-      "name": "finalizado",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        980
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": "3119523"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "7ff78b11-b98b-4d8c-bc59-7e29e9247ddf",
-      "name": "recuperado",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        1160
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": "3119370"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "2705906b-9011-43b4-8f81-752f9031b21e",
-      "name": "em inclusao",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        220
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": "3119462"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "ec6631f0-2fbf-4dea-9b5b-b253e987ddb2",
-      "name": "em recuperacao",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        400
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961557/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "options": {}
-      },
-      "id": "d3c7580c-e0da-48f6-a56a-d37aed7a9a5a",
-      "name": "HTTP Request Adicionar Etiqueta abordado pelo bot",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        600
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "flow",
-              "value": "3119473"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "4f556212-99d7-4715-ba16-4943ef0ea414",
-      "name": "INCLUSO",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [
-        900,
-        800
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "3MYXa6yjvgMoxfow",
-          "name": "BC - Medi Pais"
-        }
-      },
-      "continueOnFail": true
-    },
-    {
-      "parameters": {
         "conditions": {
           "string": [
             {
@@ -3492,6 +3196,301 @@
           "name": "medi"
         }
       }
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM INCLUSAO"
+            },
+            {
+              "value2": "EM RECUPERACAO",
+              "output": 1
+            },
+            {
+              "value2": "ABORDADO PELO BOT",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "ecded5f1-7be4-4b4f-94a2-7a30dcb5fd12",
+      "name": "Switch3",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        380,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "INCLUSO"
+            },
+            {
+              "value2": "FINALIZADO",
+              "output": 1
+            },
+            {
+              "value2": "RECUPERADO",
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "9b6ce1f5-c894-4043-a309-b1692828291f",
+      "name": "Switch4",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        380,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $('Split In Batches').item.json[\"STATUS DA TRIAGEM\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "EM CLASSIFICACAO"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "f2cd68b3-55ab-449e-8044-b422b64b59a7",
+      "name": "Switch5",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        380,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961563/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "811d12a6-e6fb-4847-888a-25300b61b9df",
+      "name": "HTTP Request Adicionar Etiqueta em inclusao",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        1280
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119653"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1f6f1e4b-6261-4590-8804-c1abe23a136d",
+      "name": "finalizado1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        920
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119523"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fad44f1c-be19-4ca3-b23a-302297e8f31a",
+      "name": "recuperado1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        1100
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119370"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "43a4eb38-9351-461f-923f-8314a8e075ab",
+      "name": "em inclusao1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        160
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119462"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8ffd3e4d-066d-4723-b44a-4cad29df82eb",
+      "name": "em recuperacao1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        340
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/tags/4961557/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "579f6e7a-6b4a-4acf-bf11-35ecedf627e8",
+      "name": "HTTP Request Adicionar Etiqueta abordado pelo bot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        540
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $json.id }}/send_flow/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "3119473"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0a29a9fb-0946-433d-81ba-15226df0383d",
+      "name": "INCLUSO1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        880,
+        740
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "3MYXa6yjvgMoxfow",
+          "name": "BC - Medi Pais"
+        }
+      },
+      "continueOnFail": true
     }
   ],
   "pinData": {
@@ -3585,8 +3584,8 @@
     "node:Google Sheets Trigger": {
       "documentId": "1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os",
       "sheetId": 887746287,
-      "lastRevision": 103429,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=103429&exportFormat=xlsx"
+      "lastRevision": 103521,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1LXr-BCLmTbm18vqQlj369q6-QCWkagg0rNQAJF8w6os&revision=103521&exportFormat=xlsx"
     }
   },
   "tags": [
@@ -3597,7 +3596,7 @@
       "name": "Medi"
     }
   ],
-  "triggerCount": 2,
-  "updatedAt": "2024-02-02T14:30:13.000Z",
-  "versionId": "db3e24b8-ef4b-4a47-8d6c-9b9e61d90519"
+  "triggerCount": 3,
+  "updatedAt": "2024-02-02T15:30:36.000Z",
+  "versionId": "19ff78dd-0508-43a4-a868-b83d98c79c02"
 }
