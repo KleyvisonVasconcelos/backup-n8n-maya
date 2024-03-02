@@ -16,7 +16,7 @@
       "main": [
         [
           {
-            "node": "Wait",
+            "node": "enviar fluxo",
             "type": "main",
             "index": 0
           }
@@ -128,6 +128,17 @@
         [
           {
             "node": "telefone vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "enviar fluxo": {
+      "main": [
+        [
+          {
+            "node": "Wait",
             "type": "main",
             "index": 0
           }
@@ -381,7 +392,7 @@
       "typeVersion": 1,
       "position": [
         2000,
-        620
+        760
       ],
       "id": "fea4dd41-aaff-4465-b6d5-fb23537552fc",
       "retryOnFail": true,
@@ -392,8 +403,7 @@
           "id": "EnweQS0a3c3jn7qF",
           "name": "BC - SEBASTIAN"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -559,12 +569,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 67691,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=67691&exportFormat=xlsx"
+      "lastRevision": 67698,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=67698&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-03-01T19:16:26.000Z",
-  "versionId": "43b27bf6-820c-4914-a917-7e9947dc6468"
+  "updatedAt": "2024-03-02T08:15:25.000Z",
+  "versionId": "d4313364-1a08-44b0-abbe-87f03d48f6fe"
 }
