@@ -191,7 +191,7 @@
       "credentials": {
         "googleSheetsTriggerOAuth2Api": {
           "id": "hzggfIVge1lSLJ6h",
-          "name": "bot.maya.n8n@gmail.com trigger"
+          "name": "MAYA"
         }
       }
     },
@@ -515,7 +515,7 @@
       "typeVersion": 1,
       "position": [
         400,
-        840
+        860
       ],
       "webhookId": "6dba5daf-517f-439e-ba0d-a67fa19fc839"
     },
@@ -544,17 +544,7 @@
       ]
     }
   ],
-  "pinData": {
-    "Google Sheets Trigger": [
-      {
-        "json": {
-          "TELEFONE FORMATADO": "+5521998566186",
-          "TELEFONE": "21998566186",
-          "NOME": "ANDRE TAVARES DE MIRANDA ALVES"
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
@@ -569,12 +559,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
       "sheetId": 482129188,
-      "lastRevision": 68344,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=68344&exportFormat=xlsx"
+      "lastRevision": 68345,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI&revision=68345&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-04-04T23:01:17.000Z",
-  "versionId": "d4313364-1a08-44b0-abbe-87f03d48f6fe"
+  "updatedAt": "2024-04-06T10:05:02.000Z",
+  "versionId": "125a8d80-589c-4bef-8a3d-646f193110c4"
 }
