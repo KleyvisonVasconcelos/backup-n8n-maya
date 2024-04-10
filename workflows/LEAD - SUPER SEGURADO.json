@@ -130,7 +130,7 @@
           "interval": [
             {
               "field": "minutes",
-              "minutesInterval": 3
+              "minutesInterval": 2
             }
           ]
         }
@@ -302,6 +302,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-04-10T14:02:51.000Z",
-  "versionId": "371bde84-ba03-4db5-92ac-bc8f2a2af19c"
+  "updatedAt": "2024-04-10T14:18:32.000Z",
+  "versionId": "493fd47a-86dc-4c28-9880-78c4afca37e0"
 }
