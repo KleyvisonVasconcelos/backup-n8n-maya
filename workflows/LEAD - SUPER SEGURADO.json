@@ -1,28 +1,6 @@
 {
   "active": true,
   "connections": {
-    "Google Sheets": {
-      "main": [
-        [
-          {
-            "node": "Split In Batches",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Schedule Trigger": {
-      "main": [
-        [
-          {
-            "node": "Google Sheets",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Split In Batches": {
       "main": [
         [
@@ -88,6 +66,17 @@
           }
         ]
       ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-04-10T13:27:59.098Z",
@@ -95,55 +84,6 @@
   "meta": null,
   "name": "LEAD - SUPER SEGURADO",
   "nodes": [
-    {
-      "parameters": {
-        "documentId": {
-          "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1ObG3JqvBapGNIOQoIhhtacR-xxt--2vYgZoFsJIPp64/edit#gid=0",
-          "mode": "url"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1ObG3JqvBapGNIOQoIhhtacR-xxt--2vYgZoFsJIPp64/edit#gid=0",
-          "mode": "url"
-        },
-        "options": {}
-      },
-      "id": "e8d06e93-e18d-46cb-a45d-f6d0970271f7",
-      "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.1,
-      "position": [
-        800,
-        200
-      ],
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "jRzEQYoWFsfdKjt1",
-          "name": "TRIGGER 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "rule": {
-          "interval": [
-            {
-              "field": "minutes",
-              "minutesInterval": 2
-            }
-          ]
-        }
-      },
-      "id": "f1c9c67e-373f-4c5a-9f97-abb6e87372a8",
-      "name": "Schedule Trigger",
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.1,
-      "position": [
-        540,
-        200
-      ]
-    },
     {
       "parameters": {
         "batchSize": 1,
@@ -155,7 +95,7 @@
       "typeVersion": 2,
       "position": [
         1020,
-        200
+        220
       ]
     },
     {
@@ -201,8 +141,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2220,
-        300
+        2180,
+        260
       ],
       "webhookId": "bf34acb3-4b8b-47ca-b612-9ed27e0fcf68"
     },
@@ -289,6 +229,45 @@
         1680,
         200
       ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1ObG3JqvBapGNIOQoIhhtacR-xxt--2vYgZoFsJIPp64/edit#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ObG3JqvBapGNIOQoIhhtacR-xxt--2vYgZoFsJIPp64/edit#gid=0"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "id": "37837530-0ffd-4955-9af4-e5e77968e865",
+      "name": "Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        760,
+        220
+      ],
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "XVpxz20FhJGdAsZA",
+          "name": "NOVO TRIGGER"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -298,10 +277,15 @@
   "staticData": {
     "node:Schedule Trigger": {
       "recurrencyRules": []
+    },
+    "node:Google Sheets Trigger": {
+      "documentId": "1ObG3JqvBapGNIOQoIhhtacR-xxt--2vYgZoFsJIPp64",
+      "sheetId": "0",
+      "lastIndexChecked": 3
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-04-10T14:18:32.000Z",
-  "versionId": "493fd47a-86dc-4c28-9880-78c4afca37e0"
+  "updatedAt": "2024-04-13T00:32:22.000Z",
+  "versionId": "f08e5cac-b40c-40ba-9625-c683380c5560"
 }
