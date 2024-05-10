@@ -1,0 +1,261 @@
+{
+  "active": true,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-05-10T10:02:37.474Z",
+  "id": "7ainYpwF64DTihqK",
+  "meta": null,
+  "name": "Uso Diário Sebastian",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 23,
+              "triggerAtMinute": 59
+            }
+          ]
+        }
+      },
+      "id": "0a2612b9-0ab8-4eda-91f1-746d95a751c7",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/get_by_phone/5521992593830/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "21a0c95a-ef2d-420f-8fb8-101573ba3dfe"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fa9cede5-6a45-4e96-a842-d286a5153862",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        780,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/243842499/send_flow/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "API-KEY",
+              "value": "21a0c95a-ef2d-420f-8fb8-101573ba3dfe"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "flow",
+              "value": "4164265"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c2587e5d-f586-4bc2-b1d1-13b5bcfda310",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1000,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "310d1498-0926-4229-8045-173ac3a2f4a8",
+        "options": {}
+      },
+      "id": "738b9cb4-848a-40d7-afb5-209ad855a510",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        120,
+        -140
+      ],
+      "webhookId": "5228c445-7862-4c79-81da-24c2a9b3e94a",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1_5MJ0bJO2Qr1zrqPDqN55EiiLoJkLInupAf-PmOtiZA",
+          "mode": "list",
+          "cachedResultName": "eventos maya",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_5MJ0bJO2Qr1zrqPDqN55EiiLoJkLInupAf-PmOtiZA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 912435535,
+          "mode": "list",
+          "cachedResultName": "SEBASTIAN",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_5MJ0bJO2Qr1zrqPDqN55EiiLoJkLInupAf-PmOtiZA/edit#gid=912435535"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "DATA": "={{ $json.body.DATA }}",
+            "USO DIÁRIO": "={{ $json.body.USO }}"
+          },
+          "matchingColumns": [
+            "DATA"
+          ],
+          "schema": [
+            {
+              "id": "DATA",
+              "displayName": "DATA",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "USO DIÁRIO",
+              "displayName": "USO DIÁRIO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "558f62b6-c26f-4a7b-917c-0d2b66cbc081",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        760,
+        -120
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "d4d1f516-b995-437e-977c-113351af1e79",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "21a0c95a-ef2d-420f-8fb8-101573ba3dfe",
+        "options": {}
+      },
+      "id": "67d30488-6f4a-4184-8049-52d3447d279b",
+      "name": "Webhook1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        500,
+        -120
+      ],
+      "webhookId": "49ec4eec-e509-4da3-b876-78f3a3013c9f"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2024-05-10T10:19:14.000Z",
+  "versionId": "62b8e00d-a7ab-49d1-a93e-aa05b9e7caab"
+}
