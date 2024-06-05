@@ -1,0 +1,264 @@
+{
+  "active": true,
+  "connections": {
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-05T19:40:11.579Z",
+  "id": "2uo0q8ZZLpSjQS4f",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Sebastian - Deletar",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+          "mode": "list",
+          "cachedResultName": "BOT-SEBASTIAN",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1244445951,
+          "mode": "list",
+          "cachedResultName": "CADASTRO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=1244445951"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "STATUS",
+              "lookupValue": "=EXCLUIR"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4e871abb-e0f2-47ce-9925-a655bc341616",
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        940,
+        580
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+          "mode": "list",
+          "cachedResultName": "BOT-SEBASTIAN",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1244445951,
+          "mode": "list",
+          "cachedResultName": "CADASTRO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=1244445951"
+        },
+        "startIndex": "={{ $json.row_number }}"
+      },
+      "id": "2e490f31-1739-4bcb-ac13-5a56bbd8c77b",
+      "name": "Google Sheets4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        1760,
+        600
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "75582bec-a2fc-4a25-adeb-37b74f51f95d",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        720,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "361bce9a-9b9b-42bb-aa2f-479d28f8e212",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1180,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI",
+          "mode": "list",
+          "cachedResultName": "BOT-SEBASTIAN",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1244445951,
+          "mode": "list",
+          "cachedResultName": "CADASTRO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KQv8Vi4voiUpuIVjmvqm1pgG4Kh7ccoucEdJSSrepGI/edit#gid=1244445951"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "STATUS",
+              "lookupValue": "=EXCLUIR"
+            },
+            {
+              "lookupColumn": "TELEFONE",
+              "lookupValue": "={{ $json.TELEFONE }}"
+            }
+          ]
+        },
+        "combineFilters": "AND",
+        "options": {
+          "returnAllMatches": "returnFirstMatch"
+        }
+      },
+      "id": "c34a6347-97a2-4cb6-a052-66601b89307b",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        1480,
+        600
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "dFIUWkQVHedOmWGn",
+          "name": "bot.maya.n8n@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "881688fe-ead6-43ac-9850-cb5b66063a50",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2000,
+        600
+      ],
+      "webhookId": "0ce4c30f-7399-45ba-a122-dbab95d1f8e3"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataSuccessExecution": "none",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-06-05T19:47:17.000Z",
+  "versionId": "62dead18-6956-450f-ad20-7fff0bcd69c0"
+}
