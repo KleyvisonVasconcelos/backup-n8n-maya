@@ -328,11 +328,6 @@
           }
         ]
       ]
-    },
-    "enviar fluxo cliente novo": {
-      "main": [
-        []
-      ]
     }
   },
   "createdAt": "2023-11-22T18:45:17.269Z",
@@ -351,8 +346,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
       "position": [
-        1000,
-        420
+        1040,
+        0
       ],
       "webhookId": "88dbb469-d25f-4afa-9897-8f18ca96bebe"
     },
@@ -821,8 +816,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4,
       "position": [
-        3620,
-        460
+        3600,
+        160
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1195,8 +1190,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        5400,
-        880
+        5420,
+        1180
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -1294,8 +1289,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        4880,
-        1120
+        4780,
+        1480
       ]
     },
     {
@@ -1311,8 +1306,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        5060,
-        980
+        5040,
+        1300
       ],
       "retryOnFail": true,
       "maxTries": 5,
@@ -1646,6 +1641,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2024-01-31T12:53:44.000Z",
-  "versionId": "bd020752-2938-4be3-900b-8590af63755e"
+  "updatedAt": "2024-07-09T14:55:41.000Z",
+  "versionId": "73b5abe0-75a5-4f5d-a298-a022f75402c1"
 }
