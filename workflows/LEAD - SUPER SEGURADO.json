@@ -274,6 +274,55 @@
   "settings": {
     "executionOrder": "v1"
   },
+  "shared": [
+    {
+      "createdAt": "2024-04-10T13:27:59.113Z",
+      "updatedAt": "2024-04-10T13:27:59.113Z",
+      "role": "workflow:owner",
+      "workflowId": "3aYZMKrlxrrt4QDt",
+      "projectId": "EhYksklXdTBsi26f",
+      "project": {
+        "createdAt": "2024-08-06T03:41:19.242Z",
+        "updatedAt": "2024-08-06T03:41:19.242Z",
+        "id": "EhYksklXdTBsi26f",
+        "name": "Vinicius Fastinoni <bot.maya.n8n@gmail.com>",
+        "type": "personal",
+        "projectRelations": [
+          {
+            "createdAt": "2024-08-06T03:41:19.242Z",
+            "updatedAt": "2024-08-06T03:41:19.242Z",
+            "role": "project:personalOwner",
+            "userId": "31bebeed-1943-40c1-85cd-9ef49971170c",
+            "projectId": "EhYksklXdTBsi26f",
+            "user": {
+              "createdAt": "2023-11-22T16:53:59.095Z",
+              "updatedAt": "2023-11-29T02:49:32.000Z",
+              "id": "31bebeed-1943-40c1-85cd-9ef49971170c",
+              "email": "bot.maya.n8n@gmail.com",
+              "firstName": "Vinicius",
+              "lastName": "Fastinoni",
+              "personalizationAnswers": {
+                "version": "v4",
+                "personalization_survey_submitted_at": "2023-11-22T17:09:31.234Z",
+                "personalization_survey_n8n_version": "1.16.0"
+              },
+              "settings": {
+                "userActivated": true,
+                "isOnboarded": true,
+                "firstSuccessfulWorkflowId": "hR3fA4rAnKCuUwjJ",
+                "userActivatedAt": 1722915679480
+              },
+              "role": "global:owner",
+              "disabled": false,
+              "mfaEnabled": false,
+              "isPending": false,
+              "isOwner": true
+            }
+          }
+        ]
+      }
+    }
+  ],
   "staticData": {
     "node:Schedule Trigger": {
       "recurrencyRules": []
