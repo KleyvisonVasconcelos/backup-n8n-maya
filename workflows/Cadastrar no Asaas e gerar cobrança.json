@@ -1144,7 +1144,7 @@
             "projectId": "EhYksklXdTBsi26f",
             "user": {
               "createdAt": "2023-11-22T16:53:59.095Z",
-              "updatedAt": "2023-11-29T02:49:32.000Z",
+              "updatedAt": "2024-08-10T02:16:09.096Z",
               "id": "31bebeed-1943-40c1-85cd-9ef49971170c",
               "email": "bot.maya.n8n@gmail.com",
               "firstName": "Vinicius",
@@ -1158,7 +1158,12 @@
                 "userActivated": true,
                 "isOnboarded": true,
                 "firstSuccessfulWorkflowId": "hR3fA4rAnKCuUwjJ",
-                "userActivatedAt": 1722915679480
+                "userActivatedAt": 1722915679480,
+                "npsSurvey": {
+                  "waitingForResponse": true,
+                  "ignoredCount": 1,
+                  "lastShownAt": 1723256160325
+                }
               },
               "role": "global:owner",
               "disabled": false,
