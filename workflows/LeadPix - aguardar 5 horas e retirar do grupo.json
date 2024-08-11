@@ -1,6 +1,73 @@
 {
   "active": false,
-  "connections": {},
+  "connections": {
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "espera 5 horas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "recuperar dados planilha1": {
+      "main": [
+        [
+          {
+            "node": "MOVER DE VOLTA PARA ABA INPUT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "verificar se foi vendido": {
+      "main": [
+        [
+          {
+            "node": "apagar da aba TRATADOS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "apagar da aba TRATADOS": {
+      "main": [
+        [
+          {
+            "node": "recuperar dados planilha1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MOVER DE VOLTA PARA ABA INPUT": {
+      "main": [
+        [
+          {
+            "node": "apagar mensagem no grupo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "espera 5 horas": {
+      "main": [
+        [
+          {
+            "node": "verificar se foi vendido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
   "createdAt": "2024-08-11T21:30:05.605Z",
   "id": "48ZhPWquwtAyAOnR",
   "meta": {
@@ -18,6 +85,297 @@
         1160,
         400
       ]
+    },
+    {
+      "parameters": {
+        "unit": "hours"
+      },
+      "id": "d1fa4017-d983-4e0b-87cc-5a72d2dfcadc",
+      "name": "espera 5 horas",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1400,
+        400
+      ],
+      "webhookId": "7cd3a639-0b0f-456a-8772-01b15bad8582"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw",
+          "mode": "list",
+          "cachedResultName": "LeadPix - Controle",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1013573269,
+          "mode": "list",
+          "cachedResultName": "Tratados",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw/edit#gid=1013573269"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ID",
+              "lookupValue": "={{ $('Execute Workflow Trigger').item.json.ID }}"
+            },
+            {
+              "lookupColumn": "Status",
+              "lookupValue": "No Grupo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1551ecde-ab56-49e0-aa54-877bfd8c8bb1",
+      "name": "verificar se foi vendido",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1620,
+        400
+      ],
+      "executeOnce": false,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "QyOrbjZTQhaHvAQC",
+          "name": "Google Sheets - botleadpix@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const nodeData = $node['verificar se foi vendido'].json;\n\nreturn {\n    json: nodeData\n};"
+      },
+      "id": "10a3cef4-1611-4e47-8978-9256f9cb757a",
+      "name": "recuperar dados planilha1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw",
+          "mode": "list",
+          "cachedResultName": "LeadPix - Controle",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "INPUT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw/edit#gid=0"
+        },
+        "startIndex": "={{ $json.row_number }}"
+      },
+      "id": "8f08512c-0c6d-4162-8def-3405dc018f85",
+      "name": "apagar da aba TRATADOS",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        1880,
+        400
+      ],
+      "executeOnce": false,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "QyOrbjZTQhaHvAQC",
+          "name": "Google Sheets - botleadpix@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw",
+          "mode": "list",
+          "cachedResultName": "LeadPix - Controle",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "INPUT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1bFDbrIHesjibHhwUduVdy6nfq3IgQ3F8Vz204DNK3Yw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Momento": "={{ $json.Momento }}",
+            "ID": "={{ $json.ID }}",
+            "Nome": "={{ $json.Nome }}",
+            "Telefone": "={{ $json.Telefone }}",
+            "CNPJ": "={{ $json.CNPJ }}",
+            "Localidade": "={{ $json.Localidade }}",
+            "Idades": "={{ $json.Idades }}",
+            "Número de Vidas": "={{ $json['Número de Vidas'] }}",
+            "Preço": "={{ $json['Preço'] }}",
+            "Status": "Voltou"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Momento",
+              "displayName": "Momento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Telefone",
+              "displayName": "Telefone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CNPJ",
+              "displayName": "CNPJ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Localidade",
+              "displayName": "Localidade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Idades",
+              "displayName": "Idades",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Número de Vidas",
+              "displayName": "Número de Vidas",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Preço",
+              "displayName": "Preço",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {
+          "cellFormat": "USER_ENTERED"
+        }
+      },
+      "id": "9f77b09c-9d5f-40dc-972c-8d1904b9520f",
+      "name": "MOVER DE VOLTA PARA ABA INPUT",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [
+        2320,
+        400
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "QyOrbjZTQhaHvAQC",
+          "name": "Google Sheets - botleadpix@gmail.com"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://maya-evolutionapi.anln5e.easypanel.host/chat/deleteMessageForEveryone/LeadPix",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"{{ $('recuperar dados planilha1').item.json[\"idMsgGrupo\"] }}\",\n  \"remoteJid\": \"120363302909732175@g.us\",\n  \"fromMe\": true\n}",
+        "options": {}
+      },
+      "id": "dceb0b9b-0b9e-4583-a2e1-0807e0c037f9",
+      "name": "apagar mensagem no grupo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2580,
+        400
+      ],
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "QAL98JQKL7XOLUQq",
+          "name": "Evolution LeadPix"
+        }
+      }
     }
   ],
   "pinData": {
@@ -35,6 +393,47 @@
           "Status": "No Grupo",
           "ID": "090801",
           "idMsgGrupo": "3EB0428E34F08BF350AFCF"
+        }
+      }
+    ],
+    "verificar se foi vendido": [
+      {
+        "json": {
+          "row_number": 10,
+          "Momento": "",
+          "ID": "090801",
+          "idMsgGrupo": "3EB0681BCA6224F948F6D2",
+          "Nome": "Zeca",
+          "Telefone": "71981719761",
+          "CNPJ": "Não",
+          "Localidade": "Taquara",
+          "Idades": "60",
+          "Número de Vidas": "1",
+          "Preço": 14.9,
+          "Status": "No Grupo"
+        }
+      }
+    ],
+    "apagar da aba TRATADOS": [
+      {
+        "json": {
+          "success": true
+        }
+      }
+    ],
+    "MOVER DE VOLTA PARA ABA INPUT": [
+      {
+        "json": {
+          "Momento": "",
+          "ID": "090801",
+          "Nome": "Zeca",
+          "Telefone": "71981719761",
+          "CNPJ": "Não",
+          "Localidade": "Taquara",
+          "Idades": "60",
+          "Número de Vidas": "1",
+          "Preço": 14.9,
+          "Status": "Voltou"
         }
       }
     ]
@@ -99,6 +498,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2024-08-11T21:31:02.000Z",
-  "versionId": "7697153c-3abb-42b1-9be3-cf926a7a0f9e"
+  "updatedAt": "2024-08-11T21:52:45.000Z",
+  "versionId": "7f6fdebd-495b-401a-bac8-837377b71e37"
 }
