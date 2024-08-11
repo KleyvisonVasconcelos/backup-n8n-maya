@@ -1,0 +1,104 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2024-08-11T21:30:05.605Z",
+  "id": "48ZhPWquwtAyAOnR",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "LeadPix - aguardar 5 horas e retirar do grupo",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "0ca0f3cb-7651-484c-8916-8e0586f3d919",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        400
+      ]
+    }
+  ],
+  "pinData": {
+    "Execute Workflow Trigger": [
+      {
+        "json": {
+          "Momento": "zzz",
+          "Nome": "Nome Teste",
+          "Telefone": "557181719761",
+          "CNPJ": "123",
+          "Localidade": "123",
+          "Idades": "123",
+          "Número de Vidas": "123",
+          "Preço": 19.9,
+          "Status": "No Grupo",
+          "ID": "090801",
+          "idMsgGrupo": "3EB0428E34F08BF350AFCF"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2024-08-11T21:30:05.615Z",
+      "updatedAt": "2024-08-11T21:30:05.615Z",
+      "role": "workflow:owner",
+      "workflowId": "48ZhPWquwtAyAOnR",
+      "projectId": "EhYksklXdTBsi26f",
+      "project": {
+        "createdAt": "2024-08-06T03:41:19.242Z",
+        "updatedAt": "2024-08-06T03:41:19.242Z",
+        "id": "EhYksklXdTBsi26f",
+        "name": "Vinicius Fastinoni <bot.maya.n8n@gmail.com>",
+        "type": "personal",
+        "projectRelations": [
+          {
+            "createdAt": "2024-08-06T03:41:19.242Z",
+            "updatedAt": "2024-08-06T03:41:19.242Z",
+            "role": "project:personalOwner",
+            "userId": "31bebeed-1943-40c1-85cd-9ef49971170c",
+            "projectId": "EhYksklXdTBsi26f",
+            "user": {
+              "createdAt": "2023-11-22T16:53:59.095Z",
+              "updatedAt": "2024-08-10T02:16:09.096Z",
+              "id": "31bebeed-1943-40c1-85cd-9ef49971170c",
+              "email": "bot.maya.n8n@gmail.com",
+              "firstName": "Vinicius",
+              "lastName": "Fastinoni",
+              "personalizationAnswers": {
+                "version": "v4",
+                "personalization_survey_submitted_at": "2023-11-22T17:09:31.234Z",
+                "personalization_survey_n8n_version": "1.16.0"
+              },
+              "settings": {
+                "userActivated": true,
+                "isOnboarded": true,
+                "firstSuccessfulWorkflowId": "hR3fA4rAnKCuUwjJ",
+                "userActivatedAt": 1722915679480,
+                "npsSurvey": {
+                  "waitingForResponse": true,
+                  "ignoredCount": 1,
+                  "lastShownAt": 1723256160325
+                }
+              },
+              "role": "global:owner",
+              "disabled": false,
+              "mfaEnabled": false,
+              "isPending": false,
+              "isOwner": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-08-11T21:31:02.000Z",
+  "versionId": "7697153c-3abb-42b1-9be3-cf926a7a0f9e"
+}
