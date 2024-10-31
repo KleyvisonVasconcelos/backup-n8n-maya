@@ -280,6 +280,17 @@
       "main": [
         [
           {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
             "node": "Split In Batches",
             "type": "main",
             "index": 0
@@ -328,7 +339,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2960,
+        3080,
         280
       ],
       "id": "99e60ebd-c434-4eb7-89a1-ada3feae1230",
@@ -1029,7 +1040,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2800,
+        2840,
         560
       ],
       "id": "a067f5ed-6708-439c-a032-e1bac1c7abea",
@@ -1106,7 +1117,7 @@
       "type": "n8n-nodes-base.googleSheetsTrigger",
       "typeVersion": 1,
       "position": [
-        880,
+        700,
         300
       ],
       "credentials": {
@@ -1115,6 +1126,50 @@
           "name": "MAYA"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "dd56508b-8f3d-493a-8213-5cea245e5d01",
+              "leftValue": "={{ $json['Qual seu nome completo?'] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "a064bb59-9829-4303-ae8d-10ad01f7ea6d",
+              "leftValue": "={{ $json.TELEFONE }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d0a17887-0014-4178-a089-e2c2fd04b460",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        920,
+        300
+      ]
     }
   ],
   "pinData": {},
@@ -1187,6 +1242,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T07:02:17.000Z",
-  "versionId": "a0ee58af-d273-4e49-b049-89e8186e9a39"
+  "updatedAt": "2024-10-31T11:06:09.000Z",
+  "versionId": "2fb4c606-1dc6-4b3f-9277-41bf726aa255"
 }
