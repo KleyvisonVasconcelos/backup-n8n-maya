@@ -23,107 +23,11 @@
         ]
       ]
     },
-    "Wait": {
-      "main": [
-        [
-          {
-            "node": "Split In Batches",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "CADASTRA NA AUDIENCIA": {
       "main": [
         [
           {
             "node": "Salvar campo Primeiro Contato",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Likedin",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Investimento",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Escolha",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Cenário",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Remuneração",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Tempo que conhece Ale",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Nome Completo",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Email",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Liderança",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Meta Profissional",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Ponto Fraco",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Nao pode Faltar",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Score",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo Anos atuação lider",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo plataforma",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Salvar campo token",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Nome e telefone para validar1",
             "type": "main",
             "index": 0
           }
@@ -163,11 +67,220 @@
         ]
       ]
     },
-    "Nome e telefone para validar1": {
+    "Formatando Data1": {
+      "main": [
+        [
+          {
+            "node": "Formatando Data2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formatando Data2": {
       "main": [
         [
           {
             "node": "Salvar campo momento do contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Primeiro Contato": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Likedin",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Likedin": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Investimento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Investimento": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Escolha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Escolha": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Cenário",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Cenário": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Remuneração",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Remuneração": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Tempo que conhece Ale",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Tempo que conhece Ale": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Email": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Liderança",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Liderança": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Meta Profissional",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Meta Profissional": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Ponto Fraco",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Ponto Fraco": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Nao pode Faltar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo momento do contato": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Nao pode Faltar": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Score": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo Anos atuação lider",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo Anos atuação lider": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo plataforma",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo plataforma": {
+      "main": [
+        [
+          {
+            "node": "Salvar campo token",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo token": {
+      "main": [
+        [
+          {
+            "node": "Formatando Data1",
             "type": "main",
             "index": 0
           }
@@ -200,13 +313,13 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://conectawebhook.com.br/api/v1/webhook/subscriber/{{ $json[\"id\"] }}/send_flow/",
+        "url": "=https://conectawebhook.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json.id }}/send_flow/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
             {
               "name": "flow",
-              "value": "=3913047"
+              "value": "=5582082"
             }
           ]
         }
@@ -215,8 +328,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2460,
-        260
+        3180,
+        280
       ],
       "id": "99e60ebd-c434-4eb7-89a1-ada3feae1230",
       "retryOnFail": true,
@@ -224,8 +337,8 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "httpHeaderAuth": {
-          "id": "xYJy5u2zqf67L4Gq",
-          "name": "SALVADOR"
+          "id": "y9NiVTPqjTmEYvXJ",
+          "name": "ALE"
         }
       }
     },
@@ -239,8 +352,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        2620,
-        260
+        3380,
+        280
       ],
       "webhookId": "bf34acb3-4b8b-47ca-b612-9ed27e0fcf68"
     },
@@ -386,7 +499,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        -780
+        -740
       ],
       "id": "51ff840f-100b-4dae-b3da-c0eb05046fc3",
       "retryOnFail": true,
@@ -401,31 +514,9 @@
     },
     {
       "parameters": {
-        "keepOnlySet": true,
-        "values": {
-          "string": [
-            {
-              "name": "Date",
-              "value": "={{ $('Google Sheets Trigger').item.json['Submitted At'] }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "71958ed6-2e01-409e-94c6-10cdd297afc1",
-      "name": "Nome e telefone para validar1",
-      "type": "n8n-nodes-base.set",
-      "position": [
-        2140,
-        1860
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087718/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -458,7 +549,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087720/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -474,7 +565,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        -620
+        -540
       ],
       "id": "62f61c6f-e137-4011-b280-4861160667d0",
       "retryOnFail": true,
@@ -491,7 +582,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087721/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -507,7 +598,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        -440
+        -320
       ],
       "id": "aece4a5a-059f-4fba-968c-e83abb4be23a",
       "retryOnFail": true,
@@ -524,7 +615,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087722/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -540,7 +631,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        -300
+        -120
       ],
       "id": "e83df83c-873d-4bca-83fe-69045fcb169a",
       "retryOnFail": true,
@@ -557,7 +648,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087723/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -573,7 +664,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        -140
+        80
       ],
       "id": "f2086ff7-2df9-4a4b-acb3-131fa7e98d96",
       "retryOnFail": true,
@@ -590,7 +681,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087724/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -606,7 +697,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        20
+        300
       ],
       "id": "7941112b-4f07-4c78-827a-8803e7fc350e",
       "retryOnFail": true,
@@ -638,8 +729,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        180
+        3200,
+        720
       ],
       "id": "ebde2a92-f7a7-464f-b879-79a21815b603",
       "retryOnFail": true,
@@ -650,13 +741,14 @@
           "id": "y9NiVTPqjTmEYvXJ",
           "name": "ALE"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087725/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -672,7 +764,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        360
+        500
       ],
       "id": "fdf22fa0-5059-4438-8024-f5fccd9b5a6e",
       "retryOnFail": true,
@@ -689,7 +781,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087726/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -705,7 +797,7 @@
       "typeVersion": 1,
       "position": [
         2140,
-        520
+        700
       ],
       "id": "f01988d5-b2fb-4694-9ae4-f1584ccf60bc",
       "retryOnFail": true,
@@ -722,8 +814,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
-        "allowUnauthorizedCerts": "={{ false }}",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087728/",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
@@ -738,8 +829,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        680
+        2480,
+        -880
       ],
       "id": "d9b1b5da-a1ea-4dd5-8b6a-a53b1af23e45",
       "retryOnFail": true,
@@ -756,7 +847,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087729/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
@@ -772,8 +863,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        840
+        2480,
+        -680
       ],
       "id": "4386c1d6-9f45-4574-8ab1-4dbd7402a344",
       "retryOnFail": true,
@@ -790,7 +881,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087730/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
@@ -806,8 +897,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        1020
+        2480,
+        -480
       ],
       "id": "3d599dcd-f42f-42d8-bdb6-618de1efee52",
       "retryOnFail": true,
@@ -824,7 +915,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087731/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
@@ -840,8 +931,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        1180
+        2480,
+        -280
       ],
       "id": "a12fc290-8c0d-4d29-abf8-2f294df13e6d",
       "retryOnFail": true,
@@ -858,7 +949,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087732/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
@@ -874,8 +965,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        1340
+        2480,
+        -100
       ],
       "id": "fd9b208d-90d1-4c52-8302-2a77e069aeaa",
       "retryOnFail": true,
@@ -892,7 +983,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087733/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
@@ -908,8 +999,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        1520
+        2480,
+        100
       ],
       "id": "59fe0705-d737-4acc-8747-7f418c68d1b1",
       "retryOnFail": true,
@@ -926,7 +1017,7 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087735/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
@@ -942,8 +1033,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        1680
+        2480,
+        300
       ],
       "id": "eb43b154-0cdc-4731-88a9-552200ebb5e2",
       "retryOnFail": true,
@@ -960,14 +1051,14 @@
       "parameters": {
         "authentication": "headerAuth",
         "requestMethod": "POST",
-        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087719/",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $('CADASTRA NA AUDIENCIA').item.json[\"id\"] }}/custom_fields/3087734/",
         "allowUnauthorizedCerts": "={{ false }}",
         "options": {},
         "bodyParametersUi": {
           "parameter": [
             {
               "name": "value",
-              "value": "={{ $('Google Sheets Trigger').item.json.Token }}"
+              "value": "={{ $json.data }}"
             }
           ]
         }
@@ -976,8 +1067,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2900,
-        1860
+        2800,
+        520
       ],
       "id": "a067f5ed-6708-439c-a032-e1bac1c7abea",
       "retryOnFail": true,
@@ -989,6 +1080,41 @@
           "name": "ALE"
         }
       }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Date",
+              "value": "={{ $('Google Sheets Trigger').item.json['Submitted At'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "71958ed6-2e01-409e-94c6-10cdd297afc1",
+      "name": "Formatando Data1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2480,
+        520
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "// Captura o valor da variável dinamicamente\nconst serialDate = parseFloat($('Google Sheets Trigger').item.json['Submitted At']);\nconst milliseconds = (serialDate - 25569) * 86400 * 1000; // Converte para milissegundos\nconst date = new Date(milliseconds); // Converte para uma data\n\n// Formata a data no formato DD/MM/YYYY HH:MM:SS\nconst day = String(date.getDate()).padStart(2, '0');\nconst month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa em 0, então +1\nconst year = date.getFullYear();\nconst hours = String(date.getHours()).padStart(2, '0');\nconst minutes = String(date.getMinutes()).padStart(2, '0');\nconst seconds = String(date.getSeconds()).padStart(2, '0');\n\nconst formattedDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;\n\nreturn {\n    data: formattedDate\n};\n"
+      },
+      "id": "6acaa849-5bd2-4174-bf3c-fb1d5b51c193",
+      "name": "Formatando Data2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        2660,
+        520
+      ]
     }
   ],
   "pinData": {},
@@ -1060,6 +1186,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T00:18:05.000Z",
-  "versionId": "ee37ee9e-60c3-4cd9-a0d8-9c557170329c"
+  "updatedAt": "2024-10-31T00:50:22.000Z",
+  "versionId": "ffaf0eed-9144-475a-a495-b0fd023cf649"
 }
