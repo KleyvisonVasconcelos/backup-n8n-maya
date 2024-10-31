@@ -1105,10 +1105,10 @@
         },
         "sheetName": {
           "__rl": true,
-          "value": 1136862954,
+          "value": 551378686,
           "mode": "list",
-          "cachedResultName": "INTEGRAÇÃO",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ/edit#gid=1136862954"
+          "cachedResultName": "My new form",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ/edit#gid=551378686"
         },
         "options": {}
       },
@@ -1149,7 +1149,7 @@
             },
             {
               "id": "a064bb59-9829-4303-ae8d-10ad01f7ea6d",
-              "leftValue": "={{ $json.TELEFONE }}",
+              "leftValue": "={{ $json['Qual seu numero de WhastApp com DDD?'] }}",
               "rightValue": "",
               "operator": {
                 "type": "string",
@@ -1235,13 +1235,13 @@
     },
     "node:Google Sheets Trigger": {
       "documentId": "1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ",
-      "sheetId": 1136862954,
-      "lastRevision": 2250,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2250&exportFormat=xlsx"
+      "sheetId": 551378686,
+      "lastRevision": 2253,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2253&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T11:06:09.000Z",
-  "versionId": "2fb4c606-1dc6-4b3f-9277-41bf726aa255"
+  "updatedAt": "2024-10-31T16:30:38.000Z",
+  "versionId": "ddcb1ddf-13df-44a5-bd13-7e23a6d7b762"
 }
