@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Split In Batches": {
       "main": [
@@ -28,17 +28,6 @@
         [
           {
             "node": "Salvar campo Primeiro Contato",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Google Sheets Trigger": {
-      "main": [
-        [
-          {
-            "node": "Split In Batches",
             "type": "main",
             "index": 0
           }
@@ -286,6 +275,17 @@
           }
         ]
       ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-04-10T13:27:59.098Z",
@@ -305,8 +305,8 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        1020,
-        220
+        1140,
+        300
       ]
     },
     {
@@ -328,7 +328,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        3180,
+        2960,
         280
       ],
       "id": "99e60ebd-c434-4eb7-89a1-ada3feae1230",
@@ -352,7 +352,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        3380,
+        3300,
         280
       ],
       "webhookId": "bf34acb3-4b8b-47ca-b612-9ed27e0fcf68"
@@ -398,47 +398,9 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1660,
-        200
+        1780,
+        280
       ]
-    },
-    {
-      "parameters": {
-        "pollTimes": {
-          "item": [
-            {
-              "mode": "everyMinute"
-            }
-          ]
-        },
-        "documentId": {
-          "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ/edit?gid=551378686#gid=551378686",
-          "mode": "url"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 1136862954,
-          "mode": "list",
-          "cachedResultName": "INTEGRAÇÃO",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ/edit#gid=1136862954"
-        },
-        "options": {}
-      },
-      "id": "37837530-0ffd-4955-9af4-e5e77968e865",
-      "name": "Google Sheets Trigger",
-      "type": "n8n-nodes-base.googleSheetsTrigger",
-      "typeVersion": 1,
-      "position": [
-        760,
-        220
-      ],
-      "credentials": {
-        "googleSheetsTriggerOAuth2Api": {
-          "id": "hzggfIVge1lSLJ6h",
-          "name": "MAYA"
-        }
-      }
     },
     {
       "parameters": {
@@ -449,8 +411,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        1440,
-        200
+        1560,
+        280
       ]
     },
     {
@@ -474,8 +436,8 @@
       "name": "Nome e telefone para validar",
       "type": "n8n-nodes-base.set",
       "position": [
-        1240,
-        200
+        1360,
+        280
       ],
       "typeVersion": 1
     },
@@ -830,7 +792,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        -880
+        -860
       ],
       "id": "d9b1b5da-a1ea-4dd5-8b6a-a53b1af23e45",
       "retryOnFail": true,
@@ -864,7 +826,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        -680
+        -640
       ],
       "id": "4386c1d6-9f45-4574-8ab1-4dbd7402a344",
       "retryOnFail": true,
@@ -898,7 +860,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        -480
+        -440
       ],
       "id": "3d599dcd-f42f-42d8-bdb6-618de1efee52",
       "retryOnFail": true,
@@ -932,7 +894,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        -280
+        -240
       ],
       "id": "a12fc290-8c0d-4d29-abf8-2f294df13e6d",
       "retryOnFail": true,
@@ -966,7 +928,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        -100
+        -60
       ],
       "id": "fd9b208d-90d1-4c52-8302-2a77e069aeaa",
       "retryOnFail": true,
@@ -1000,7 +962,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        100
+        140
       ],
       "id": "59fe0705-d737-4acc-8747-7f418c68d1b1",
       "retryOnFail": true,
@@ -1034,7 +996,7 @@
       "typeVersion": 1,
       "position": [
         2480,
-        300
+        340
       ],
       "id": "eb43b154-0cdc-4731-88a9-552200ebb5e2",
       "retryOnFail": true,
@@ -1068,7 +1030,7 @@
       "typeVersion": 1,
       "position": [
         2800,
-        520
+        560
       ],
       "id": "a067f5ed-6708-439c-a032-e1bac1c7abea",
       "retryOnFail": true,
@@ -1099,7 +1061,7 @@
       "type": "n8n-nodes-base.set",
       "position": [
         2480,
-        520
+        560
       ],
       "typeVersion": 1
     },
@@ -1113,8 +1075,46 @@
       "typeVersion": 1,
       "position": [
         2660,
-        520
+        560
       ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ/edit?gid=551378686#gid=551378686",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1136862954,
+          "mode": "list",
+          "cachedResultName": "INTEGRAÇÃO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ/edit#gid=1136862954"
+        },
+        "options": {}
+      },
+      "id": "b5d0fbfe-c7ff-422d-ac04-85c11b6c2ed8",
+      "name": "Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        880,
+        300
+      ],
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "hzggfIVge1lSLJ6h",
+          "name": "MAYA"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -1179,13 +1179,14 @@
       "recurrencyRules": []
     },
     "node:Google Sheets Trigger": {
-      "documentId": "1ObG3JqvBapGNIOQoIhhtacR-xxt--2vYgZoFsJIPp64",
-      "sheetId": "0",
-      "lastIndexChecked": 3
+      "documentId": "1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ",
+      "sheetId": 1136862954,
+      "lastRevision": 2248,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2248&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T00:50:22.000Z",
-  "versionId": "ffaf0eed-9144-475a-a495-b0fd023cf649"
+  "updatedAt": "2024-10-31T07:02:17.000Z",
+  "versionId": "a0ee58af-d273-4e49-b049-89e8186e9a39"
 }
