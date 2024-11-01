@@ -199,11 +199,6 @@
         ]
       ]
     },
-    "Salvar campo momento do contato": {
-      "main": [
-        []
-      ]
-    },
     "Salvar campo Nao pode Faltar": {
       "main": [
         [
@@ -286,6 +281,17 @@
         [
           {
             "node": "Split In Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar campo momento do contato": {
+      "main": [
+        [
+          {
+            "node": "enviar fluxo",
             "type": "main",
             "index": 0
           }
@@ -1230,12 +1236,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ",
       "sheetId": 551378686,
-      "lastRevision": 2254,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2254&exportFormat=xlsx"
+      "lastRevision": 2261,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2261&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T17:10:38.000Z",
-  "versionId": "87a9afce-02c6-4c01-9e0f-d8195af265af"
+  "updatedAt": "2024-11-01T10:22:11.000Z",
+  "versionId": "394b8327-751c-4436-8f97-f4f7cef05390"
 }
