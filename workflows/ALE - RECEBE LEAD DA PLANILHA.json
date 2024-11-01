@@ -351,7 +351,8 @@
           "id": "y9NiVTPqjTmEYvXJ",
           "name": "ALE"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -760,7 +761,7 @@
           "parameter": [
             {
               "name": "value",
-              "value": "={{ $('Google Sheets Trigger').item.json['Qual seu e-mail principal?'] }}"
+              "value": "={{ $('Google Sheets Trigger').item.json['Qual sua grade de liderança?'] }}"
             }
           ]
         }
@@ -1236,12 +1237,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ",
       "sheetId": 551378686,
-      "lastRevision": 2262,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2262&exportFormat=xlsx"
+      "lastRevision": 2266,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2266&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-11-01T10:33:05.000Z",
-  "versionId": "394b8327-751c-4436-8f97-f4f7cef05390"
+  "updatedAt": "2024-11-01T15:02:16.000Z",
+  "versionId": "5dd6024b-ce60-4226-85e1-7aab9c7caef8"
 }
