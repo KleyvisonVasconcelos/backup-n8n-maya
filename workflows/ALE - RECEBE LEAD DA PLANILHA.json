@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Split In Batches": {
       "main": [
@@ -1236,12 +1236,12 @@
     "node:Google Sheets Trigger": {
       "documentId": "1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ",
       "sheetId": 551378686,
-      "lastRevision": 2261,
-      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2261&exportFormat=xlsx"
+      "lastRevision": 2262,
+      "lastRevisionLink": "https://docs.google.com/spreadsheets/export?id=1Y9wExn6hB_hhZC4mkTcss98X31aZksUpsaJi_1jN-bQ&revision=2262&exportFormat=xlsx"
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-11-01T10:22:11.000Z",
+  "updatedAt": "2024-11-01T10:33:05.000Z",
   "versionId": "394b8327-751c-4436-8f97-f4f7cef05390"
 }
