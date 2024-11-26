@@ -27,7 +27,7 @@
       "main": [
         [
           {
-            "node": "Salvar campo Primeiro Contato",
+            "node": "Salvar campo Likedin",
             "type": "main",
             "index": 0
           }
@@ -80,13 +80,7 @@
     },
     "Salvar campo Primeiro Contato": {
       "main": [
-        [
-          {
-            "node": "Salvar campo Likedin",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Salvar campo Likedin": {
@@ -504,8 +498,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        2140,
-        -940
+        2100,
+        -1040
       ],
       "id": "548c6a02-c4fa-43f6-bb7b-a5ae2d15d11c",
       "retryOnFail": true,
@@ -516,7 +510,8 @@
           "id": "y9NiVTPqjTmEYvXJ",
           "name": "ALE"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -1242,6 +1237,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-11-01T17:56:18.000Z",
-  "versionId": "8bfd8ace-0871-4b2c-ac94-94d903d2cf65"
+  "updatedAt": "2024-11-26T10:05:41.000Z",
+  "versionId": "d84215b4-e629-4cb1-a21a-e69afb2295eb"
 }
