@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "Google Sheets3": {
       "main": [
@@ -313,6 +313,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-06-05T19:47:17.000Z",
+  "updatedAt": "2025-01-06T23:23:39.000Z",
   "versionId": "62dead18-6956-450f-ad20-7fff0bcd69c0"
 }
