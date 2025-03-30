@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "Split In Batches": {
       "main": [
@@ -1239,6 +1239,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-11-26T10:05:41.000Z",
+  "updatedAt": "2025-03-30T11:26:14.000Z",
   "versionId": "d84215b4-e629-4cb1-a21a-e69afb2295eb"
 }
