@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "Data Vencimento": {
       "main": [
@@ -1696,6 +1696,6 @@
     }
   ],
   "triggerCount": 2,
-  "updatedAt": "2024-07-09T14:55:41.000Z",
+  "updatedAt": "2025-03-30T11:26:25.000Z",
   "versionId": "73b5abe0-75a5-4f5d-a298-a022f75402c1"
 }
